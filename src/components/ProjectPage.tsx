@@ -145,7 +145,7 @@ export function ProjectPage() {
       <div className="pp">
         <div className="pp-inner">
           <motion.figure {...reveal} className="pp-figure pp-figure-wide">
-            <img src="/images/m2050/vue-ensemble.jpg" alt="Vue d'ensemble de l'exposition, les îlots et leurs panneaux" />
+            <img src="/images/m2050/vue-ensemble.jpg" fetchPriority="high" decoding="async" alt="Vue d'ensemble de l'exposition, les îlots et leurs panneaux" />
           </motion.figure>
         </div>
       </div>
@@ -229,10 +229,10 @@ export function ProjectPage() {
         <div className="pp-inner">
           <motion.div {...reveal} className="pp-grid pp-grid-2">
             <figure className="pp-figure pp-figure-tall">
-              <img src="/images/m2050/maison-detail.jpg" alt="Détail d'une fenêtre illustrée de la maquette de la maison" />
+              <img loading="lazy" decoding="async" src="/images/m2050/maison-detail.jpg" alt="Détail d'une fenêtre illustrée de la maquette de la maison" />
             </figure>
             <figure className="pp-figure pp-figure-tall">
-              <img src="/images/m2050/posidonie-detail.jpg" alt="Poissons de bois dans l'herbier de posidonie" />
+              <img loading="lazy" decoding="async" src="/images/m2050/posidonie-detail.jpg" alt="Poissons de bois dans l'herbier de posidonie" />
             </figure>
           </motion.div>
         </div>
@@ -253,7 +253,7 @@ export function ProjectPage() {
           {manips.map((m, i) => (
             <motion.div {...reveal} key={m.t} className="pp-manip">
               <figure className="pp-figure pp-figure-square pp-manip-media">
-                <img src={m.img} alt={`Manip ${i + 1} : ${m.t}`} />
+                <img loading="lazy" decoding="async" src={m.img} alt={`Manip ${i + 1} : ${m.t}`} />
               </figure>
               <div>
                 <p className="pp-manip-index">Manip {i + 1}</p>
@@ -297,7 +297,7 @@ export function ProjectPage() {
               { src: "/images/m2050/atelier.jpg", alt: "Fabrication des maquettes en atelier" },
             ].map((g, i) => (
               <figure key={i} className="pp-figure pp-figure-square">
-                <img src={g.src} alt={g.alt} />
+                <img loading="lazy" decoding="async" src={g.src} alt={g.alt} />
               </figure>
             ))}
           </motion.div>

@@ -190,16 +190,10 @@
   align-items: baseline;
 }
 
-/* Repère visuel pendant la phase maquette. Retirer avec le lorem ipsum. */
-.pp-placeholder-note {
-  font-family: var(--font-nav);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-background);
-  background: var(--color-foreground);
-  padding: 0.55rem 1rem;
-  display: inline-block;
-  margin-top: 2rem;
-}
 
+
+/* Les photos de maquettes sont majoritairement en portrait (1800 × 2700).
+   Dans un cadre carré, un recadrage centré coupe autant en haut qu'en bas et
+   décapitait la maquette de la maison. On remonte le point de cadrage : le
+   sujet est presque toujours dans la moitié haute. */
+.pp-figure-square img { object-position: center 35%; }
