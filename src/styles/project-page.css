@@ -1,0 +1,205 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   FICHE PROJET — styles dédiés
+
+   Pourquoi un fichier CSS à la main plutôt que des classes Tailwind :
+   src/index.css est un instantané COMPILÉ (export Figma), pas une feuille
+   générée au build. Seules les ~144 classes utilisées par les composants
+   existants s'y trouvent ; toute nouvelle classe utilitaire serait
+   silencieusement sans style. Ce fichier est donc autonome et n'utilise que
+   les variables de thème (--color-*, --font-*) déjà définies.
+
+   Préfixe `pp-` (project page) pour éviter toute collision.
+   ───────────────────────────────────────────────────────────────────────── */
+
+.pp {
+  padding: 0 1.5rem;
+}
+@media (width >= 48rem) {
+  .pp { padding: 0 3rem; }
+}
+.pp-inner {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+/* ── Retour ─────────────────────────────────────────────────────────────── */
+.pp-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-nav);
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  padding: 9rem 0 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pp-back:hover { opacity: 0.55; }
+
+/* ── En-tête ────────────────────────────────────────────────────────────── */
+.pp-header { padding: 2.5rem 0 4rem; }
+.pp-title {
+  font-family: var(--font-grotesk);
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin: 0.75rem 0 0;
+}
+.pp-subtitle {
+  font-family: var(--font-grotesk);
+  font-size: clamp(1.5rem, 3vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-muted);
+  margin: 0.25rem 0 0;
+}
+
+/* ── Métadonnées ────────────────────────────────────────────────────────── */
+.pp-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem 2rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 2rem;
+  margin-top: 3.5rem;
+}
+@media (width >= 48rem) {
+  .pp-meta { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.pp-meta-value {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  margin-top: 0.4rem;
+}
+
+/* ── Images ─────────────────────────────────────────────────────────────── */
+.pp-figure {
+  overflow: hidden;
+  background: var(--color-stone-light);
+}
+.pp-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pp-figure-wide { aspect-ratio: 16 / 9; }
+.pp-figure-tall { aspect-ratio: 4 / 5; }
+.pp-figure-square { aspect-ratio: 1 / 1; }
+.pp-caption {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: var(--color-muted);
+  margin-top: 0.75rem;
+}
+
+/* ── Sections ─────────────────────────────────────────────────────────────
+   padding-block et non « padding: 6rem 0 » : la notation raccourcie remet la
+   marge horizontale à zéro et écrase celle de .pp, que les sections portent
+   aussi. Le contenu débordait alors du bord gauche de l'écran.              */
+.pp-section { padding-block: 6rem; }
+@media (width >= 48rem) {
+  .pp-section { padding-block: 8rem; }
+}
+.pp-section-alt { background: var(--color-stone-light); }
+.pp-section-head { margin-bottom: 3.5rem; }
+
+/* Deux colonnes : chapeau à gauche, corps à droite */
+.pp-two-col {
+  display: grid;
+  gap: 2.5rem;
+}
+@media (width >= 64rem) {
+  .pp-two-col {
+    grid-template-columns: 5fr 7fr;
+    gap: 6rem;
+  }
+}
+
+/* Grille générique */
+.pp-grid { display: grid; gap: 2.5rem; }
+@media (width >= 48rem) {
+  .pp-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pp-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pp-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* ── Chiffres clés ──────────────────────────────────────────────────────── */
+.pp-stat { border-top: 1px solid var(--color-border); padding-top: 1.25rem; }
+.pp-stat-number {
+  font-family: var(--font-grotesk);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.pp-stat-label {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  margin-top: 0.6rem;
+}
+
+/* ── Manips : blocs alternés ────────────────────────────────────────────── */
+.pp-manip {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--color-border);
+}
+@media (width >= 64rem) {
+  .pp-manip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5rem;
+    padding: 5rem 0;
+  }
+  /* Un bloc sur deux inverse image et texte */
+  .pp-manip:nth-child(even) .pp-manip-media { order: 2; }
+}
+.pp-manip-index {
+  font-family: var(--font-nav);
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+}
+.pp-manip h3 { margin-bottom: 1rem; }
+
+/* ── Liste catalogue ────────────────────────────────────────────────────── */
+.pp-item {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+}
+.pp-item h4 {
+  font-family: var(--font-grotesk);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Pied de fiche ──────────────────────────────────────────────────────── */
+.pp-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 3rem 0 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* Repère visuel pendant la phase maquette. Retirer avec le lorem ipsum. */
+.pp-placeholder-note {
+  font-family: var(--font-nav);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-background);
+  background: var(--color-foreground);
+  padding: 0.55rem 1rem;
+  display: inline-block;
+  margin-top: 2rem;
+}
+

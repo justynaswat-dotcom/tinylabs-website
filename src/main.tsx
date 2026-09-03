@@ -12,6 +12,9 @@
   import "@fontsource-variable/dm-sans"; // navigation/logo → var(--font-nav)
 
   import "./index.css";
+  // Feuille écrite à la main : index.css est un instantané compilé, les
+  // nouvelles classes utilitaires n'y existent pas (voir l'en-tête du fichier).
+  import "./styles/project-page.css";
 
   createRoot(document.getElementById("root")!).render(<App />);
   

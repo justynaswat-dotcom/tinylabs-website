@@ -30,6 +30,12 @@ const projectTypologies = [
   "Spatial",    // 7 La Rue
 ];
 
+// Fiches projet existantes, par index. Seule Exhibition M2050 en a une pour
+// l'instant ; les autres cartes restent volontairement non cliquables.
+const projectLinks: Record<number, string> = {
+  4: "/work/marseille-2050", // Exhibition M2050 → Marseille 2050, Ici ça chauffe
+};
+
 export function Work() {
   const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState("All");
@@ -92,6 +98,7 @@ export function Work() {
               description={project.description}
               imageUrl={project.imageUrl}
               index={project.index}
+              href={projectLinks[project.index]}
             />
           ))}
         </div>

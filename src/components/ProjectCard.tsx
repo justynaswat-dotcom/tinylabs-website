@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
+import { Link } from "react-router-dom";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { useState, useRef } from "react";
+import { useState, useRef, ReactNode } from "react";
 
 interface ProjectCardProps {
   title: string;
@@ -9,9 +10,12 @@ interface ProjectCardProps {
   description: string;
   imageUrl: string;
   index: number;
+  /** Fiche projet associée. Absent = carte non cliquable : on n'ajoute alors
+   *  ni curseur ni affordance de lien, pour ne pas suggérer un lien mort. */
+  href?: string;
 }
 
-export function ProjectCard({ title, category, year, description, imageUrl, index }: ProjectCardProps) {
+export function ProjectCard({ title, category, year, description, imageUrl, index, href }: ProjectCardProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -22,6 +26,13 @@ export function ProjectCard({ title, category, year, description, imageUrl, inde
 
   const y = useTransform(scrollYProgress, [0, 1], ["10%", "-10%"]);
 
+  // Seules les cartes disposant d'une fiche deviennent des liens.
+  // Fonction et non composant : un composant déclaré dans le corps du rendu est
+  // recréé à chaque passage, ce qui pousse React à démonter puis remonter ses
+  // enfants — l'image et son animation repartiraient de zéro sans arrêt.
+  const wrap = (children: ReactNode) =>
+    href ? <Link to={href} className="block">{children}</Link> : children;
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 40 }}
@@ -30,6 +41,7 @@ export function ProjectCard({ title, category, year, description, imageUrl, inde
       transition={{ duration: 1, delay: index * 0.15, ease: [0.4, 0, 0.2, 1] }}
       className="group"
     >
+      {wrap(<>
       <div ref={ref} className="relative aspect-[4/5] overflow-hidden bg-stone-200 mb-6">
         <motion.div
           initial={{ scale: 1.1 }}
@@ -62,6 +74,7 @@ export function ProjectCard({ title, category, year, description, imageUrl, inde
 
         <p className="text-[var(--color-muted)] pt-1">{description}</p>
       </div>
+      </>)}
     </motion.article>
   );
 }
