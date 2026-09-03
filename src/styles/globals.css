@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @source "../**/*.{ts,tsx,js,jsx}";
 /* Polices auto-hébergées, importées depuis src/main.tsx (@fontsource-variable).
-   Ne PAS remettre d'@import fonts.googleapis.com — RGPD. */
+   Ne PAS remettre d'@import fonts.googleapis.com - RGPD. */
 
 @theme {
   --color-background: #f7f5f2;
@@ -12,7 +12,7 @@
 
   /* ⚠️ Ce fichier est la SOURCE Tailwind ; le site charge la version déjà
      compilée (src/index.css), la seule importée par main.tsx. Garder les deux
-     synchronisés — sinon un futur passage à une compilation Tailwind réelle
+     synchronisés - sinon un futur passage à une compilation Tailwind réelle
      ferait resurgir les anciennes polices. */
   --font-sans: 'Inter Variable', 'Inter', 'Univers', 'Univers LT Std', ui-sans-serif, system-ui, sans-serif;
   --font-grotesk: 'Syne Variable', 'Syne', ui-sans-serif, system-ui, sans-serif;
@@ -39,7 +39,7 @@ body {
   line-height: 1.7;
 }
 
-/* Display headline — Syne, very large */
+/* Display headline - Syne, very large */
 h1 {
   font-family: var(--font-grotesk);
   font-size: clamp(2.5rem, 5.5vw, 5.5rem);
@@ -49,7 +49,7 @@ h1 {
   margin: 0;
 }
 
-/* Section headline — Syne */
+/* Section headline - Syne */
 h2 {
   font-family: var(--font-grotesk);
   font-size: clamp(1.75rem, 3vw, 2.75rem);
@@ -59,7 +59,7 @@ h2 {
   margin: 0;
 }
 
-/* Card / pillar title — Syne */
+/* Card / pillar title - Syne */
 h3 {
   font-family: var(--font-grotesk);
   font-size: clamp(1rem, 1.5vw, 1.1875rem);
@@ -69,7 +69,7 @@ h3 {
   margin: 0;
 }
 
-/* Body — var(--font-sans) = Inter */
+/* Body - var(--font-sans) = Inter */
 p {
   font-family: var(--font-sans);
   font-size: clamp(1rem, 1.3vw, 1.1875rem);
@@ -78,7 +78,7 @@ p {
   margin: 0;
 }
 
-/* Large body — for preface/mission text */
+/* Large body - for preface/mission text */
 .p-large {
   font-family: var(--font-sans);
   font-size: clamp(1.125rem, 1.6vw, 1.375rem);
@@ -93,7 +93,7 @@ small {
   line-height: 1.5;
 }
 
-/* Label — Syne, uppercase, muted */
+/* Label - Syne, uppercase, muted */
 .label {
   font-family: var(--font-grotesk);
   font-size: 0.625rem;
@@ -146,7 +146,7 @@ blockquote {
 .col-span-7  { grid-column: span 7 / span 7; }
 .col-start-10 { grid-column-start: 10; }
 
-/* Spacing — children */
+/* Spacing - children */
 .space-y-3  > * + * { margin-top: 0.75rem; }
 .space-y-10 > * + * { margin-top: 2.5rem; }
 

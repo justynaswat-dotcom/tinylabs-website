@@ -36,7 +36,7 @@
 @layer theme {
   :root, :host {
     /* Corps de texte : Inter. Univers (Linotype) était déclarée sans jamais être
-       chargée — aucun @font-face, absente de Google Fonts — donc tout le texte
+       chargée - aucun @font-face, absente de Google Fonts - donc tout le texte
        retombait sur la police système du visiteur et changeait d'un poste à
        l'autre. Inter est la néo-grotesque libre la plus proche d'Univers.
        Univers reste en 2e position : les postes qui l'ont installée la garderont. */
@@ -1026,7 +1026,7 @@ body {
   line-height: 1.7;
 }
 
-/* Display headline — Syne, very large */
+/* Display headline - Syne, very large */
 h1 {
   font-family: var(--font-grotesk);
   font-size: clamp(2.5rem, 5.5vw, 5.5rem);
@@ -1036,7 +1036,7 @@ h1 {
   margin: 0;
 }
 
-/* Section headline — Syne */
+/* Section headline - Syne */
 h2 {
   font-family: var(--font-grotesk);
   font-size: clamp(1.75rem, 3vw, 2.75rem);
@@ -1046,7 +1046,7 @@ h2 {
   margin: 0;
 }
 
-/* Card / pillar title — Syne */
+/* Card / pillar title - Syne */
 h3 {
   font-family: var(--font-grotesk);
   font-size: clamp(1rem, 1.5vw, 1.1875rem);
@@ -1056,7 +1056,7 @@ h3 {
   margin: 0;
 }
 
-/* Body — var(--font-sans) = Inter */
+/* Body - var(--font-sans) = Inter */
 p {
   font-family: var(--font-sans);
   font-size: clamp(1rem, 1.3vw, 1.1875rem);
@@ -1065,7 +1065,7 @@ p {
   margin: 0;
 }
 
-/* Large body — for preface/mission text */
+/* Large body - for preface/mission text */
 .p-large {
   font-family: var(--font-sans);
   font-size: clamp(1.125rem, 1.6vw, 1.375rem);
@@ -1080,7 +1080,7 @@ small {
   line-height: 1.5;
 }
 
-/* Label — Syne, uppercase, muted */
+/* Label - Syne, uppercase, muted */
 .label {
   font-family: var(--font-grotesk);
   font-size: 0.625rem;

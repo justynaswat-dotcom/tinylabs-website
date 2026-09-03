@@ -17,7 +17,7 @@ export function Hero() {
     <section ref={ref} className="min-h-screen flex flex-col justify-between px-6 md:px-12 pt-36 pb-16 md:pt-44 md:pb-20">
       <motion.div style={{ y, opacity }} className="flex-1 flex flex-col justify-between max-w-[1800px] mx-auto w-full">
 
-        {/* Headline — full width, very large */}
+        {/* Headline - full width, very large */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ export function Hero() {
           </h1>
         </motion.div>
 
-        {/* Bottom row — mission + approach, ~3/4 width */}
+        {/* Bottom row - mission + approach, ~3/4 width */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}

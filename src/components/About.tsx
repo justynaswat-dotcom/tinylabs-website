@@ -29,7 +29,7 @@ export function About() {
           </h2>
         </motion.div>
 
-        {/* Four pillars — 2×2 grid */}
+        {/* Four pillars - 2×2 grid */}
         <div className="grid md:grid-cols-2 gap-x-16 md:gap-x-24 gap-y-16 md:gap-y-20 mb-24 md:mb-40">
           {pillars.map((pillar, i) => (
             <motion.div

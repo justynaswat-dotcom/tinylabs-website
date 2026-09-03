@@ -55,7 +55,7 @@ export function DotSphere() {
       const lx = Math.sin(phi) * Math.cos(theta);
       const ly = -Math.cos(phi);
 
-      // Project light onto 2D canvas — highlight center
+      // Project light onto 2D canvas - highlight center
       const hx = cx + lx * radius * 0.48;
       const hy = cy + ly * radius * 0.48;
 
