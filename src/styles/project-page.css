@@ -195,10 +195,6 @@
    sujet est presque toujours dans la moitié haute. */
 .pp-figure-square img { object-position: center 35%; }
 
-/* Panorama : les vues MEXPO_PANNO ont un rapport proche de 2,5. Un cadre
-   carré ou 16/9 en amputerait la moitié, alors que c'est précisément leur
-   largeur qui donne à lire l'îlot entier. */
-.pp-figure-pano { aspect-ratio: 2.46 / 1; }
 
 /* Plan technique : contain et non cover, un dessin ne se recadre pas.
    Le fond reprend celui de la page, le PDF étant transparent. */

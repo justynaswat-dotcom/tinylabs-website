@@ -308,20 +308,6 @@ export function ProjectPage() {
         </div>
       </section>
 
-      {/* ── Panorama de l'îlot ────────────────────────────────────────── */}
-      <div className="pp">
-        <div className="pp-inner">
-          <motion.figure {...reveal} className="pp-figure pp-figure-pano">
-            <img loading="lazy" decoding="async" src="/images/m2050/posidonie-panorama.jpg"
-                 alt="L'îlot du Grand Dehors : panneau photo, atlas des espèces et herbier en volume" />
-          </motion.figure>
-          <p className="pp-caption">
-            L'îlot du Grand Dehors, du panneau photographique à l'atlas des espèces
-            et à l'herbier en volume, avec ses poissons à manipuler.
-          </p>
-        </div>
-      </div>
-
       {/* ── Pied de fiche ─────────────────────────────────────────────── */}
       <div className="pp" style={{ marginTop: "6rem" }}>
         <div className="pp-inner">
