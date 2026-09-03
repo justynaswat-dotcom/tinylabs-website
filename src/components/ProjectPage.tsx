@@ -55,22 +55,22 @@ const methode = [
 const manips = [
   {
     t: "La Maison",
-    img: "/images/project-2.jpg",
+    img: "/images/m2050/maison.jpg",
     d: "Une maquette du fameux « trois-fenêtres » marseillais, l'immeuble qui fait l'identité de la ville. Façade après façade, on l'adapte au climat de 2050 : volets et persiennes, enduit à la chaux clair, isolation biosourcée, toiture-terrasse végétalisée, cour intérieure fraîche, récupération d'eau et soleil sur les toits.",
   },
   {
     t: "La Rue",
-    img: "/images/project-3.jpg",
+    img: "/images/m2050/rue.jpg",
     d: "« À MARS-eille, on sait jouer collectif, comme sur un terrain de foot. » La rue devient terrain de jeu et de transition : trottoirs qui boivent la pluie, arbres qui montent vers le ciel, voitures ralenties, marchés ouverts, bancs partagés, murs qui parlent. Une maquette à manipuler pour comparer la rue d'hier et celle de demain.",
   },
   {
     t: "La Ville",
-    img: "/images/project-6.jpg",
+    img: "/images/m2050/ville.jpg",
     d: "Un jeu pour les moins de 10 ans, pour comprendre en jouant comment les choix d'aménagement transforment le cadre de vie. Un plateau, des modules à poser, huit missions à mener avec un·e médiateur·ice : trente minutes à une heure d'urbanisme joyeux, à hauteur d'enfant.",
   },
   {
     t: "Le Grand Dehors",
-    img: "/images/project-1.jpg",
+    img: "/images/m2050/posidonie.jpg",
     d: "Sous la mer, une plante endémique de la Méditerranée tisse de vastes prairies : la posidonie, joyau du littoral. Une maquette en bois ouvre une fenêtre sous l'eau, où l'on découvre l'herbier, ses habitants, ses racines millénaires et son rôle climatique pour Marseille et les calanques.",
   },
 ];
@@ -145,7 +145,7 @@ export function ProjectPage() {
       <div className="pp">
         <div className="pp-inner">
           <motion.figure {...reveal} className="pp-figure pp-figure-wide">
-            <img src="/images/project-6.jpg" alt="Vue de l'exposition Marseille 2050" />
+            <img src="/images/m2050/vue-ensemble.jpg" alt="Vue d'ensemble de l'exposition, les îlots et leurs panneaux" />
           </motion.figure>
         </div>
       </div>
@@ -229,10 +229,10 @@ export function ProjectPage() {
         <div className="pp-inner">
           <motion.div {...reveal} className="pp-grid pp-grid-2">
             <figure className="pp-figure pp-figure-tall">
-              <img src="/images/project-2.jpg" alt="Maquette manipulable de l'exposition" />
+              <img src="/images/m2050/maison-detail.jpg" alt="Détail d'une fenêtre illustrée de la maquette de la maison" />
             </figure>
             <figure className="pp-figure pp-figure-tall">
-              <img src="/images/project-3.jpg" alt="Panneau pédagogique de l'exposition" />
+              <img src="/images/m2050/posidonie-detail.jpg" alt="Poissons de bois dans l'herbier de posidonie" />
             </figure>
           </motion.div>
         </div>
@@ -291,9 +291,13 @@ export function ProjectPage() {
       <div className="pp">
         <div className="pp-inner">
           <motion.div {...reveal} className="pp-grid pp-grid-3">
-            {["/images/project-1.jpg", "/images/project-6.jpg", "/images/project-2.jpg"].map((src, i) => (
+            {[
+              { src: "/images/m2050/ilot-panneaux.jpg", alt: "Un îlot de l'exposition et ses panneaux pédagogiques" },
+              { src: "/images/m2050/carte.jpg", alt: "Carte peinte du littoral marseillais" },
+              { src: "/images/m2050/atelier.jpg", alt: "Fabrication des maquettes en atelier" },
+            ].map((g, i) => (
               <figure key={i} className="pp-figure pp-figure-square">
-                <img src={src} alt={`Exposition Marseille 2050, vue ${i + 1}`} />
+                <img src={g.src} alt={g.alt} />
               </figure>
             ))}
           </motion.div>
