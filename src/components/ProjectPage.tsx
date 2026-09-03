@@ -309,7 +309,7 @@ export function ProjectPage() {
       </section>
 
       {/* ── Pied de fiche ─────────────────────────────────────────────── */}
-      <div className="pp" style={{ marginTop: "6rem" }}>
+      <div className="pp" style={{ marginTop: "3.5rem" }}>
         <div className="pp-inner">
           <div className="pp-footer">
             <Link to="/#work" className="pp-back" style={{ padding: 0 }}>← Tous les travaux</Link>

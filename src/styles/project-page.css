@@ -30,13 +30,13 @@
   font-family: var(--font-nav);
   font-size: 0.8125rem;
   color: var(--color-muted);
-  padding: 9rem 0 0;
+  padding: 7rem 0 0;
   transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .pp-back:hover { opacity: 0.55; }
 
 /* ── En-tête ────────────────────────────────────────────────────────────── */
-.pp-header { padding: 2.5rem 0 4rem; }
+.pp-header { padding: 2rem 0 2.5rem; }
 .pp-title {
   font-family: var(--font-grotesk);
   font-size: clamp(2.5rem, 6vw, 6rem);
@@ -62,7 +62,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.75rem 2rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 @media (width >= 48rem) {
   .pp-meta { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -99,27 +99,27 @@
    padding-block et non « padding: 6rem 0 » : la notation raccourcie remet la
    marge horizontale à zéro et écrase celle de .pp, que les sections portent
    aussi. Le contenu débordait alors du bord gauche de l'écran.              */
-.pp-section { padding-block: 6rem; }
+.pp-section { padding-block: 4rem; }
 @media (width >= 48rem) {
-  .pp-section { padding-block: 8rem; }
+  .pp-section { padding-block: 5.5rem; }
 }
 .pp-section-alt { background: var(--color-stone-light); }
-.pp-section-head { margin-bottom: 3.5rem; }
+.pp-section-head { margin-bottom: 2.5rem; }
 
 /* Deux colonnes : chapeau à gauche, corps à droite */
 .pp-two-col {
   display: grid;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 @media (width >= 64rem) {
   .pp-two-col {
     grid-template-columns: 5fr 7fr;
-    gap: 6rem;
+    gap: 4.5rem;
   }
 }
 
 /* Grille générique */
-.pp-grid { display: grid; gap: 2.5rem; }
+.pp-grid { display: grid; gap: 2rem; }
 @media (width >= 48rem) {
   .pp-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pp-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -147,13 +147,13 @@
   display: grid;
   gap: 2rem;
   align-items: center;
-  padding: 3.5rem 0;
+  padding: 2.5rem 0;
 }
 @media (width >= 64rem) {
   .pp-manip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 5rem;
-    padding: 5rem 0;
+    gap: 4rem;
+    padding: 3.5rem 0;
   }
   /* Un bloc sur deux inverse image et texte */
   .pp-manip:nth-child(even) .pp-manip-media { order: 2; }
@@ -179,7 +179,7 @@
 
 /* ── Pied de fiche ──────────────────────────────────────────────────────── */
 .pp-footer {
-  padding: 3rem 0 6rem;
+  padding: 2.5rem 0 4rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
