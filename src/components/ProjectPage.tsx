@@ -287,20 +287,38 @@ export function ProjectPage() {
         </div>
       </section>
 
-      {/* ── Galerie ───────────────────────────────────────────────────── */}
+      {/* ── Principe constructif ──────────────────────────────────────── */}
+      <section className="pp pp-section">
+        <div className="pp-inner">
+          <motion.div {...reveal} className="pp-two-col">
+            <div>
+              <p className="label pp-section-head">Principe constructif</p>
+              <p className="p-large">
+                Un seul chevalet, décliné en quatre configurations : panneau
+                seul, table d'atelier, îlot double avec ses bancs, et module
+                d'ombrage. Bois, toile et contreplaqué, assemblés pour être
+                démontés, transportés et remontés en quelques heures.
+              </p>
+            </div>
+            <figure className="pp-plan">
+              <img loading="lazy" decoding="async" src="/images/m2050/axonometrie.jpg"
+                   alt="Axonométries des quatre configurations de chevalet de l'exposition" />
+            </figure>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── Panorama de l'îlot ────────────────────────────────────────── */}
       <div className="pp">
         <div className="pp-inner">
-          <motion.div {...reveal} className="pp-grid pp-grid-3">
-            {[
-              { src: "/images/m2050/ilot-panneaux.jpg", alt: "Un îlot de l'exposition et ses panneaux pédagogiques" },
-              { src: "/images/m2050/carte.jpg", alt: "Carte peinte du littoral marseillais" },
-              { src: "/images/m2050/panneau-graphique.jpg", alt: "Panneau gravé expliquant la photosynthèse de la posidonie" },
-            ].map((g, i) => (
-              <figure key={i} className="pp-figure pp-figure-square">
-                <img loading="lazy" decoding="async" src={g.src} alt={g.alt} />
-              </figure>
-            ))}
-          </motion.div>
+          <motion.figure {...reveal} className="pp-figure pp-figure-pano">
+            <img loading="lazy" decoding="async" src="/images/m2050/posidonie-panorama.jpg"
+                 alt="L'îlot du Grand Dehors : panneau photo, atlas des espèces et herbier en volume" />
+          </motion.figure>
+          <p className="pp-caption">
+            L'îlot du Grand Dehors, du panneau photographique à l'atlas des espèces
+            et à l'herbier en volume, avec ses poissons à manipuler.
+          </p>
         </div>
       </div>
 

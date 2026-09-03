@@ -33,15 +33,12 @@ WANTED = {
     # Une valeur commençant par « / » est un chemin absolu ; sinon le fichier
     # est cherché par nom exact dans SRC.
     'vue-ensemble':      FIBOIS,                          # les îlots et leurs panneaux, en large
-    'ilot-panneaux':     'TINYLABS_EXPO_M2050.jpg',       # un îlot complet, de face
     'maison':            'TINYLABS_EXPO_M2050-17.jpg',    # façade du trois-fenêtres et son arbre
     'maison-detail':     'TINYLABS_EXPO_M2050-18.jpg',    # fenêtre illustrée, intérieur habité
     'rue':               'TINYLABS_EXPO_M2050-23.jpg',    # la rue, ses commerces et ses passants
     'ville':             'TINYLABS_EXPO_M2050-100.jpg',   # le plateau et ses modules, vu de dessus
     'posidonie':         'TINYLABS_EXPO_M2050-37.jpg',    # l'herbier de face, entier
     'posidonie-detail':  'TINYLABS_EXPO_M2050-30.jpg',    # un poisson seul sur le contreplaqué
-    'carte':             'TINYLABS_EXPO_M2050-67.jpg',    # carte peinte du littoral
-    'panneau-graphique': 'TINYLABS_EXPO_M2050-55.jpg',    # panneau gravé, photosynthèse de la posidonie
 }
 
 
