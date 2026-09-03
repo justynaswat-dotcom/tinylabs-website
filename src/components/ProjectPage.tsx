@@ -145,7 +145,7 @@ export function ProjectPage() {
       <div className="pp">
         <div className="pp-inner">
           <motion.figure {...reveal} className="pp-figure pp-figure-wide">
-            <img src="/images/m2050/vue-ensemble.jpg" fetchPriority="high" decoding="async" alt="Vue d'ensemble de l'exposition, les îlots et leurs panneaux" />
+            <img src="/images/m2050/vue-ensemble.jpg" fetchPriority="high" decoding="async" alt="Les îlots de l'exposition et leurs panneaux, montés dans la halle" />
           </motion.figure>
         </div>
       </div>
@@ -294,7 +294,7 @@ export function ProjectPage() {
             {[
               { src: "/images/m2050/ilot-panneaux.jpg", alt: "Un îlot de l'exposition et ses panneaux pédagogiques" },
               { src: "/images/m2050/carte.jpg", alt: "Carte peinte du littoral marseillais" },
-              { src: "/images/m2050/atelier.jpg", alt: "Fabrication des maquettes en atelier" },
+              { src: "/images/m2050/panneau-graphique.jpg", alt: "Panneau gravé expliquant la photosynthèse de la posidonie" },
             ].map((g, i) => (
               <figure key={i} className="pp-figure pp-figure-square">
                 <img loading="lazy" decoding="async" src={g.src} alt={g.alt} />

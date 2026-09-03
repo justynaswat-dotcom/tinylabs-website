@@ -19,26 +19,35 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(BASE, 'public', 'images', 'm2050')
 MAXW, Q = 1800, 82
 
+# Photo d'ouverture : elle vit dans le dossier d'images du projet Figma
+# d'origine, et non dans le reportage d'exposition.
+FIBOIS = os.path.expanduser(
+    '~/Documents/REPO_NOCODE/Minimalist Editorial Website/build/images/IMAGE_FIBOIS.jpg')
+
 # Nom de destination -> fragment du nom de fichier source.
 # Les noms de sortie décrivent le contenu : le composant les lit tels quels.
 WANTED = {
-    # Toutes tirées du reportage de l'exposition MONTÉE (EXPO_M250) : les
-    # dossiers MM_* sont des prises en atelier, où l'on voit le mobilier de
-    # bureau et un radiateur en arrière-plan.
-    'vue-ensemble':      'TINYLABS_EXPO_M2050-93.jpg',   # la salle, les îlots, une visiteuse
-    'ilot-panneaux':     'TINYLABS_EXPO_M2050.jpg',      # un îlot complet, de face
-    'maison':            'TINYLABS_EXPO_M2050-17.jpg',   # façade du trois-fenêtres et son arbre
-    'maison-detail':     'TINYLABS_EXPO_M2050-18.jpg',   # fenêtre illustrée, intérieur habité
-    'rue':               'TINYLABS_EXPO_M2050-23.jpg',   # la rue, ses commerces et ses passants
-    'ville':             'TINYLABS_EXPO_M2050-102.jpg',  # une main pose les modules du plateau
-    'posidonie':         'TINYLABS_EXPO_M2050-37.jpg',   # l'herbier de face, entier
-    'posidonie-detail':  'TINYLABS_EXPO_M2050-30.jpg',   # un poisson seul sur le contreplaqué
-    'carte':             'TINYLABS_EXPO_M2050-67.jpg',   # carte peinte du littoral
-    'atelier':           'TINYLABS_EXPO_M2050-69.jpg',   # fabrication en atelier
+    # Aucune photo ne doit montrer de visiteur ni de personne au travail :
+    # la fiche donne à voir le dispositif, pas son inauguration. Les figurines
+    # des maquettes, elles, font partie des objets exposés.
+    # Une valeur commençant par « / » est un chemin absolu ; sinon le fichier
+    # est cherché par nom exact dans SRC.
+    'vue-ensemble':      FIBOIS,                          # les îlots et leurs panneaux, en large
+    'ilot-panneaux':     'TINYLABS_EXPO_M2050.jpg',       # un îlot complet, de face
+    'maison':            'TINYLABS_EXPO_M2050-17.jpg',    # façade du trois-fenêtres et son arbre
+    'maison-detail':     'TINYLABS_EXPO_M2050-18.jpg',    # fenêtre illustrée, intérieur habité
+    'rue':               'TINYLABS_EXPO_M2050-23.jpg',    # la rue, ses commerces et ses passants
+    'ville':             'TINYLABS_EXPO_M2050-100.jpg',   # le plateau et ses modules, vu de dessus
+    'posidonie':         'TINYLABS_EXPO_M2050-37.jpg',    # l'herbier de face, entier
+    'posidonie-detail':  'TINYLABS_EXPO_M2050-30.jpg',    # un poisson seul sur le contreplaqué
+    'carte':             'TINYLABS_EXPO_M2050-67.jpg',    # carte peinte du littoral
+    'panneau-graphique': 'TINYLABS_EXPO_M2050-55.jpg',    # panneau gravé, photosynthèse de la posidonie
 }
 
 
-def find(fragment):   # nom de fichier exact
+def find(fragment):   # chemin absolu, ou nom de fichier exact dans SRC
+    if fragment.startswith('/'):
+        return fragment if os.path.exists(fragment) else None
     for root, _, files in os.walk(SRC):
         for f in files:
             if f == fragment and not f.startswith('._'):
