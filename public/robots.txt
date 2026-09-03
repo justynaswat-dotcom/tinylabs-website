@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tinylabs-horsechelle.netlify.app/sitemap.xml
+Sitemap: https://tinylabs.one/sitemap.xml

@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tinylabs-horsechelle.netlify.app/</loc>
+    <loc>https://tinylabs.one/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tinylabs-horsechelle.netlify.app/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://tinylabs-horsechelle.netlify.app/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://tinylabs-horsechelle.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tinylabs.one/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tinylabs.one/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tinylabs.one/"/>
   </url>
 </urlset>
