@@ -100,20 +100,21 @@ if src:
 else:
     print(f'  MANQUANT  {PANO}')
 
-# axonometrie.jpg : page 1 du PDF, sur le fond du site
+# axonometrie.svg : page 1 du PDF, convertie en VECTORIEL et non en bitmap.
+# Un dessin technique doit rester net à toutes les tailles ; pdftocairo
+# préserve les tracés. Les huit toiles d'ombrage sont en revanche des bitmaps
+# dans le PDF source : on les rééchantillonne, sans quoi elles pèsent à elles
+# seules 90 % du fichier pour un affichage dix fois plus petit.
 if os.path.exists(AXO_PDF):
-    subprocess.run(['sips', '-s', 'format', 'png', '--out', '/tmp/axo.png', AXO_PDF],
+    dst = os.path.join(OUT, 'axonometrie.svg')
+    subprocess.run(['pdftocairo', '-svg', '-f', '1', '-l', '1', AXO_PDF, dst],
                    capture_output=True)
-    im = Image.open('/tmp/axo.png').convert('RGBA')
-    fond = Image.new('RGBA', im.size, FOND + (255,))
-    fond.alpha_composite(im)
-    im = fond.convert('RGB')
-    im.thumbnail((MAXW, MAXW), Image.LANCZOS)
-    dst = os.path.join(OUT, 'axonometrie.jpg')
-    im.save(dst, 'JPEG', quality=88, optimize=True, progressive=True)
+    subprocess.run(['python3', os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                            'shrink_svg_rasters.py'), dst, '600'],
+                   capture_output=True)
     total_src += os.path.getsize(AXO_PDF); total_out += os.path.getsize(dst)
-    print(f'  {"axonometrie":<18} {os.path.getsize(AXO_PDF)/1e6:6.1f} Mo -> '
-          f'{os.path.getsize(dst)/1e3:6.0f} ko   {im.width}x{im.height}')
+    print(f'  {"axonometrie.svg":<18} {os.path.getsize(AXO_PDF)/1e6:6.1f} Mo -> '
+          f'{os.path.getsize(dst)/1e3:6.0f} ko   vectoriel')
 else:
     print(f'  MANQUANT  {AXO_PDF}')
 

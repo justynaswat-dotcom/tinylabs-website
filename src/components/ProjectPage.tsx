@@ -150,27 +150,6 @@ export function ProjectPage() {
         </div>
       </div>
 
-      {/* ── Principe constructif ──────────────────────────────────────── */}
-      <section className="pp pp-section">
-        <div className="pp-inner">
-          <motion.div {...reveal} className="pp-two-col">
-            <div>
-              <p className="label pp-section-head">Principe constructif</p>
-              <p className="p-large">
-                Un seul chevalet, décliné en quatre configurations : panneau
-                seul, table d'atelier, îlot double avec ses bancs, et module
-                d'ombrage. Bois, toile et contreplaqué, assemblés pour être
-                démontés, transportés et remontés en quelques heures.
-              </p>
-            </div>
-            <figure className="pp-plan">
-              <img loading="lazy" decoding="async" src="/images/m2050/axonometrie.jpg"
-                   alt="Axonométries des quatre configurations de chevalet de l'exposition" />
-            </figure>
-          </motion.div>
-        </div>
-      </section>
-
       {/* ── Le projet ─────────────────────────────────────────────────── */}
       <section className="pp pp-section">
         <div className="pp-inner">
@@ -206,6 +185,27 @@ export function ProjectPage() {
                 d'agir, ensemble.
               </p>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── Principe constructif ──────────────────────────────────────── */}
+      <section className="pp pp-section">
+        <div className="pp-inner">
+          <motion.div {...reveal} className="pp-two-col">
+            <div>
+              <p className="label pp-section-head">Principe constructif</p>
+              <p className="p-large">
+                Un seul chevalet, décliné en quatre configurations : panneau
+                seul, table d'atelier, îlot double avec ses bancs, et module
+                d'ombrage. Bois, toile et contreplaqué, assemblés pour être
+                démontés, transportés et remontés en quelques heures.
+              </p>
+            </div>
+            <figure className="pp-plan">
+              <img loading="lazy" decoding="async" src="/images/m2050/axonometrie.svg"
+                   alt="Axonométries des quatre configurations de chevalet de l'exposition" />
+            </figure>
           </motion.div>
         </div>
       </section>
