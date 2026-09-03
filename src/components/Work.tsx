@@ -15,15 +15,19 @@ const projectImages = [
 
 const typologies = ["All", "Research", "Objects", "Spatial", "Consulting"];
 
+// ⚠️ Tableau positionnel : chaque entrée correspond au projet de MÊME INDEX
+// dans t.work.projects (translations.ts). Réordonner ou insérer un projet
+// là-bas décale toutes les typologies et toutes les images. Les commentaires
+// ci-dessous servent de garde-fou.
 const projectTypologies = [
-  "Research",
-  "Research",
-  "Spatial",
-  "Consulting",
-  "Spatial",
-  "Spatial",
-  "Objects",
-  "Spatial",
+  "Research",   // 0 Systemic Forms
+  "Research",   // 1 Material Archives
+  "Spatial",    // 2 Scale & Proportion
+  "Consulting", // 3 Studio Practice
+  "Spatial",    // 4 Exhibition M2050
+  "Objects",    // 5 Maquette Posidonie
+  "Objects",    // 6 Maison Modèle
+  "Spatial",    // 7 La Rue
 ];
 
 export function Work() {
