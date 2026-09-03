@@ -52,7 +52,7 @@ export const translations = {
         {
           title: "Exhibition M2050",
           category: "Spatial & Research",
-          year: "2024",
+          year: "2025",
           description: "An exhibition exploring the Mediterranean futures of 2050, making ecological and territorial scenarios visible, navigable, and actionable for diverse publics."
         },
         {
@@ -164,7 +164,7 @@ export const translations = {
         {
           title: "Exposition M2050",
           category: "Spatial & Recherche",
-          year: "2024",
+          year: "2025",
           description: "Une exposition explorant les futurs méditerranéens de 2050, rendant les scénarios écologiques et territoriaux visibles, navigables et actionnables pour des publics diversifiés."
         },
         {
@@ -276,7 +276,7 @@ export const translations = {
         {
           title: "Wystawa M2050",
           category: "Przestrzeń & Badania",
-          year: "2024",
+          year: "2025",
           description: "Wystawa badająca śródziemnomorskie przyszłości 2050, czyniąca scenariusze ekologiczne i terytorialne widocznymi, nawigowalnymi i możliwymi do działania dla różnorodnych odbiorców."
         },
         {
