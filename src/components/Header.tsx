@@ -22,7 +22,7 @@ export function Header() {
   };
 
   const languages: Language[] = ['en', 'fr', 'pl'];
-  const navStyle = { fontFamily: "'DM Sans', sans-serif", fontWeight: 400 };
+  const navStyle = { fontFamily: "var(--font-nav)", fontWeight: 400 };
 
   return (
     <>

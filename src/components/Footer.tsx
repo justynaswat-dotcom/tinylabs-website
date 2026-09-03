@@ -65,8 +65,8 @@ export function Footer() {
           </div>
 
           <div className="pt-10 border-t border-[var(--color-border)] flex flex-col md:flex-row justify-between items-baseline gap-6">
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.8125rem", opacity: 0.5 }}>{t.footer.copyright}</p>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.8125rem", opacity: 0.5 }}>{t.footer.tagline}</p>
+            <p style={{ fontFamily: "var(--font-nav)", fontSize: "0.8125rem", opacity: 0.5 }}>{t.footer.copyright}</p>
+            <p style={{ fontFamily: "var(--font-nav)", fontSize: "0.8125rem", opacity: 0.5 }}>{t.footer.tagline}</p>
           </div>
         </motion.div>
       </div>

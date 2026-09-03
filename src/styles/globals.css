@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @source "../**/*.{ts,tsx,js,jsx}";
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Inter:wght@300;400&display=swap');
+/* Polices auto-hébergées, importées depuis src/main.tsx (@fontsource-variable).
+   Ne PAS remettre d'@import fonts.googleapis.com — RGPD. */
 
 @theme {
   --color-background: #f7f5f2;
@@ -9,9 +10,14 @@
   --color-border: #e2ddd8;
   --color-stone-light: #ede9e4;
 
-  --font-sans: 'Univers', 'Univers LT Std', ui-sans-serif, system-ui, sans-serif;
-  --font-grotesk: 'Syne', ui-sans-serif, system-ui, sans-serif;
-  --font-serif: 'Univers', 'Univers LT Std', ui-sans-serif, system-ui, sans-serif;
+  /* ⚠️ Ce fichier est la SOURCE Tailwind ; le site charge la version déjà
+     compilée (src/index.css), la seule importée par main.tsx. Garder les deux
+     synchronisés — sinon un futur passage à une compilation Tailwind réelle
+     ferait resurgir les anciennes polices. */
+  --font-sans: 'Inter Variable', 'Inter', 'Univers', 'Univers LT Std', ui-sans-serif, system-ui, sans-serif;
+  --font-grotesk: 'Syne Variable', 'Syne', ui-sans-serif, system-ui, sans-serif;
+  --font-nav: 'DM Sans Variable', 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Inter Variable', 'Inter', 'Univers', 'Univers LT Std', ui-sans-serif, system-ui, sans-serif;
 }
 
 * {
@@ -63,7 +69,7 @@ h3 {
   margin: 0;
 }
 
-/* Body — DM Sans */
+/* Body — var(--font-sans) = Inter */
 p {
   font-family: var(--font-sans);
   font-size: clamp(1rem, 1.3vw, 1.1875rem);
