@@ -51,18 +51,18 @@
   font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.02em;
-  color: var(--color-muted);
   margin: 0.25rem 0 0;
 }
 
-/* ── Métadonnées ────────────────────────────────────────────────────────── */
+/* ── Métadonnées ──────────────────────────────────────────────────────────
+   Placées sous l'image d'ouverture : le titre et son accroche gardent la
+   première page pour eux seuls, les informations de production viennent
+   après ce qu'il y a à voir.                                              */
 .pp-meta {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.75rem 2rem;
-  /* Sans filet de séparation : le blanc suffit à détacher les métadonnées
-     du titre, et la ligne coupait la page en deux juste sous l'accroche. */
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
 }
 @media (width >= 48rem) {
   .pp-meta { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -127,7 +127,7 @@
 }
 
 /* ── Chiffres clés ──────────────────────────────────────────────────────── */
-.pp-stat { border-top: 1px solid var(--color-border); padding-top: 1.25rem; }
+.pp-stat { padding-top: 1.25rem; }
 .pp-stat-number {
   font-family: var(--font-grotesk);
   font-size: clamp(2.25rem, 4vw, 3.5rem);
@@ -148,7 +148,6 @@
   gap: 2rem;
   align-items: center;
   padding: 3.5rem 0;
-  border-top: 1px solid var(--color-border);
 }
 @media (width >= 64rem) {
   .pp-manip {
@@ -169,7 +168,6 @@
 
 /* ── Liste catalogue ────────────────────────────────────────────────────── */
 .pp-item {
-  border-top: 1px solid var(--color-border);
   padding-top: 1.25rem;
 }
 .pp-item h4 {
@@ -181,7 +179,6 @@
 
 /* ── Pied de fiche ──────────────────────────────────────────────────────── */
 .pp-footer {
-  border-top: 1px solid var(--color-border);
   padding: 3rem 0 6rem;
   display: flex;
   flex-wrap: wrap;

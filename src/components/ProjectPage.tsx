@@ -128,15 +128,6 @@ export function ProjectPage() {
           <motion.div {...reveal} className="pp-header">
             <h1 className="pp-title">Marseille 2050</h1>
             <p className="pp-subtitle">Ici, ça chauffe</p>
-
-            <div className="pp-meta">
-              {meta.map((m) => (
-                <div key={m.k}>
-                  <p className="label">{m.k}</p>
-                  <p className="pp-meta-value">{m.v}</p>
-                </div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </header>
@@ -147,6 +138,15 @@ export function ProjectPage() {
           <motion.figure {...reveal} className="pp-figure pp-figure-wide">
             <img src="/images/m2050/vue-ensemble.jpg" fetchPriority="high" decoding="async" alt="Les îlots de l'exposition et leurs panneaux, montés dans la halle" />
           </motion.figure>
+
+          <motion.div {...reveal} className="pp-meta">
+            {meta.map((m) => (
+              <div key={m.k}>
+                <p className="label">{m.k}</p>
+                <p className="pp-meta-value">{m.v}</p>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
 
