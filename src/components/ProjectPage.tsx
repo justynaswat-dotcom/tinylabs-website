@@ -126,7 +126,6 @@ export function ProjectPage() {
           <Link to="/#work" className="pp-back">← Travaux</Link>
 
           <motion.div {...reveal} className="pp-header">
-            <p className="label">Exposition · Spatial · 2025</p>
             <h1 className="pp-title">Marseille 2050</h1>
             <p className="pp-subtitle">Ici, ça chauffe</p>
 
