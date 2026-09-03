@@ -22,23 +22,26 @@ MAXW, Q = 1800, 82
 # Nom de destination -> fragment du nom de fichier source.
 # Les noms de sortie décrivent le contenu : le composant les lit tels quels.
 WANTED = {
-    'vue-ensemble':      'EXPO_M2050-2.jpg',    # salle, plusieurs îlots
-    'ilot-panneaux':     'EXPO_M2050-6.jpg',    # un îlot complet avec ses panneaux
-    'maison':            'MM_Maison-81.jpg',    # maquette du trois-fenêtres
-    'maison-detail':     'MM_Maison-24.jpg',    # fenêtre illustrée, gros plan
-    'rue':               'MM_Rue-12.jpg',       # mains posant les modules de la rue
-    'ville':             'EXPO_M2050-101.jpg',  # mains sur le plateau de la ville
-    'posidonie':         'EXPO_M2050-52.jpg',   # herbier, vue d'ensemble
-    'posidonie-detail':  'EXPO_M2050-43.jpg',   # poissons dans l'herbier
-    'carte':             'EXPO_M2050-67.jpg',   # carte du littoral marseillais
-    'atelier':           'EXPO_M2050-69.jpg',   # fabrication en atelier
+    # Toutes tirées du reportage de l'exposition MONTÉE (EXPO_M250) : les
+    # dossiers MM_* sont des prises en atelier, où l'on voit le mobilier de
+    # bureau et un radiateur en arrière-plan.
+    'vue-ensemble':      'TINYLABS_EXPO_M2050-93.jpg',   # la salle, les îlots, une visiteuse
+    'ilot-panneaux':     'TINYLABS_EXPO_M2050.jpg',      # un îlot complet, de face
+    'maison':            'TINYLABS_EXPO_M2050-17.jpg',   # façade du trois-fenêtres et son arbre
+    'maison-detail':     'TINYLABS_EXPO_M2050-18.jpg',   # fenêtre illustrée, intérieur habité
+    'rue':               'TINYLABS_EXPO_M2050-23.jpg',   # la rue, ses commerces et ses passants
+    'ville':             'TINYLABS_EXPO_M2050-102.jpg',  # une main pose les modules du plateau
+    'posidonie':         'TINYLABS_EXPO_M2050-37.jpg',   # l'herbier de face, entier
+    'posidonie-detail':  'TINYLABS_EXPO_M2050-30.jpg',   # un poisson seul sur le contreplaqué
+    'carte':             'TINYLABS_EXPO_M2050-67.jpg',   # carte peinte du littoral
+    'atelier':           'TINYLABS_EXPO_M2050-69.jpg',   # fabrication en atelier
 }
 
 
-def find(fragment):
+def find(fragment):   # nom de fichier exact
     for root, _, files in os.walk(SRC):
         for f in files:
-            if f.endswith(fragment) and not f.startswith('._'):
+            if f == fragment and not f.startswith('._'):
                 return os.path.join(root, f)
     return None
 
