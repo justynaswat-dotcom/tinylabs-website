@@ -204,3 +204,17 @@
   display: block;
   background: var(--color-background);
 }
+
+/* ── Distinction et exposition ─────────────────────────────────────────── */
+.pp-prix { align-items: center; }
+.pp-logo img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+}
+@media (width >= 64rem) {
+  /* Le logo se cale à droite, face au texte. */
+  .pp-logo { justify-self: end; }
+  .pp-logo img { max-width: 360px; }
+}

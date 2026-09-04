@@ -308,6 +308,30 @@ export function ProjectPage() {
         </div>
       </section>
 
+      {/* ── Distinction et exposition ─────────────────────────────────── */}
+      <section className="pp pp-section pp-section-alt">
+        <div className="pp-inner">
+          <motion.div {...reveal} className="pp-two-col pp-prix">
+            <div>
+              <p className="label pp-section-head">Distinction</p>
+              <p className="p-large">
+                Lauréat francilien de l'appel à projets <em>Bois Français &amp; Design</em>,
+                porté par le réseau Fibois France avec Fibois Île-de-France.
+              </p>
+              <p style={{ marginTop: "1.5rem" }}>
+                Le dispositif est exposé <strong>du 10 au 19 septembre 2026</strong> dans le
+                cadre de la Paris Design Week, à la Bibliothèque Historique de la Ville
+                de Paris, 24 rue Pavée, 75004 Paris.
+              </p>
+            </div>
+            <figure className="pp-logo">
+              <img loading="lazy" decoding="async" src="/images/m2050/prix-pdw.png"
+                   alt="Paris Design Week, 10 au 19 septembre 2026, Maison &amp; Objet" />
+            </figure>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── Pied de fiche ─────────────────────────────────────────────── */}
       <div className="pp" style={{ marginTop: "3.5rem" }}>
         <div className="pp-inner">
