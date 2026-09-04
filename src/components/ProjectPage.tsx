@@ -297,6 +297,11 @@ export function ProjectPage() {
               en quartier.
             </h2>
           </motion.div>
+          <motion.figure {...reveal} className="pp-figure pp-figure-wide" style={{ marginBottom: "2.5rem" }}>
+            <img loading="lazy" decoding="async" src="/images/m2050/scenographie-rendu.jpg"
+                 alt="Vue d'implantation : quatre îlots, l'agora et le véhicule, occupés par le public" />
+          </motion.figure>
+
           <motion.div {...reveal} className="pp-grid pp-grid-3">
             {catalogue.map((c) => (
               <div key={c.t} className="pp-item">
@@ -307,6 +312,22 @@ export function ProjectPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* ── Fabrication ───────────────────────────────────────────────── */}
+      <div className="pp">
+        <div className="pp-inner">
+          <motion.div {...reveal} className="pp-grid pp-grid-2">
+            <figure className="pp-figure pp-figure-tall">
+              <img loading="lazy" decoding="async" src="/images/m2050/composants-maison.jpg"
+                   alt="Façades de la maquette de la maison, découpées et posées à plat" />
+            </figure>
+            <figure className="pp-figure pp-figure-tall">
+              <img loading="lazy" decoding="async" src="/images/m2050/poisson-planche.jpg"
+                   alt="Poisson découpé dans le contreplaqué, avec son nom d'espèce gravé" />
+            </figure>
+          </motion.div>
+        </div>
+      </div>
 
       {/* ── Distinction et exposition ─────────────────────────────────── */}
       <section className="pp pp-section pp-section-alt">
