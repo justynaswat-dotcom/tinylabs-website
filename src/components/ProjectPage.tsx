@@ -326,12 +326,12 @@ export function ProjectPage() {
         <div className="pp-inner">
           <motion.div {...reveal} className="pp-grid pp-grid-3 pp-galerie">
             {[
-              { src: "composants-maison", alt: "Façades de la maquette de la maison, découpées et posées à plat" },
-              { src: "galerie-maison",    alt: "La maquette de la maison sur son chevalet dans l'exposition" },
-              { src: "galerie-facades",   alt: "Panneaux de façade en kit, prêts à être assemblés" },
-              { src: "galerie-rue",       alt: "La rue au niveau du sol, ses passants et ses commerces" },
-              { src: "poisson-planche",   alt: "Poisson découpé dans le contreplaqué, son nom d'espèce gravé" },
-              { src: "galerie-herbier",   alt: "Oursin et coquillage parmi les herbes de l'herbier" },
+              { src: "detail-portique",   alt: "Le chevalet vu de face, à travers son triangle porteur" },
+              { src: "detail-assemblage", alt: "Tenon fourchu : l'assemblage bois d'un montant" },
+              { src: "detail-module",     alt: "Un module complet, son chevalet et ses deux bancs" },
+              { src: "detail-poutre",     alt: "Poutres empilées et tablette de polycarbonate" },
+              { src: "detail-rangement",  alt: "Les panneaux rangés à plat sous la tablette" },
+              { src: "detail-cadre",      alt: "Le portique cadrant un panneau de l'exposition" },
             ].map((g) => (
               <figure key={g.src} className="pp-figure pp-figure-square">
                 <img loading="lazy" decoding="async" src={`/images/m2050/${g.src}.jpg`} alt={g.alt} />
