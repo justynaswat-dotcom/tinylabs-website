@@ -189,6 +189,19 @@ export function ProjectPage() {
         </div>
       </section>
 
+      {/* ── Implantation ──────────────────────────────────────────────── */}
+      <div className="pp">
+        <div className="pp-inner">
+          <motion.figure {...reveal} className="pp-figure pp-figure-wide">
+            <img loading="lazy" decoding="async" src="/images/m2050/scenographie-rendu.jpg"
+                 alt="Vue d'implantation : quatre îlots, l'agora et le véhicule, occupés par le public" />
+          </motion.figure>
+          <p className="pp-caption">
+            Quatre îlots et une agora, autour du véhicule qui transporte l'exposition.
+          </p>
+        </div>
+      </div>
+
       {/* ── Principe constructif ──────────────────────────────────────── */}
       <section className="pp pp-section">
         <div className="pp-inner">
@@ -297,11 +310,6 @@ export function ProjectPage() {
               en quartier.
             </h2>
           </motion.div>
-          <motion.figure {...reveal} className="pp-figure pp-figure-wide" style={{ marginBottom: "2.5rem" }}>
-            <img loading="lazy" decoding="async" src="/images/m2050/scenographie-rendu.jpg"
-                 alt="Vue d'implantation : quatre îlots, l'agora et le véhicule, occupés par le public" />
-          </motion.figure>
-
           <motion.div {...reveal} className="pp-grid pp-grid-3">
             {catalogue.map((c) => (
               <div key={c.t} className="pp-item">
@@ -313,21 +321,25 @@ export function ProjectPage() {
         </div>
       </section>
 
-      {/* ── Fabrication ───────────────────────────────────────────────── */}
-      <div className="pp">
+      {/* ── Galerie ───────────────────────────────────────────────────── */}
+      <section className="pp pp-section">
         <div className="pp-inner">
-          <motion.div {...reveal} className="pp-grid pp-grid-2">
-            <figure className="pp-figure pp-figure-tall">
-              <img loading="lazy" decoding="async" src="/images/m2050/composants-maison.jpg"
-                   alt="Façades de la maquette de la maison, découpées et posées à plat" />
-            </figure>
-            <figure className="pp-figure pp-figure-tall">
-              <img loading="lazy" decoding="async" src="/images/m2050/poisson-planche.jpg"
-                   alt="Poisson découpé dans le contreplaqué, avec son nom d'espèce gravé" />
-            </figure>
+          <motion.div {...reveal} className="pp-grid pp-grid-3 pp-galerie">
+            {[
+              { src: "composants-maison", alt: "Façades de la maquette de la maison, découpées et posées à plat" },
+              { src: "galerie-maison",    alt: "La maquette de la maison sur son chevalet dans l'exposition" },
+              { src: "galerie-facades",   alt: "Panneaux de façade en kit, prêts à être assemblés" },
+              { src: "galerie-rue",       alt: "La rue au niveau du sol, ses passants et ses commerces" },
+              { src: "poisson-planche",   alt: "Poisson découpé dans le contreplaqué, son nom d'espèce gravé" },
+              { src: "galerie-herbier",   alt: "Oursin et coquillage parmi les herbes de l'herbier" },
+            ].map((g) => (
+              <figure key={g.src} className="pp-figure pp-figure-square">
+                <img loading="lazy" decoding="async" src={`/images/m2050/${g.src}.jpg`} alt={g.alt} />
+              </figure>
+            ))}
           </motion.div>
         </div>
-      </div>
+      </section>
 
       {/* ── Distinction et exposition ─────────────────────────────────── */}
       <section className="pp pp-section pp-section-alt">

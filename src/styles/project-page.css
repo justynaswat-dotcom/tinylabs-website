@@ -218,3 +218,6 @@
   .pp-logo { justify-self: end; }
   .pp-logo img { max-width: 360px; }
 }
+
+/* Galerie de fin : vignettes un peu plus resserrées que les grilles de texte. */
+.pp-galerie { gap: 1.25rem; }
