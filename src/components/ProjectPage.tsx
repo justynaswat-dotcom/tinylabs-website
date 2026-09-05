@@ -326,12 +326,12 @@ export function ProjectPage() {
         <div className="pp-inner">
           <motion.div {...reveal} className="pp-grid pp-grid-3 pp-galerie">
             {[
+              { src: "detail-module",     alt: "Un module entier, chevalet, tablettes et bancs" },
+              { src: "detail-pignon",     alt: "Le pignon de contreplaqué gravé « Ici, c'est Marseille »" },
               { src: "detail-portique",   alt: "Le chevalet vu de face, à travers son triangle porteur" },
+              { src: "detail-profil",     alt: "L'îlot de profil : les tablettes étagées et leurs bancs" },
               { src: "detail-assemblage", alt: "Tenon fourchu : l'assemblage bois d'un montant" },
-              { src: "detail-module",     alt: "Un module complet, son chevalet et ses deux bancs" },
-              { src: "detail-poutre",     alt: "Poutres empilées et tablette de polycarbonate" },
-              { src: "detail-rangement",  alt: "Les panneaux rangés à plat sous la tablette" },
-              { src: "detail-cadre",      alt: "Le portique cadrant un panneau de l'exposition" },
+              { src: "detail-plan",       alt: "Le plan de travail vu de dessus, panneau et cartes à plat" },
             ].map((g) => (
               <figure key={g.src} className="pp-figure pp-figure-square">
                 <img loading="lazy" decoding="async" src={`/images/m2050/${g.src}.jpg`} alt={g.alt} />
