@@ -326,12 +326,12 @@ export function ProjectPage() {
         <div className="pp-inner">
           <motion.div {...reveal} className="pp-grid pp-grid-3 pp-galerie">
             {[
-              { src: "detail-module",     alt: "Un module entier, chevalet, tablettes et bancs" },
-              { src: "detail-pignon",     alt: "Le pignon de contreplaqué gravé « Ici, c'est Marseille »" },
-              { src: "detail-portique",   alt: "Le chevalet vu de face, à travers son triangle porteur" },
-              { src: "detail-profil",     alt: "L'îlot de profil : les tablettes étagées et leurs bancs" },
-              { src: "detail-assemblage", alt: "Tenon fourchu : l'assemblage bois d'un montant" },
-              { src: "detail-plan",       alt: "Le plan de travail vu de dessus, panneau et cartes à plat" },
+              { src: "gal-ilot",      alt: "Un îlot entier et ses trois panneaux, sous sa tablette d'ombrage" },
+              { src: "gal-interieur", alt: "L'intérieur de la maquette de la maison, la lumière aux fenêtres" },
+              { src: "gal-carte",     alt: "Le littoral marseillais peint sur le contreplaqué" },
+              { src: "gal-rue",       alt: "La rue et ses figurines, vue depuis le trottoir" },
+              { src: "gal-poisson",   alt: "Un poisson découpé dans le contreplaqué, peint à la main" },
+              { src: "gal-chant",     alt: "Le chant du contreplaqué et l'ossature qui le porte" },
             ].map((g) => (
               <figure key={g.src} className="pp-figure pp-figure-square">
                 <img loading="lazy" decoding="async" src={`/images/m2050/${g.src}.jpg`} alt={g.alt} />
