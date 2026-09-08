@@ -39,7 +39,7 @@ export function ProjectCard({ title, category, year, description, imageUrl, inde
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 1, delay: index * 0.15, ease: [0.4, 0, 0.2, 1] }}
-      className="group"
+      className={href ? "group pc-link" : "group pc-inert"}
     >
       {wrap(<>
       <div ref={ref} className="relative aspect-[4/5] overflow-hidden bg-stone-200 mb-6">
@@ -54,7 +54,7 @@ export function ProjectCard({ title, category, year, description, imageUrl, inde
           <ImageWithFallback
             src={imageUrl}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            className="w-full h-full object-cover"
             onLoad={() => setImageLoaded(true)}
             style={{
               opacity: imageLoaded ? 1 : 0,
@@ -70,7 +70,10 @@ export function ProjectCard({ title, category, year, description, imageUrl, inde
           <p className="label shrink-0">{year}</p>
         </div>
 
-        <h3>{title}</h3>
+        <h3 className="pc-title">
+          {title}
+          {href && <span className="pc-arrow" aria-hidden="true">↗</span>}
+        </h3>
 
         <p className="text-[var(--color-muted)] pt-1">{description}</p>
       </div>

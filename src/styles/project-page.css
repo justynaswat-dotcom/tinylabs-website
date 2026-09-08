@@ -30,12 +30,14 @@
   font-family: var(--font-nav);
   font-size: 0.8125rem;
   color: var(--color-muted);
-  padding: 7rem 0 0;
   transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .pp-back:hover { opacity: 0.55; }
 
 /* ── En-tête ────────────────────────────────────────────────────────────── */
+/* Le décalage haut appartient à l'en-tête, pas au lien de retour :
+   une marge portée par un inline-flex casse dès que le lien change. */
+.pp-top { padding-top: 7rem; }
 .pp-header { padding: 2rem 0 2.5rem; }
 .pp-title {
   font-family: var(--font-grotesk);
@@ -118,6 +120,23 @@
   }
 }
 
+/* ── Justesse ─────────────────────────────────────────────────────────────
+   Le conteneur monte à 1800 px : sans limite, la colonne de prose atteignait
+   95 caractères par ligne, et les blocs de manip 86. Au-delà de 75 l'œil perd
+   la ligne de retour. On plafonne en ch, unité indexée sur la police, plutôt
+   qu'en pixels : la mesure reste juste si la taille du corps change.
+
+   60ch et non 75 : l'unité ch vaut la largeur du zéro, plus large que la
+   moyenne des lettres. 60ch rend environ 72 caractères réels, soit le haut
+   de la fourchette de lisibilité. Mesuré, pas estimé.                       */
+.pp-two-col p,
+.pp-manip p,
+.pp-caption { max-width: 60ch; }
+
+/* Les titres de section supportent une mesure plus large : ils se lisent
+   d'un seul regard, pas ligne à ligne. */
+.pp-section-head h2 { max-width: 22ch; }
+
 /* Grille générique */
 .pp-grid { display: grid; gap: 2rem; }
 @media (width >= 48rem) {
@@ -127,7 +146,7 @@
 }
 
 /* ── Chiffres clés ──────────────────────────────────────────────────────── */
-.pp-stat { padding-top: 1.25rem; }
+.pp-stat { }
 .pp-stat-number {
   font-family: var(--font-grotesk);
   font-size: clamp(2.25rem, 4vw, 3.5rem);
@@ -167,9 +186,7 @@
 .pp-manip h3 { margin-bottom: 1rem; }
 
 /* ── Liste catalogue ────────────────────────────────────────────────────── */
-.pp-item {
-  padding-top: 1.25rem;
-}
+.pp-item { }
 .pp-item h4 {
   font-family: var(--font-grotesk);
   font-size: 1rem;
@@ -221,3 +238,59 @@
 
 /* Galerie de fin : vignettes un peu plus resserrées que les grilles de texte. */
 .pp-galerie { gap: 1.25rem; }
+
+/* ── Réaction des images ──────────────────────────────────────────────────
+   Un très léger agrandissement au survol, ni zoom ni ombre : la page est
+   sobre, l'image doit seulement accuser réception du curseur. Le cadre
+   restant fixe, c'est le contenu qui respire à l'intérieur.                */
+.pp-figure img {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pp-figure:hover img { transform: scale(1.015); }
+
+@media (prefers-reduced-motion: reduce) {
+  .pp-figure img { transition: none; }
+  .pp-figure:hover img { transform: none; }
+}
+
+/* ── Le pied de fiche se distingue du corps ───────────────────────────── */
+.pp-footer { color: var(--color-muted); }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   CARTES DE PROJET (page d'accueil)
+
+   Sur huit projets, un seul a une fiche. Les huit réagissaient pourtant au
+   survol de la même façon : l'image s'agrandissait, le curseur restait une
+   flèche, et le clic ne menait nulle part. Sept promesses non tenues.
+
+   Le survol est désormais réservé aux cartes qui mènent quelque part, et
+   celles-ci portent un chevron qui apparaît à l'approche.
+   ───────────────────────────────────────────────────────────────────────── */
+.pc-link img {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pc-link:hover img { transform: scale(1.04); }
+
+.pc-title { display: flex; align-items: baseline; gap: 0.5rem; }
+
+.pc-arrow {
+  font-size: 0.7em;
+  color: var(--color-muted);
+  opacity: 0;
+  transform: translate(-0.35rem, 0.2rem);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pc-link:hover .pc-arrow,
+.pc-link:focus-within .pc-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Le chevron reste visible sans survol quand l'animation est déconseillée,
+   sinon l'information disparaît complètement pour ces visiteurs. */
+@media (prefers-reduced-motion: reduce) {
+  .pc-link img, .pc-arrow { transition: none; }
+  .pc-link:hover img { transform: none; }
+  .pc-arrow { opacity: 1; transform: none; }
+}

@@ -121,7 +121,7 @@ export function ProjectPage() {
   return (
     <article>
       {/* ── En-tête ───────────────────────────────────────────────────── */}
-      <header className="pp">
+      <header className="pp pp-top">
         <div className="pp-inner">
           <Link to="/#work" className="pp-back">← Travaux</Link>
 
