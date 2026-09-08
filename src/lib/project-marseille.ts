@@ -114,7 +114,7 @@ const fr = {
 
   gallery: {
     alts: [
-      "Un chevalet nu dans la halle, bancs, tablette et couverture",
+      "Un îlot complet dans la halle, ses panneaux montés sous la couverture",
       "Un îlot équipé de ses panneaux, sous sa couverture",
       "Le chant d'un panneau, la ferme et la couverture au-dessus",
       "La rangée de chevalets vue de face",
@@ -244,7 +244,7 @@ const en: ProjectContent = {
 
   gallery: {
     alts: [
-      "A bare trestle in the hall — benches, shelf and canopy",
+      "A complete island in the hall, its panels mounted under the canopy",
       "An island fitted with its panels, under its canopy",
       "The edge of a panel, the truss and the canopy above",
       "The row of trestles seen head-on",

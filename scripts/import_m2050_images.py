@@ -71,7 +71,7 @@ WANTED = {
     # la couverture translucide. Une première série mêlait des détails
     # graphiques qui racontaient le contenu de l'exposition plutôt que sa
     # construction ; une seconde tenait un gros plan d'assemblage, écarté.
-    'gal-halle':       'TINYLABS_EXPO_M2050-3.jpg',    # un chevalet nu dans la halle, structure entière
+    'gal-halle':       'TINYLABS_EXPO_M2050-16.jpg',   # un îlot complet dans la halle, panneaux montés
     'gal-ilot':        'TINYLABS_EXPO_M2050-11.jpg',   # un îlot équipé sous sa couverture
     'gal-structure':   'DSCF1496.jpg',                 # le chant du panneau, la ferme et la couverture
     'gal-rangee':      'Untitled-5.jpg',               # la rangée de face, presque une élévation
