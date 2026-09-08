@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
    FICHE PROJET · MARSEILLE 2050, « Ici, ça chauffe »
 
    Textes repris du dossier de brochure Marseille 2050 (chapeau, texte long,
-   méthode en quatre volets, intro d'exposition, scénographie, quatre manips,
+   méthode en quatre volets, intro d'exposition, scénographie, quatre interactions,
    catalogue). Aucun contenu inventé : ce qui n'était pas documenté est
    signalé plus bas plutôt que comblé.
 
@@ -29,7 +29,7 @@ const meta = [
 const stats = [
   { n: "5", l: "escales, de Soi au Grand Dehors" },
   { n: "8", l: "thèmes, de la chaleur à la santé" },
-  { n: "4", l: "manips à manipuler" },
+  { n: "4", l: "interactions, de la maison à la mer" },
   { n: "1", l: "véhicule qui déplace l'exposition" },
 ];
 
@@ -52,7 +52,7 @@ const methode = [
   },
 ];
 
-const manips = [
+const interactions = [
   {
     t: "La Maison",
     vue: "Façade du trois-fenêtres et son arbre, dans l'exposition",
@@ -278,7 +278,7 @@ export function ProjectPage() {
         </div>
       </div>
 
-      {/* ── Les manips ────────────────────────────────────────────────── */}
+      {/* ── Les interactions ────────────────────────────────────────────────── */}
       <section className="pp pp-section pp-section-alt">
         <div className="pp-inner">
           <motion.div {...reveal} className="pp-section-head">
@@ -289,17 +289,17 @@ export function ProjectPage() {
             </h2>
             <p className="pp-parcours">
               Soi · la Maison · la Rue · la Ville · le Grand Dehors —
-              <span> quatre d'entre elles se manipulent.</span>
+              <span> quatre d'entre elles portent une interaction.</span>
             </p>
           </motion.div>
 
-          {manips.map((m, i) => (
-            <motion.div {...reveal} key={m.t} className="pp-manip">
-              <figure className="pp-figure pp-figure-square pp-manip-media">
+          {interactions.map((m, i) => (
+            <motion.div {...reveal} key={m.t} className="pp-inter">
+              <figure className="pp-figure pp-figure-square pp-inter-media">
                 <img loading="lazy" decoding="async" src={m.img} alt={m.vue} />
               </figure>
               <div>
-                <p className="pp-manip-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</p>
+                <p className="pp-inter-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</p>
                 <h3>{m.t}</h3>
                 <p>{m.d}</p>
               </div>
@@ -370,6 +370,41 @@ export function ProjectPage() {
               <img loading="lazy" decoding="async" src="/images/m2050/prix-pdw.png"
                    alt="Paris Design Week, 10 au 19 septembre 2026, Maison &amp; Objet" />
             </figure>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── Crédits ───────────────────────────────────────────────────── */}
+      <section className="pp pp-section">
+        <div className="pp-inner">
+          <motion.div {...reveal}>
+            <p className="label pp-section-head">Crédits</p>
+            <dl className="pp-credits">
+              <dt className="label">Équipe</dt>
+              <dd>
+                {/* Chaque nom est rendu insécable : un prénom ne doit pas se
+                    détacher de son nom en fin de ligne. L'espace insécable qui
+                    précède la puce l'empêche par ailleurs d'ouvrir une ligne. */}
+                {["Juliette Eugénie", "Julien Dossier", "Julie Vandal",
+                  "Stéphanie Beuf", "Mathieu Grosche", "Louise Viollet Deval",
+                  "Artemis Ingénieur"]
+                  .map((n) => n.replace(/ /g, "\u00A0"))
+                  .join("\u00A0· ")}
+              </dd>
+
+              <dt className="label">Véhicule</dt>
+              <dd>Kilow</dd>
+
+              <dt className="label">Impression sur bois</dt>
+              <dd>
+                <a href="https://prestimage.fr" target="_blank" rel="noreferrer noopener">
+                  Prestimage
+                </a>
+              </dd>
+
+              <dt className="label">Photographies</dt>
+              <dd>Marcin Pawlowski</dd>
+            </dl>
           </motion.div>
         </div>
       </section>
