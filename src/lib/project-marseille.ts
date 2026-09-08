@@ -71,21 +71,21 @@ const fr = {
     items: [
       {
         t: "La Maison",
-        vue: "La maquette du trois-fenêtres, pignon au goéland et façade ouverte",
+        vue: "La façade du trois-fenêtres, fenêtre après fenêtre",
         d: "Une maquette du fameux « trois-fenêtres » marseillais, l'immeuble qui fait l'identité de la ville. Façade après façade, on l'adapte au climat de 2050 : volets et persiennes, enduit à la chaux clair, isolation biosourcée, toiture-terrasse végétalisée, cour intérieure fraîche, récupération d'eau et soleil sur les toits.",
       },
       {
         t: "La Rue",
-        vue: "La maquette de la rue, ses commerces et ses passants",
+        vue: "La maquette de la rue, ses immeubles et ses passants",
         d: "« À MARS-eille, on sait jouer collectif, comme sur un terrain de foot. » La rue devient terrain de jeu et de transition : trottoirs qui boivent la pluie, arbres qui montent vers le ciel, voitures ralenties, marchés ouverts, bancs partagés, murs qui parlent. Une maquette à manipuler pour comparer la rue d'hier et celle de demain.",
       },
       {
         t: "La Ville",
-        vue: "Le plateau de jeu et ses modules, vu de dessus",
+        vue: "Le plateau de jeu et ses modules, à hauteur de rue",
         d: "Un jeu pour les moins de 10 ans, pour comprendre en jouant comment les choix d'aménagement transforment le cadre de vie. Un plateau, des modules à poser, huit missions à mener avec un·e médiateur·ice : trente minutes à une heure d'urbanisme joyeux, à hauteur d'enfant.",
       },
       {
-        t: "La Posidonie",
+        t: "Le Grand Dehors",
         vue: "L'herbier en volume et ses poissons, porté par un chevalet",
         d: "Sous la mer, une plante endémique de la Méditerranée tisse de vastes prairies : la posidonie, joyau du littoral. Une maquette en bois ouvre une fenêtre sous l'eau, où l'on découvre l'herbier, ses habitants, ses racines millénaires et son rôle climatique pour Marseille et les calanques.",
       },
@@ -115,11 +115,11 @@ const fr = {
   gallery: {
     alts: [
       "Un chevalet nu dans la halle, bancs, tablette et couverture",
-      "Les deux jambes du chevalet et leur assemblage à mi-bois",
-      "L'enfilade des panneaux, la profondeur du parcours",
+      "Un îlot équipé de ses panneaux, sous sa couverture",
+      "Le chant d'un panneau, la ferme et la couverture au-dessus",
       "La rangée de chevalets vue de face",
+      "Un panneau et la tablette qui le prolonge, au bord de la rangée",
       "Deux poutres superposées et la couverture translucide, en contre-jour",
-      "Un îlot équipé de ses panneaux, posé dans la halle",
     ],
   },
 
@@ -202,21 +202,21 @@ const en: ProjectContent = {
     items: [
       {
         t: "The Home",
-        vue: "The trois-fenêtres model, gull drawn on the gable, façade open",
+        vue: "The façade of the trois-fenêtres, window by window",
         d: "A model of the famous Marseille trois-fenêtres, the building that gives the city its face. Façade by façade, it is adapted to the climate of 2050: shutters and louvres, pale lime render, biosourced insulation, planted roof terrace, cool inner courtyard, rainwater harvesting and sun on the roofs.",
       },
       {
         t: "The Street",
-        vue: "The street model, its shopfronts and passers-by",
+        vue: "The street model, its buildings and passers-by",
         d: "“In MARS-eille we know how to play as a team, like on a football pitch.” The street becomes a field of play and of transition: pavements that drink the rain, trees reaching upward, cars slowed, open markets, shared benches, walls that speak. A model to handle, comparing yesterday's street with tomorrow's.",
       },
       {
         t: "The City",
-        vue: "The game board and its modules, seen from above",
+        vue: "The game board and its modules, at street level",
         d: "A game for under-tens, to grasp through play how planning choices reshape daily life. A board, modules to place, eight missions run with a facilitator: thirty minutes to an hour of joyful urbanism, at a child's height.",
       },
       {
-        t: "The Posidonia",
+        t: "The Great Outdoors",
         vue: "The seagrass meadow in relief and its fish, carried on a trestle",
         d: "Beneath the sea, a plant endemic to the Mediterranean weaves vast meadows: posidonia, the jewel of the coast. A timber model opens a window underwater, revealing the meadow, its inhabitants, its thousand-year-old roots and its climate role for Marseille and the calanques.",
       },
@@ -245,11 +245,11 @@ const en: ProjectContent = {
   gallery: {
     alts: [
       "A bare trestle in the hall — benches, shelf and canopy",
-      "The two legs of the trestle and their halved joint",
-      "The run of panels, the depth of the route",
+      "An island fitted with its panels, under its canopy",
+      "The edge of a panel, the truss and the canopy above",
       "The row of trestles seen head-on",
+      "A panel and the shelf that extends it, at the end of the row",
       "Two stacked beams and the translucent canopy, backlit",
-      "An island fitted with its panels, standing in the hall",
     ],
   },
 

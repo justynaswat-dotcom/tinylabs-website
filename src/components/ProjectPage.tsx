@@ -34,8 +34,8 @@ const equipe = [
    structure entière en tête, et la rangée frontale, la plus panoramique de
    la série, en quatrième position. */
 const galerie = [
-  "gal-halle", "gal-assemblage", "gal-enfilade",
-  "gal-rangee", "gal-couverture", "gal-ilot",
+  "gal-halle", "gal-ilot", "gal-structure",
+  "gal-rangee", "gal-panneau", "gal-couverture",
 ];
 
 const vues = ["maison", "rue", "ville", "posidonie"];

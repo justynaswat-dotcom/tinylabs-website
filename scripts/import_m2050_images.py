@@ -39,6 +39,10 @@ MAXW, Q = 1800, 82
 FIBOIS = os.path.expanduser(
     '~/Documents/REPO_NOCODE/Minimalist Editorial Website/build/images/IMAGE_FIBOIS.jpg')
 
+# Second dossier source : la sélection faite par la cliente. Deux de ses vues
+# (les DSCF) n'existent que là et ne figurent pas dans le reportage.
+CHOIX = os.path.expanduser('~/Downloads/Photos for the MArseille website')
+
 # Nom de destination -> fragment du nom de fichier source.
 # Les noms de sortie décrivent le contenu : le composant les lit tels quels.
 # Une valeur commençant par « / » est un chemin absolu ; sinon le fichier est
@@ -52,25 +56,27 @@ WANTED = {
     'chevalet':       'TINYLABS_EXPO_M2050-63.jpg',   # le chevalet de face, bois seul
     'poissons':       'TINYLABS_EXPO_M2050-29.jpg',   # poissons découpés posés sur le contreplaqué
 
-    # Les quatre dispositifs. Une image chacun, la plus lisible.
-    'maison':         'TINYLABS_MM_Maison-30.jpg',    # la maquette entière, pignon et façade, fond neutre
-    'rue':            'TINYLABS_EXPO_M2050-23.jpg',   # la rue, ses commerces et ses passants
-    'ville':          'TINYLABS_EXPO_M2050-100.jpg',  # le plateau de jeu et ses modules, vu de dessus
+    # Les quatre dispositifs. Une image chacun, la plus lisible. Trois d'entre
+    # elles viennent de la sélection de la cliente : la maquette de la maison
+    # photographiée entière restait un objet fermé, alors que la façade cadrée
+    # de près montre ce qui s'y joue, fenêtre après fenêtre.
+    'maison':         'TINYLABS_EXPO_M2050-18.jpg',   # la façade illustrée, ses fenêtres habitées
+    'rue':            'TINYLABS_MM_Rue-73.jpg',       # la rue en élévation, fond nu
+    'ville':          'TINYLABS_EXPO_M2050-19.jpg',   # le plateau et ses modules, à hauteur de rue
     'posidonie':      'TINYLABS_EXPO_M2050-52.jpg',   # l'herbier en volume, cadré par le chevalet
 
-    # Galerie, tenue en registre d'architecture. Une première série mêlait des
-    # détails graphiques — un panneau dessiné, une carte imprimée, l'intérieur
-    # d'une maquette — qui racontaient le contenu de l'exposition, pas sa
-    # construction. Celle-ci ne montre que le bâti, et chaque vue en donne une
-    # lecture différente : la structure entière, l'assemblage, la profondeur,
-    # l'élévation, la couverture, l'objet posé dans l'espace. Aucune ne répète
-    # le cadrage d'une autre.
+    # Galerie, tenue en registre d'architecture : le bâti seul, six lectures
+    # qui ne se répètent pas — la structure entière, l'îlot dans la halle, un
+    # détail de charpente, l'élévation de la rangée, un panneau et sa tablette,
+    # la couverture translucide. Une première série mêlait des détails
+    # graphiques qui racontaient le contenu de l'exposition plutôt que sa
+    # construction ; une seconde tenait un gros plan d'assemblage, écarté.
     'gal-halle':       'TINYLABS_EXPO_M2050-3.jpg',    # un chevalet nu dans la halle, structure entière
-    'gal-assemblage':  'TINYLABS_EXPO_M2050-64.jpg',   # les deux jambes qui se rejoignent, détail
-    'gal-enfilade':    'TINYLABS_EXPO_M2050-8.jpg',    # l'enfilade des panneaux, la profondeur du parcours
+    'gal-ilot':        'TINYLABS_EXPO_M2050-11.jpg',   # un îlot équipé sous sa couverture
+    'gal-structure':   'DSCF1496.jpg',                 # le chant du panneau, la ferme et la couverture
     'gal-rangee':      'Untitled-5.jpg',               # la rangée de face, presque une élévation
+    'gal-panneau':     'DSCF1505.jpg',                 # un panneau et la tablette qui le prolonge
     'gal-couverture':  'TINYLABS_EXPO_M2050-62.jpg',   # poutres superposées et couverture translucide
-    'gal-ilot':        'TINYLABS_EXPO_M2050-90.jpg',   # un îlot équipé, posé dans la halle
 }
 
 # L'axonométrie n'est pas un simple redimensionnement.
@@ -93,13 +99,14 @@ AXO_SVG_LIVRE = os.path.expanduser(
     '~/Documents/REPO_NOCODE/Minimalist Editorial Website/build/images/vue_iso_modules_justyna.svg')
 
 
-def find(fragment):   # chemin absolu, ou nom de fichier exact dans SRC
+def find(fragment):   # chemin absolu, ou nom de fichier exact dans SRC puis CHOIX
     if fragment.startswith('/'):
         return fragment if os.path.exists(fragment) else None
-    for root, _, files in os.walk(SRC):
-        for f in files:
-            if f == fragment and not f.startswith('._'):
-                return os.path.join(root, f)
+    for base in (SRC, CHOIX):
+        for root, _, files in os.walk(base):
+            for f in files:
+                if f == fragment and not f.startswith('._'):
+                    return os.path.join(root, f)
     return None
 
 
