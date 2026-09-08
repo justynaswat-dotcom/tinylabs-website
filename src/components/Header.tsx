@@ -1,18 +1,33 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "../lib/LanguageContext";
 import { Language } from "../lib/translations";
 
 export function Header() {
   const { language, setLanguage, t } = useLanguage();
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
 
+  // Au défilement la barre se resserre : moins de hauteur, menu et logotype
+  // plus petits. Le nom reste entier, seul le corps baisse.
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Sur l'accueil, cliquer le logotype ne change pas de route : le routeur
+  // n'a donc rien à faire et la page resterait où elle est. On remonte à la
+  // main. Ailleurs, on laisse le lien naviguer normalement.
+  const retourAccueil = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    setMenuOpen(false);
+    if (pathname !== "/") return;
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -30,49 +45,43 @@ export function Header() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
-        className="fixed top-0 left-0 right-0 z-50 px-12 py-10 md:px-16 md:py-11 bg-[var(--color-background)]/80 backdrop-blur-sm"
+        className={`fixed top-0 left-0 right-0 z-50 px-12 py-10 md:px-16 md:py-11 bg-[var(--color-background)]/80 backdrop-blur-sm tl-header${scrolled ? " tl-shrunk" : ""}`}
       >
         <div className="max-w-[1800px] mx-auto flex justify-between items-center">
 
-          {/* Logo */}
-          <h1
-            className="tracking-[-0.02em] overflow-hidden m-0"
-            style={{ ...navStyle, fontSize: "1.375rem" }}
-          >
-            <AnimatePresence mode="wait">
-              {scrolled ? (
-                <motion.span key="short" initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -4 }} transition={{ duration: 0.25 }} style={{ display: "block" }}>
-                  T—HE
-                </motion.span>
-              ) : (
-                <motion.span key="full" initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -4 }} transition={{ duration: 0.25 }} style={{ display: "block" }}>
-                  TINYLABS — Hors Échelle
-                </motion.span>
-              )}
-            </AnimatePresence>
+          {/* Logotype. Le nom reste entier au défilement — il se réduisait
+              auparavant en « T—HE », ce qui faisait perdre la marque dès les
+              premiers pixels de scroll. Il mène à l'accueil : depuis la fiche
+              projet le routeur s'en charge, depuis l'accueil il ne reste qu'à
+              remonter en haut. */}
+          <h1 className="m-0" style={navStyle}>
+            <Link to="/" onClick={retourAccueil} className="tl-wordmark">
+              <span className="tl-wordmark-nom">TINYLABS</span>
+              <span className="tl-wordmark-tiret" aria-hidden="true">—</span>
+              <span className="tl-wordmark-suite">Studio Hors Échelle</span>
+            </Link>
           </h1>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-12">
             <nav>
-              <ul className="flex gap-10 list-none p-0 m-0" style={{ ...navStyle, fontSize: "1.375rem" }}>
-                <li><a href="#work" className="hover:opacity-50 transition-opacity" onClick={(e) => handleNavClick(e, "#work")}>{t.header.nav.work}</a></li>
-                <li><a href="#about" className="hover:opacity-50 transition-opacity" onClick={(e) => handleNavClick(e, "#about")}>{t.header.nav.about}</a></li>
-                <li><a href="#contact" className="hover:opacity-50 transition-opacity" onClick={(e) => handleNavClick(e, "#contact")}>{t.header.nav.contact}</a></li>
+              <ul className="flex gap-10 list-none p-0 m-0 tl-nav" style={navStyle}>
+                <li><a href="#work" onClick={(e) => handleNavClick(e, "#work")}>{t.header.nav.work}</a></li>
+                <li><a href="#about" onClick={(e) => handleNavClick(e, "#about")}>{t.header.nav.about}</a></li>
+                <li><a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>{t.header.nav.contact}</a></li>
               </ul>
             </nav>
 
-            <div className="flex items-center gap-3 pl-10 border-l border-[var(--color-border)]" style={{ ...navStyle, fontSize: "0.8125rem" }}>
+            <div className="flex items-center gap-3 pl-10 border-l border-[var(--color-border)] tl-langues" style={{ ...navStyle, fontSize: "0.8125rem" }}>
               {languages.map((lang, i) => (
                 <span key={lang} className="flex items-center gap-3">
                   <button
                     onClick={() => setLanguage(lang)}
-                    className="uppercase tracking-widest transition-opacity"
-                    style={{ opacity: language === lang ? 1 : 0.3 }}
+                    className={`uppercase tracking-widest${language === lang ? " tl-langue-active" : ""}`}
                   >
                     {lang}
                   </button>
-                  {i < languages.length - 1 && <span style={{ opacity: 0.2 }}>·</span>}
+                  {i < languages.length - 1 && <span className="tl-langue-point">·</span>}
                 </span>
               ))}
             </div>
@@ -80,7 +89,7 @@ export function Header() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden flex flex-col justify-center gap-[6px] w-7 h-7 shrink-0"
+            className="md:hidden flex flex-col justify-center gap-[6px] w-7 h-7 shrink-0 tl-burger"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >

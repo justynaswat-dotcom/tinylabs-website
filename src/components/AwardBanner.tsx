@@ -6,23 +6,26 @@ import { useLanguage } from "../lib/LanguageContext";
    Volontairement sobre : une ligne, pas de fond coloré ni d'appel à l'action,
    pour ne pas prendre le pas sur le titre de la page qui le suit. */
 
+/* La tête du bandeau annonce d'abord où l'on est — « TINYLABS à la Paris
+   Design Week » — et non plus le nom du prix : c'est l'évènement en cours qui
+   situe le studio, le prix vient ensuite dans la phrase. */
 const texte = {
   fr: {
-    prix: "Prix Fibois Île-de-France",
-    suite: "Un extrait de l'exposition Marseille 2050 est présenté à la Paris Design Week, Espace Fibois, Bibliothèque Historique de la Ville de Paris, 24 rue Pavée, du 10 au 19 septembre.",
-    court: "Extrait présenté à la Paris Design Week, 10–19 sept.",
+    tete: "TINYLABS à la Paris Design Week",
+    suite: "Un extrait de Marseille 2050, prix Fibois Île-de-France, à l'Espace Fibois, Bibliothèque Historique de la Ville de Paris, 24 rue Pavée, du 10 au 19 septembre.",
+    court: "Extrait de Marseille 2050, Espace Fibois, 10–19 sept.",
     lien: "Voir le projet",
   },
   en: {
-    prix: "Fibois Île-de-France Award",
-    suite: "An extract from the Marseille 2050 exhibition is on show at Paris Design Week, Espace Fibois, Bibliothèque Historique de la Ville de Paris, 24 rue Pavée, 10–19 September.",
-    court: "Extract on show at Paris Design Week, 10–19 Sept.",
+    tete: "TINYLABS at Paris Design Week",
+    suite: "An extract from Marseille 2050, Fibois Île-de-France Award, at Espace Fibois, Bibliothèque Historique de la Ville de Paris, 24 rue Pavée, 10–19 September.",
+    court: "Extract from Marseille 2050, Espace Fibois, 10–19 Sept.",
     lien: "See the project",
   },
   pl: {
-    prix: "Fibois Île-de-France Award",
-    suite: "An extract from the Marseille 2050 exhibition is on show at Paris Design Week, Espace Fibois, Bibliothèque Historique de la Ville de Paris, 24 rue Pavée, 10–19 September.",
-    court: "Extract on show at Paris Design Week, 10–19 Sept.",
+    tete: "TINYLABS at Paris Design Week",
+    suite: "An extract from Marseille 2050, Fibois Île-de-France Award, at Espace Fibois, Bibliothèque Historique de la Ville de Paris, 24 rue Pavée, 10–19 September.",
+    court: "Extract from Marseille 2050, Espace Fibois, 10–19 Sept.",
     lien: "See the project",
   },
 };
@@ -34,7 +37,7 @@ export function AwardBanner() {
   return (
     <aside className="award-banner">
       <div className="award-banner-inner">
-        <span className="award-banner-prix">{t.prix}</span>
+        <span className="award-banner-prix">{t.tete}</span>
         <span className="award-banner-suite">{t.suite}</span>
         {/* Version courte pour les petits écrans, où la phrase complète
             serait tronquée en plein milieu. */}

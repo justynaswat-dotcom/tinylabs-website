@@ -10,7 +10,9 @@ export function ScrollProgress() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 right-0 h-[1px] bg-stone-900 origin-left z-50"
+      // tl-progress la fait passer sous le bandeau d'actualité, qui occupe
+      // le haut de l'écran (voir project-page.css).
+      className="tl-progress fixed top-0 left-0 right-0 h-[1px] bg-stone-900 origin-left z-50"
       style={{ scaleX }}
     />
   );

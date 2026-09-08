@@ -37,7 +37,11 @@
 /* ── En-tête ────────────────────────────────────────────────────────────── */
 /* Le décalage haut appartient à l'en-tête, pas au lien de retour :
    une marge portée par un inline-flex casse dès que le lien change. */
-.pp-top { padding-top: 7rem; }
+/* 12 rem et non 7 : l'entête fixe mesure 171 px de haut tant que la page
+   n'est pas défilée, et le lien de retour passait dessous. Mesuré, pas
+   estimé. */
+.pp-top { padding-top: 8.5rem; }
+@media (width >= 48rem) { .pp-top { padding-top: 12rem; } }
 .pp-header { padding: 2rem 0 2.5rem; }
 .pp-title {
   font-family: var(--font-grotesk);
@@ -410,10 +414,100 @@
   .award-banner-court { display: none; }
 }
 
-/* Le header et le haut des pages descendent de la hauteur du bandeau. */
+/* Le bandeau est fixe : il ne prend pas de place dans le flux, et le contenu
+   passerait dessous. Plutôt que de rattraper le décalage section par section,
+   le document entier descend d'un cran — une seule valeur à ajuster si le
+   bandeau change de hauteur. Le header et la jauge de défilement, tous deux
+   en position fixe, ne sont pas concernés par ce décalage et se règlent à la
+   main juste en dessous. */
+body { padding-top: var(--banner-h); }
 header.fixed { top: var(--banner-h); }
-.pp-top { padding-top: calc(7rem + var(--banner-h)); }
+body .tl-progress { top: var(--banner-h); }
 #hero, main > section:first-child { scroll-margin-top: var(--banner-h); }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   BARRE DE NAVIGATION ET LOGOTYPE
+
+   Le nom complet reste affiché en permanence, y compris au défilement — il
+   se réduisait auparavant en « T—HE », ce qui faisait disparaître la marque
+   dès les premiers pixels. Ce qui se réduit désormais, c'est la barre :
+   au-delà de 40 px de défilement elle perd de la hauteur et le menu baisse
+   d'un corps, pour laisser la page occuper l'écran.
+
+   Interlettrage : le logotype portait « tracking-[-0.02em] », une classe
+   Tailwind arbitraire absente du CSS pré-compilé de l'export Figma — donc
+   sans effet. Il héritait de l'interlettrage serré des titres, -0,12 em, et
+   les lettres se touchaient. La valeur est posée ici, en clair.
+
+   Le nom tient sur une ligne à toutes les largeurs : à 375 px, le nom entier
+   au corps du header dépasserait la place laissée par le bouton de menu, donc
+   le corps descend sur les petits écrans plutôt que le nom de se tronquer.
+   ───────────────────────────────────────────────────────────────────────── */
+/* Marges latérales de l'entête. Elles venaient de « px-12 md:px-16 », dont
+   seule la seconde figure dans le CSS pré-compilé : sur mobile le logotype
+   collait au bord de l'écran. Elles reprennent ici celles du contenu (.pp et
+   le hero), pour que le nom s'aligne sur le texte qui le suit. */
+.tl-header {
+  padding-inline: 1.5rem;
+  transition: padding 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (width >= 48rem) { .tl-header { padding-inline: 3rem; } }
+header.tl-header.tl-shrunk { padding-block: 1.25rem; }
+
+/* Le bouton de menu tirait sa taille de « w-7 h-7 shrink-0 » et la couleur de
+   ses barres de « bg-[var(--color-foreground)] » — classes arbitraires
+   absentes elles aussi du CSS pré-compilé. Il mesurait donc zéro pixel et ses
+   barres étaient transparentes : présent dans le DOM et cliquable, mais
+   entièrement invisible. Aucun menu n'était atteignable sur mobile. */
+.tl-burger { width: 1.75rem; height: 1.75rem; flex: 0 0 auto; gap: 6px; }
+.tl-burger span { background: var(--color-foreground); height: 1px; width: 100%; }
+
+/* Menu en gris : le noir plein mettait la navigation au même niveau que les
+   titres de la page. Elle passe au premier plan seulement au survol et sur
+   la langue active. */
+.tl-nav { font-size: 1.375rem; transition: font-size 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+header.tl-shrunk .tl-nav { font-size: 1.0625rem; }
+@media (width < 68rem) {
+  .tl-nav { font-size: 1.0625rem; gap: 1.75rem; }
+  .tl-langues { padding-left: 1.5rem; }
+  .tl-header > div { gap: 1.25rem; }
+}
+.tl-nav a { color: var(--color-muted); transition: color 0.3s ease; }
+.tl-nav a:hover { color: var(--color-foreground); }
+
+.tl-langues button { color: var(--color-muted); transition: color 0.3s ease; }
+.tl-langues button:hover { color: var(--color-foreground); }
+.tl-langues .tl-langue-active { color: var(--color-foreground); }
+.tl-langue-point { color: var(--color-border); }
+
+/* Le logotype ne se comprime jamais : le nom tient sur une ligne à toutes
+   les largeurs, et c'est le menu qui cède la place s'il le faut. */
+.tl-header h1 { flex: 0 0 auto; }
+.tl-header > div { gap: 2rem; }
+
+.tl-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.42em;
+  font-size: 1rem;
+  letter-spacing: 0.005em;
+  white-space: nowrap;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease, font-size 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tl-wordmark:hover { opacity: 0.55; }
+/* Le grand corps n'arrive qu'à 68 rem : entre le passage au menu horizontal
+   (48 rem) et cette largeur, le nom entier plus le menu plus les langues ne
+   tiennent pas sur la ligne et débordaient à droite. */
+@media (width >= 26rem) { .tl-wordmark { font-size: 1.125rem; } }
+@media (width >= 68rem) { .tl-wordmark { font-size: 1.375rem; } }
+@media (width >= 68rem) { header.tl-shrunk .tl-wordmark { font-size: 1.0625rem; } }
+
+/* Trois plans dans un même mot : le nom porte, le reste accompagne. */
+.tl-wordmark-nom { font-weight: 500; letter-spacing: 0.02em; }
+.tl-wordmark-tiret { opacity: 0.35; }
+.tl-wordmark-suite { opacity: 0.72; }
 
 /* ─────────────────────────────────────────────────────────────────────────
    RYTHME DES IMAGES
