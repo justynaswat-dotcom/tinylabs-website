@@ -338,3 +338,136 @@
   }
   .pp-credits dt { margin-top: 0; padding-top: 0.3rem; }
 }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   BANDEAU D'ACTUALITÉ
+
+   Le header du site est en `fixed top-0`, avec des classes Tailwind figées
+   dans un CSS pré-compilé : impossible d'y ajouter une classe. On le décale
+   donc en CSS, en s'appuyant sur la balise. La hauteur du bandeau vit dans
+   une variable, seule valeur à changer si le texte passe sur deux lignes.
+   ───────────────────────────────────────────────────────────────────────── */
+:root { --banner-h: 2.6rem; }
+
+.award-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;                       /* au-dessus du header, qui est en 50 */
+  height: var(--banner-h);
+  display: flex;
+  align-items: center;
+  /* Jaune Paris Design Week, prélevé sur leur logo (#FFBD15), texte noir :
+     c'est leur signalétique, elle identifie l'événement d'un coup d'œil. */
+  background: #FFBD15;
+  color: #1a1916;
+  padding: 0 1.5rem;
+}
+@media (width >= 48rem) { .award-banner { padding: 0 3rem; } }
+
+.award-banner-inner {
+  max-width: 1800px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-family: var(--font-nav);
+  font-size: 0.75rem;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.award-banner-prix { font-weight: 500; }
+.award-banner-suite {
+  opacity: 0.78;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.award-banner-lien {
+  margin-left: auto;
+  flex-shrink: 0;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+  text-decoration-color: rgb(26 25 22 / 0.4);
+  transition: text-decoration-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.award-banner-lien:hover { text-decoration-color: currentColor; }
+
+/* Sur mobile, la phrase complète ne tient pas : on garde le prix et le lien,
+   qui portent l'essentiel, plutôt que de tronquer au milieu d'un mot. */
+.award-banner-court { display: none; opacity: 0.78; }
+
+/* Sous 64rem la phrase longue serait tronquée en plein mot : on bascule sur
+   la version courte, qui garde l'essentiel. */
+@media (width < 64rem) {
+  .award-banner-suite { display: none; }
+  .award-banner-court { display: inline; }
+}
+@media (width < 34rem) {
+  .award-banner-court { display: none; }
+}
+
+/* Le header et le haut des pages descendent de la hauteur du bandeau. */
+header.fixed { top: var(--banner-h); }
+.pp-top { padding-top: calc(7rem + var(--banner-h)); }
+#hero, main > section:first-child { scroll-margin-top: var(--banner-h); }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   RYTHME DES IMAGES
+
+   La fiche alignait toutes ses images sur la même largeur : pleine largeur,
+   deux colonnes, grille régulière. Cette régularité se lit comme une trame
+   par défaut. Chaque image occupe désormais une place qui dépend de son rôle.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* Ouverture : la seule image à toucher les bords de l'écran. */
+.pp-bleed {
+  margin: 0;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  background: var(--color-stone-light);
+}
+.pp-bleed img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Implantation : décalée vers la droite et plus étroite que le conteneur.
+   Un plan n'est pas une image d'ambiance, il n'a pas à occuper toute la page. */
+@media (width >= 64rem) {
+  .pp-offset { width: 72%; margin-left: 28%; }
+  .pp-offset-caption { width: 72%; margin-left: 28%; }
+}
+
+/* Diptyque asymétrique : une grande image à gauche, une plus petite à droite
+   et décalée vers le bas. */
+.pp-duo { display: grid; gap: 2rem; }
+@media (width >= 64rem) {
+  .pp-duo {
+    grid-template-columns: 7fr 5fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .pp-duo-b { margin-top: 6rem; }
+}
+
+/* Galerie en mosaïque : la première vue tient deux colonnes et deux rangs,
+   les cinq autres se répartissent autour. */
+.pp-mosaic { display: grid; gap: 1.25rem; }
+.pp-mosaic .pp-figure { aspect-ratio: 1 / 1; }
+@media (width >= 48rem) {
+  .pp-mosaic {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+  }
+  .pp-mosaic-1 { grid-column: span 2; grid-row: span 2; }
+  .pp-mosaic-4 { grid-column: span 2; }
+  .pp-mosaic .pp-figure { aspect-ratio: auto; }
+  .pp-mosaic-1 { aspect-ratio: 1 / 1; }
+}
+.pp-mosaic img { object-position: center 40%; }

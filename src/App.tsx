@@ -7,6 +7,7 @@ import { About } from "./components/About";
 import { Footer } from "./components/Footer";
 import { ProjectPage } from "./components/ProjectPage";
 import { ScrollProgress } from "./components/ScrollProgress";
+import { AwardBanner } from "./components/AwardBanner";
 import { LanguageProvider } from "./lib/LanguageContext";
 
 function Home() {
@@ -41,6 +42,7 @@ export default function App() {
       <BrowserRouter>
         <HashScroll />
         <div className="min-h-screen">
+          <AwardBanner />
           <ScrollProgress />
           <Header />
           <Routes>
