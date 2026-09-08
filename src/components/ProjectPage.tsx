@@ -387,10 +387,13 @@ export function ProjectPage() {
                     précède la puce l'empêche par ailleurs d'ouvrir une ligne. */}
                 {["Juliette Eugénie", "Julien Dossier", "Julie Vandal",
                   "Stéphanie Beuf", "Mathieu Grosche", "Louise Viollet Deval",
-                  "Artemis Ingénieur"]
+                  "Sonia Nazef"]
                   .map((n) => n.replace(/ /g, "\u00A0"))
                   .join("\u00A0· ")}
               </dd>
+
+              <dt className="label">BET structure</dt>
+              <dd>Artemis Ingénieur</dd>
 
               <dt className="label">Véhicule</dt>
               <dd>Kilow</dd>
@@ -401,9 +404,6 @@ export function ProjectPage() {
                   Prestimage
                 </a>
               </dd>
-
-              <dt className="label">Photographies</dt>
-              <dd>Marcin Pawlowski</dd>
             </dl>
           </motion.div>
         </div>
