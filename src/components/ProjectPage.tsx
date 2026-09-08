@@ -303,8 +303,9 @@ export function ProjectPage() {
             <Link to="/#work" className="pp-back" style={{ padding: 0 }}>
               ← {t.allWork}
             </Link>
+            {/* Sans point médian : le sous-titre porte ses parenthèses. */}
             <p className="pp-caption" style={{ margin: 0 }}>
-              {t.title} · {t.subtitle}
+              {t.title} {t.subtitle}
             </p>
           </div>
         </div>

@@ -18,7 +18,7 @@ const fr = {
   back: "Travaux",
   allWork: "Tous les travaux",
   title: "Ici, ça chauffe",
-  subtitle: "Marseille 2050",
+  subtitle: "(Marseille 2050)",
   note: "Extrait d'exposition présenté à la Paris Design Week",
 
   meta: [
@@ -151,7 +151,7 @@ const en: ProjectContent = {
   back: "Work",
   allWork: "All work",
   title: "It's getting hot in here",
-  subtitle: "Marseille 2050",
+  subtitle: "(Marseille 2050)",
   note: "Exhibition extract on show at Paris Design Week",
 
   meta: [
@@ -282,7 +282,7 @@ const pl: ProjectContent = {
   back: "Prace",
   allWork: "Wszystkie prace",
   title: "Ale tu gorąco",
-  subtitle: "Marsylia 2050",
+  subtitle: "(Marsylia 2050)",
   note: "Fragment wystawy pokazywany na Paris Design Week",
 
   meta: [
