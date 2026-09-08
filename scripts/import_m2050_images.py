@@ -61,8 +61,8 @@ WANTED = {
     # photographiée entière restait un objet fermé, alors que la façade cadrée
     # de près montre ce qui s'y joue, fenêtre après fenêtre.
     'maison':         'TINYLABS_EXPO_M2050-18.jpg',   # la façade illustrée, ses fenêtres habitées
-    'rue':            'TINYLABS_MM_Rue-73.jpg',       # la rue en élévation, fond nu
-    'ville':          'TINYLABS_EXPO_M2050-19.jpg',   # le plateau et ses modules, à hauteur de rue
+    'rue':            'TINYLABS_EXPO_M2050-23.jpg',   # la rue, ses commerces et ses passants
+    'ville':          'TINYLABS_EXPO_M2050-100.jpg',  # le plateau de jeu et ses modules, vu de dessus
     'posidonie':      'TINYLABS_EXPO_M2050-52.jpg',   # l'herbier en volume, cadré par le chevalet
 
     # Galerie, tenue en registre d'architecture : le bâti seul, six lectures

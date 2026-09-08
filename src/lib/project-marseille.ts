@@ -76,12 +76,12 @@ const fr = {
       },
       {
         t: "La Rue",
-        vue: "La maquette de la rue, ses immeubles et ses passants",
+        vue: "La maquette de la rue, ses commerces et ses passants",
         d: "« À MARS-eille, on sait jouer collectif, comme sur un terrain de foot. » La rue devient terrain de jeu et de transition : trottoirs qui boivent la pluie, arbres qui montent vers le ciel, voitures ralenties, marchés ouverts, bancs partagés, murs qui parlent. Une maquette à manipuler pour comparer la rue d'hier et celle de demain.",
       },
       {
         t: "La Ville",
-        vue: "Le plateau de jeu et ses modules, à hauteur de rue",
+        vue: "Le plateau de jeu et ses modules, vu de dessus",
         d: "Un jeu pour les moins de 10 ans, pour comprendre en jouant comment les choix d'aménagement transforment le cadre de vie. Un plateau, des modules à poser, huit missions à mener avec un·e médiateur·ice : trente minutes à une heure d'urbanisme joyeux, à hauteur d'enfant.",
       },
       {
@@ -207,12 +207,12 @@ const en: ProjectContent = {
       },
       {
         t: "The Street",
-        vue: "The street model, its buildings and passers-by",
+        vue: "The street model, its shopfronts and passers-by",
         d: "“In MARS-eille we know how to play as a team, like on a football pitch.” The street becomes a field of play and of transition: pavements that drink the rain, trees reaching upward, cars slowed, open markets, shared benches, walls that speak. A model to handle, comparing yesterday's street with tomorrow's.",
       },
       {
         t: "The City",
-        vue: "The game board and its modules, at street level",
+        vue: "The game board and its modules, seen from above",
         d: "A game for under-tens, to grasp through play how planning choices reshape daily life. A board, modules to place, eight missions run with a facilitator: thirty minutes to an hour of joyful urbanism, at a child's height.",
       },
       {
