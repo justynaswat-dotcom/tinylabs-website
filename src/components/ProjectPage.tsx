@@ -380,7 +380,7 @@ export function ProjectPage() {
           <motion.div {...reveal}>
             <p className="label pp-section-head">Crédits</p>
             <dl className="pp-credits">
-              <dt className="label">Équipe</dt>
+              <dt className="label">Équipe TINYLABS</dt>
               <dd>
                 {/* Chaque nom est rendu insécable : un prénom ne doit pas se
                     détacher de son nom en fin de ligne. L'espace insécable qui
@@ -402,6 +402,16 @@ export function ProjectPage() {
               <dd>
                 <a href="https://prestimage.fr" target="_blank" rel="noreferrer noopener">
                   Prestimage
+                </a>
+              </dd>
+
+              <dt className="label">Contact</dt>
+              <dd>
+                <a href="mailto:hello@tinylabs.one">hello@tinylabs.one</a>
+                <br />
+                {/* wa.me exige le format international sans le zéro initial. */}
+                <a href="https://wa.me/33651360555" target="_blank" rel="noreferrer noopener">
+                  WhatsApp&nbsp;06&nbsp;51&nbsp;36&nbsp;05&nbsp;55
                 </a>
               </dd>
             </dl>
