@@ -475,11 +475,13 @@ header.tl-header.tl-shrunk { padding-block: 1.25rem; }
 /* Logotype et menu en noir plein, d'une seule valeur. Le survol éclaircit,
    ce qui suffit à signaler le lien sans installer deux noirs différents dans
    la barre. */
-.tl-nav { font-size: 1.375rem; transition: font-size 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
-header.tl-shrunk .tl-nav { font-size: 1.0625rem; }
+/* Le menu tenait le même corps que le logotype, 22 px, et ses trois mots
+   étaient espacés de 40 px : le bloc de droite occupait 418 px, presque un
+   tiers de la barre. Il descend d'un cran sous le nom, ce qui rétablit la
+   hiérarchie — le nom d'abord, la navigation ensuite — et se resserre. */
+.tl-nav { font-size: 1.0625rem; gap: 1.5rem; }
+.tl-langues { padding-left: 1.5rem; }
 @media (width < 68rem) {
-  .tl-nav { font-size: 1.0625rem; gap: 1.75rem; }
-  .tl-langues { padding-left: 1.5rem; }
   .tl-header > div { gap: 1.25rem; }
 }
 .tl-nav a { color: var(--color-foreground); transition: opacity 0.3s ease; }
