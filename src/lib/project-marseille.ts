@@ -114,12 +114,12 @@ const fr = {
 
   gallery: {
     alts: [
-      "Un îlot entier et ses panneaux, isolé dans la halle",
-      "Le panneau « Ici, c'est Marseille » et son goéland au trait",
-      "Le littoral marseillais imprimé en bleu sur le contreplaqué",
-      "Un chevalet nu, ses bancs et sa tablette, sans panneau",
-      "La posidonie dessinée au trait sur le contreplaqué, légendée",
-      "L'intérieur de la maquette de la maison, la lumière aux fenêtres",
+      "Un chevalet nu dans la halle, bancs, tablette et couverture",
+      "Les deux jambes du chevalet et leur assemblage à mi-bois",
+      "L'enfilade des panneaux, la profondeur du parcours",
+      "La rangée de chevalets vue de face",
+      "Deux poutres superposées et la couverture translucide, en contre-jour",
+      "Un îlot équipé de ses panneaux, posé dans la halle",
     ],
   },
 
@@ -244,12 +244,12 @@ const en: ProjectContent = {
 
   gallery: {
     alts: [
-      "A whole island and its panels, standing alone in the hall",
-      "The “Ici, c’est Marseille” panel and its line-drawn gull",
-      "The Marseille coastline printed in blue on plywood",
-      "A bare trestle, its benches and shelf, with no panel",
-      "Posidonia drawn in outline on plywood, with labels",
-      "Inside the house model, light at the windows",
+      "A bare trestle in the hall — benches, shelf and canopy",
+      "The two legs of the trestle and their halved joint",
+      "The run of panels, the depth of the route",
+      "The row of trestles seen head-on",
+      "Two stacked beams and the translucent canopy, backlit",
+      "An island fitted with its panels, standing in the hall",
     ],
   },
 

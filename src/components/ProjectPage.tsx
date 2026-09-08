@@ -28,13 +28,14 @@ const equipe = [
   "Stéphanie Beuf", "Mathieu Grosche", "Louise Viollet Deval", "Sonia Nazef",
 ];
 
-/* Galerie : six vues de la scénographie, presque sans couleur. L'ordre compte
-   — la première occupe deux colonnes sur deux dans la mosaïque, la quatrième
-   deux colonnes en largeur. On y place donc l'îlot complet, puis le chevalet
-   nu, les deux images les plus larges de la série. */
+/* Galerie tenue en registre d'architecture : le bâti seul, six lectures qui
+   ne se répètent pas. L'ordre compte — la première occupe deux colonnes sur
+   deux dans la mosaïque, la quatrième deux colonnes en largeur. D'où la
+   structure entière en tête, et la rangée frontale, la plus panoramique de
+   la série, en quatrième position. */
 const galerie = [
-  "gal-ilot", "gal-signe", "gal-carte",
-  "gal-banc", "gal-herbier", "gal-interieur",
+  "gal-halle", "gal-assemblage", "gal-enfilade",
+  "gal-rangee", "gal-couverture", "gal-ilot",
 ];
 
 const vues = ["maison", "rue", "ville", "posidonie"];

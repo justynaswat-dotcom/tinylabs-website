@@ -588,8 +588,15 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-auto-rows: 1fr;
   }
+  /* La première tient deux colonnes sur deux rangées, ce qui laisse les
+     colonnes 3 et 4 aux deuxième et troisième vues, puis la quatrième occupe
+     toute la largeur restante. Les deux dernières se partagent la rangée du
+     bas à parts égales : sur une seule colonne chacune, elles laissaient la
+     moitié droite de la grille vide. */
   .pp-mosaic-1 { grid-column: span 2; grid-row: span 2; }
-  .pp-mosaic-4 { grid-column: span 2; }
+  .pp-mosaic-4,
+  .pp-mosaic-5,
+  .pp-mosaic-6 { grid-column: span 2; }
   .pp-mosaic .pp-figure { aspect-ratio: auto; }
   .pp-mosaic-1 { aspect-ratio: 1 / 1; }
 }

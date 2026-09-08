@@ -58,14 +58,19 @@ WANTED = {
     'ville':          'TINYLABS_EXPO_M2050-100.jpg',  # le plateau de jeu et ses modules, vu de dessus
     'posidonie':      'TINYLABS_EXPO_M2050-52.jpg',   # l'herbier en volume, cadré par le chevalet
 
-    # Galerie. Six vues de la scénographie, du bois et du trait, presque sans
-    # couleur : c'est là que l'exposition se lit comme un objet construit.
-    'gal-ilot':       'TINYLABS_EXPO_M2050.jpg',      # un îlot complet, isolé dans la halle
-    'gal-signe':      'TINYLABS_EXPO_M2050-88.jpg',   # le panneau « Ici, c'est Marseille »
-    'gal-carte':      'TINYLABS_EXPO_M2050-67.jpg',   # la carte du littoral, bleu sur contreplaqué
-    'gal-banc':       'TINYLABS_EXPO_M2050-5.jpg',    # un chevalet nu, sans panneau
-    'gal-herbier':    'TINYLABS_EXPO_M2050-55.jpg',   # la posidonie au trait, légendée
-    'gal-interieur':  'TINYLABS_EXPO_M2050-72.jpg',   # l'intérieur de la maquette, fenêtres à contre-jour
+    # Galerie, tenue en registre d'architecture. Une première série mêlait des
+    # détails graphiques — un panneau dessiné, une carte imprimée, l'intérieur
+    # d'une maquette — qui racontaient le contenu de l'exposition, pas sa
+    # construction. Celle-ci ne montre que le bâti, et chaque vue en donne une
+    # lecture différente : la structure entière, l'assemblage, la profondeur,
+    # l'élévation, la couverture, l'objet posé dans l'espace. Aucune ne répète
+    # le cadrage d'une autre.
+    'gal-halle':       'TINYLABS_EXPO_M2050-3.jpg',    # un chevalet nu dans la halle, structure entière
+    'gal-assemblage':  'TINYLABS_EXPO_M2050-64.jpg',   # les deux jambes qui se rejoignent, détail
+    'gal-enfilade':    'TINYLABS_EXPO_M2050-8.jpg',    # l'enfilade des panneaux, la profondeur du parcours
+    'gal-rangee':      'Untitled-5.jpg',               # la rangée de face, presque une élévation
+    'gal-couverture':  'TINYLABS_EXPO_M2050-62.jpg',   # poutres superposées et couverture translucide
+    'gal-ilot':        'TINYLABS_EXPO_M2050-90.jpg',   # un îlot équipé, posé dans la halle
 }
 
 # L'axonométrie n'est pas un simple redimensionnement.
