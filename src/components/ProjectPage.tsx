@@ -55,21 +55,27 @@ const methode = [
 const manips = [
   {
     t: "La Maison",
+    vue: "Façade du trois-fenêtres et son arbre, dans l'exposition",
     img: "/images/m2050/maison.jpg",
     d: "Une maquette du fameux « trois-fenêtres » marseillais, l'immeuble qui fait l'identité de la ville. Façade après façade, on l'adapte au climat de 2050 : volets et persiennes, enduit à la chaux clair, isolation biosourcée, toiture-terrasse végétalisée, cour intérieure fraîche, récupération d'eau et soleil sur les toits.",
   },
   {
     t: "La Rue",
+    vue: "La maquette de la rue, ses commerces et ses passants",
     img: "/images/m2050/rue.jpg",
     d: "« À MARS-eille, on sait jouer collectif, comme sur un terrain de foot. » La rue devient terrain de jeu et de transition : trottoirs qui boivent la pluie, arbres qui montent vers le ciel, voitures ralenties, marchés ouverts, bancs partagés, murs qui parlent. Une maquette à manipuler pour comparer la rue d'hier et celle de demain.",
   },
   {
     t: "La Ville",
+    vue: "Le plateau de jeu et ses modules, vu de dessus",
     img: "/images/m2050/ville.jpg",
     d: "Un jeu pour les moins de 10 ans, pour comprendre en jouant comment les choix d'aménagement transforment le cadre de vie. Un plateau, des modules à poser, huit missions à mener avec un·e médiateur·ice : trente minutes à une heure d'urbanisme joyeux, à hauteur d'enfant.",
   },
   {
-    t: "Le Grand Dehors",
+    // Escale « le Grand Dehors », dispositif « la Posidonie » : le dossier
+    // distingue les deux, la page les confondait.
+    t: "La Posidonie",
+    vue: "L'herbier en volume et ses poissons, devant l'atlas des espèces",
     img: "/images/m2050/posidonie.jpg",
     d: "Sous la mer, une plante endémique de la Méditerranée tisse de vastes prairies : la posidonie, joyau du littoral. Une maquette en bois ouvre une fenêtre sous l'eau, où l'on découvre l'herbier, ses habitants, ses racines millénaires et son rôle climatique pour Marseille et les calanques.",
   },
@@ -277,20 +283,23 @@ export function ProjectPage() {
         <div className="pp-inner">
           <motion.div {...reveal} className="pp-section-head">
             <p className="label" style={{ marginBottom: "2rem" }}>L'exposition</p>
-            <h2 className="max-w-4xl">
-              Cinq escales, Soi, la Maison, la Rue, la Ville et le Grand Dehors, où
-              chaque panneau pose une question simple pour éveiller la pensée et
-              l'envie d'agir.
+            <h2>
+              Cinq escales, de Soi au Grand Dehors, où chaque panneau pose une
+              question simple pour éveiller la pensée et l'envie d'agir.
             </h2>
+            <p className="pp-parcours">
+              Soi · la Maison · la Rue · la Ville · le Grand Dehors —
+              <span> quatre d'entre elles se manipulent.</span>
+            </p>
           </motion.div>
 
           {manips.map((m, i) => (
             <motion.div {...reveal} key={m.t} className="pp-manip">
               <figure className="pp-figure pp-figure-square pp-manip-media">
-                <img loading="lazy" decoding="async" src={m.img} alt={`Manip ${i + 1} : ${m.t}`} />
+                <img loading="lazy" decoding="async" src={m.img} alt={m.vue} />
               </figure>
               <div>
-                <p className="pp-manip-index">Manip {i + 1}</p>
+                <p className="pp-manip-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</p>
                 <h3>{m.t}</h3>
                 <p>{m.d}</p>
               </div>

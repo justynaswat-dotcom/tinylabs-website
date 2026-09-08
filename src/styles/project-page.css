@@ -133,9 +133,13 @@
 .pp-manip p,
 .pp-caption { max-width: 60ch; }
 
-/* Les titres de section supportent une mesure plus large : ils se lisent
-   d'un seul regard, pas ligne à ligne. */
-.pp-section-head h2 { max-width: 22ch; }
+/* Les titres supportent une mesure plus large que la prose : on les balaie
+   du regard au lieu de les lire ligne à ligne. 22ch les cassait en colonnes
+   de six lignes ; 34ch rend environ 40 caractères, la valeur que le gabarit
+   d'origine appliquait déjà et qui convenait. La règle est en CSS plutôt
+   qu'en classe utilitaire pour valoir sur tous les titres, y compris ceux
+   qui ne la portaient pas. */
+.pp-section-head h2 { max-width: 34ch; }
 
 /* Grille générique */
 .pp-grid { display: grid; gap: 2rem; }
@@ -177,11 +181,31 @@
   /* Un bloc sur deux inverse image et texte */
   .pp-manip:nth-child(even) .pp-manip-media { order: 2; }
 }
-.pp-manip-index {
-  font-family: var(--font-nav);
-  font-size: 0.8125rem;
+/* Le parcours, sous le chapeau : nomme les cinq escales et explique
+   pourquoi quatre dispositifs seulement suivent. */
+.pp-parcours {
+  font-family: var(--font-grotesk);
+  font-size: 1rem;
   color: var(--color-muted);
-  margin-bottom: 0.75rem;
+  margin-top: 1.25rem;
+  max-width: 46ch;
+}
+.pp-parcours span { display: inline-block; }
+
+/* Numérotation : un chiffre posé, qui donne le rythme des quatre blocs et
+   les rend repérables au défilement. « Manip 1 » en petit gris ne se voyait
+   pas et reprenait un mot d'atelier ; le numéro seul suffit, le nom du
+   dispositif est juste dessous. Masqué aux lecteurs d'écran, qui liraient
+   « zéro un » sans profit. */
+.pp-manip-num {
+  font-family: var(--font-grotesk);
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--color-muted);
+  opacity: 0.45;
+  margin-bottom: 1rem;
 }
 .pp-manip h3 { margin-bottom: 1rem; }
 
