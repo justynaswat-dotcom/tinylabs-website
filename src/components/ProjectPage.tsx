@@ -26,13 +26,6 @@ const meta = [
   { k: "Rôle", v: "Conception et scénographie" },
 ];
 
-const stats = [
-  { n: "5", l: "escales, de Soi au Grand Dehors" },
-  { n: "8", l: "thèmes, de la chaleur à la santé" },
-  { n: "4", l: "interactions, de la maison à la mer" },
-  { n: "1", l: "véhicule qui déplace l'exposition" },
-];
-
 const methode = [
   {
     t: "Lecture sensible du territoire",
@@ -225,20 +218,6 @@ export function ProjectPage() {
               <img loading="lazy" decoding="async" src="/images/m2050/axonometrie.svg"
                    alt="Axonométries des quatre configurations de chevalet de l'exposition" />
             </figure>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── Chiffres clés ─────────────────────────────────────────────── */}
-      <section className="pp">
-        <div className="pp-inner">
-          <motion.div {...reveal} className="pp-grid pp-grid-4">
-            {stats.map((s) => (
-              <div key={s.l} className="pp-stat">
-                <p className="pp-stat-number">{s.n}</p>
-                <p className="pp-stat-label">{s.l}</p>
-              </div>
-            ))}
           </motion.div>
         </div>
       </section>
