@@ -385,9 +385,9 @@ export function ProjectPage() {
                 {/* Chaque nom est rendu insécable : un prénom ne doit pas se
                     détacher de son nom en fin de ligne. L'espace insécable qui
                     précède la puce l'empêche par ailleurs d'ouvrir une ligne. */}
-                {["Juliette Eugénie", "Julien Dossier", "Julie Vandal",
-                  "Stéphanie Beuf", "Mathieu Grosche", "Louise Viollet Deval",
-                  "Sonia Nazef"]
+                {["Justyna Swat", "Juliette Eugénie", "Julien Dossier",
+                  "Julie Vandal", "Stéphanie Beuf", "Mathieu Grosche",
+                  "Louise Viollet Deval", "Sonia Nazef"]
                   .map((n) => n.replace(/ /g, "\u00A0"))
                   .join("\u00A0· ")}
               </dd>
