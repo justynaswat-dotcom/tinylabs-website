@@ -6,9 +6,10 @@
    il se corrige, et il n'a pas à alourdir le fichier que toutes les pages
    chargent.
 
-   ⚠️ Le polonais reprend l'anglais. Écrire ce volume de texte spécialisé en
-   polonais demanderait une relecture native que je ne peux pas garantir ;
-   servir de l'anglais est plus honnête qu'une traduction approximative.
+   ⚠️ Le polonais est une traduction que j'ai écrite, pas une relecture
+   native. Le sens et le ton y sont, mais quelques tournures gagneraient à
+   être vérifiées par une personne dont c'est la langue — en particulier les
+   termes de construction (kozioł, wiązar, sklejka) et le titre.
    ─────────────────────────────────────────────────────────────────────────── */
 
 export type ProjectContent = typeof fr;
@@ -18,6 +19,7 @@ const fr = {
   allWork: "Tous les travaux",
   title: "Ici, ça chauffe",
   subtitle: "Marseille 2050",
+  note: "Extrait d'exposition présenté à la Paris Design Week",
 
   meta: [
     { k: "Client", v: "Ville de Marseille · Mission Marseille 2030" },
@@ -115,7 +117,7 @@ const fr = {
   gallery: {
     alts: [
       "Un îlot complet dans la halle, ses panneaux montés sous la couverture",
-      "Un îlot équipé de ses panneaux, sous sa couverture",
+      "La maquette de la maison dominant le plateau, entre les panneaux et la charpente",
       "Le chant d'un panneau, la ferme et la couverture au-dessus",
       "La rangée de chevalets vue de face",
       "Un panneau et la tablette qui le prolonge, au bord de la rangée",
@@ -150,6 +152,7 @@ const en: ProjectContent = {
   allWork: "All work",
   title: "It's getting hot in here",
   subtitle: "Marseille 2050",
+  note: "Exhibition extract on show at Paris Design Week",
 
   meta: [
     { k: "Client", v: "City of Marseille · Mission Marseille 2030" },
@@ -245,7 +248,7 @@ const en: ProjectContent = {
   gallery: {
     alts: [
       "A complete island in the hall, its panels mounted under the canopy",
-      "An island fitted with its panels, under its canopy",
+      "The house model above the game board, between the panels and the frame",
       "The edge of a panel, the truss and the canopy above",
       "The row of trestles seen head-on",
       "A panel and the shelf that extends it, at the end of the row",
@@ -275,8 +278,140 @@ const en: ProjectContent = {
   planAlt: "Site view: four islands, the agora and the vehicle, occupied by the public",
 };
 
+const pl: ProjectContent = {
+  back: "Prace",
+  allWork: "Wszystkie prace",
+  title: "Ale tu gorąco",
+  subtitle: "Marsylia 2050",
+  note: "Fragment wystawy pokazywany na Paris Design Week",
+
+  meta: [
+    { k: "Klient", v: "Miasto Marsylia · Mission Marseille 2030" },
+    { k: "Miejsce", v: "Marsylia" },
+    { k: "Rok", v: "2025" },
+    { k: "Rola", v: "Projekt i scenografia" },
+  ],
+
+  intro: {
+    label: "Projekt",
+    lead:
+      "Marsylia 2050 to objazdowa wystawa edukacyjna, która pozwala dotknąć zmiany klimatu w mieście. W pięciu skalach, od domu po cały region, zaprasza każdego do zrozumienia, odczucia i wspólnego wyobrażenia sobie Marsylii, w której da się mieszkać — miasta, którego chce się i które poradzi sobie z nadchodzącym klimatem.",
+    body: [
+      "Wystawa jest dla wszystkich: rodzin, szkół, ciekawskich, mieszkańców. Podróżuje po mieście, staje na placach, na szkolnych dziedzińcach i w miejscach, które marsylczycy znają, i rozwija trasę z plansz, makiet i przedmiotów, które bierze się do ręki.",
+      "Marsylia jawi się tu jako gorący punkt klimatu śródziemnomorskiego: dłuższe fale upałów, mniej wody, podnoszące się morze, słabnąca różnorodność biologiczna, częstsze pożary. Do 2050 roku klimat miasta może przypominać dzisiejszą Sewillę.",
+      "Zamiast straszyć, wystawa pokazuje przemiany już trwające: zazielenianie ulic, otwieranie gruntów, nowe sposoby poruszania się, lokalne jedzenie, troskę o życie w morzu i na lądzie. Świętuje zbiorową energię Marsylii, żeby chciało się działać — razem.",
+    ],
+  },
+
+  plan: {
+    caption:
+      "Cztery wyspy i agora, wokół pojazdu, który wozi wystawę.",
+  },
+
+  structure: {
+    label: "Zasada konstrukcyjna",
+    lead:
+      "Jeden kozioł w czterech układach: sama plansza, stół warsztatowy, podwójna wyspa z ławkami i moduł zacieniający. Drewno, tkanina i sklejka, złożone tak, by dało się je rozebrać, przewieźć i postawić na nowo w kilka godzin.",
+    alt:
+      "Aksonometrie czterech układów kozła użytych na wystawie",
+  },
+
+  method: {
+    label: "Metoda",
+    heading:
+      "Przekazywać bez pouczania, na wysokości wzroku, z humorem, jasno i ze wspólną chęcią działania, każdy w swojej skali.",
+    items: [
+      { t: "Uważne czytanie miejsca", d: "Słuchać, patrzeć, chodzić, zrozumieć Marsylię, zanim się ją zmieni." },
+      { t: "Podejście systemowe", d: "Wiązać klimat, wodę, energię, różnorodność biologiczną, transport, jedzenie, zdrowie i kulturę jak nitki jednej tkaniny." },
+      { t: "Współtworzenie", d: "Pracować z naukowcami, stowarzyszeniami, mieszkańcami i instytucjami publicznymi Marsylii." },
+      { t: "Prototypowanie w iteracjach", d: "Sprawdzać treści, makiety i urządzenia na miejscu, poprawiać, przekazywać bez moralizowania." },
+    ],
+  },
+
+  exhibition: {
+    label: "Wystawa",
+    heading:
+      "Pięć przystanków, od Siebie po Wielki Świat, gdzie każda plansza stawia jedno proste pytanie, żeby obudzić myślenie i chęć działania.",
+    route: "Ja · Dom · Ulica · Miasto · Wielki Świat",
+    routeNote: "cztery z nich mają urządzenie do obsługi.",
+    items: [
+      {
+        t: "Dom",
+        vue: "Elewacja trois-fenêtres, okno po oknie",
+        d: "Makieta słynnej marsylskiej kamienicy trois-fenêtres, budynku, który nadaje miastu twarz. Elewacja po elewacji dostosowuje się ją do klimatu roku 2050: okiennice i żaluzje, jasny tynk wapienny, izolacja z materiałów pochodzenia roślinnego, zielony taras na dachu, chłodny dziedziniec, zbieranie deszczówki i słońce na dachach.",
+      },
+      {
+        t: "Ulica",
+        vue: "Makieta ulicy, jej sklepy i przechodnie",
+        d: "„W MARS-ylii umiemy grać zespołowo, jak na boisku”. Ulica staje się boiskiem i miejscem przemiany: chodniki, które piją deszcz, drzewa rosnące ku niebu, spowolnione samochody, otwarte targi, wspólne ławki, mówiące ściany. Makieta do ręki, żeby porównać ulicę wczorajszą z jutrzejszą.",
+      },
+      {
+        t: "Miasto",
+        vue: "Plansza do gry i jej moduły, widziane z góry",
+        d: "Gra dla dzieci do dziesiątego roku życia, żeby w zabawie zrozumieć, jak decyzje o zagospodarowaniu zmieniają codzienne życie. Plansza, moduły do ustawiania, osiem zadań prowadzonych z animatorem: od pół godziny do godziny radosnej urbanistyki, na wysokości dziecka.",
+      },
+      {
+        t: "Wielki Świat",
+        vue: "Przestrzenna makieta łąki i jej ryby, niesione przez kozioł",
+        d: "Pod wodą roślina endemiczna dla Morza Śródziemnego tka rozległe łąki: posejdonia, klejnot wybrzeża. Drewniana makieta otwiera okno pod powierzchnią, za którym widać łąkę, jej mieszkańców, jej tysiącletnie korzenie i jej rolę klimatyczną dla Marsylii i calanques.",
+      },
+    ],
+  },
+
+  catalogue: {
+    label: "Scenografia i katalog",
+    heading:
+      "Trasa modułowa, ruchoma i oszczędna: cztery wyspy i agora, wokół pojazdu-totemu, który wozi wystawę z dzielnicy do dzielnicy.",
+    items: [
+      { t: "Plansze edukacyjne", d: "Format 90 × 180 cm składany w tryptyk, drukowany na podłożach nadających się do recyklingu i mocowany do modułowych stelaży z drewna i stali. Trzy do czterech plansz na wyspę, zależnie od tematów." },
+      { t: "Zadaszenia", d: "Tkaninowe zadaszenia 60 × 180 cm mocowane nad planszami. Chronią zwiedzających przed słońcem, ożywiają bryły i niosą oznakowanie trasy." },
+      { t: "Makiety do ręki", d: "Dom odporny na upał, ulica przepuszczająca wodę, miasto przepływów, żywy region. Jasne drewno, materiały pochodzenia roślinnego i elementy na magnesy — żeby rozumieć gestem i we wspólnocie." },
+      { t: "Meble scenograficzne", d: "Rozbieralne stelaże, niskie siedziska, stoły warsztatowe i skrzynie transportowe, które stają się cokołami. Oszczędna rodzina mebli pomyślana do szybkiego montażu i intensywnego użytku na zewnątrz." },
+      { t: "Identyfikacja graficzna", d: "Odręczne tytuły, liniowe piktogramy, rysowane ręcznie ilustracje, paleta wzięta z ziemi i z morza. Ciepłe oznakowanie, które rozmawia z miastem." },
+      { t: "Materiały dydaktyczne", d: "Zeszyt zwiedzającego, tabliczki „A ja?”, karty działań i broszura dla nauczycieli. Materiały do zabrania, żeby przedłużyć doświadczenie w klasie albo w domu." },
+    ],
+  },
+
+  duo: [
+    "Kozioł widziany z przodu, jego drewniane połączenia odsłonięte",
+    "Ryby wycięte ze sklejki, położone płasko na półce",
+  ],
+
+  gallery: {
+    alts: [
+      "Kompletna wyspa w hali, jej plansze zamontowane pod zadaszeniem",
+      "Makieta domu nad planszą do gry, między planszami a konstrukcją",
+      "Krawędź planszy, wiązar i zadaszenie nad nią",
+      "Rząd kozłów widziany z przodu",
+      "Plansza i półka, która ją przedłuża, na końcu rzędu",
+      "Dwie belki jedna nad drugą i przezroczyste zadaszenie pod światło",
+    ],
+  },
+
+  award: {
+    label: "Wyróżnienie",
+    lead: "Laureat regionu Île-de-France w konkursie Bois Français & Design, prowadzonym przez sieć Fibois France wraz z Fibois Île-de-France.",
+    leadEm: "Bois Français & Design",
+    body: "Instalacja jest pokazywana od 10 do 19 września 2026 roku w ramach Paris Design Week, w Bibliothèque Historique de la Ville de Paris, 24 rue Pavée, 75004 Paryż.",
+    dates: "od 10 do 19 września 2026",
+    logoAlt: "Paris Design Week, od 10 do 19 września 2026, Maison & Objet",
+  },
+
+  credits: {
+    label: "Autorzy",
+    team: "Zespół TINYLABS",
+    engineering: "Konstrukcja",
+    vehicle: "Pojazd",
+    printing: "Druk na drewnie",
+    contact: "Kontakt",
+  },
+
+  openingAlt: "Wyspy wystawy i ich plansze, zmontowane w hali",
+  planAlt: "Widok zagospodarowania: cztery wyspy, agora i pojazd, zajęte przez publiczność",
+};
+
 export const projectMarseille: Record<string, ProjectContent> = {
   en,
   fr,
-  pl: en,   // voir l'avertissement en tête de fichier
+  pl,
 };

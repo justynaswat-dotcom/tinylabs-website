@@ -48,25 +48,34 @@ export function ProjectPage() {
 
   return (
     <article>
+      {/* ── Ouverture, pleine page ────────────────────────────────────────
+          Elle ouvre la fiche, avant le titre, et occupe tout ce que l'écran
+          laisse sous la barre : la photo se voit entière au chargement, sans
+          rien à faire défiler. Sans marge non plus — elle touche les bords,
+          seule de la fiche à le faire.
+
+          Pas d'animation d'apparition ici : elle est visible d'emblée, et un
+          fondu au chargement ne ferait que retarder ce qu'on est venu voir. */}
+      <figure className="pp-bleed">
+        <img src="/images/m2050/vue-ensemble.jpg" fetchPriority="high"
+             decoding="async" alt={t.openingAlt} />
+      </figure>
+
       {/* ── En-tête ─────────────────────────────────────────────────────
-          Sans lien de retour : le titre ouvre la page seul. Le retour reste
-          en pied de fiche, et le logotype de la barre ramène à l'accueil. */}
+          Sans lien de retour : le titre suit l'image. Le retour reste en pied
+          de fiche, et le logotype de la barre ramène à l'accueil. */}
       <header className="pp pp-top">
         <div className="pp-inner">
           <motion.div {...reveal} className="pp-header">
             <h1 className="pp-title">{t.title}</h1>
             <p className="pp-subtitle">{t.subtitle}</p>
+            {/* La mention d'exposition, dès l'ouverture : le bandeau la porte
+                déjà en haut de toutes les pages, mais elle appartient aussi à
+                cette fiche-ci, où l'on arrive parfois par un lien direct. */}
+            <p className="pp-note">{t.note}</p>
           </motion.div>
         </div>
       </header>
-
-      {/* ── Ouverture, pleine page ────────────────────────────────────────
-          Sans marge : l'image touche les bords de l'écran. C'est la seule de
-          la fiche à le faire, ce qui lui donne son statut d'ouverture.      */}
-      <motion.figure {...reveal} className="pp-bleed">
-        <img src="/images/m2050/vue-ensemble.jpg" fetchPriority="high"
-             decoding="async" alt={t.openingAlt} />
-      </motion.figure>
 
       {/* ── Métadonnées ───────────────────────────────────────────────── */}
       <div className="pp">

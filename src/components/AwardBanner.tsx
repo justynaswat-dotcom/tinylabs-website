@@ -24,10 +24,10 @@ const texte = {
     lien: "See the project",
   },
   pl: {
-    tete: "Find us at Paris Design Week",
-    suite: "An extract from Marseille 2050, Fibois Île-de-France Award, at Espace Fibois, Bibliothèque Historique de la Ville de Paris, 24 rue Pavée, 10–19 September.",
-    court: "Extract from Marseille 2050, Espace Fibois, 10–19 Sept.",
-    lien: "See the project",
+    tete: "Znajdź nas na Paris Design Week",
+    suite: "Fragment wystawy Marsylia 2050, nagroda Fibois Île-de-France, w Espace Fibois, Bibliothèque Historique de la Ville de Paris, 24 rue Pavée, 10–19 września.",
+    court: "Fragment wystawy Marsylia 2050, Espace Fibois, 10–19 września",
+    lien: "Zobacz projekt",
   },
 };
 

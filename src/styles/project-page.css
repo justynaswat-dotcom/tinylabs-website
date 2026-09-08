@@ -39,8 +39,10 @@
    une marge portée par un inline-flex casse dès que le lien change. */
 /* Calé sur la hauteur réelle de l'entête fixe, 93 px page non défilée, plus
    une quarantaine de pixels de dégagement. Mesuré, pas estimé. */
-.pp-top { padding-top: 6.5rem; }
-@media (width >= 48rem) { .pp-top { padding-top: 8.5rem; } }
+/* L'ouverture passe devant le titre : celui-ci n'a plus à dégager la barre
+   fixe, il lui suffit de respirer sous la photo. */
+.pp-top { padding-top: 3rem; }
+@media (width >= 48rem) { .pp-top { padding-top: 4rem; } }
 /* Plus de retrait au-dessus du titre : il séparait le titre du lien de retour
    qui le précédait. Ce lien a été retiré, le retrait ne tenait plus que du
    vide. */
@@ -60,6 +62,15 @@
   line-height: 1.15;
   letter-spacing: -0.02em;
   margin: 0.25rem 0 0;
+}
+/* La mention d'exposition : au corps de la navigation, pas à celui du titre.
+   Elle situe la fiche sans disputer la place au nom du projet. */
+.pp-note {
+  font-family: var(--font-nav);
+  font-size: 0.9375rem;
+  color: var(--color-muted);
+  margin: 1.1rem 0 0;
+  max-width: 46ch;
 }
 
 /* ── Métadonnées ──────────────────────────────────────────────────────────
@@ -363,7 +374,13 @@
    donc en CSS, en s'appuyant sur la balise. La hauteur du bandeau vit dans
    une variable, seule valeur à changer si le texte passe sur deux lignes.
    ───────────────────────────────────────────────────────────────────────── */
-:root { --banner-h: 2.6rem; }
+:root {
+  --banner-h: 2.6rem;
+  /* Hauteur de l'entête page non défilée, mesurée : 2 rem de retrait
+     haut et bas plus la ligne du logotype. Sert à caler l'ouverture de
+     la fiche projet juste dessous. */
+  --header-h: 5.8rem;
+}
 
 .award-banner {
   position: fixed;
@@ -550,9 +567,24 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
    ───────────────────────────────────────────────────────────────────────── */
 
 /* Ouverture : la seule image à toucher les bords de l'écran. */
+/* L'ouverture occupe ce que l'écran laisse sous la barre : hauteur de la
+   fenêtre moins le bandeau et l'entête, tous deux fixes. La photo se voit
+   donc entière au chargement, sans rien faire défiler.
+
+   Trois bornes, dans cet ordre :
+   — la place disponible, pour que rien ne passe sous le pli ;
+   — 0,593 × la largeur, soit la proportion de la photo : au-delà, elle serait
+     recadrée pour rien, ce qui arrive sur un écran étroit et haut ;
+   — 60 svh au minimum, sinon sur mobile la borne précédente la réduirait à
+     une bande de deux cents pixels.
+
+   svh et non vh : sur mobile, vh ignore la barre d'adresse du navigateur et
+   l'image dépasserait du bas de l'écran. */
 .pp-bleed {
-  margin: 0;
-  aspect-ratio: 16 / 7;
+  margin: var(--header-h) 0 0;
+  height: max(60svh,
+              min(calc(100svh - var(--banner-h) - var(--header-h)),
+                  calc(100vw * 0.593)));
   overflow: hidden;
   background: var(--color-stone-light);
 }

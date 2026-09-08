@@ -72,7 +72,8 @@ WANTED = {
     # graphiques qui racontaient le contenu de l'exposition plutôt que sa
     # construction ; une seconde tenait un gros plan d'assemblage, écarté.
     'gal-halle':       'TINYLABS_EXPO_M2050-16.jpg',   # un îlot complet dans la halle, panneaux montés
-    'gal-ilot':        'TINYLABS_EXPO_M2050-11.jpg',   # un îlot équipé sous sa couverture
+    'gal-ilot':        'TINYLABS_EXPO_M2050-81.jpg',   # la maquette de la maison au-dessus du plateau,
+                                                    # entre les panneaux et la charpente
     'gal-structure':   'DSCF1496.jpg',                 # le chant du panneau, la ferme et la couverture
     'gal-rangee':      'Untitled-5.jpg',               # la rangée de face, presque une élévation
     'gal-panneau':     'DSCF1505.jpg',                 # un panneau et la tablette qui le prolonge
