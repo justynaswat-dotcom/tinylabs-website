@@ -41,7 +41,10 @@
    une quarantaine de pixels de dégagement. Mesuré, pas estimé. */
 .pp-top { padding-top: 6.5rem; }
 @media (width >= 48rem) { .pp-top { padding-top: 8.5rem; } }
-.pp-header { padding: 2rem 0 2.5rem; }
+/* Plus de retrait au-dessus du titre : il séparait le titre du lien de retour
+   qui le précédait. Ce lien a été retiré, le retrait ne tenait plus que du
+   vide. */
+.pp-header { padding: 0 0 2.5rem; }
 .pp-title {
   font-family: var(--font-grotesk);
   font-size: clamp(2.5rem, 6vw, 6rem);

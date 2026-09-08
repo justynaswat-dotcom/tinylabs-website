@@ -48,10 +48,11 @@ export function ProjectPage() {
 
   return (
     <article>
-      {/* ── En-tête ───────────────────────────────────────────────────── */}
+      {/* ── En-tête ─────────────────────────────────────────────────────
+          Sans lien de retour : le titre ouvre la page seul. Le retour reste
+          en pied de fiche, et le logotype de la barre ramène à l'accueil. */}
       <header className="pp pp-top">
         <div className="pp-inner">
-          <Link to="/#work" className="pp-back">← {t.back}</Link>
           <motion.div {...reveal} className="pp-header">
             <h1 className="pp-title">{t.title}</h1>
             <p className="pp-subtitle">{t.subtitle}</p>
