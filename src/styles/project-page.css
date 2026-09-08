@@ -225,13 +225,23 @@
 .pp-figure-square img { object-position: center 35%; }
 
 
+/* Le chapeau du principe constructif n'est plus dans une colonne mais sur
+   toute la largeur : sans limite il atteindrait la centaine de caractères.
+   50ch en gros corps, soit une soixantaine de caractères réels. */
+.pp-lead { max-width: 50ch; }
+
 /* Plan technique : contain et non cover, un dessin ne se recadre pas.
-   Le fond reprend celui de la page, le PDF étant transparent. */
+
+   Le fond blanc n'est pas retirable proprement du fichier — il provient de la
+   composition du PDF, où une plaque blanche sert de support aux masques qui
+   découpent les toiles. Le mélange par multiplication le fait disparaître :
+   blanc multiplié par le fond de page donne le fond de page, tandis que les
+   traits noirs et les toiles restent intacts. */
 .pp-plan img {
   width: 100%;
   height: auto;
   display: block;
-  background: var(--color-background);
+  mix-blend-mode: multiply;
 }
 
 /* ── Distinction et exposition ─────────────────────────────────────────── */
@@ -462,9 +472,9 @@ header.tl-header.tl-shrunk { padding-block: 1.25rem; }
 .tl-burger { width: 1.75rem; height: 1.75rem; flex: 0 0 auto; gap: 6px; }
 .tl-burger span { background: var(--color-foreground); height: 1px; width: 100%; }
 
-/* Menu en gris : le noir plein mettait la navigation au même niveau que les
-   titres de la page. Elle passe au premier plan seulement au survol et sur
-   la langue active. */
+/* Logotype et menu en noir plein, d'une seule valeur. Le survol éclaircit,
+   ce qui suffit à signaler le lien sans installer deux noirs différents dans
+   la barre. */
 .tl-nav { font-size: 1.375rem; transition: font-size 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
 header.tl-shrunk .tl-nav { font-size: 1.0625rem; }
 @media (width < 68rem) {
@@ -472,9 +482,11 @@ header.tl-shrunk .tl-nav { font-size: 1.0625rem; }
   .tl-langues { padding-left: 1.5rem; }
   .tl-header > div { gap: 1.25rem; }
 }
-.tl-nav a { color: var(--color-muted); transition: color 0.3s ease; }
-.tl-nav a:hover { color: var(--color-foreground); }
+.tl-nav a { color: var(--color-foreground); transition: opacity 0.3s ease; }
+.tl-nav a:hover { opacity: 0.5; }
 
+/* Le sélecteur de langue garde son contraste : c'est un état, pas un lien.
+   La langue courante doit se distinguer des deux autres. */
 .tl-langues button { color: var(--color-muted); transition: color 0.3s ease; }
 .tl-langues button:hover { color: var(--color-foreground); }
 .tl-langues .tl-langue-active { color: var(--color-foreground); }
@@ -483,7 +495,10 @@ header.tl-shrunk .tl-nav { font-size: 1.0625rem; }
 /* Le logotype ne se comprime jamais : le nom tient sur une ligne à toutes
    les largeurs, et c'est le menu qui cède la place s'il le faut. */
 .tl-header h1 { flex: 0 0 auto; }
-.tl-header > div { gap: 2rem; }
+/* Alignés sur la ligne de base et non par le milieu : les corps du logotype,
+   du menu et des langues diffèrent, et un alignement centré posait le nom
+   une vingtaine de pixels sous le menu. */
+.tl-header > div { gap: 2rem; align-items: baseline; }
 
 .tl-wordmark {
   display: inline-flex;
@@ -504,10 +519,9 @@ header.tl-shrunk .tl-nav { font-size: 1.0625rem; }
 @media (width >= 68rem) { .tl-wordmark { font-size: 1.375rem; } }
 @media (width >= 68rem) { header.tl-shrunk .tl-wordmark { font-size: 1.0625rem; } }
 
-/* Trois plans dans un même mot : le nom porte, le reste accompagne. */
-.tl-wordmark-nom { font-weight: 500; letter-spacing: 0.02em; }
-.tl-wordmark-tiret { opacity: 0.35; }
-.tl-wordmark-suite { opacity: 0.72; }
+/* D'un seul noir et d'une seule graisse : le nom se lisait sur trois plans,
+   ce qui le faisait ressembler à une ligne composée plutôt qu'à un nom. */
+.tl-wordmark-nom { letter-spacing: 0.02em; }
 
 /* ─────────────────────────────────────────────────────────────────────────
    RYTHME DES IMAGES

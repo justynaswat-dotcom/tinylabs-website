@@ -106,19 +106,20 @@ export function ProjectPage() {
         </div>
       </div>
 
-      {/* ── Principe constructif ──────────────────────────────────────── */}
+      {/* ── Principe constructif ────────────────────────────────────────
+          Le dessin est une bande de 4,4 pour 1 : dans une colonne il ne
+          mesurerait que deux cents pixels de haut. Il passe donc sous le
+          texte, sur toute la largeur, où il tient sa place.              */}
       <section className="pp pp-section">
         <div className="pp-inner">
-          <motion.div {...reveal} className="pp-two-col">
-            <div>
-              <p className="label pp-section-head">{t.structure.label}</p>
-              <p className="p-large">{t.structure.lead}</p>
-            </div>
-            <figure className="pp-plan">
-              <img loading="lazy" decoding="async"
-                   src="/images/m2050/axonometrie.svg" alt={t.structure.alt} />
-            </figure>
+          <motion.div {...reveal} className="pp-section-head">
+            <p className="label" style={{ marginBottom: "2rem" }}>{t.structure.label}</p>
+            <p className="p-large pp-lead">{t.structure.lead}</p>
           </motion.div>
+          <motion.figure {...reveal} className="pp-plan">
+            <img loading="lazy" decoding="async"
+                 src="/images/m2050/axonometrie.svg" alt={t.structure.alt} />
+          </motion.figure>
         </div>
       </section>
 
