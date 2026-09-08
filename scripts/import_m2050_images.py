@@ -9,6 +9,21 @@ quelques centaines de kilooctets sans perte visible à l'écran.
 Source : ~/Documents/M2050/PHOTOS_FINAL_MARSEILLE (hors dépôt, volumineux)
 Sortie : public/images/m2050/
 
+CHOIX DES IMAGES. Le fonds compte 239 photos réparties en six dossiers. Les
+deux dossiers de timelapse ne montrent que le montage, une personne dans
+chaque vue : inutilisables ici. La sélection ci-dessous suit trois règles.
+
+  1. Aucun visiteur, aucune personne au travail. La fiche donne à voir le
+     dispositif, pas son inauguration. Les figurines des maquettes, elles,
+     font partie des objets exposés.
+  2. Peu de couleur. L'exposition est très colorée ; une page qui empilerait
+     ses vues les plus vives deviendrait illisible. Les photos retenues sont
+     dominées par le bois et le blanc de la halle, la couleur n'arrivant que
+     là où elle est le sujet — les quatre dispositifs.
+  3. Un sujet par image. Les vues d'atelier, où l'on voit un radiateur, un
+     parquet ou des tréteaux blancs, sont écartées au profit des cadrages
+     serrés sur fond neutre.
+
 Usage : python3 scripts/import_m2050_images.py
 """
 import os, subprocess
@@ -20,40 +35,57 @@ OUT = os.path.join(BASE, 'public', 'images', 'm2050')
 MAXW, Q = 1800, 82
 
 # Photo d'ouverture : elle vit dans le dossier d'images du projet Figma
-# d'origine, et non dans le reportage d'exposition.
+# d'origine, et non dans le reportage d'exposition. Choisie par la cliente.
 FIBOIS = os.path.expanduser(
     '~/Documents/REPO_NOCODE/Minimalist Editorial Website/build/images/IMAGE_FIBOIS.jpg')
 
 # Nom de destination -> fragment du nom de fichier source.
 # Les noms de sortie décrivent le contenu : le composant les lit tels quels.
+# Une valeur commençant par « / » est un chemin absolu ; sinon le fichier est
+# cherché par nom exact dans SRC, quel que soit le sous-dossier.
 WANTED = {
-    # Aucune photo ne doit montrer de visiteur ni de personne au travail :
-    # la fiche donne à voir le dispositif, pas son inauguration. Les figurines
-    # des maquettes, elles, font partie des objets exposés.
-    # Une valeur commençant par « / » est un chemin absolu ; sinon le fichier
-    # est cherché par nom exact dans SRC.
-    'vue-ensemble':      FIBOIS,                          # les îlots et leurs panneaux, en large
-    'maison':            'TINYLABS_EXPO_M2050-17.jpg',    # façade du trois-fenêtres et son arbre
-    'maison-detail':     'TINYLABS_EXPO_M2050-18.jpg',    # fenêtre illustrée, intérieur habité
-    'rue':               'TINYLABS_EXPO_M2050-23.jpg',    # la rue, ses commerces et ses passants
-    'ville':             'TINYLABS_EXPO_M2050-100.jpg',   # le plateau et ses modules, vu de dessus
-    'posidonie-detail':  'TINYLABS_EXPO_M2050-30.jpg',    # un poisson seul sur le contreplaqué
+    # Ouverture, pleine largeur.
+    'vue-ensemble':   FIBOIS,
+
+    # Diptyque : la structure nue, puis les pièces à plat. Deux images sans
+    # presque aucune couleur, qui reposent l'œil entre deux sections.
+    'chevalet':       'TINYLABS_EXPO_M2050-63.jpg',   # le chevalet de face, bois seul
+    'poissons':       'TINYLABS_EXPO_M2050-29.jpg',   # poissons découpés posés sur le contreplaqué
+
+    # Les quatre dispositifs. Une image chacun, la plus lisible.
+    'maison':         'TINYLABS_MM_Maison-30.jpg',    # la maquette entière, pignon et façade, fond neutre
+    'rue':            'TINYLABS_EXPO_M2050-23.jpg',   # la rue, ses commerces et ses passants
+    'ville':          'TINYLABS_EXPO_M2050-100.jpg',  # le plateau de jeu et ses modules, vu de dessus
+    'posidonie':      'TINYLABS_EXPO_M2050-52.jpg',   # l'herbier en volume, cadré par le chevalet
+
+    # Galerie. Six vues de la scénographie, du bois et du trait, presque sans
+    # couleur : c'est là que l'exposition se lit comme un objet construit.
+    'gal-ilot':       'TINYLABS_EXPO_M2050.jpg',      # un îlot complet, isolé dans la halle
+    'gal-signe':      'TINYLABS_EXPO_M2050-88.jpg',   # le panneau « Ici, c'est Marseille »
+    'gal-carte':      'TINYLABS_EXPO_M2050-67.jpg',   # la carte du littoral, bleu sur contreplaqué
+    'gal-banc':       'TINYLABS_EXPO_M2050-5.jpg',    # un chevalet nu, sans panneau
+    'gal-herbier':    'TINYLABS_EXPO_M2050-55.jpg',   # la posidonie au trait, légendée
+    'gal-interieur':  'TINYLABS_EXPO_M2050-72.jpg',   # l'intérieur de la maquette, fenêtres à contre-jour
 }
 
-# Deux sorties ne sont pas de simples redimensionnements.
-
-# L'herbier : la seule vue qui le montre entier est un panorama de rapport 2,5
-# (dossier MEXPO_PANNO). La vignette carrée de la manip en est un morceau,
-# cadré sur l'herbier en volume et ses poissons.
-PANO = 'Untitled-8.jpg'
-PANO_CROP_X = 0.355        # bord gauche du carré, en fraction de la largeur
-
-# L'axonométrie : page 1 du PDF de principes constructifs, qui montre les
-# quatre configurations du chevalet. Le PDF est transparent, il faut donc le
-# composer sur le fond du site plutôt que de le laisser sur du noir.
-AXO_PDF = os.path.expanduser(
-    '~/Documents/REPO_NOCODE/Minimalist Editorial Website/build/assets/AXO_1_1X2_1 (1).pdf')
-FOND = (247, 245, 242)
+# L'axonométrie n'est pas un simple redimensionnement.
+#
+# Deux planches existent : un carré qui empile les quatre configurations deux
+# par deux, et une bande qui les aligne. C'est la bande qui est retenue.
+# pdftocairo en préserve les tracés — un dessin technique doit rester net à
+# toutes les tailles.
+#
+# Piège, à ne pas répéter : les masques bitmap du PDF couvrent TOUT le dessin.
+# Les rééchantillonner allège le fichier mais plafonne la définition de
+# l'ensemble, qui paraît alors pixellisé. shrink_svg_rasters.py les réencode
+# en 1 bit à pleine résolution : 229 ko -> 31 ko sans perdre un pixel.
+#
+# Le cadrage et le retrait du fond blanc ont été faits à la main sur le
+# fichier livré (viewBox resserrée à 24 unités de marge). Le SVG en place est
+# donc plus abouti que ce que produirait une simple reconversion : ce bloc ne
+# s'exécute que si le fichier a disparu.
+AXO_SVG_LIVRE = os.path.expanduser(
+    '~/Documents/REPO_NOCODE/Minimalist Editorial Website/build/images/vue_iso_modules_justyna.svg')
 
 
 def find(fragment):   # chemin absolu, ou nom de fichier exact dans SRC
@@ -84,38 +116,15 @@ for name, frag in WANTED.items():
     total_out += o
     print(f'  {name:<18} {s/1e6:6.1f} Mo -> {o/1e3:6.0f} ko   {im.width}x{im.height}')
 
-
-# posidonie.jpg : carré taillé dans le panorama de l'îlot
-src = find(PANO)
-if src:
-    im = Image.open(src).convert('RGB')
-    h = im.height
-    x = round(im.width * PANO_CROP_X)
-    im = im.crop((x, 0, x + h, h)).resize((1400, 1400), Image.LANCZOS)
-    dst = os.path.join(OUT, 'posidonie.jpg')
-    im.save(dst, 'JPEG', quality=84, optimize=True, progressive=True)
-    total_src += os.path.getsize(src); total_out += os.path.getsize(dst)
-    print(f'  {"posidonie":<18} {os.path.getsize(src)/1e6:6.1f} Mo -> '
-          f'{os.path.getsize(dst)/1e3:6.0f} ko   1400x1400  (carré taillé dans le panorama)')
-else:
-    print(f'  MANQUANT  {PANO}')
-
-# axonometrie.svg : page 1 du PDF, convertie en VECTORIEL et non en bitmap.
-# Un dessin technique doit rester net à toutes les tailles ; pdftocairo
-# préserve les tracés. Les huit toiles d'ombrage sont en revanche des bitmaps
-# dans le PDF source : on les rééchantillonne, sans quoi elles pèsent à elles
-# seules 90 % du fichier pour un affichage dix fois plus petit.
-if os.path.exists(AXO_PDF):
-    dst = os.path.join(OUT, 'axonometrie.svg')
-    subprocess.run(['pdftocairo', '-svg', '-f', '1', '-l', '1', AXO_PDF, dst],
-                   capture_output=True)
+axo = os.path.join(OUT, 'axonometrie.svg')
+if os.path.exists(axo):
+    print(f'  {"axonometrie.svg":<18} déjà en place ({os.path.getsize(axo)/1e3:.0f} ko), conservé')
+elif os.path.exists(AXO_SVG_LIVRE):
+    subprocess.run(['cp', AXO_SVG_LIVRE, axo])
     subprocess.run(['python3', os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                                            'shrink_svg_rasters.py'), dst, '600'],
-                   capture_output=True)
-    total_src += os.path.getsize(AXO_PDF); total_out += os.path.getsize(dst)
-    print(f'  {"axonometrie.svg":<18} {os.path.getsize(AXO_PDF)/1e6:6.1f} Mo -> '
-          f'{os.path.getsize(dst)/1e3:6.0f} ko   vectoriel')
+                                            'shrink_svg_rasters.py'), axo])
+    print(f'  {"axonometrie.svg":<18} réimporté brut — cadrage et fond blanc à reprendre à la main')
 else:
-    print(f'  MANQUANT  {AXO_PDF}')
+    print(f'  MANQUANT  {AXO_SVG_LIVRE}')
 
-print(f'\ntotal : {total_src/1e6:.0f} Mo -> {total_out/1e6:.1f} Mo')
+print(f'\ntotal photos : {total_src/1e6:.0f} Mo -> {total_out/1e6:.1f} Mo')

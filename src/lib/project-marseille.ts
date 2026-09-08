@@ -71,7 +71,7 @@ const fr = {
     items: [
       {
         t: "La Maison",
-        vue: "Façade du trois-fenêtres et son arbre, dans l'exposition",
+        vue: "La maquette du trois-fenêtres, pignon au goéland et façade ouverte",
         d: "Une maquette du fameux « trois-fenêtres » marseillais, l'immeuble qui fait l'identité de la ville. Façade après façade, on l'adapte au climat de 2050 : volets et persiennes, enduit à la chaux clair, isolation biosourcée, toiture-terrasse végétalisée, cour intérieure fraîche, récupération d'eau et soleil sur les toits.",
       },
       {
@@ -86,7 +86,7 @@ const fr = {
       },
       {
         t: "La Posidonie",
-        vue: "L'herbier en volume et ses poissons, devant l'atlas des espèces",
+        vue: "L'herbier en volume et ses poissons, porté par un chevalet",
         d: "Sous la mer, une plante endémique de la Méditerranée tisse de vastes prairies : la posidonie, joyau du littoral. Une maquette en bois ouvre une fenêtre sous l'eau, où l'on découvre l'herbier, ses habitants, ses racines millénaires et son rôle climatique pour Marseille et les calanques.",
       },
     ],
@@ -106,14 +106,20 @@ const fr = {
     ],
   },
 
+  // Diptyque : la structure nue, puis les pièces à plat.
+  duo: [
+    "Un chevalet vu de face, son assemblage de bois apparent",
+    "Des poissons découpés dans le contreplaqué, posés à plat sur la tablette",
+  ],
+
   gallery: {
     alts: [
-      "Un îlot entier et ses trois panneaux, sous sa tablette d'ombrage",
+      "Un îlot entier et ses panneaux, isolé dans la halle",
+      "Le panneau « Ici, c'est Marseille » et son goéland au trait",
+      "Le littoral marseillais imprimé en bleu sur le contreplaqué",
+      "Un chevalet nu, ses bancs et sa tablette, sans panneau",
+      "La posidonie dessinée au trait sur le contreplaqué, légendée",
       "L'intérieur de la maquette de la maison, la lumière aux fenêtres",
-      "Le littoral marseillais peint sur le contreplaqué",
-      "La rue et ses figurines, vue depuis le trottoir",
-      "Un poisson découpé dans le contreplaqué, peint à la main",
-      "Le chant du contreplaqué et l'ossature qui le porte",
     ],
   },
 
@@ -196,7 +202,7 @@ const en: ProjectContent = {
     items: [
       {
         t: "The Home",
-        vue: "Façade of the trois-fenêtres and its tree, in the exhibition",
+        vue: "The trois-fenêtres model, gull drawn on the gable, façade open",
         d: "A model of the famous Marseille trois-fenêtres, the building that gives the city its face. Façade by façade, it is adapted to the climate of 2050: shutters and louvres, pale lime render, biosourced insulation, planted roof terrace, cool inner courtyard, rainwater harvesting and sun on the roofs.",
       },
       {
@@ -211,7 +217,7 @@ const en: ProjectContent = {
       },
       {
         t: "The Posidonia",
-        vue: "The seagrass meadow in relief and its fish, before the atlas of species",
+        vue: "The seagrass meadow in relief and its fish, carried on a trestle",
         d: "Beneath the sea, a plant endemic to the Mediterranean weaves vast meadows: posidonia, the jewel of the coast. A timber model opens a window underwater, revealing the meadow, its inhabitants, its thousand-year-old roots and its climate role for Marseille and the calanques.",
       },
     ],
@@ -231,14 +237,19 @@ const en: ProjectContent = {
     ],
   },
 
+  duo: [
+    "A trestle seen head-on, its timber joints exposed",
+    "Fish cut from plywood, laid flat on the shelf",
+  ],
+
   gallery: {
     alts: [
-      "A whole island and its three panels, under its shading canopy",
+      "A whole island and its panels, standing alone in the hall",
+      "The “Ici, c’est Marseille” panel and its line-drawn gull",
+      "The Marseille coastline printed in blue on plywood",
+      "A bare trestle, its benches and shelf, with no panel",
+      "Posidonia drawn in outline on plywood, with labels",
       "Inside the house model, light at the windows",
-      "The Marseille coastline painted on plywood",
-      "The street and its figures, seen from the pavement",
-      "A fish cut from plywood, hand-painted",
-      "The edge of the plywood and the frame that carries it",
     ],
   },
 

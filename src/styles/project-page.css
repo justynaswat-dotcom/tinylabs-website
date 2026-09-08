@@ -37,11 +37,10 @@
 /* ── En-tête ────────────────────────────────────────────────────────────── */
 /* Le décalage haut appartient à l'en-tête, pas au lien de retour :
    une marge portée par un inline-flex casse dès que le lien change. */
-/* 12 rem et non 7 : l'entête fixe mesure 171 px de haut tant que la page
-   n'est pas défilée, et le lien de retour passait dessous. Mesuré, pas
-   estimé. */
-.pp-top { padding-top: 8.5rem; }
-@media (width >= 48rem) { .pp-top { padding-top: 12rem; } }
+/* Calé sur la hauteur réelle de l'entête fixe, 93 px page non défilée, plus
+   une quarantaine de pixels de dégagement. Mesuré, pas estimé. */
+.pp-top { padding-top: 6.5rem; }
+@media (width >= 48rem) { .pp-top { padding-top: 8.5rem; } }
 .pp-header { padding: 2rem 0 2.5rem; }
 .pp-title {
   font-family: var(--font-grotesk);
@@ -435,6 +434,12 @@ header.fixed { top: var(--banner-h); }
 body .tl-progress { top: var(--banner-h); }
 #hero, main > section:first-child { scroll-margin-top: var(--banner-h); }
 
+/* La réserve du hero, 176 px, était calée sur une entête de 171 px de haut.
+   Celle-ci n'en fait plus que 93 : il restait 83 px de vide entre la barre et
+   le titre. On garde une quarantaine de pixels de dégagement, pas davantage. */
+main > section:first-child { padding-top: 6.5rem; }
+@media (width >= 48rem) { main > section:first-child { padding-top: 8rem; } }
+
 /* ─────────────────────────────────────────────────────────────────────────
    BARRE DE NAVIGATION ET LOGOTYPE
 
@@ -459,10 +464,17 @@ body .tl-progress { top: var(--banner-h); }
    le hero), pour que le nom s'aligne sur le texte qui le suit. */
 .tl-header {
   padding-inline: 1.5rem;
+  padding-block: 2rem;
   transition: padding 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media (width >= 48rem) { .tl-header { padding-inline: 3rem; } }
-header.tl-header.tl-shrunk { padding-block: 1.25rem; }
+header.tl-header.tl-shrunk { padding-block: 1.1rem; }
+
+/* Le h1 gardait le corps des titres de la feuille de style — le logotype ne
+   fixe la taille que sur le lien qu'il contient. Sa ligne mesurait donc 83 px
+   pour 23 px de texte, et l'entête 171 px de haut : tout ce vide se voyait
+   au-dessus de la page. */
+.tl-header h1 { font-size: inherit; line-height: 1; }
 
 /* Le bouton de menu tirait sa taille de « w-7 h-7 shrink-0 » et la couleur de
    ses barres de « bg-[var(--color-foreground)] » — classes arbitraires
@@ -507,6 +519,7 @@ header.tl-header.tl-shrunk { padding-block: 1.25rem; }
   align-items: baseline;
   gap: 0.42em;
   font-size: 1rem;
+  line-height: 1.15;
   letter-spacing: 0.005em;
   white-space: nowrap;
   color: inherit;

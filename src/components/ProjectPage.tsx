@@ -28,9 +28,13 @@ const equipe = [
   "Stéphanie Beuf", "Mathieu Grosche", "Louise Viollet Deval", "Sonia Nazef",
 ];
 
+/* Galerie : six vues de la scénographie, presque sans couleur. L'ordre compte
+   — la première occupe deux colonnes sur deux dans la mosaïque, la quatrième
+   deux colonnes en largeur. On y place donc l'îlot complet, puis le chevalet
+   nu, les deux images les plus larges de la série. */
 const galerie = [
-  "gal-ilot", "gal-interieur", "gal-carte",
-  "gal-rue", "gal-poisson", "gal-chant",
+  "gal-ilot", "gal-signe", "gal-carte",
+  "gal-banc", "gal-herbier", "gal-interieur",
 ];
 
 const vues = ["maison", "rue", "ville", "posidonie"];
@@ -150,11 +154,11 @@ export function ProjectPage() {
           <motion.div {...reveal} className="pp-duo">
             <figure className="pp-figure pp-figure-tall pp-duo-a">
               <img loading="lazy" decoding="async"
-                   src="/images/m2050/maison-detail.jpg" alt={t.gallery.alts[1]} />
+                   src="/images/m2050/chevalet.jpg" alt={t.duo[0]} />
             </figure>
             <figure className="pp-figure pp-figure-square pp-duo-b">
               <img loading="lazy" decoding="async"
-                   src="/images/m2050/posidonie-detail.jpg" alt={t.gallery.alts[4]} />
+                   src="/images/m2050/poissons.jpg" alt={t.duo[1]} />
             </figure>
           </motion.div>
         </div>
