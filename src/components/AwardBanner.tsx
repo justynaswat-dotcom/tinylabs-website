@@ -6,24 +6,25 @@ import { useLanguage } from "../lib/LanguageContext";
    Volontairement sobre : une ligne, pas de fond coloré ni d'appel à l'action,
    pour ne pas prendre le pas sur le titre de la page qui le suit. */
 
-/* La tête du bandeau annonce d'abord où l'on est — « TINYLABS à la Paris
+/* La tête du bandeau annonce d'abord où l'on est — « Trouvez-nous à la Paris
    Design Week » — et non plus le nom du prix : c'est l'évènement en cours qui
-   situe le studio, le prix vient ensuite dans la phrase. */
+   situe le studio, le prix vient ensuite dans la phrase. L'adresse directe
+   invite à venir, là où le nom du studio ne faisait que constater. */
 const texte = {
   fr: {
-    tete: "TINYLABS à la Paris Design Week",
+    tete: "Trouvez-nous à la Paris Design Week",
     suite: "Un extrait de Marseille 2050, prix Fibois Île-de-France, à l'Espace Fibois, Bibliothèque Historique de la Ville de Paris, 24 rue Pavée, du 10 au 19 septembre.",
     court: "Extrait de Marseille 2050, Espace Fibois, 10–19 sept.",
     lien: "Voir le projet",
   },
   en: {
-    tete: "TINYLABS at Paris Design Week",
+    tete: "Find us at Paris Design Week",
     suite: "An extract from Marseille 2050, Fibois Île-de-France Award, at Espace Fibois, Bibliothèque Historique de la Ville de Paris, 24 rue Pavée, 10–19 September.",
     court: "Extract from Marseille 2050, Espace Fibois, 10–19 Sept.",
     lien: "See the project",
   },
   pl: {
-    tete: "TINYLABS at Paris Design Week",
+    tete: "Find us at Paris Design Week",
     suite: "An extract from Marseille 2050, Fibois Île-de-France Award, at Espace Fibois, Bibliothèque Historique de la Ville de Paris, 24 rue Pavée, 10–19 September.",
     court: "Extract from Marseille 2050, Espace Fibois, 10–19 Sept.",
     lien: "See the project",
