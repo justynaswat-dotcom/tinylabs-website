@@ -7,7 +7,10 @@ const projectImages = [
   "/images/project-2.jpg",
   "/images/project-3.jpg",
   "/images/project-4.jpg",
-  "/images/project-6.jpg",
+  // 4 · l'exposition : même photo que project-6, portant en plus le logo
+  // Paris Design Week. C'est la seule carte de la grille qui renvoie à une
+  // fiche, et l'évènement en cours mérite de se voir dès l'accueil.
+  "/images/project-6-pdw.jpg",
   "/images/project-7.jpg",
   "/images/project-8.jpg",
   "/images/project-9.jpg",
