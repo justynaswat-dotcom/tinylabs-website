@@ -70,7 +70,7 @@ const fr = {
 
   fabrication: {
     label: "Fabrication",
-    heading: "Quatre gestes, un pré.",
+    heading: "Quatre gestes",
     items: [
       { t: "Couper", d: "Trois branches choisies pour leur fourche naturelle, taillées à la longueur d'assise." },
       { t: "Lier", d: "Les ligatures d'éclisse tiennent l'ossature, qui sert ensuite de support au moule." },
@@ -175,7 +175,7 @@ const en: StoolContent = {
 
   fabrication: {
     label: "Making",
-    heading: "Four gestures, one meadow.",
+    heading: "Four gestures",
     items: [
       { t: "Cut", d: "Three branches chosen for their natural fork, trimmed to seat height." },
       { t: "Lash", d: "Cane lashings hold the frame, which then carries the mould." },
@@ -280,7 +280,7 @@ const pl: StoolContent = {
 
   fabrication: {
     label: "Wykonanie",
-    heading: "Cztery gesty, jedna łąka.",
+    heading: "Cztery gesty",
     items: [
       { t: "Ściąć", d: "Trzy gałęzie wybrane dla naturalnego rozwidlenia, przycięte na wysokość siedziska." },
       { t: "Związać", d: "Wiązania z taśmy trzymają konstrukcję, która następnie niesie formę." },
