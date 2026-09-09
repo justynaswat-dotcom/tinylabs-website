@@ -23,7 +23,14 @@ const reveal = {
   transition: { duration: 1, ease: [0.4, 0, 0.2, 1] as const },
 };
 
-const galerie = ["laine", "carnet", "ligature", "substrat-detail", "pre", "plantation"];
+/* La galerie ne redit pas ce que les sections montrent déjà. Elle alterne
+   l'étude — les maquettes du piètement sur fond neutre — et le terrain, et
+   respecte les formats des cellules : la première est haute, les deux
+   suivantes en portrait, les trois dernières en largeur. */
+const galerie = [
+  "maquette-debout", "carnet", "laine",
+  "materiaux", "pre", "maquette-profil",
+];
 
 export function StoolPage() {
   const { language } = useLanguage();

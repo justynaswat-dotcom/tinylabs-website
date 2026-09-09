@@ -82,12 +82,12 @@ const fr = {
   galerie: {
     label: "L'atelier",
     alts: [
-      "La toison de laine posée sur l'ossature de branches, dans le pré",
+      "La maquette du piètement, debout sur fond neutre",
       "Le carnet de croquis et les branches choisies, posés côte à côte",
-      "Une ligature d'éclisse serrée sur le croisement de deux branches",
-      "Le substrat ensemencé, étalé avant la mise en moule",
+      "La toison de laine posée sur l'ossature de branches, dans le pré",
+      "Les bois, la bobine d'éclisse et un premier trépied, à plat",
       "L'établi monté dans le pré, le substrat étalé sur la bâche",
-      "Les pieds du tabouret mis en terre à la bêche",
+      "La même maquette de profil, ses trois pieds et sa tête liée",
     ],
   },
 
@@ -187,12 +187,12 @@ const en: StoolContent = {
   galerie: {
     label: "The workshop",
     alts: [
-      "The wool fleece set over the branch frame, in the meadow",
+      "The leg-frame maquette, standing on a neutral ground",
       "The sketchbook and the chosen branches, laid side by side",
-      "A cane lashing drawn tight over the crossing of two branches",
-      "The inoculated substrate, spread out before moulding",
+      "The wool fleece set over the branch frame, in the meadow",
+      "The branches, the coil of cane and a first tripod, laid flat",
       "The bench set up in the meadow, the substrate spread on the sheet",
-      "The stool's legs driven into the ground with a spade",
+      "The same maquette in profile, its three legs and lashed head",
     ],
   },
 
@@ -292,12 +292,12 @@ const pl: StoolContent = {
   galerie: {
     label: "Warsztat",
     alts: [
-      "Runo wełny położone na konstrukcji z gałęzi, na łące",
+      "Makieta podstawy, stojąca na neutralnym tle",
       "Szkicownik i wybrane gałęzie, złożone obok siebie",
-      "Wiązanie z taśmy zaciągnięte na skrzyżowaniu dwóch gałęzi",
-      "Zaszczepione podłoże, rozłożone przed formowaniem",
+      "Runo wełny położone na konstrukcji z gałęzi, na łące",
+      "Gałęzie, zwój taśmy i pierwszy trójnóg, rozłożone płasko",
       "Warsztat ustawiony na łące, podłoże rozłożone na plandece",
-      "Nogi taboretu wbite w ziemię szpadlem",
+      "Ta sama makieta z profilu, trzy nogi i związana głowica",
     ],
   },
 

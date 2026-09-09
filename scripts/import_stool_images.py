@@ -57,13 +57,17 @@ WANTED = {
     'ferme':           ('DSCF3220.JPG', None),        # la ferme au fond du pré
     'toit':            ('DSCF3221.JPG', None),        # les lauzes, appareillées
 
-    # La main : ligatures d'essai, photographiées au mur.
-    'ligature':        ('DSCF3367.JPG', None),        # une ligature, de près
+    # La main : ligatures d'essai photographiées au mur, puis les maquettes
+    # du piètement, debout sur fond neutre. Ces dernières sont le vrai travail
+    # d'étude du studio — une galerie faite d'instantanés d'atelier passait à
+    # côté.
     'assemblage':      ('DSCF3356.JPG', None),        # deux croisements liés
     'carnet':          ('Process/Process_013.JPG', None),  # le carnet et les bois
+    'materiaux':       ('DSCF3374.JPG', None),        # bois, bobine d'éclisse, premier trépied
+    'maquette-debout': ('DSCF3388.JPG', None),        # la maquette du piètement, debout
+    'maquette-profil': ('DSCF3385.JPG', None),        # la même, de profil
 
     # La matière : le mycélium, avant le tabouret.
-    'substrat-detail': ('DSCF3433.JPG', None),        # le substrat étalé, de près
     'substrat':        ('Process/Process_0112.JPG', None),  # le substrat en main
 
     # La culture, la mise en terre, l'objet.
