@@ -26,13 +26,18 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(BASE, 'public', 'images', 'tabouret')
 MAXW, Q = 1800, 82
 
-# nom de sortie -> (fichier source, recadrage éventuel)
+# nom de sortie -> (fichier source, recadrage éventuel, ancrage vertical)
 # Le recadrage vaut « largeur / hauteur » visé ; None laisse la photo entière.
+# L'ancrage dit où prendre la bande : 0 en haut, 1 en bas, 0,5 au centre.
 WANTED = {
     # Ouverture pleine largeur : l'ossature et son moule montés dans le pré.
     # La bande d'ouverture est en 1,7/1, la photo en 16/9 : on recadre pour
     # que le cadrage automatique ne coupe pas le montage.
-    'ouverture':       ('Process/Process_018.JPG', 16 / 7),
+    # Pas de recadrage préalable : la bande d'ouverture applique déjà un
+    # cover, et pré-recadrer en 16/7 revenait à zoomer deux fois. Une source
+    # en PAYSAGE est indispensable — une portrait, comme la vue à la toison,
+    # se retrouve agrandie au point de ne plus montrer que son sujet central.
+    'ouverture':       ('DSCF3215.JPG', None),        # deux briques de mycélium en main
 
     # Le lieu : une vallée, une ferme, un toit de lauzes. Le projet parle de
     # matériaux d'ici — encore faut-il montrer où est cet ici.
@@ -46,12 +51,12 @@ WANTED = {
     'carnet':          ('Process/Process_013.JPG', None),  # le carnet et les bois
 
     # La matière : le mycélium, avant le tabouret.
-    'briques':         ('DSCF3215.JPG', None),        # deux briques en main
     'blocs':           ('DSCF3224.JPG', None),        # les blocs sur l'établi
     'substrat':        ('Process/Process_0112.JPG', None),  # le substrat en main
 
     # La culture, la mise en terre, l'objet.
     'laine':           ('DSCF3408.JPG', None),        # la toison sur l'ossature
+    'pre':             ('Process/Process_018.JPG', None),  # l'établi monté dans le pré
     'plantation':      ('DSCF3421.JPG', None),        # les pieds mis en terre
     'tabouret':        ('Process/Final_3.JPG', None), # le tabouret, debout
 }
@@ -81,7 +86,9 @@ def charge(rel):
 
 os.makedirs(OUT, exist_ok=True)
 avant = apres = 0
-for nom, (rel, ratio) in WANTED.items():
+for nom, spec in WANTED.items():
+    rel, ratio = spec[0], spec[1]
+    ancrage = spec[2] if len(spec) > 2 else 0.5
     im = charge(rel)
     if im is None:
         print(f'  MANQUANT  {rel}')
@@ -91,9 +98,7 @@ for nom, (rel, ratio) in WANTED.items():
     if ratio:
         h = round(im.width / ratio)
         if h <= im.height:
-            # On garde le centre de gravité du sujet : il est plutôt bas dans
-            # les vues du tabouret, où le ciel occupe le haut du cadre.
-            haut = round((im.height - h) * 0.62)
+            haut = round((im.height - h) * ancrage)
             im = im.crop((0, haut, im.width, haut + h))
         else:
             l = round(im.height * ratio)

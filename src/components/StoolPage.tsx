@@ -23,7 +23,7 @@ const reveal = {
   transition: { duration: 1, ease: [0.4, 0, 0.2, 1] as const },
 };
 
-const galerie = ["briques", "carnet", "ligature", "blocs", "laine", "plantation"];
+const galerie = ["laine", "carnet", "ligature", "blocs", "pre", "plantation"];
 
 export function StoolPage() {
   const { language } = useLanguage();
@@ -242,7 +242,11 @@ export function StoolPage() {
               </dd>
 
               <dt className="label">{t.credits.studio}</dt>
-              <dd>Justyna&nbsp;Swat · TINYLABS</dd>
+              {/* Noms insécables : un prénom ne doit pas se détacher de son
+                  nom en fin de ligne. */}
+              <dd>
+                {t.credits.equipe} — Justyna&nbsp;Swat&nbsp;· Brieuc&nbsp;Tual
+              </dd>
 
               <dt className="label">{t.credits.contact}</dt>
               <dd>

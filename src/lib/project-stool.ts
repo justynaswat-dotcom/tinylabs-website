@@ -34,7 +34,7 @@ const fr = {
     lead:
       "Un tabouret dont l'assise n'est pas fabriquée mais cultivée. Le mycélium — la partie souterraine du champignon, un feutrage de filaments — colonise un substrat de bois et le lie en un matériau ferme et léger. Les pieds sont trois branches coupées dans le bois voisin. Rien n'a été apporté de loin.",
     body: [
-      "L'objet est né à l'atelier de l'Epinay, deux journées d'août 2026 en montagne, sous la conduite d'Adrien Rigobello. L'atelier est un des terrains du projet de recherche Relational Tectonics, qui explore ce que devient la construction quand elle travaille avec le vivant plutôt que contre lui.",
+      "L'objet est né à l'atelier de l'Epinay, en montagne, en août 2026, sous la conduite d'Adrien Rigobello. L'atelier est un des terrains du projet de recherche Relational Tectonics, qui explore ce que devient la construction quand elle travaille avec le vivant plutôt que contre lui.",
       "Biorégional est ici un mot précis, pas une intention : le bois vient de la parcelle, la laine du troupeau qui la broute, le mycélium se nourrit des copeaux du bois coupé. La vallée fournit la matière, l'énergie et le temps de prise. Ce qui manque à la vallée ne fait pas partie de l'objet.",
       "Cette pièce est une étape. Elle prépare l'exposition finale de la recherche, à Copenhague en 2028, où elle sera montrée avec les autres épreuves du programme.",
     ],
@@ -50,7 +50,7 @@ const fr = {
   liaison: {
     label: "Assemblages",
     heading:
-      "Aucune vis, aucune colle : des ligatures d'éclisse, essayées une à une avant d'être portées sur l'ossature.",
+      "Des ligatures d'éclisse, essayées une à une avant d'être portées sur l'ossature.",
     body:
       "Les croisements ont été étudiés au mur, en série, sur des branches de diamètres différents. Une ligature bien serrée tient par friction et se défait sans rien casser : l'objet peut être démonté, ses pieds replantés, son assise rendue au sol.",
   },
@@ -69,7 +69,7 @@ const fr = {
 
   fabrication: {
     label: "Fabrication",
-    heading: "Quatre gestes, deux jours, un pré.",
+    heading: "Quatre gestes, un pré.",
     items: [
       { t: "Couper", d: "Trois branches choisies pour leur fourche naturelle, taillées à la longueur d'assise." },
       { t: "Lier", d: "Les ligatures d'éclisse tiennent l'ossature, qui sert ensuite de support au moule." },
@@ -81,11 +81,11 @@ const fr = {
   galerie: {
     label: "L'atelier",
     alts: [
-      "Deux briques de mycélium tenues en main, à contre-jour",
+      "La toison de laine posée sur l'ossature de branches, dans le pré",
       "Le carnet de croquis et les branches choisies, posés côte à côte",
       "Une ligature d'éclisse serrée sur le croisement de deux branches",
       "Des blocs de mycélium de formes diverses, sur l'établi",
-      "La toison de laine posée sur l'ossature, dans le pré",
+      "L'établi monté dans le pré, le substrat étalé sur la bâche",
       "Les pieds du tabouret mis en terre à la bêche",
     ],
   },
@@ -109,13 +109,14 @@ const fr = {
   credits: {
     label: "Crédits",
     atelier: "Atelier et transmission",
-    studio: "Réalisation",
+    studio: "Conception et réalisation",
+    equipe: "Équipe TINYLABS",
     contact: "Contact",
   },
 
   cta: "Pour un devis ou un renseignement, écrivez-nous à",
 
-  openingAlt: "L'ossature de branches et son moule, montés dans le pré",
+  openingAlt: "Deux briques de mycélium tenues en main, à contre-jour",
   finalAlt: "Le tabouret achevé, assise de mycélium sur trois pieds de branches",
 };
 
@@ -137,7 +138,7 @@ const en: StoolContent = {
     lead:
       "A stool whose seat is not made but grown. Mycelium — the underground body of a fungus, a felt of fine filaments — colonises a wood substrate and binds it into a firm, light material. The legs are three branches cut in the wood next door. Nothing was brought from far away.",
     body: [
-      "The object was born at l’atelier de l’Epinay, two days in the mountains in August 2026, led by Adrien Rigobello. The workshop is one of the testing grounds of the Relational Tectonics research project, which asks what building becomes when it works with the living rather than against it.",
+      "The object was born at l’atelier de l’Epinay, in the mountains, in August 2026, led by Adrien Rigobello. The workshop is one of the testing grounds of the Relational Tectonics research project, which asks what building becomes when it works with the living rather than against it.",
       "Bioregional is a precise word here, not an intention: the wood comes from the plot, the wool from the flock that grazes it, the mycelium feeds on the shavings of the cut timber. The valley supplies the matter, the energy and the setting time. What the valley does not hold is not part of the object.",
       "This piece is a step. It prepares the research's final exhibition in Copenhagen in 2028, where it will be shown alongside the programme's other trials.",
     ],
@@ -153,7 +154,7 @@ const en: StoolContent = {
   liaison: {
     label: "Joints",
     heading:
-      "No screws, no glue: cane lashings, each tried on its own before being carried to the frame.",
+      "Cane lashings, each tried on its own before being carried to the frame.",
     body:
       "The crossings were studied on a wall, in series, on branches of different diameters. A well-drawn lashing holds by friction and comes undone without breaking anything: the object can be taken apart, its legs replanted, its seat returned to the soil.",
   },
@@ -172,7 +173,7 @@ const en: StoolContent = {
 
   fabrication: {
     label: "Making",
-    heading: "Four gestures, two days, one meadow.",
+    heading: "Four gestures, one meadow.",
     items: [
       { t: "Cut", d: "Three branches chosen for their natural fork, trimmed to seat height." },
       { t: "Lash", d: "Cane lashings hold the frame, which then carries the mould." },
@@ -184,11 +185,11 @@ const en: StoolContent = {
   galerie: {
     label: "The workshop",
     alts: [
-      "Two mycelium bricks held in the hand, against the light",
+      "The wool fleece set over the branch frame, in the meadow",
       "The sketchbook and the chosen branches, laid side by side",
       "A cane lashing drawn tight over the crossing of two branches",
       "Mycelium blocks of various shapes, on the workbench",
-      "The wool fleece set over the frame, in the meadow",
+      "The bench set up in the meadow, the substrate spread on the sheet",
       "The stool's legs driven into the ground with a spade",
     ],
   },
@@ -212,13 +213,14 @@ const en: StoolContent = {
   credits: {
     label: "Credits",
     atelier: "Workshop and teaching",
-    studio: "Making",
+    studio: "Design and making",
+    equipe: "TINYLABS team",
     contact: "Contact",
   },
 
   cta: "For a quote or any question, write to us at",
 
-  openingAlt: "The branch frame and its mould, set up in the meadow",
+  openingAlt: "Two mycelium bricks held in the hand, against the light",
   finalAlt: "The finished stool, a mycelium seat on three branch legs",
 };
 
@@ -240,7 +242,7 @@ const pl: StoolContent = {
     lead:
       "Taboret, którego siedzisko nie zostało wykonane, lecz wyhodowane. Grzybnia — podziemna część grzyba, filc z cienkich nitek — zarasta podłoże z drewna i wiąże je w materiał twardy i lekki. Nogi to trzy gałęzie ścięte w sąsiednim lesie. Nic nie zostało przywiezione z daleka.",
     body: [
-      "Obiekt powstał w l’atelier de l’Epinay, przez dwa dni w górach w sierpniu 2026 roku, pod okiem Adriena Rigobello. Warsztat jest jednym z poligonów projektu badawczego Relational Tectonics, który pyta, czym staje się budowanie, gdy pracuje z tym, co żywe, a nie przeciw niemu.",
+      "Obiekt powstał w l’atelier de l’Epinay, w górach, w sierpniu 2026 roku, pod okiem Adriena Rigobello. Warsztat jest jednym z poligonów projektu badawczego Relational Tectonics, który pyta, czym staje się budowanie, gdy pracuje z tym, co żywe, a nie przeciw niemu.",
       "Bioregionalny jest tu słowem ścisłym, nie deklaracją: drewno pochodzi z działki, wełna od stada, które ją spasa, grzybnia żywi się wiórami ze ściętego drewna. Dolina daje materię, energię i czas wiązania. To, czego dolina nie ma, nie wchodzi w skład obiektu.",
       "Ta praca jest etapem. Przygotowuje wystawę finałową badań w Kopenhadze w 2028 roku, gdzie pokazana zostanie obok pozostałych prób programu.",
     ],
@@ -256,7 +258,7 @@ const pl: StoolContent = {
   liaison: {
     label: "Połączenia",
     heading:
-      "Żadnych śrub, żadnego kleju: wiązania z taśmy trzcinowej, każde wypróbowane osobno, zanim trafiło na konstrukcję.",
+      "Wiązania z taśmy trzcinowej, każde wypróbowane osobno, zanim trafiło na konstrukcję.",
     body:
       "Skrzyżowania badano na ścianie, seriami, na gałęziach o różnych średnicach. Dobrze zaciągnięte wiązanie trzyma tarciem i rozchodzi się bez niszczenia czegokolwiek: obiekt można rozebrać, nogi wsadzić z powrotem w ziemię, a siedzisko oddać glebie.",
   },
@@ -275,7 +277,7 @@ const pl: StoolContent = {
 
   fabrication: {
     label: "Wykonanie",
-    heading: "Cztery gesty, dwa dni, jedna łąka.",
+    heading: "Cztery gesty, jedna łąka.",
     items: [
       { t: "Ściąć", d: "Trzy gałęzie wybrane dla naturalnego rozwidlenia, przycięte na wysokość siedziska." },
       { t: "Związać", d: "Wiązania z taśmy trzymają konstrukcję, która następnie niesie formę." },
@@ -287,11 +289,11 @@ const pl: StoolContent = {
   galerie: {
     label: "Warsztat",
     alts: [
-      "Dwie cegły z grzybni trzymane w dłoni, pod światło",
+      "Runo wełny położone na konstrukcji z gałęzi, na łące",
       "Szkicownik i wybrane gałęzie, złożone obok siebie",
       "Wiązanie z taśmy zaciągnięte na skrzyżowaniu dwóch gałęzi",
       "Bloki z grzybni o różnych kształtach, na warsztacie",
-      "Runo wełny położone na konstrukcji, na łące",
+      "Warsztat ustawiony na łące, podłoże rozłożone na plandece",
       "Nogi taboretu wbite w ziemię szpadlem",
     ],
   },
@@ -315,13 +317,14 @@ const pl: StoolContent = {
   credits: {
     label: "Autorzy",
     atelier: "Warsztat i prowadzenie",
-    studio: "Wykonanie",
+    studio: "Projekt i wykonanie",
+    equipe: "Zespół TINYLABS",
     contact: "Kontakt",
   },
 
   cta: "W sprawie wyceny lub pytań napiszcie do nas:",
 
-  openingAlt: "Konstrukcja z gałęzi i jej forma, ustawione na łące",
+  openingAlt: "Dwie cegły z grzybni trzymane w dłoni, pod światło",
   finalAlt: "Gotowy taboret, siedzisko z grzybni na trzech nogach z gałęzi",
 };
 
