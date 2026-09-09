@@ -548,6 +548,53 @@ main > section:first-child { padding-top: 6.5rem; }
 @media (width >= 48rem) { main > section:first-child { padding-top: 8rem; } }
 
 /* ─────────────────────────────────────────────────────────────────────────
+   MENU MOBILE
+
+   Le panneau était en « inset-0 », qui couvre la fenêtre de MISE EN PAGE et
+   non la partie réellement visible : sur téléphone, elle se prolonge derrière
+   la barre d'adresse et la barre système. Le sélecteur de langue, collé en
+   bas, tombait dessous — on ne pouvait plus changer de langue depuis un
+   téléphone.
+
+   100svh borne le panneau à la hauteur visible, et le sélecteur remonte sous
+   les liens au lieu d'être poussé au ras du bord. Les cibles de touche
+   passent à 44 px de haut, le minimum tenable au doigt.
+   ───────────────────────────────────────────────────────────────────────── */
+/* Le fond venait de « bg-[var(--color-background)] », classe arbitraire
+   absente du CSS pré-compilé : le panneau était transparent et la page
+   défilait à travers. C'est la raison principale pour laquelle le menu
+   mobile paraissait cassé. */
+.tl-menu {
+  background: var(--color-background);
+  height: 100svh;
+  /* « px-8 » manquait lui aussi : les liens touchaient le bord gauche. La
+     marge reprend celle du contenu des pages. */
+  padding-inline: 1.5rem;
+  /* Dégagement mesuré : l'entête mobile descend jusqu'à 141 px, bandeau
+     compris. 8 rem sous le bandeau laisse une trentaine de pixels d'air. */
+  padding-top: calc(var(--banner-h) + 8rem);
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
+}
+.tl-menu nav { flex: 0 0 auto; }
+.tl-menu-langues {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 1rem;
+}
+.tl-menu-langues button {
+  min-height: 44px;
+  padding: 0 0.25rem;
+  color: var(--color-muted);
+  transition: color 0.3s ease;
+}
+.tl-menu-langues .tl-langue-active { color: var(--color-foreground); }
+
+/* ─────────────────────────────────────────────────────────────────────────
    BARRE DE NAVIGATION ET LOGOTYPE
 
    Le nom complet reste affiché en permanence, y compris au défilement — il

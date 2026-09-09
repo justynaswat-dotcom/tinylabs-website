@@ -109,7 +109,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
-            className="fixed inset-0 z-40 bg-[var(--color-background)] flex flex-col px-8 pt-28 pb-12 md:hidden"
+            className="tl-menu fixed inset-0 z-40 bg-[var(--color-background)] flex flex-col px-8 md:hidden"
           >
             <nav className="flex-1 flex items-start">
               <ul className="list-none p-0 m-0 flex flex-col gap-4" style={{ ...navStyle, fontSize: "2.5rem", lineHeight: 1.2 }}>
@@ -131,13 +131,19 @@ export function Header() {
               </ul>
             </nav>
 
-            <div className="flex items-center gap-4 pt-8 border-t border-[var(--color-border)]" style={{ ...navStyle, fontSize: "0.8125rem" }}>
+            {/* Le sélecteur de langue est monté sous les liens plutôt que
+                collé au bas de l'écran : il s'y retrouvait sous la barre du
+                navigateur mobile. Voir .tl-menu dans project-page.css. */}
+            <div className="tl-menu-langues" style={navStyle}>
               {languages.map((lang, i) => (
                 <span key={lang} className="flex items-center gap-4">
-                  <button onClick={() => setLanguage(lang)} className="uppercase tracking-widest" style={{ opacity: language === lang ? 1 : 0.3 }}>
+                  <button
+                    onClick={() => setLanguage(lang)}
+                    className={`uppercase tracking-widest${language === lang ? " tl-langue-active" : ""}`}
+                  >
                     {lang}
                   </button>
-                  {i < languages.length - 1 && <span style={{ opacity: 0.2 }}>·</span>}
+                  {i < languages.length - 1 && <span className="tl-langue-point">·</span>}
                 </span>
               ))}
             </div>
