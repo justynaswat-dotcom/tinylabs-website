@@ -74,10 +74,10 @@ export const translations = {
           description: "A street-scale model exploring how urban infrastructure shapes collective behaviour, making the invisible logics of public space visible and open to redesign."
         },
         {
-          title: "L’atelier de l’Epinay",
+          title: "Living stool",
           category: "Material Research",
-          year: "2026",
-          description: "Two days in the mountains at Adrien Rigobello’s workshop, part of the Relational Tectonics research project: three branches cut in the forest for legs, a seat cultivated on a wood substrate. From the first sketch to unmoulding, everything happened in the meadow."
+          year: "2026–2028",
+          description: "An object of bioregional materials: a seat grown from mycelium on a wood substrate, legs of branches cut where it stands. Developed at l’atelier de l’Epinay with Adrien Rigobello, within the Relational Tectonics research, toward the final exhibition in Copenhagen in 2028. Research supported by the Carlsberg Foundation and the Designae COST Action."
         }
       ]
     },
@@ -192,10 +192,10 @@ export const translations = {
           description: "Une maquette à l'échelle de la rue explorant comment l'infrastructure urbaine façonne les comportements collectifs, rendant les logiques invisibles de l'espace public visibles et ouvertes à la reconception."
         },
         {
-          title: "L’atelier de l’Epinay",
+          title: "Tabouret vivant",
           category: "Recherche Matérielle",
-          year: "2026",
-          description: "Deux jours d'atelier en montagne chez Adrien Rigobello, dans le cadre du projet de recherche Relational Tectonics : trois branches coupées en forêt pour les pieds, une assise cultivée sur substrat de bois. Du premier croquis au démoulage, tout s'est fait dans le pré."
+          year: "2026–2028",
+          description: "Un objet en matériaux biorégionaux : une assise poussée de mycélium sur substrat de bois, des pieds taillés dans les branches du lieu même. Développé à l'atelier de l'Epinay avec Adrien Rigobello, dans le cadre de la recherche Relational Tectonics, en vue de l'exposition finale à Copenhague en 2028. Recherche soutenue par la Carlsberg Foundation et le réseau COST Designae."
         }
       ]
     },
@@ -310,10 +310,10 @@ export const translations = {
           description: "Makieta w skali ulicy badająca, jak infrastruktura miejska kształtuje zachowania zbiorowe, czyniąc niewidzialne logiki przestrzeni publicznej widocznymi i otwartymi na przeprojektowanie."
         },
         {
-          title: "L’atelier de l’Epinay",
+          title: "Żywy taboret",
           category: "Badania Materiałowe",
-          year: "2026",
-          description: "Dwa dni warsztatów w górach u Adriena Rigobello, w ramach projektu badawczego Relational Tectonics: trzy gałęzie ścięte w lesie na nogi, siedzisko wyhodowane na podłożu z drewna. Od pierwszego szkicu po wyjęcie z formy — wszystko na łące."
+          year: "2026–2028",
+          description: "Obiekt z materiałów bioregionalnych: siedzisko wyhodowane z grzybni na podłożu z drewna, nogi z gałęzi ściętych na miejscu. Rozwijany w l’atelier de l’Epinay z Adrienem Rigobello, w ramach badań Relational Tectonics, z myślą o wystawie finałowej w Kopenhadze w 2028 roku. Badania wspierane przez Carlsberg Foundation i sieć Designae COST Action."
         }
       ]
     },

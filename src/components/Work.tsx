@@ -32,7 +32,7 @@ const projectTypologies = [
   "Objects",    // 5 Le Grand Dehors
   "Objects",    // 6 Maison Modèle
   "Spatial",    // 7 La Rue
-  "Objects",    // 8 L'atelier de l'Epinay
+  "Objects",    // 8 Tabouret vivant (atelier de l'Epinay)
 ];
 
 // Fiches projet existantes, par index. Seule l'exposition en a une pour
