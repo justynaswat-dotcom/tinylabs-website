@@ -23,13 +23,16 @@ const reveal = {
   transition: { duration: 1, ease: [0.4, 0, 0.2, 1] as const },
 };
 
-/* La galerie ne redit pas ce que les sections montrent déjà. Elle alterne
-   l'étude — les maquettes du piètement sur fond neutre — et le terrain, et
-   respecte les formats des cellules : la première est haute, les deux
-   suivantes en portrait, les trois dernières en largeur. */
+/* La galerie montre comment l'objet se fait : le moule, le tassage, la laine,
+   la bêche. Une seule vue d'étude y reste, en dernier — une galerie pleine de
+   branches disait la matière première, pas le procédé.
+
+   L'ordre suit les formats des cellules : la première est haute, les deux
+   suivantes en portrait, les trois dernières en largeur. Le fonds étant
+   presque tout en portrait, ces trois-là sont contraintes. */
 const galerie = [
-  "maquette-debout", "carnet", "laine",
-  "materiaux", "pre", "maquette-profil",
+  "moule", "tassage", "laine",
+  "beche", "pre", "maquette-profil",
 ];
 
 export function StoolPage() {

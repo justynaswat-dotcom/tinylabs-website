@@ -57,18 +57,20 @@ WANTED = {
     'ferme':           ('DSCF3220.JPG', None),        # la ferme au fond du pré
     'toit':            ('DSCF3221.JPG', None),        # les lauzes, appareillées
 
-    # La main : ligatures d'essai photographiées au mur, puis les maquettes
-    # du piètement, debout sur fond neutre. Ces dernières sont le vrai travail
-    # d'étude du studio — une galerie faite d'instantanés d'atelier passait à
-    # côté.
+    # La main : une ligature au mur, et une maquette d'étude du piètement.
+    # Deux suffisent — une galerie pleine de branches ne montrait plus comment
+    # l'objet se fait.
     'assemblage':      ('DSCF3356.JPG', None),        # deux croisements liés
-    'carnet':          ('Process/Process_013.JPG', None),  # le carnet et les bois
-    'materiaux':       ('DSCF3374.JPG', None),        # bois, bobine d'éclisse, premier trépied
-    'maquette-debout': ('DSCF3388.JPG', None),        # la maquette du piètement, debout
-    'maquette-profil': ('DSCF3385.JPG', None),        # la même, de profil
+    'maquette-profil': ('DSCF3385.JPG', None),        # la maquette du piètement, de profil
 
-    # La matière : le mycélium, avant le tabouret.
-    'substrat':        ('Process/Process_0112.JPG', None),  # le substrat en main
+    # Le procédé, du moule à la mise en terre. Presque tout est en portrait
+    # dans le fonds : les trois cellules en largeur de la mosaïque se prennent
+    # donc sur les rares vues paysage.
+    'substrat':        ('Process/Process_0112.JPG', None),  # le substrat en main — section Matière
+    'moule':           ('DSCF3434.JPG', None),        # le moule et le substrat sur l'établi
+    'tassage':         ('DSCF3444.JPG', None),        # le substrat tassé autour des pieds
+    'laine':           ('DSCF3430.JPG', None),        # la laine enroulée sur l'ossature
+    'beche':           ('Process/Process_016.JPG', None),  # la motte ouverte à la bêche
 
     # La culture, la mise en terre, l'objet.
     'laine':           ('DSCF3408.JPG', None),        # la toison sur l'ossature

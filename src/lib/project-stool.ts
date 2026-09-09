@@ -82,12 +82,12 @@ const fr = {
   galerie: {
     label: "L'atelier",
     alts: [
-      "La maquette du piètement, debout sur fond neutre",
-      "Le carnet de croquis et les branches choisies, posés côte à côte",
-      "La toison de laine posée sur l'ossature de branches, dans le pré",
-      "Les bois, la bobine d'éclisse et un premier trépied, à plat",
+      "Le moule et le tas de substrat, prêts sur l'établi",
+      "Le substrat tassé à la main autour des trois pieds",
+      "La laine enroulée sur l'ossature avant la mise en moule",
+      "La motte ouverte à la bêche, là où les pieds vont descendre",
       "L'établi monté dans le pré, le substrat étalé sur la bâche",
-      "La même maquette de profil, ses trois pieds et sa tête liée",
+      "La maquette d'étude du piètement, de profil",
     ],
   },
 
@@ -187,12 +187,12 @@ const en: StoolContent = {
   galerie: {
     label: "The workshop",
     alts: [
-      "The leg-frame maquette, standing on a neutral ground",
-      "The sketchbook and the chosen branches, laid side by side",
-      "The wool fleece set over the branch frame, in the meadow",
-      "The branches, the coil of cane and a first tripod, laid flat",
+      "The mould and the heap of substrate, ready on the bench",
+      "The substrate packed by hand around the three legs",
+      "The wool wound onto the frame before moulding",
+      "The clod opened with a spade, where the legs will go down",
       "The bench set up in the meadow, the substrate spread on the sheet",
-      "The same maquette in profile, its three legs and lashed head",
+      "The study maquette of the leg frame, in profile",
     ],
   },
 
@@ -292,12 +292,12 @@ const pl: StoolContent = {
   galerie: {
     label: "Warsztat",
     alts: [
-      "Makieta podstawy, stojąca na neutralnym tle",
-      "Szkicownik i wybrane gałęzie, złożone obok siebie",
-      "Runo wełny położone na konstrukcji z gałęzi, na łące",
-      "Gałęzie, zwój taśmy i pierwszy trójnóg, rozłożone płasko",
+      "Forma i kopiec podłoża, gotowe na warsztacie",
+      "Podłoże ubite ręką wokół trzech nóg",
+      "Wełna nawinięta na konstrukcję przed formowaniem",
+      "Darń otwarta szpadlem, tam gdzie zejdą nogi",
       "Warsztat ustawiony na łące, podłoże rozłożone na plandece",
-      "Ta sama makieta z profilu, trzy nogi i związana głowica",
+      "Makieta studialna podstawy, z profilu",
     ],
   },
 
