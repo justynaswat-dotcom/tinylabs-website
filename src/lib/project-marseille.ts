@@ -22,7 +22,7 @@ const fr = {
   note: "Extrait d'exposition présenté à la Paris Design Week",
 
   meta: [
-    { k: "Client", v: "Ville de Marseille · Mission Marseille 2030" },
+    { k: "Client", v: "Ville de Marseille · Mission Marseille 2030 · Direction de la Mer" },
     { k: "Lieu", v: "Marseille" },
     { k: "Année", v: "2025" },
     { k: "Rôle", v: "Conception et scénographie" },
@@ -31,7 +31,7 @@ const fr = {
   intro: {
     label: "Le projet",
     lead:
-      "Marseille 2050 est une exposition itinérante, immersive et pédagogique qui rend tangibles les transformations climatiques de la ville. À travers cinq échelles, de la maison au grand territoire, elle invite chacun·e à comprendre, ressentir et imaginer ensemble un Marseille habitable, désirable et résilient face au climat de demain.",
+      "« Ici, ça chauffe » (Marseille 2050) est une exposition itinérante, immersive et pédagogique qui rend tangibles les transformations climatiques de la ville. À travers cinq échelles, de la maison au grand territoire, elle invite chacun·e à comprendre, ressentir et imaginer ensemble un Marseille habitable, désirable et résilient face au climat de demain.",
     body: [
       "L'exposition s'adresse à toutes et tous : familles, écoles, curieux·ses, habitant·es. Elle voyage dans la ville, s'installe sur les places, dans les cours d'école et sur des sites emblématiques, et déploie un parcours fait de panneaux, de maquettes et d'objets manipulables.",
       "Marseille y apparaît comme un point chaud du climat méditerranéen : canicules plus longues, eau plus rare, mer qui monte, biodiversité fragilisée, incendies plus fréquents. D'ici 2050, le climat de la ville pourrait ressembler à celui de Séville aujourd'hui.",
@@ -155,7 +155,7 @@ const en: ProjectContent = {
   note: "Exhibition extract on show at Paris Design Week",
 
   meta: [
-    { k: "Client", v: "City of Marseille · Mission Marseille 2030" },
+    { k: "Client", v: "City of Marseille · Mission Marseille 2030 · Direction de la Mer" },
     { k: "Place", v: "Marseille" },
     { k: "Year", v: "2025" },
     { k: "Role", v: "Design and scenography" },
@@ -164,7 +164,7 @@ const en: ProjectContent = {
   intro: {
     label: "The project",
     lead:
-      "Marseille 2050 is a travelling, immersive and educational exhibition that makes the city's climate shift tangible. Across five scales, from the home to the wider territory, it invites everyone to understand, feel and imagine together a Marseille that is liveable, desirable and resilient in the climate to come.",
+      "“It’s getting hot in here” (Marseille 2050) is a travelling, immersive and educational exhibition that makes the city's climate shift tangible. Across five scales, from the home to the wider territory, it invites everyone to understand, feel and imagine together a Marseille that is liveable, desirable and resilient in the climate to come.",
     body: [
       "The exhibition is built for everyone: families, schools, the curious, residents. It travels through the city, settling on squares, in schoolyards and on landmark sites, unfolding a route of panels, models and objects to handle.",
       "Marseille appears here as a Mediterranean climate hotspot: longer heatwaves, scarcer water, rising sea, weakened biodiversity, more frequent fires. By 2050 the city's climate could resemble that of Seville today.",
@@ -286,7 +286,7 @@ const pl: ProjectContent = {
   note: "Fragment wystawy pokazywany na Paris Design Week",
 
   meta: [
-    { k: "Klient", v: "Miasto Marsylia · Mission Marseille 2030" },
+    { k: "Klient", v: "Miasto Marsylia · Mission Marseille 2030 · Direction de la Mer" },
     { k: "Miejsce", v: "Marsylia" },
     { k: "Rok", v: "2025" },
     { k: "Rola", v: "Projekt i scenografia" },
@@ -295,7 +295,7 @@ const pl: ProjectContent = {
   intro: {
     label: "Projekt",
     lead:
-      "Marsylia 2050 to objazdowa wystawa edukacyjna, która pozwala dotknąć zmiany klimatu w mieście. W pięciu skalach, od domu po cały region, zaprasza każdego do zrozumienia, odczucia i wspólnego wyobrażenia sobie Marsylii, w której da się mieszkać — miasta, którego chce się i które poradzi sobie z nadchodzącym klimatem.",
+      "„Ale tu gorąco” (Marsylia 2050) to objazdowa wystawa edukacyjna, która pozwala dotknąć zmiany klimatu w mieście. W pięciu skalach, od domu po cały region, zaprasza każdego do zrozumienia, odczucia i wspólnego wyobrażenia sobie Marsylii, w której da się mieszkać — miasta, którego chce się i które poradzi sobie z nadchodzącym klimatem.",
     body: [
       "Wystawa jest dla wszystkich: rodzin, szkół, ciekawskich, mieszkańców. Podróżuje po mieście, staje na placach, na szkolnych dziedzińcach i w miejscach, które marsylczycy znają, i rozwija trasę z plansz, makiet i przedmiotów, które bierze się do ręki.",
       "Marsylia jawi się tu jako gorący punkt klimatu śródziemnomorskiego: dłuższe fale upałów, mniej wody, podnoszące się morze, słabnąca różnorodność biologiczna, częstsze pożary. Do 2050 roku klimat miasta może przypominać dzisiejszą Sewillę.",
