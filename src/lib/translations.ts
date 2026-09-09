@@ -40,13 +40,13 @@ export const translations = {
         {
           title: "Scale & Proportion",
           category: "Spatial Systems",
-          year: "2023",
+          year: "2024",
           description: "A design inquiry into multi-scalar thinking: how decisions at the level of object, space, and infrastructure shape systemic outcomes at organisation and territory scale."
         },
         {
           title: "Studio Practice",
           category: "Process & Method",
-          year: "2023",
+          year: "2026",
           description: "Documentation of our systemic design methodology: the mapping tools, co-creation protocols, and innovation frameworks that move organisations from complexity to strategic clarity."
         },
         {
@@ -58,19 +58,19 @@ export const translations = {
         {
           title: "Le Grand Dehors — seascape",
           category: "Material Research",
-          year: "2023",
+          year: "2025",
           description: "A scale model of posidonie meadows, translating the invisible complexity of Mediterranean seagrass ecosystems into a tangible, navigable object that makes ecological interdependence perceptible."
         },
         {
           title: "Maison Modèle",
           category: "Objects & Spatial",
-          year: "2023",
+          year: "2025",
           description: "A scale model investigation into domestic futures: how the house, as a systemic unit, encodes and transmits ecological, social, and material logics."
         },
         {
           title: "La Rue",
           category: "Spatial Systems",
-          year: "2023",
+          year: "2025",
           description: "A street-scale model exploring how urban infrastructure shapes collective behaviour, making the invisible logics of public space visible and open to redesign."
         }
       ]
@@ -152,13 +152,13 @@ export const translations = {
         {
           title: "Échelle & Proportion",
           category: "Systèmes Spatiaux",
-          year: "2023",
+          year: "2024",
           description: "Une enquête de design sur la pensée multi-scalaire : comment les décisions à l'échelle de l'objet, de l'espace et de l'infrastructure façonnent les résultats systémiques à l'échelle de l'organisation et du territoire."
         },
         {
           title: "Pratique de Studio",
           category: "Processus & Méthode",
-          year: "2023",
+          year: "2026",
           description: "Documentation de notre méthodologie de design systémique : les outils de cartographie, protocoles de co-création et cadres d'innovation qui font passer les organisations de la complexité à la clarté stratégique."
         },
         {
@@ -170,19 +170,19 @@ export const translations = {
         {
           title: "Le Grand Dehors — paysage marin",
           category: "Recherche Matérielle",
-          year: "2023",
+          year: "2025",
           description: "Une maquette des herbiers de posidonie, traduisant la complexité invisible des écosystèmes de posidonies méditerranéennes en un objet tangible et navigable qui rend perceptible l'interdépendance écologique."
         },
         {
           title: "Maison Modèle",
           category: "Objets & Spatial",
-          year: "2023",
+          year: "2025",
           description: "Une investigation en maquette sur les futurs domestiques : comment la maison, en tant qu'unité systémique, encode et transmet des logiques écologiques, sociales et matérielles."
         },
         {
           title: "La Rue",
           category: "Systèmes Spatiaux",
-          year: "2023",
+          year: "2025",
           description: "Une maquette à l'échelle de la rue explorant comment l'infrastructure urbaine façonne les comportements collectifs, rendant les logiques invisibles de l'espace public visibles et ouvertes à la reconception."
         }
       ]
@@ -264,13 +264,13 @@ export const translations = {
         {
           title: "Skala & Proporcja",
           category: "Systemy Przestrzenne",
-          year: "2023",
+          year: "2024",
           description: "Badanie projektowe wieloskalowego myślenia: jak decyzje na poziomie obiektu, przestrzeni i infrastruktury kształtują systemowe wyniki w skali organizacji i terytorium."
         },
         {
           title: "Praktyka Studia",
           category: "Proces & Metoda",
-          year: "2023",
+          year: "2026",
           description: "Dokumentacja naszej metodologii projektowania systemowego: narzędzia kartograficzne, protokoły współtworzenia i ramy innowacji przenoszące organizacje od złożoności do strategicznej jasności."
         },
         {
@@ -282,19 +282,19 @@ export const translations = {
         {
           title: "Wielki Świat — pejzaż morski",
           category: "Badania Materiałowe",
-          year: "2023",
+          year: "2025",
           description: "Makieta łąk posidonie, przekładająca niewidzialną złożoność śródziemnomorskich ekosystemów trawy morskiej na namacalny, navigowalny obiekt, który czyni ekologiczną współzależność postrzegalną."
         },
         {
           title: "Dom Modelowy",
           category: "Obiekty & Przestrzeń",
-          year: "2023",
+          year: "2025",
           description: "Dochodzenie w skali makiety dotyczące przyszłości domowych: jak dom, jako jednostka systemowa, koduje i przekazuje logiki ekologiczne, społeczne i materialne."
         },
         {
           title: "Ulica",
           category: "Systemy Przestrzenne",
-          year: "2023",
+          year: "2025",
           description: "Makieta w skali ulicy badająca, jak infrastruktura miejska kształtuje zachowania zbiorowe, czyniąc niewidzialne logiki przestrzeni publicznej widocznymi i otwartymi na przeprojektowanie."
         }
       ]
