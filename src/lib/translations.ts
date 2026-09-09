@@ -50,13 +50,13 @@ export const translations = {
           description: "Documentation of our systemic design methodology: the mapping tools, co-creation protocols, and innovation frameworks that move organisations from complexity to strategic clarity."
         },
         {
-          title: "Exhibition M2050",
+          title: "“Ici, ça chauffe” exhibition",
           category: "Spatial & Research",
           year: "2025",
           description: "An exhibition exploring the Mediterranean futures of 2050, making ecological and territorial scenarios visible, navigable, and actionable for diverse publics."
         },
         {
-          title: "Maquette Posidonie",
+          title: "Le Grand Dehors — seascape",
           category: "Material Research",
           year: "2023",
           description: "A scale model of posidonie meadows, translating the invisible complexity of Mediterranean seagrass ecosystems into a tangible, navigable object that makes ecological interdependence perceptible."
@@ -162,13 +162,13 @@ export const translations = {
           description: "Documentation de notre méthodologie de design systémique : les outils de cartographie, protocoles de co-création et cadres d'innovation qui font passer les organisations de la complexité à la clarté stratégique."
         },
         {
-          title: "Exposition M2050",
+          title: "Exposition « Ici, ça chauffe »",
           category: "Spatial & Recherche",
           year: "2025",
           description: "Une exposition explorant les futurs méditerranéens de 2050, rendant les scénarios écologiques et territoriaux visibles, navigables et actionnables pour des publics diversifiés."
         },
         {
-          title: "Maquette Posidonie",
+          title: "Le Grand Dehors — paysage marin",
           category: "Recherche Matérielle",
           year: "2023",
           description: "Une maquette des herbiers de posidonie, traduisant la complexité invisible des écosystèmes de posidonies méditerranéennes en un objet tangible et navigable qui rend perceptible l'interdépendance écologique."
@@ -274,13 +274,13 @@ export const translations = {
           description: "Dokumentacja naszej metodologii projektowania systemowego: narzędzia kartograficzne, protokoły współtworzenia i ramy innowacji przenoszące organizacje od złożoności do strategicznej jasności."
         },
         {
-          title: "Wystawa M2050",
+          title: "Wystawa „Ale tu gorąco”",
           category: "Przestrzeń & Badania",
           year: "2025",
           description: "Wystawa badająca śródziemnomorskie przyszłości 2050, czyniąca scenariusze ekologiczne i terytorialne widocznymi, nawigowalnymi i możliwymi do działania dla różnorodnych odbiorców."
         },
         {
-          title: "Makieta Posidonie",
+          title: "Wielki Świat — pejzaż morski",
           category: "Badania Materiałowe",
           year: "2023",
           description: "Makieta łąk posidonie, przekładająca niewidzialną złożoność śródziemnomorskich ekosystemów trawy morskiej na namacalny, navigowalny obiekt, który czyni ekologiczną współzależność postrzegalną."
