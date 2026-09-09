@@ -143,6 +143,11 @@ const fr = {
     contact: "Contact",
   },
 
+  // Appel en bas de fiche : l'adresse figure déjà dans les crédits, mais
+  // noyée parmi les partenaires. Ici elle est une invitation, pas une ligne
+  // de générique.
+  cta: "Pour un devis ou un renseignement, écrivez-nous à",
+
   openingAlt: "Les îlots de l'exposition et leurs panneaux, montés dans la halle",
   planAlt: "Vue d'implantation : quatre îlots, l'agora et le véhicule, occupés par le public",
 };
@@ -273,6 +278,8 @@ const en: ProjectContent = {
     printing: "Printing on wood",
     contact: "Contact",
   },
+
+  cta: "For a quote or any question, write to us at",
 
   openingAlt: "The exhibition islands and their panels, assembled in the hall",
   planAlt: "Site view: four islands, the agora and the vehicle, occupied by the public",
@@ -405,6 +412,8 @@ const pl: ProjectContent = {
     printing: "Druk na drewnie",
     contact: "Kontakt",
   },
+
+  cta: "W sprawie wyceny lub pytań napiszcie do nas:",
 
   openingAlt: "Wyspy wystawy i ich plansze, zmontowane w hali",
   planAlt: "Widok zagospodarowania: cztery wyspy, agora i pojazd, zajęte przez publiczność",

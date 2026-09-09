@@ -219,6 +219,28 @@
   margin-bottom: 0.5rem;
 }
 
+/* ── Appel de contact ─────────────────────────────────────────────────────
+   Au corps des chapeaux, pas à celui de la prose : c'est une adresse qu'on
+   doit voir sans la chercher. L'adresse elle-même est soulignée, seul lien
+   souligné de la fiche — ailleurs le survol suffit, ici il faut qu'on
+   comprenne qu'on peut cliquer sans passer la souris dessus. */
+.pp-cta {
+  font-family: var(--font-grotesk);
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin: 0;
+  max-width: 34ch;
+}
+.pp-cta a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  transition: opacity 0.3s ease;
+}
+.pp-cta a:hover { opacity: 0.55; }
+
 /* ── Pied de fiche ──────────────────────────────────────────────────────── */
 .pp-footer {
   padding: 2.5rem 0 4rem;

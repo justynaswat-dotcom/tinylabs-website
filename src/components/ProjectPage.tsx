@@ -296,6 +296,20 @@ export function ProjectPage() {
         </div>
       </section>
 
+      {/* ── Appel de contact ─────────────────────────────────────────────
+          Dernière chose lue avant le pied de fiche. L'adresse figure déjà
+          dans les crédits, mais noyée entre le bureau d'études et
+          l'imprimeur : ici elle est une invitation, pas une ligne de
+          générique.                                                       */}
+      <section className="pp pp-section pp-section-alt">
+        <div className="pp-inner">
+          <motion.p {...reveal} className="pp-cta">
+            {t.cta}{" "}
+            <a href="mailto:hello@tinylabs.one">hello@tinylabs.one</a>
+          </motion.p>
+        </div>
+      </section>
+
       {/* ── Pied de fiche ─────────────────────────────────────────────── */}
       <div className="pp" style={{ marginTop: "3.5rem" }}>
         <div className="pp-inner">
