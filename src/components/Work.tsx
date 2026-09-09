@@ -11,10 +11,12 @@ const projectImages = [
   // Paris Design Week. C'est la seule carte de la grille qui renvoie à une
   // fiche, et l'évènement en cours mérite de se voir dès l'accueil.
   "/images/project-6-pdw.jpg",
+  // 5 · le tabouret, juste après l'exposition : les deux seules fiches du
+  // site se suivent, et ce sont les deux projets en cours.
+  "/images/project-epinay.jpg",
   "/images/project-7.jpg",
   "/images/project-8.jpg",
   "/images/project-9.jpg",
-  "/images/project-epinay.jpg",
 ];
 
 const typologies = ["All", "Research", "Objects", "Spatial", "Consulting"];
@@ -29,16 +31,17 @@ const projectTypologies = [
   "Spatial",    // 2 Scale & Proportion
   "Consulting", // 3 Studio Practice
   "Spatial",    // 4 Exposition « Ici, ça chauffe »
-  "Objects",    // 5 Le Grand Dehors
-  "Objects",    // 6 Maison Modèle
-  "Spatial",    // 7 La Rue
-  "Objects",    // 8 Tabouret vivant (atelier de l'Epinay)
+  "Objects",    // 5 Tabouret vivant (atelier de l'Epinay)
+  "Objects",    // 6 Le Grand Dehors
+  "Objects",    // 7 Maison Modèle
+  "Spatial",    // 8 La Rue
 ];
 
-// Fiches projet existantes, par index. Seule l'exposition en a une pour
-// l'instant ; les autres cartes restent volontairement non cliquables.
+// Fiches projet existantes, par index. Les autres cartes restent
+// volontairement non cliquables.
 const projectLinks: Record<number, string> = {
-  4: "/work/marseille-2050", // « Ici, ça chauffe » → la fiche Marseille 2050
+  4: "/work/marseille-2050",  // « Ici, ça chauffe » → la fiche Marseille 2050
+  5: "/work/tabouret-vivant", // Tabouret vivant → l'atelier de l'Epinay
 };
 
 export function Work() {

@@ -6,6 +6,7 @@ import { Work } from "./components/Work";
 import { About } from "./components/About";
 import { Footer } from "./components/Footer";
 import { ProjectPage } from "./components/ProjectPage";
+import { StoolPage } from "./components/StoolPage";
 import { ScrollProgress } from "./components/ScrollProgress";
 import { AwardBanner } from "./components/AwardBanner";
 import { LanguageProvider } from "./lib/LanguageContext";
@@ -48,6 +49,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/work/marseille-2050" element={<ProjectPage />} />
+            <Route path="/work/tabouret-vivant" element={<StoolPage />} />
           </Routes>
         </div>
       </BrowserRouter>

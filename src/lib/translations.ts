@@ -56,6 +56,12 @@ export const translations = {
           description: "An exhibition exploring the Mediterranean futures of 2050, making ecological and territorial scenarios visible, navigable, and actionable for diverse publics."
         },
         {
+          title: "Living stool",
+          category: "Material Research",
+          year: "2026–2028",
+          description: "An object of bioregional materials: a seat grown from mycelium on a wood substrate, legs of branches cut where it stands. Developed at l’atelier de l’Epinay with Adrien Rigobello, within the Relational Tectonics research, toward the final exhibition in Copenhagen in 2028. Research supported by the Carlsberg Foundation and the Designae COST Action."
+        },
+        {
           title: "Le Grand Dehors — seascape",
           category: "Material Research",
           year: "2025",
@@ -72,12 +78,6 @@ export const translations = {
           category: "Spatial Systems",
           year: "2025",
           description: "A street-scale model exploring how urban infrastructure shapes collective behaviour, making the invisible logics of public space visible and open to redesign."
-        },
-        {
-          title: "Living stool",
-          category: "Material Research",
-          year: "2026–2028",
-          description: "An object of bioregional materials: a seat grown from mycelium on a wood substrate, legs of branches cut where it stands. Developed at l’atelier de l’Epinay with Adrien Rigobello, within the Relational Tectonics research, toward the final exhibition in Copenhagen in 2028. Research supported by the Carlsberg Foundation and the Designae COST Action."
         }
       ]
     },
@@ -174,6 +174,12 @@ export const translations = {
           description: "Une exposition explorant les futurs méditerranéens de 2050, rendant les scénarios écologiques et territoriaux visibles, navigables et actionnables pour des publics diversifiés."
         },
         {
+          title: "Tabouret vivant",
+          category: "Recherche Matérielle",
+          year: "2026–2028",
+          description: "Un objet en matériaux biorégionaux : une assise poussée de mycélium sur substrat de bois, des pieds taillés dans les branches du lieu même. Développé à l'atelier de l'Epinay avec Adrien Rigobello, dans le cadre de la recherche Relational Tectonics, en vue de l'exposition finale à Copenhague en 2028. Recherche soutenue par la Carlsberg Foundation et le réseau COST Designae."
+        },
+        {
           title: "Le Grand Dehors — paysage marin",
           category: "Recherche Matérielle",
           year: "2025",
@@ -190,12 +196,6 @@ export const translations = {
           category: "Systèmes Spatiaux",
           year: "2025",
           description: "Une maquette à l'échelle de la rue explorant comment l'infrastructure urbaine façonne les comportements collectifs, rendant les logiques invisibles de l'espace public visibles et ouvertes à la reconception."
-        },
-        {
-          title: "Tabouret vivant",
-          category: "Recherche Matérielle",
-          year: "2026–2028",
-          description: "Un objet en matériaux biorégionaux : une assise poussée de mycélium sur substrat de bois, des pieds taillés dans les branches du lieu même. Développé à l'atelier de l'Epinay avec Adrien Rigobello, dans le cadre de la recherche Relational Tectonics, en vue de l'exposition finale à Copenhague en 2028. Recherche soutenue par la Carlsberg Foundation et le réseau COST Designae."
         }
       ]
     },
@@ -292,6 +292,12 @@ export const translations = {
           description: "Wystawa badająca śródziemnomorskie przyszłości 2050, czyniąca scenariusze ekologiczne i terytorialne widocznymi, nawigowalnymi i możliwymi do działania dla różnorodnych odbiorców."
         },
         {
+          title: "Żywy taboret",
+          category: "Badania Materiałowe",
+          year: "2026–2028",
+          description: "Obiekt z materiałów bioregionalnych: siedzisko wyhodowane z grzybni na podłożu z drewna, nogi z gałęzi ściętych na miejscu. Rozwijany w l’atelier de l’Epinay z Adrienem Rigobello, w ramach badań Relational Tectonics, z myślą o wystawie finałowej w Kopenhadze w 2028 roku. Badania wspierane przez Carlsberg Foundation i sieć Designae COST Action."
+        },
+        {
           title: "Wielki Świat — pejzaż morski",
           category: "Badania Materiałowe",
           year: "2025",
@@ -308,12 +314,6 @@ export const translations = {
           category: "Systemy Przestrzenne",
           year: "2025",
           description: "Makieta w skali ulicy badająca, jak infrastruktura miejska kształtuje zachowania zbiorowe, czyniąc niewidzialne logiki przestrzeni publicznej widocznymi i otwartymi na przeprojektowanie."
-        },
-        {
-          title: "Żywy taboret",
-          category: "Badania Materiałowe",
-          year: "2026–2028",
-          description: "Obiekt z materiałów bioregionalnych: siedzisko wyhodowane z grzybni na podłożu z drewna, nogi z gałęzi ściętych na miejscu. Rozwijany w l’atelier de l’Epinay z Adrienem Rigobello, w ramach badań Relational Tectonics, z myślą o wystawie finałowej w Kopenhadze w 2028 roku. Badania wspierane przez Carlsberg Foundation i sieć Designae COST Action."
         }
       ]
     },

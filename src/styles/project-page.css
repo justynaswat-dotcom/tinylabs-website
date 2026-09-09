@@ -241,6 +241,40 @@
 }
 .pp-cta a:hover { opacity: 0.55; }
 
+/* ── Recherche : liens et financement ─────────────────────────────────────
+   La mention de financement est une citation imposée par le financeur. Elle
+   se lit, elle ne se met pas en avant : petit corps, gris, mesure courte.
+   Elle reste en anglais quelle que soit la langue de la page, d'où le
+   lang="en" côté composant. */
+.pp-liens {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.pp-liens a {
+  font-family: var(--font-nav);
+  font-size: 1rem;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  transition: opacity 0.3s ease;
+}
+.pp-liens a:hover { opacity: 0.55; }
+
+.pp-funding {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--color-muted);
+  max-width: 52ch;
+  margin: 0;
+}
+
 /* ── Pied de fiche ──────────────────────────────────────────────────────── */
 .pp-footer {
   padding: 2.5rem 0 4rem;
