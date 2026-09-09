@@ -241,6 +241,37 @@
 }
 .pp-cta a:hover { opacity: 0.55; }
 
+/* Pleine page en cours de fiche. Comme l'ouverture, l'image touche les bords ;
+   à la différence de l'ouverture, elle n'a pas à tenir dans ce que l'écran
+   laisse libre — on est déjà en train de faire défiler.
+
+   La hauteur est bornée deux fois : 85 % de la fenêtre, pour qu'il reste
+   toujours un peu de page autour, et 62 % de la largeur, sinon sur un écran
+   large et bas l'image deviendrait une meurtrière. Le point de cadrage
+   descend légèrement : la source est en portrait et son sujet occupe la
+   moitié basse. */
+.pp-bleed-mid {
+  margin: 0;
+  height: min(85svh, calc(100vw * 0.62));
+  overflow: hidden;
+  background: var(--color-stone-light);
+}
+.pp-bleed-mid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 56%;
+  display: block;
+}
+.pp-bleed-caption {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: var(--color-muted);
+  margin: 0.75rem 0 0;
+  max-width: 60ch;
+}
+
 /* ── Recherche : liens et financement ─────────────────────────────────────
    La mention de financement est une citation imposée par le financeur. Elle
    se lit, elle ne se met pas en avant : petit corps, gris, mesure courte.

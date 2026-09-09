@@ -139,18 +139,27 @@ export function StoolPage() {
               </div>
             ))}
           </motion.div>
-          <motion.div {...reveal} className="pp-duo" style={{ marginTop: "3.5rem" }}>
-            <figure className="pp-figure pp-figure-wide pp-duo-a">
-              <img loading="lazy" decoding="async"
-                   src="/images/tabouret/culture.jpg" alt={t.matiere.cultureAlt} />
-            </figure>
-            <figure className="pp-figure pp-figure-square pp-duo-b">
-              <img loading="lazy" decoding="async"
-                   src="/images/tabouret/substrat.jpg" alt={t.matiere.items[0].d} />
-            </figure>
-          </motion.div>
+          <motion.figure {...reveal} className="pp-figure pp-figure-wide"
+                         style={{ marginTop: "3.5rem" }}>
+            <img loading="lazy" decoding="async"
+                 src="/images/tabouret/substrat.jpg" alt={t.matiere.items[0].d} />
+          </motion.figure>
         </div>
       </section>
+
+      {/* ── La prise, pleine page ────────────────────────────────────────
+          Hors du conteneur : l'image touche les bords de l'écran, comme
+          l'ouverture. C'est le moment où l'objet n'est plus un montage et
+          pas encore un tabouret — il méritait la pleine largeur.        */}
+      <motion.figure {...reveal} className="pp-bleed-mid">
+        <img loading="lazy" decoding="async"
+             src="/images/tabouret/culture.jpg" alt={t.matiere.cultureAlt} />
+      </motion.figure>
+      <div className="pp">
+        <div className="pp-inner">
+          <p className="pp-bleed-caption">{t.matiere.cultureAlt}</p>
+        </div>
+      </div>
 
       {/* ── Fabrication ───────────────────────────────────────────────── */}
       <section className="pp pp-section pp-section-alt">
