@@ -72,6 +72,12 @@ export const translations = {
           category: "Spatial Systems",
           year: "2025",
           description: "A street-scale model exploring how urban infrastructure shapes collective behaviour, making the invisible logics of public space visible and open to redesign."
+        },
+        {
+          title: "L’atelier de l’Epinay",
+          category: "Material Research",
+          year: "2026",
+          description: "Two days in the mountains at Adrien Rigobello’s workshop, part of the Relational Tectonics research project: three branches cut in the forest for legs, a seat cultivated on a wood substrate. From the first sketch to unmoulding, everything happened in the meadow."
         }
       ]
     },
@@ -184,6 +190,12 @@ export const translations = {
           category: "Systèmes Spatiaux",
           year: "2025",
           description: "Une maquette à l'échelle de la rue explorant comment l'infrastructure urbaine façonne les comportements collectifs, rendant les logiques invisibles de l'espace public visibles et ouvertes à la reconception."
+        },
+        {
+          title: "L’atelier de l’Epinay",
+          category: "Recherche Matérielle",
+          year: "2026",
+          description: "Deux jours d'atelier en montagne chez Adrien Rigobello, dans le cadre du projet de recherche Relational Tectonics : trois branches coupées en forêt pour les pieds, une assise cultivée sur substrat de bois. Du premier croquis au démoulage, tout s'est fait dans le pré."
         }
       ]
     },
@@ -296,6 +308,12 @@ export const translations = {
           category: "Systemy Przestrzenne",
           year: "2025",
           description: "Makieta w skali ulicy badająca, jak infrastruktura miejska kształtuje zachowania zbiorowe, czyniąc niewidzialne logiki przestrzeni publicznej widocznymi i otwartymi na przeprojektowanie."
+        },
+        {
+          title: "L’atelier de l’Epinay",
+          category: "Badania Materiałowe",
+          year: "2026",
+          description: "Dwa dni warsztatów w górach u Adriena Rigobello, w ramach projektu badawczego Relational Tectonics: trzy gałęzie ścięte w lesie na nogi, siedzisko wyhodowane na podłożu z drewna. Od pierwszego szkicu po wyjęcie z formy — wszystko na łące."
         }
       ]
     },

@@ -14,6 +14,7 @@ const projectImages = [
   "/images/project-7.jpg",
   "/images/project-8.jpg",
   "/images/project-9.jpg",
+  "/images/project-epinay.jpg",
 ];
 
 const typologies = ["All", "Research", "Objects", "Spatial", "Consulting"];
@@ -27,16 +28,17 @@ const projectTypologies = [
   "Research",   // 1 Material Archives
   "Spatial",    // 2 Scale & Proportion
   "Consulting", // 3 Studio Practice
-  "Spatial",    // 4 Exhibition M2050
-  "Objects",    // 5 Maquette Posidonie
+  "Spatial",    // 4 Exposition « Ici, ça chauffe »
+  "Objects",    // 5 Le Grand Dehors
   "Objects",    // 6 Maison Modèle
   "Spatial",    // 7 La Rue
+  "Objects",    // 8 L'atelier de l'Epinay
 ];
 
-// Fiches projet existantes, par index. Seule Exhibition M2050 en a une pour
+// Fiches projet existantes, par index. Seule l'exposition en a une pour
 // l'instant ; les autres cartes restent volontairement non cliquables.
 const projectLinks: Record<number, string> = {
-  4: "/work/marseille-2050", // Exhibition M2050 → Marseille 2050, Ici ça chauffe
+  4: "/work/marseille-2050", // « Ici, ça chauffe » → la fiche Marseille 2050
 };
 
 export function Work() {
