@@ -16,6 +16,13 @@ ligatures, le substrat, la culture, l'objet fini. Les vues d'atelier avec
 participants sont écartées — ce sont celles d'un atelier collectif, la fiche
 parle d'un objet.
 
+LIMITE CONNUE. Le tabouret achevé n'existe qu'en 900 px : les trois fichiers
+« Final » sont des exports tardifs, et le reportage s'arrête à DSCF3447, où
+l'assise est encore sous film. La couverture est donc agrandie à 1800 px de
+large — au Lanczos plutôt qu'en laissant le navigateur le faire, mais
+agrandie tout de même. Si l'original de ces trois vues réapparaît, il suffit
+de le substituer ici.
+
 Usage : python3 scripts/import_stool_images.py
 """
 import os
@@ -33,11 +40,16 @@ WANTED = {
     # Ouverture pleine largeur : l'ossature et son moule montés dans le pré.
     # La bande d'ouverture est en 1,7/1, la photo en 16/9 : on recadre pour
     # que le cadrage automatique ne coupe pas le montage.
-    # Pas de recadrage préalable : la bande d'ouverture applique déjà un
-    # cover, et pré-recadrer en 16/7 revenait à zoomer deux fois. Une source
-    # en PAYSAGE est indispensable — une portrait, comme la vue à la toison,
-    # se retrouve agrandie au point de ne plus montrer que son sujet central.
-    'ouverture':       ('DSCF3215.JPG', None),        # deux briques de mycélium en main
+    # Le tabouret achevé, en pleine définition — les fichiers « Final » n'en
+    # sont que des exports à 900 px, inutilisables en pleine largeur.
+    #
+    # La photo est en portrait et la bande d'ouverture applique un cover. Deux
+    # pièges s'annulent ici : on recadre en 4/3 seulement, pas en 16/7 (une
+    # bande étroite prise dans un portrait ne montrerait qu'une tranche), et
+    # on exporte à 1800 px de LARGE et non de grand côté, sans quoi la bande
+    # agrandirait l'image. L'ancrage descend le cadre sur le tabouret, qui est
+    # dans la moitié basse.
+    'ouverture':       ('Process/Final_3.JPG', 4 / 3, 0.58, 'largeur'),
 
     # Le lieu : une vallée, une ferme, un toit de lauzes. Le projet parle de
     # matériaux d'ici — encore faut-il montrer où est cet ici.
@@ -51,14 +63,15 @@ WANTED = {
     'carnet':          ('Process/Process_013.JPG', None),  # le carnet et les bois
 
     # La matière : le mycélium, avant le tabouret.
-    'blocs':           ('DSCF3224.JPG', None),        # les blocs sur l'établi
+    'substrat-detail': ('DSCF3433.JPG', None),        # le substrat étalé, de près
     'substrat':        ('Process/Process_0112.JPG', None),  # le substrat en main
 
     # La culture, la mise en terre, l'objet.
     'laine':           ('DSCF3408.JPG', None),        # la toison sur l'ossature
     'pre':             ('Process/Process_018.JPG', None),  # l'établi monté dans le pré
     'plantation':      ('DSCF3421.JPG', None),        # les pieds mis en terre
-    'tabouret':        ('Process/Final_3.JPG', None), # le tabouret, debout
+    'culture':         ('DSCF3447.JPG', None),        # monté dans le pré, assise encore sous film
+    'tabouret':        ('Process/Final_2.JPG', None), # le tabouret démoulé, debout
 }
 
 
@@ -89,6 +102,7 @@ avant = apres = 0
 for nom, spec in WANTED.items():
     rel, ratio = spec[0], spec[1]
     ancrage = spec[2] if len(spec) > 2 else 0.5
+    plafond = spec[3] if len(spec) > 3 else 'grand'
     im = charge(rel)
     if im is None:
         print(f'  MANQUANT  {rel}')
@@ -104,9 +118,10 @@ for nom, spec in WANTED.items():
             l = round(im.height * ratio)
             im = im.crop(((im.width - l) // 2, 0, (im.width - l) // 2 + l, im.height))
 
-    grand = max(im.width, im.height)
-    if grand > MAXW:
-        k = MAXW / grand
+    reference = im.width if plafond == 'largeur' else max(im.width, im.height)
+    # Agrandissement toléré pour la seule couverture : voir la note en tête.
+    if reference > MAXW or (plafond == 'largeur' and reference < MAXW):
+        k = MAXW / reference
         im = im.resize((round(im.width * k), round(im.height * k)), Image.LANCZOS)
     dst = os.path.join(OUT, nom + '.jpg')
     im.save(dst, 'JPEG', quality=Q, optimize=True, progressive=True)

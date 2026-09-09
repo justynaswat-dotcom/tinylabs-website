@@ -23,7 +23,7 @@ const reveal = {
   transition: { duration: 1, ease: [0.4, 0, 0.2, 1] as const },
 };
 
-const galerie = ["laine", "carnet", "ligature", "blocs", "pre", "plantation"];
+const galerie = ["laine", "carnet", "ligature", "substrat-detail", "pre", "plantation"];
 
 export function StoolPage() {
   const { language } = useLanguage();
@@ -139,11 +139,16 @@ export function StoolPage() {
               </div>
             ))}
           </motion.div>
-          <motion.figure {...reveal} className="pp-figure pp-figure-wide"
-                         style={{ marginTop: "3.5rem" }}>
-            <img loading="lazy" decoding="async"
-                 src="/images/tabouret/substrat.jpg" alt={t.matiere.items[0].d} />
-          </motion.figure>
+          <motion.div {...reveal} className="pp-duo" style={{ marginTop: "3.5rem" }}>
+            <figure className="pp-figure pp-figure-wide pp-duo-a">
+              <img loading="lazy" decoding="async"
+                   src="/images/tabouret/culture.jpg" alt={t.matiere.cultureAlt} />
+            </figure>
+            <figure className="pp-figure pp-figure-square pp-duo-b">
+              <img loading="lazy" decoding="async"
+                   src="/images/tabouret/substrat.jpg" alt={t.matiere.items[0].d} />
+            </figure>
+          </motion.div>
         </div>
       </section>
 

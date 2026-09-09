@@ -57,6 +57,7 @@ const fr = {
 
   matiere: {
     label: "La matière",
+    cultureAlt: "Le tabouret monté dans le pré, l'assise encore sous film pendant la prise",
     heading:
       "Le mycélium n'est pas un liant que l'on mélange : c'est un organisme que l'on nourrit, et qui prend la forme du moule où on l'installe.",
     items: [
@@ -84,7 +85,7 @@ const fr = {
       "La toison de laine posée sur l'ossature de branches, dans le pré",
       "Le carnet de croquis et les branches choisies, posés côte à côte",
       "Une ligature d'éclisse serrée sur le croisement de deux branches",
-      "Des blocs de mycélium de formes diverses, sur l'établi",
+      "Le substrat ensemencé, étalé avant la mise en moule",
       "L'établi monté dans le pré, le substrat étalé sur la bâche",
       "Les pieds du tabouret mis en terre à la bêche",
     ],
@@ -116,7 +117,7 @@ const fr = {
 
   cta: "Pour un devis ou un renseignement, écrivez-nous à",
 
-  openingAlt: "Deux briques de mycélium tenues en main, à contre-jour",
+  openingAlt: "Le tabouret achevé dans le pré, la montagne derrière",
   finalAlt: "Le tabouret achevé, assise de mycélium sur trois pieds de branches",
 };
 
@@ -161,6 +162,7 @@ const en: StoolContent = {
 
   matiere: {
     label: "The material",
+    cultureAlt: "The stool set up in the meadow, the seat still under film while it takes",
     heading:
       "Mycelium is not a binder you mix in: it is an organism you feed, and it takes the shape of the mould you settle it in.",
     items: [
@@ -188,7 +190,7 @@ const en: StoolContent = {
       "The wool fleece set over the branch frame, in the meadow",
       "The sketchbook and the chosen branches, laid side by side",
       "A cane lashing drawn tight over the crossing of two branches",
-      "Mycelium blocks of various shapes, on the workbench",
+      "The inoculated substrate, spread out before moulding",
       "The bench set up in the meadow, the substrate spread on the sheet",
       "The stool's legs driven into the ground with a spade",
     ],
@@ -220,7 +222,7 @@ const en: StoolContent = {
 
   cta: "For a quote or any question, write to us at",
 
-  openingAlt: "Two mycelium bricks held in the hand, against the light",
+  openingAlt: "The finished stool in the meadow, the mountain behind",
   finalAlt: "The finished stool, a mycelium seat on three branch legs",
 };
 
@@ -265,6 +267,7 @@ const pl: StoolContent = {
 
   matiere: {
     label: "Materiał",
+    cultureAlt: "Taboret ustawiony na łące, siedzisko jeszcze pod folią w trakcie wiązania",
     heading:
       "Grzybnia nie jest spoiwem, które się miesza: to organizm, który się karmi, i który przyjmuje kształt formy, w jakiej się go osadzi.",
     items: [
@@ -292,7 +295,7 @@ const pl: StoolContent = {
       "Runo wełny położone na konstrukcji z gałęzi, na łące",
       "Szkicownik i wybrane gałęzie, złożone obok siebie",
       "Wiązanie z taśmy zaciągnięte na skrzyżowaniu dwóch gałęzi",
-      "Bloki z grzybni o różnych kształtach, na warsztacie",
+      "Zaszczepione podłoże, rozłożone przed formowaniem",
       "Warsztat ustawiony na łące, podłoże rozłożone na plandece",
       "Nogi taboretu wbite w ziemię szpadlem",
     ],
@@ -324,7 +327,7 @@ const pl: StoolContent = {
 
   cta: "W sprawie wyceny lub pytań napiszcie do nas:",
 
-  openingAlt: "Dwie cegły z grzybni trzymane w dłoni, pod światło",
+  openingAlt: "Gotowy taboret na łące, w tle góra",
   finalAlt: "Gotowy taboret, siedzisko z grzybni na trzech nogach z gałęzi",
 };
 
