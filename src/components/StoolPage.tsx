@@ -186,6 +186,20 @@ export function StoolPage() {
               </div>
             ))}
           </motion.div>
+
+          {/* Les croquis, sous les quatre gestes : ils les précèdent. La
+              double page d'atelier d'abord, puis le carnet ressorti sur le
+              terrain, devant l'ossature déjà plantée. */}
+          <motion.div {...reveal} className="pp-duo" style={{ marginTop: "3.5rem" }}>
+            <figure className="pp-figure pp-figure-wide pp-duo-a">
+              <img loading="lazy" decoding="async"
+                   src="/images/tabouret/croquis.jpg" alt={t.fabrication.croquisAlt} />
+            </figure>
+            <figure className="pp-figure pp-figure-square pp-duo-b">
+              <img loading="lazy" decoding="async"
+                   src="/images/tabouret/croquis-terrain.jpg" alt={t.fabrication.terrainAlt} />
+            </figure>
+          </motion.div>
         </div>
       </section>
 

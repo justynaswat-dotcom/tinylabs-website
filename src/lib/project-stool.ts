@@ -71,6 +71,8 @@ const fr = {
   fabrication: {
     label: "Fabrication",
     heading: "Quatre gestes",
+    croquisAlt: "La double page du carnet : le tabouret de trois quarts, et son plan",
+    terrainAlt: "Le carnet rouvert dans l'herbe, l'ossature déjà plantée derrière",
     items: [
       { t: "Couper", d: "Trois branches choisies pour leur fourche naturelle, taillées à la longueur d'assise." },
       { t: "Lier", d: "Les ligatures d'éclisse tiennent l'ossature, qui sert ensuite de support au moule." },
@@ -176,6 +178,8 @@ const en: StoolContent = {
   fabrication: {
     label: "Making",
     heading: "Four gestures",
+    croquisAlt: "The open sketchbook: the stool in three-quarter view, and its plan",
+    terrainAlt: "The sketchbook reopened in the grass, the frame already planted behind",
     items: [
       { t: "Cut", d: "Three branches chosen for their natural fork, trimmed to seat height." },
       { t: "Lash", d: "Cane lashings hold the frame, which then carries the mould." },
@@ -281,6 +285,8 @@ const pl: StoolContent = {
   fabrication: {
     label: "Wykonanie",
     heading: "Cztery gesty",
+    croquisAlt: "Rozłożony szkicownik: taboret w trzech czwartych i jego rzut",
+    terrainAlt: "Szkicownik otwarty w trawie, konstrukcja już wbita w ziemię",
     items: [
       { t: "Ściąć", d: "Trzy gałęzie wybrane dla naturalnego rozwidlenia, przycięte na wysokość siedziska." },
       { t: "Związać", d: "Wiązania z taśmy trzymają konstrukcję, która następnie niesie formę." },

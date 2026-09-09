@@ -63,6 +63,11 @@ WANTED = {
     'assemblage':      ('DSCF3356.JPG', None),        # deux croisements liés
     'maquette-profil': ('DSCF3385.JPG', None),        # la maquette du piètement, de profil
 
+    # Les croquis. Ils précèdent les gestes, et la section Fabrication
+    # n'avait que du texte.
+    'croquis':         ('DSCF3380.JPG', None),        # la double page, le tabouret et son plan
+    'croquis-terrain': ('DSCF3404.JPG', None),        # le carnet dans l'herbe, l'ossature plantée derrière
+
     # Le procédé, du moule à la mise en terre. Presque tout est en portrait
     # dans le fonds : les trois cellules en largeur de la mosaïque se prennent
     # donc sur les rares vues paysage.
