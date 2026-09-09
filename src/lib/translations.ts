@@ -62,7 +62,7 @@ export const translations = {
           description: "An object of bioregional materials: a seat grown from mycelium on a wood substrate, legs of branches cut where it stands. Developed at l’atelier de l’Epinay with Adrien Rigobello, within the Relational Tectonics research, toward the final exhibition in Copenhagen in 2028. Research supported by the Carlsberg Foundation and the Designae COST Action."
         },
         {
-          title: "Le Grand Dehors — seascape",
+          title: "Le Grand Dehors, seascape",
           category: "Material Research",
           year: "2025",
           description: "A scale model of posidonie meadows, translating the invisible complexity of Mediterranean seagrass ecosystems into a tangible, navigable object that makes ecological interdependence perceptible."
@@ -180,7 +180,7 @@ export const translations = {
           description: "Un objet en matériaux biorégionaux : une assise poussée de mycélium sur substrat de bois, des pieds taillés dans les branches du lieu même. Développé à l'atelier de l'Epinay avec Adrien Rigobello, dans le cadre de la recherche Relational Tectonics, en vue de l'exposition finale à Copenhague en 2028. Recherche soutenue par la Carlsberg Foundation et le réseau COST Designae."
         },
         {
-          title: "Le Grand Dehors — paysage marin",
+          title: "Le Grand Dehors, paysage marin",
           category: "Recherche Matérielle",
           year: "2025",
           description: "Une maquette des herbiers de posidonie, traduisant la complexité invisible des écosystèmes de posidonies méditerranéennes en un objet tangible et navigable qui rend perceptible l'interdépendance écologique."
@@ -298,7 +298,7 @@ export const translations = {
           description: "Obiekt z materiałów bioregionalnych: siedzisko wyhodowane z grzybni na podłożu z drewna, nogi z gałęzi ściętych na miejscu. Rozwijany w l’atelier de l’Epinay z Adrienem Rigobello, w ramach badań Relational Tectonics, z myślą o wystawie finałowej w Kopenhadze w 2028 roku. Badania wspierane przez Carlsberg Foundation i sieć Designae COST Action."
         },
         {
-          title: "Wielki Świat — pejzaż morski",
+          title: "Wielki Świat, pejzaż morski",
           category: "Badania Materiałowe",
           year: "2025",
           description: "Makieta łąk posidonie, przekładająca niewidzialną złożoność śródziemnomorskich ekosystemów trawy morskiej na namacalny, navigowalny obiekt, który czyni ekologiczną współzależność postrzegalną."

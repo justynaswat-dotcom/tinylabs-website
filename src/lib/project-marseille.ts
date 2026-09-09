@@ -69,7 +69,7 @@ const fr = {
     heading:
       "Cinq escales, de Soi au Grand Dehors, où chaque panneau pose une question simple pour éveiller la pensée et l'envie d'agir.",
     route: "Soi · la Maison · la Rue · la Ville · le Grand Dehors",
-    routeNote: "quatre d'entre elles portent une interaction.",
+    routeNote: "quatre d'entre elles portent une interaction",
     items: [
       {
         t: "La Maison",
@@ -206,7 +206,7 @@ const en: ProjectContent = {
     heading:
       "Five stops, from the Self to the Great Outdoors, where each panel asks one simple question to open thought and the urge to act.",
     route: "the Self · the Home · the Street · the City · the Great Outdoors",
-    routeNote: "four of them carry an interaction.",
+    routeNote: "four of them carry an interaction",
     items: [
       {
         t: "The Home",
@@ -302,11 +302,11 @@ const pl: ProjectContent = {
   intro: {
     label: "Projekt",
     lead:
-      "„Ale tu gorąco” (Marsylia 2050) to objazdowa wystawa edukacyjna, która pozwala dotknąć zmiany klimatu w mieście. W pięciu skalach, od domu po cały region, zaprasza każdego do zrozumienia, odczucia i wspólnego wyobrażenia sobie Marsylii, w której da się mieszkać — miasta, którego chce się i które poradzi sobie z nadchodzącym klimatem.",
+      "„Ale tu gorąco” (Marsylia 2050) to objazdowa wystawa edukacyjna, która pozwala dotknąć zmiany klimatu w mieście. W pięciu skalach, od domu po cały region, zaprasza każdego do zrozumienia, odczucia i wspólnego wyobrażenia sobie Marsylii, w której da się mieszkać, miasta, którego chce się i które poradzi sobie z nadchodzącym klimatem.",
     body: [
       "Wystawa jest dla wszystkich: rodzin, szkół, ciekawskich, mieszkańców. Podróżuje po mieście, staje na placach, na szkolnych dziedzińcach i w miejscach, które marsylczycy znają, i rozwija trasę z plansz, makiet i przedmiotów, które bierze się do ręki.",
       "Marsylia jawi się tu jako gorący punkt klimatu śródziemnomorskiego: dłuższe fale upałów, mniej wody, podnoszące się morze, słabnąca różnorodność biologiczna, częstsze pożary. Do 2050 roku klimat miasta może przypominać dzisiejszą Sewillę.",
-      "Zamiast straszyć, wystawa pokazuje przemiany już trwające: zazielenianie ulic, otwieranie gruntów, nowe sposoby poruszania się, lokalne jedzenie, troskę o życie w morzu i na lądzie. Świętuje zbiorową energię Marsylii, żeby chciało się działać — razem.",
+      "Zamiast straszyć, wystawa pokazuje przemiany już trwające: zazielenianie ulic, otwieranie gruntów, nowe sposoby poruszania się, lokalne jedzenie, troskę o życie w morzu i na lądzie. Świętuje zbiorową energię Marsylii, żeby chciało się działać, razem.",
     ],
   },
 
@@ -340,7 +340,7 @@ const pl: ProjectContent = {
     heading:
       "Pięć przystanków, od Siebie po Wielki Świat, gdzie każda plansza stawia jedno proste pytanie, żeby obudzić myślenie i chęć działania.",
     route: "Ja · Dom · Ulica · Miasto · Wielki Świat",
-    routeNote: "cztery z nich mają urządzenie do obsługi.",
+    routeNote: "cztery z nich mają urządzenie do obsługi",
     items: [
       {
         t: "Dom",
@@ -372,7 +372,7 @@ const pl: ProjectContent = {
     items: [
       { t: "Plansze edukacyjne", d: "Format 90 × 180 cm składany w tryptyk, drukowany na podłożach nadających się do recyklingu i mocowany do modułowych stelaży z drewna i stali. Trzy do czterech plansz na wyspę, zależnie od tematów." },
       { t: "Zadaszenia", d: "Tkaninowe zadaszenia 60 × 180 cm mocowane nad planszami. Chronią zwiedzających przed słońcem, ożywiają bryły i niosą oznakowanie trasy." },
-      { t: "Makiety do ręki", d: "Dom odporny na upał, ulica przepuszczająca wodę, miasto przepływów, żywy region. Jasne drewno, materiały pochodzenia roślinnego i elementy na magnesy — żeby rozumieć gestem i we wspólnocie." },
+      { t: "Makiety do ręki", d: "Dom odporny na upał, ulica przepuszczająca wodę, miasto przepływów, żywy region. Jasne drewno, materiały pochodzenia roślinnego i elementy na magnesy, żeby rozumieć gestem i we wspólnocie." },
       { t: "Meble scenograficzne", d: "Rozbieralne stelaże, niskie siedziska, stoły warsztatowe i skrzynie transportowe, które stają się cokołami. Oszczędna rodzina mebli pomyślana do szybkiego montażu i intensywnego użytku na zewnątrz." },
       { t: "Identyfikacja graficzna", d: "Odręczne tytuły, liniowe piktogramy, rysowane ręcznie ilustracje, paleta wzięta z ziemi i z morza. Ciepłe oznakowanie, które rozmawia z miastem." },
       { t: "Materiały dydaktyczne", d: "Zeszyt zwiedzającego, tabliczki „A ja?”, karty działań i broszura dla nauczycieli. Materiały do zabrania, żeby przedłużyć doświadczenie w klasie albo w domu." },

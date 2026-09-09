@@ -182,7 +182,7 @@ export function ProjectPage() {
             <p className="label" style={{ marginBottom: "2rem" }}>{t.exhibition.label}</p>
             <h2>{t.exhibition.heading}</h2>
             <p className="pp-parcours">
-              {t.exhibition.route} — <span>{t.exhibition.routeNote}</span>
+              {t.exhibition.route} <span>({t.exhibition.routeNote})</span>
             </p>
           </motion.div>
 

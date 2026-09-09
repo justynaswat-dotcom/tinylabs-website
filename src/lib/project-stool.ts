@@ -32,7 +32,7 @@ const fr = {
   intro: {
     label: "Le projet",
     lead:
-      "Un tabouret dont l'assise n'est pas fabriquée mais cultivée. Le mycélium — la partie souterraine du champignon, un feutrage de filaments — colonise un substrat de bois et le lie en un matériau ferme et léger. Les pieds sont trois branches coupées dans le bois voisin. Rien n'a été apporté de loin.",
+      "Un tabouret dont l'assise n'est pas fabriquée mais cultivée. Le mycélium, la partie souterraine du champignon, un feutrage de filaments, colonise un substrat de bois et le lie en un matériau ferme et léger. Les pieds sont trois branches coupées dans le bois voisin. Rien n'a été apporté de loin.",
     body: [
       "L'objet est né à l'atelier de l'Epinay, en montagne, en août 2026, sous la conduite d'Adrien Rigobello. L'atelier est un des terrains du projet de recherche Relational Tectonics, qui explore ce que devient la construction quand elle travaille avec le vivant plutôt que contre lui.",
       "Biorégional est ici un mot précis, pas une intention : le bois vient de la parcelle, la laine du troupeau qui la broute, le mycélium se nourrit des copeaux du bois coupé. La vallée fournit la matière, l'énergie et le temps de prise. Ce qui manque à la vallée ne fait pas partie de l'objet.",
@@ -137,7 +137,7 @@ const en: StoolContent = {
   intro: {
     label: "The project",
     lead:
-      "A stool whose seat is not made but grown. Mycelium — the underground body of a fungus, a felt of fine filaments — colonises a wood substrate and binds it into a firm, light material. The legs are three branches cut in the wood next door. Nothing was brought from far away.",
+      "A stool whose seat is not made but grown. Mycelium, the underground body of a fungus, a felt of fine filaments, colonises a wood substrate and binds it into a firm, light material. The legs are three branches cut in the wood next door. Nothing was brought from far away.",
     body: [
       "The object was born at l’atelier de l’Epinay, in the mountains, in August 2026, led by Adrien Rigobello. The workshop is one of the testing grounds of the Relational Tectonics research project, which asks what building becomes when it works with the living rather than against it.",
       "Bioregional is a precise word here, not an intention: the wood comes from the plot, the wool from the flock that grazes it, the mycelium feeds on the shavings of the cut timber. The valley supplies the matter, the energy and the setting time. What the valley does not hold is not part of the object.",
@@ -242,7 +242,7 @@ const pl: StoolContent = {
   intro: {
     label: "Projekt",
     lead:
-      "Taboret, którego siedzisko nie zostało wykonane, lecz wyhodowane. Grzybnia — podziemna część grzyba, filc z cienkich nitek — zarasta podłoże z drewna i wiąże je w materiał twardy i lekki. Nogi to trzy gałęzie ścięte w sąsiednim lesie. Nic nie zostało przywiezione z daleka.",
+      "Taboret, którego siedzisko nie zostało wykonane, lecz wyhodowane. Grzybnia, podziemna część grzyba, filc z cienkich nitek, zarasta podłoże z drewna i wiąże je w materiał twardy i lekki. Nogi to trzy gałęzie ścięte w sąsiednim lesie. Nic nie zostało przywiezione z daleka.",
     body: [
       "Obiekt powstał w l’atelier de l’Epinay, w górach, w sierpniu 2026 roku, pod okiem Adriena Rigobello. Warsztat jest jednym z poligonów projektu badawczego Relational Tectonics, który pyta, czym staje się budowanie, gdy pracuje z tym, co żywe, a nie przeciw niemu.",
       "Bioregionalny jest tu słowem ścisłym, nie deklaracją: drewno pochodzi z działki, wełna od stada, które ją spasa, grzybnia żywi się wiórami ze ściętego drewna. Dolina daje materię, energię i czas wiązania. To, czego dolina nie ma, nie wchodzi w skład obiektu.",
@@ -272,7 +272,7 @@ const pl: StoolContent = {
       "Grzybnia nie jest spoiwem, które się miesza: to organizm, który się karmi, i który przyjmuje kształt formy, w jakiej się go osadzi.",
     items: [
       { t: "Podłoże", d: "Wióry i trociny z drewna ściętego na miejscu, nawilżone i zaszczepione. Surowcem grzyba jest odpad po ścince." },
-      { t: "Zarastanie", d: "Kilka dni wzrostu pod przykryciem — tyle, by biały filc przeszedł przez podłoże i związał je na wskroś." },
+      { t: "Zarastanie", d: "Kilka dni wzrostu pod przykryciem: tyle, by biały filc przeszedł przez podłoże i związał je na wskroś." },
       { t: "Zatrzymanie", d: "Suszenie wstrzymuje wzrost. Element staje się stabilny, suchy, lekki i sam z siebie już nie ruszy." },
       { t: "Powrót", d: "Pod koniec życia siedzisko się kompostuje. Będzie pożyczone od gleby tylko na czas użytkowania." },
     ],

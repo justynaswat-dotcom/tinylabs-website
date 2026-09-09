@@ -269,7 +269,7 @@ export function StoolPage() {
               {/* Noms insécables : un prénom ne doit pas se détacher de son
                   nom en fin de ligne. */}
               <dd>
-                {t.credits.equipe} — Justyna&nbsp;Swat&nbsp;· Brieuc&nbsp;Tual
+                {t.credits.equipe} : Justyna&nbsp;Swat&nbsp;· Brieuc&nbsp;Tual
               </dd>
 
               <dt className="label">{t.credits.contact}</dt>
