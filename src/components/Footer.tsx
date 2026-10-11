@@ -36,13 +36,6 @@ export function Footer() {
                 </div>
 
                 <div>
-                  <p className="label mb-3">Website</p>
-                  <a href="https://tinylabs.one" target="_blank" rel="noopener noreferrer">
-                    tinylabs.one
-                  </a>
-                </div>
-
-                <div>
                   <p className="label mb-3">{t.footer.phone}</p>
                   <a href="tel:+33956851165">{t.footer.phoneValue}</a>
                 </div>

@@ -43,6 +43,42 @@ const PAGES = [
       "Un objet en matériaux biorégionaux : une assise poussée de mycélium sur substrat de bois, des pieds taillés dans les branches du lieu même. Recherche Relational Tectonics.",
     image: `${RACINE}/images/share/tabouret.jpg`,
   },
+  {
+    slug: 'work/la-voie',
+    titre: "La Voie, concevoir le mouvement pour un futur commun | TINYLABS",
+    description:
+      "Ateliers, quatorze courts films, une exposition et un livre sur des mobilités qui régénèrent les territoires, construits avec les habitants. Avec le soutien de l'ADEME (Extrême Défi Mobilité).",
+    image: `${RACINE}/images/share/la-voie.jpg`,
+  },
+  // Les quatre volets de La Voie, chacun sur sa page.
+  {
+    slug: 'work/la-voie/residence',
+    titre: "La Voie · Résidence et atelier | TINYLABS",
+    description:
+      "Une semaine de résidence à Mouans-Sartoux en juin 2024 pour tester les Vélis avec les habitants, puis un atelier de co-conception autour d'une cartographie sensible.",
+    image: `${RACINE}/images/share/la-voie-residence.jpg`,
+  },
+  {
+    slug: 'work/la-voie/films',
+    titre: "La Voie · Films | TINYLABS",
+    description:
+      "Quatorze entretiens filmés sur le terrain, un par chapitre du livre La Voie : de l'eau à la santé, de la biodiversité à la liberté.",
+    image: `${RACINE}/images/share/la-voie.jpg`,
+  },
+  {
+    slug: 'work/la-voie/exposition',
+    titre: "La Voie · Exposition | TINYLABS",
+    description:
+      "Un container maritime réaménagé, présenté au Festival du Livre de Mouans-Sartoux : vidéos, cartes sensibles et Vélis à essayer.",
+    image: `${RACINE}/images/share/la-voie-exposition.jpg`,
+  },
+  {
+    slug: 'work/la-voie/livre',
+    titre: "La Voie · Livre | TINYLABS",
+    description:
+      "Un journal de bord en quatorze chapitres et quatorze entretiens, 212 pages (TINY LABS éditions, mai 2025). Feuilleter un extrait.",
+    image: `${RACINE}/images/share/la-voie-livre.jpg`,
+  },
 ];
 
 const gabarit = readFileSync(join(BUILD, 'index.html'), 'utf8');

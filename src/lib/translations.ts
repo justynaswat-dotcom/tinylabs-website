@@ -1,5 +1,10 @@
 export type Language = "en" | "fr" | "pl";
 
+/* Textes de l'accueil. Réécrits le 10 octobre 2026 dans une langue simple :
+   des faits (ce que le studio fait, pour qui, où) plutôt que des formules
+   abstraites. L'ordre des projets est POSITIONNEL : il doit rester le même
+   dans les trois langues et correspondre aux tableaux de Work.tsx. */
+
 export const translations = {
   en: {
     header: {
@@ -11,104 +16,110 @@ export const translations = {
       }
     },
     hero: {
-      headline: "We need new ways to navigate uncertainty, to build connections, and to design futures that are both desirable and grounded in reality.",
+      headline: "A design studio in Paris working on the ecological transition, from a single object to a whole territory.",
       mission: {
-        title: "Mission",
-        text: "TINYLABS is an exploratory design studio dedicated to helping organisations understand complexity and move into action with clarity. We work through systemic design, weaving together beauty, rigour, and ecological intelligence. Our ambition is simple: to make sustainability tangible, inspiring, and operational across objects, spaces, infrastructures, and collective narratives."
+        title: "What we do",
+        text: "TINYLABS designs objects, exhibitions, films and books, and advises public programmes. Every project starts in the field: we meet the people involved, test ideas on site and leave behind tools that others can use."
       },
       approach: {
-        title: "Approach",
-        text: "From a single object to a city-wide strategy, we make complexity visible and actionable, producing things that can be held, spaces that can be inhabited, and strategies that can be implemented."
+        title: "Who with",
+        text: "ADEME, the City of Marseille, local authorities, associations and research programmes such as Relational Tectonics."
       }
     },
     work: {
-      sectionLabel: "Selected Works",
-      sectionTitle: "Research-led work across objects, spaces, and systems, designed to make complexity legible and futures tangible",
+      sectionLabel: "Selected work",
+      sectionTitle: "Projects from recent years, from fieldwork to finished objects.",
       projects: [
         {
-          title: "Systemic Forms",
-          category: "Research & Objects",
-          year: "2024",
-          description: "An investigation into how design principles make organisational complexity visible, mapping the invisible forces that determine how institutions and systems behave and evolve."
+          title: "La Voie",
+          category: "Research & Territories",
+          year: "2024–2025",
+          description: "Action research in Mouans-Sartoux on intermediate vehicles, between the bike and the car: a residency, a workshop, fourteen filmed interviews, an exhibition and a book. For ADEME (Extrême Défi Mobilité)."
         },
         {
-          title: "Material Archives",
-          category: "Installation & Research",
-          year: "2024",
-          description: "A spatial study that makes ecological memory tangible, translating complex relationships between landscape, infrastructure, and culture into experiential form."
+          title: "La Voie · Book",
+          category: "Research & Territories",
+          year: "2025",
+          description: "212 pages, fourteen chapters and fourteen interviews. TINY LABS éditions, May 2025."
         },
         {
-          title: "Scale & Proportion",
-          category: "Spatial Systems",
+          title: "La Voie · Exhibition",
+          category: "Spatial & Research",
           year: "2024",
-          description: "A design inquiry into multi-scalar thinking: how decisions at the level of object, space, and infrastructure shape systemic outcomes at organisation and territory scale."
+          description: "A converted shipping container shown at the Festival du Livre in Mouans-Sartoux, with the Vélis parked beside it."
         },
         {
-          title: "Studio Practice",
-          category: "Process & Method",
-          year: "2026",
-          description: "Documentation of our systemic design methodology: the mapping tools, co-creation protocols, and innovation frameworks that move organisations from complexity to strategic clarity."
+          title: "La Voie · Residency and workshop",
+          category: "Research & Territories",
+          year: "2024",
+          description: "A week in Mouans-Sartoux with residents and Vélis in June 2024, then a mapping workshop with local services in September."
+        },
+        {
+          title: "La Voie · Films",
+          category: "Research & Territories",
+          year: "2024–2025",
+          description: "Fourteen interviews filmed in the field, one for each chapter of the book."
         },
         {
           title: "“Ici, ça chauffe” exhibition",
           category: "Spatial & Research",
           year: "2025",
-          description: "An exhibition exploring the Mediterranean futures of 2050, making ecological and territorial scenarios visible, navigable, and actionable for diverse publics."
+          description: "A travelling exhibition for the City of Marseille on how the city will change with the climate by 2050. Fibois Île-de-France award, shown at Paris Design Week."
         },
         {
           title: "Living stool",
           category: "Material Research",
           year: "2026–2028",
-          description: "An object of bioregional materials: a seat grown from mycelium on a wood substrate, legs of branches cut where it stands. Developed at l’atelier de l’Epinay with Adrien Rigobello, within the Relational Tectonics research, toward the final exhibition in Copenhagen in 2028. Research supported by the Carlsberg Foundation and the Designae COST Action."
+          description: "A seat grown from mycelium on a wood substrate, with legs cut from branches found on site. Developed at l’atelier de l’Epinay with Adrien Rigobello, within the Relational Tectonics research, for the final exhibition in Copenhagen in 2028. Supported by the Carlsberg Foundation and the Designae COST Action."
         },
         {
           title: "Le Grand Dehors, seascape",
           category: "Material Research",
           year: "2025",
-          description: "A scale model of posidonie meadows, translating the invisible complexity of Mediterranean seagrass ecosystems into a tangible, navigable object that makes ecological interdependence perceptible."
+          description: "A scale model of a Posidonia seagrass meadow, to show how this Mediterranean habitat lives and what depends on it."
         },
         {
           title: "Maison Modèle",
           category: "Objects & Spatial",
           year: "2025",
-          description: "A scale model investigation into domestic futures: how the house, as a systemic unit, encodes and transmits ecological, social, and material logics."
+          description: "A scale model of a house, used to talk about how we will live in the years to come."
         },
         {
           title: "La Rue",
           category: "Spatial Systems",
           year: "2025",
-          description: "A street-scale model exploring how urban infrastructure shapes collective behaviour, making the invisible logics of public space visible and open to redesign."
+          description: "A scale model of a street, used to discuss how public space is shared between its users."
         }
       ]
     },
     about: {
-      sectionLabel: "Studio Philosophy",
-      headline: "We believe the future is designed, not predicted, and that good design makes sustainability tangible, inspiring, and real.",
+      sectionLabel: "The studio",
+      headline: "Hors Échelle means working at every scale: an object you can hold can explain a whole territory.",
       research: {
         title: "Objects & Materials",
-        text: "We design and research at the scale of the hand: objects, materials, and prototypes that make systems thinking visible, touchable, and transferable."
+        text: "Prototypes, scale models and furniture, often in bio-based or reused materials."
       },
       making: {
         title: "Spaces & Installations",
-        text: "We create environments people can inhabit and experience: spatial installations, exhibitions, and interventions that change how a place, a problem, or a possibility is understood."
+        text: "Exhibitions and installations, such as the La Voie container or the Marseille 2050 exhibition."
       },
       expression: {
         title: "Systems & Strategies",
-        text: "We map complexity and design the tools to navigate it: innovation methodologies, transition frameworks, and strategies built for real institutional use."
+        text: "Support for public programmes: calls for projects, juries, and following the projects that get funded."
       },
       relationship: {
         title: "Territories & Collectives",
-        text: "We work at city and regional scale, co-creating with communities, institutions, and governments to activate transformation across entire ecosystems."
+        text: "Residencies and workshops with residents, elected officials and local organisations."
       },
       manifesto: {
-        quote: "\"Hors Échelle\": beyond scale. New ways to navigate uncertainty, build connections, and design futures that are both desirable and grounded in reality.",
-        attribution: "Studio Manifesto"
+        quote: "Hors Échelle: our way of working on the object, the building and the territory at the same time.",
+        attribution: "The studio"
       }
     },
     footer: {
-      headline: "If you're working on something that matters, we'd love to hear about it.",
-      description: "We offer material research, object design, spatial installations, and design consulting, for organisations ready to navigate complexity and build sustainable futures.",
-      partnerLine: "We are your partner in exploration.",
+      headline: "Have a project in mind? Write to us.",
+      description: "Material research, object design, exhibitions and consulting, for public bodies, companies and associations.",
+      partnerLine: "Based in Paris, working across France and Europe.",
       email: "Email",
       phone: "Phone",
       phoneValue: "+33 9 56 85 11 65",
@@ -116,7 +127,7 @@ export const translations = {
       locationValue: "13 rue Godefroy Cavaignac 75011 Paris",
       follow: "Follow",
       copyright: "© 2026 TINYLABS — Hors Échelle",
-      tagline: "Exploratory Design Studio, Paris"
+      tagline: "Design studio, Paris"
     }
   },
   fr: {
@@ -129,112 +140,118 @@ export const translations = {
       }
     },
     hero: {
-      headline: "Nous avons besoin de nouvelles façons de naviguer l'incertitude, de tisser des connexions, et de concevoir des futurs à la fois désirables et ancrés dans la réalité.",
+      headline: "Un studio de design à Paris qui travaille sur la transition écologique, de l'objet au territoire.",
       mission: {
-        title: "Mission",
-        text: "TINYLABS est un studio de design exploratoire dédié à aider les organisations à comprendre la complexité et à passer à l'action avec clarté. Nous travaillons par le design systémique, en tissant ensemble beauté, rigueur et intelligence écologique. Notre ambition est simple : rendre la durabilité tangible, inspirante et opérationnelle à travers objets, espaces, infrastructures et récits collectifs."
+        title: "Ce que nous faisons",
+        text: "TINYLABS conçoit des objets, des expositions, des films et des livres, et accompagne des programmes publics. Chaque projet commence sur le terrain : nous rencontrons les personnes concernées, nous testons sur place et nous laissons des outils que d'autres peuvent reprendre."
       },
       approach: {
-        title: "Approche",
-        text: "D'un objet unique à une stratégie à l'échelle de la ville, nous rendons la complexité visible et actionnable, produisant des choses que l'on peut tenir, des espaces que l'on peut habiter, et des stratégies que l'on peut mettre en œuvre."
+        title: "Avec qui",
+        text: "L'ADEME, la Ville de Marseille, des collectivités, des associations et des programmes de recherche comme Relational Tectonics."
       }
     },
     work: {
-      sectionLabel: "Travaux Sélectionnés",
-      sectionTitle: "Un travail fondé sur la recherche à travers objets, espaces et systèmes, conçu pour rendre la complexité lisible et les futurs tangibles",
+      sectionLabel: "Travaux",
+      sectionTitle: "Des projets de ces dernières années, du terrain jusqu'à l'objet fini.",
       projects: [
         {
-          title: "Formes Systémiques",
-          category: "Recherche & Objets",
-          year: "2024",
-          description: "Une investigation sur la façon dont les principes de design rendent visible la complexité organisationnelle, cartographiant les forces invisibles qui déterminent comment institutions et systèmes se comportent et évoluent."
+          title: "La Voie",
+          category: "Recherche & Territoires",
+          year: "2024–2025",
+          description: "Une recherche-action à Mouans-Sartoux sur les véhicules intermédiaires, entre le vélo et la voiture : résidence, atelier, quatorze entretiens filmés, exposition et livre. Pour l'ADEME (Extrême Défi Mobilité)."
         },
         {
-          title: "Archives Matérielles",
-          category: "Installation & Recherche",
-          year: "2024",
-          description: "Une étude spatiale qui rend la mémoire écologique tangible, traduisant les relations complexes entre paysage, infrastructure et culture en forme expérientielle."
+          title: "La Voie · Livre",
+          category: "Recherche & Territoires",
+          year: "2025",
+          description: "212 pages, quatorze chapitres et quatorze entretiens. TINY LABS éditions, mai 2025."
         },
         {
-          title: "Échelle & Proportion",
-          category: "Systèmes Spatiaux",
+          title: "La Voie · Exposition",
+          category: "Espace & Recherche",
           year: "2024",
-          description: "Une enquête de design sur la pensée multi-scalaire : comment les décisions à l'échelle de l'objet, de l'espace et de l'infrastructure façonnent les résultats systémiques à l'échelle de l'organisation et du territoire."
+          description: "Un container maritime réaménagé, présenté au Festival du Livre de Mouans-Sartoux, avec les Vélis garés à côté."
         },
         {
-          title: "Pratique de Studio",
-          category: "Processus & Méthode",
-          year: "2026",
-          description: "Documentation de notre méthodologie de design systémique : les outils de cartographie, protocoles de co-création et cadres d'innovation qui font passer les organisations de la complexité à la clarté stratégique."
+          title: "La Voie · Résidence et atelier",
+          category: "Recherche & Territoires",
+          year: "2024",
+          description: "Une semaine à Mouans-Sartoux avec les habitants et les Vélis en juin 2024, puis un atelier de cartographie avec les services de la ville en septembre."
+        },
+        {
+          title: "La Voie · Films",
+          category: "Recherche & Territoires",
+          year: "2024–2025",
+          description: "Quatorze entretiens filmés sur le terrain, un par chapitre du livre."
         },
         {
           title: "Exposition « Ici, ça chauffe »",
-          category: "Spatial & Recherche",
+          category: "Espace & Recherche",
           year: "2025",
-          description: "Une exposition explorant les futurs méditerranéens de 2050, rendant les scénarios écologiques et territoriaux visibles, navigables et actionnables pour des publics diversifiés."
+          description: "Une exposition itinérante pour la Ville de Marseille sur la façon dont la ville va changer avec le climat d'ici 2050. Prix Fibois Île-de-France, présentée à la Paris Design Week."
         },
         {
           title: "Tabouret vivant",
           category: "Recherche Matérielle",
           year: "2026–2028",
-          description: "Un objet en matériaux biorégionaux : une assise poussée de mycélium sur substrat de bois, des pieds taillés dans les branches du lieu même. Développé à l'atelier de l'Epinay avec Adrien Rigobello, dans le cadre de la recherche Relational Tectonics, en vue de l'exposition finale à Copenhague en 2028. Recherche soutenue par la Carlsberg Foundation et le réseau COST Designae."
+          description: "Une assise poussée de mycélium sur un substrat de bois, des pieds taillés dans les branches trouvées sur place. Développé à l'atelier de l'Epinay avec Adrien Rigobello, dans le cadre de la recherche Relational Tectonics, pour l'exposition finale à Copenhague en 2028. Avec le soutien de la Carlsberg Foundation et du réseau COST Designae."
         },
         {
           title: "Le Grand Dehors, paysage marin",
           category: "Recherche Matérielle",
           year: "2025",
-          description: "Une maquette des herbiers de posidonie, traduisant la complexité invisible des écosystèmes de posidonies méditerranéennes en un objet tangible et navigable qui rend perceptible l'interdépendance écologique."
+          description: "Une maquette d'herbier de posidonie, pour montrer comment vit ce milieu méditerranéen et ce qui en dépend."
         },
         {
           title: "Maison Modèle",
-          category: "Objets & Spatial",
+          category: "Objets & Espace",
           year: "2025",
-          description: "Une investigation en maquette sur les futurs domestiques : comment la maison, en tant qu'unité systémique, encode et transmet des logiques écologiques, sociales et matérielles."
+          description: "Une maquette de maison, pour parler de la façon dont nous habiterons dans les années qui viennent."
         },
         {
           title: "La Rue",
           category: "Systèmes Spatiaux",
           year: "2025",
-          description: "Une maquette à l'échelle de la rue explorant comment l'infrastructure urbaine façonne les comportements collectifs, rendant les logiques invisibles de l'espace public visibles et ouvertes à la reconception."
+          description: "Une maquette de rue, pour discuter du partage de l'espace public entre ceux qui l'utilisent."
         }
       ]
     },
     about: {
-      sectionLabel: "Philosophie du Studio",
-      headline: "Nous croyons que le futur se conçoit, il ne se prédit pas, et que le bon design rend la durabilité tangible, inspirante et réelle.",
+      sectionLabel: "Le studio",
+      headline: "Hors Échelle, c'est travailler à toutes les échelles : un objet que l'on tient en main peut faire comprendre un territoire entier.",
       research: {
         title: "Objets & Matériaux",
-        text: "Nous concevons et recherchons à l'échelle de la main : objets, matériaux et prototypes qui rendent la pensée systémique visible, tangible et transmissible."
+        text: "Prototypes, maquettes et mobilier, souvent en matériaux biosourcés ou de réemploi."
       },
       making: {
         title: "Espaces & Installations",
-        text: "Nous créons des environnements que les gens peuvent habiter et expérimenter : installations spatiales, expositions et interventions qui changent la façon dont un lieu, un problème ou une possibilité est compris."
+        text: "Expositions et installations, comme le container de La Voie ou l'exposition Marseille 2050."
       },
       expression: {
         title: "Systèmes & Stratégies",
-        text: "Nous cartographions la complexité et concevons les outils pour la naviguer : méthodologies d'innovation, cadres de transition et stratégies construits pour un usage institutionnel réel."
+        text: "Accompagnement de programmes publics : appels à projets, jurys et suivi des projets financés."
       },
       relationship: {
         title: "Territoires & Collectifs",
-        text: "Nous travaillons à l'échelle de la ville et de la région, co-créant avec des communautés, institutions et gouvernements pour activer la transformation à travers des écosystèmes entiers."
+        text: "Résidences et ateliers avec les habitants, les élus et les associations du territoire."
       },
       manifesto: {
-        quote: "« Hors Échelle » : au-delà de l'échelle. De nouvelles façons de naviguer l'incertitude, de tisser des connexions, et de concevoir des futurs à la fois désirables et ancrés dans la réalité.",
-        attribution: "Manifeste du Studio"
+        quote: "Hors Échelle : notre façon de travailler en même temps sur l'objet, le bâtiment et le territoire.",
+        attribution: "Le studio"
       }
     },
     footer: {
-      headline: "Si vous travaillez sur quelque chose qui compte, nous aimerions en entendre parler.",
-      description: "Nous proposons recherche matérielle, design d'objets, installations spatiales et conseil en design, pour les organisations prêtes à naviguer la complexité et à construire des futurs durables.",
-      partnerLine: "Nous sommes votre partenaire d'exploration.",
+      headline: "Vous avez un projet ? Écrivez-nous.",
+      description: "Recherche matérielle, design d'objets, expositions et conseil, pour des acteurs publics, des entreprises et des associations.",
+      partnerLine: "Basés à Paris, nous travaillons en France et en Europe.",
       email: "Email",
       phone: "Téléphone",
       phoneValue: "+33 9 56 85 11 65",
-      location: "Localisation",
+      location: "Adresse",
       locationValue: "13 rue Godefroy Cavaignac 75011 Paris",
       follow: "Suivre",
       copyright: "© 2026 TINYLABS — Hors Échelle",
-      tagline: "Studio de Design Exploratoire, Paris"
+      tagline: "Studio de design, Paris"
     }
   },
   pl: {
@@ -247,112 +264,118 @@ export const translations = {
       }
     },
     hero: {
-      headline: "Potrzebujemy nowych sposobów nawigowania niepewnością, budowania połączeń i projektowania przyszłości, które są zarówno pożądane, jak i zakorzenione w rzeczywistości.",
+      headline: "Studio projektowe w Paryżu, które zajmuje się transformacją ekologiczną, od przedmiotu po całe terytorium.",
       mission: {
-        title: "Misja",
-        text: "TINYLABS to eksploratoryjne studio designu dedykowane pomaganiu organizacjom w rozumieniu złożoności i przechodzeniu do działania z jasnością. Pracujemy przez projektowanie systemowe, splatając razem piękno, rygor i ekologiczną inteligencję. Nasza ambicja jest prosta: uczynić zrównoważoność namacalną, inspirującą i operacyjną poprzez obiekty, przestrzenie, infrastruktury i zbiorowe narracje."
+        title: "Co robimy",
+        text: "TINYLABS projektuje przedmioty, wystawy, filmy i książki, a także wspiera programy publiczne. Każdy projekt zaczyna się w terenie: spotykamy się z ludźmi, których dotyczy, testujemy na miejscu i zostawiamy narzędzia, z których inni mogą korzystać."
       },
       approach: {
-        title: "Podejście",
-        text: "Od pojedynczego obiektu po strategię na skalę miasta, czynimy złożoność widoczną i możliwą do działania, tworząc rzeczy, które można trzymać, przestrzenie, które można zamieszkać, i strategie, które można wdrożyć."
+        title: "Z kim",
+        text: "ADEME, miasto Marsylia, samorządy, stowarzyszenia i programy badawcze, takie jak Relational Tectonics."
       }
     },
     work: {
-      sectionLabel: "Wybrane Prace",
-      sectionTitle: "Praca oparta na badaniach przez obiekty, przestrzenie i systemy, zaprojektowana, by złożoność stała się czytelna, a przyszłości namacalne",
+      sectionLabel: "Prace",
+      sectionTitle: "Projekty z ostatnich lat, od pracy w terenie po gotowe przedmioty.",
       projects: [
         {
-          title: "Formy Systemowe",
-          category: "Badania & Obiekty",
-          year: "2024",
-          description: "Dochodzenie w to, jak zasady designu czynią organizacyjną złożoność widoczną, mapowanie niewidocznych sił determinujących, jak instytucje i systemy zachowują się i ewoluują."
+          title: "La Voie",
+          category: "Badania & Terytoria",
+          year: "2024–2025",
+          description: "Badania w działaniu w Mouans-Sartoux o pojazdach pośrednich, między rowerem a samochodem: rezydencja, warsztat, czternaście filmowanych wywiadów, wystawa i książka. Dla ADEME (Extrême Défi Mobilité)."
         },
         {
-          title: "Archiwa Materiałowe",
-          category: "Instalacja & Badania",
-          year: "2024",
-          description: "Przestrzenne studium czyniące ekologiczną pamięć namacalną, przekładające złożone relacje między krajobrazem, infrastrukturą i kulturą na formę doświadczalną."
+          title: "La Voie · Książka",
+          category: "Badania & Terytoria",
+          year: "2025",
+          description: "212 stron, czternaście rozdziałów i czternaście wywiadów. TINY LABS éditions, maj 2025."
         },
         {
-          title: "Skala & Proporcja",
-          category: "Systemy Przestrzenne",
+          title: "La Voie · Wystawa",
+          category: "Przestrzeń & Badania",
           year: "2024",
-          description: "Badanie projektowe wieloskalowego myślenia: jak decyzje na poziomie obiektu, przestrzeni i infrastruktury kształtują systemowe wyniki w skali organizacji i terytorium."
+          description: "Przebudowany kontener morski pokazany na Festival du Livre w Mouans-Sartoux, z zaparkowanymi obok pojazdami Vélis."
         },
         {
-          title: "Praktyka Studia",
-          category: "Proces & Metoda",
-          year: "2026",
-          description: "Dokumentacja naszej metodologii projektowania systemowego: narzędzia kartograficzne, protokoły współtworzenia i ramy innowacji przenoszące organizacje od złożoności do strategicznej jasności."
+          title: "La Voie · Rezydencja i warsztat",
+          category: "Badania & Terytoria",
+          year: "2024",
+          description: "Tydzień w Mouans-Sartoux z mieszkańcami i pojazdami Vélis w czerwcu 2024, potem warsztat mapowania z lokalnymi służbami we wrześniu."
+        },
+        {
+          title: "La Voie · Filmy",
+          category: "Badania & Terytoria",
+          year: "2024–2025",
+          description: "Czternaście wywiadów nakręconych w terenie, po jednym na każdy rozdział książki."
         },
         {
           title: "Wystawa „Ale tu gorąco”",
           category: "Przestrzeń & Badania",
           year: "2025",
-          description: "Wystawa badająca śródziemnomorskie przyszłości 2050, czyniąca scenariusze ekologiczne i terytorialne widocznymi, nawigowalnymi i możliwymi do działania dla różnorodnych odbiorców."
+          description: "Wystawa objazdowa dla miasta Marsylia o tym, jak miasto zmieni się wraz z klimatem do 2050 roku. Nagroda Fibois Île-de-France, pokazana na Paris Design Week."
         },
         {
           title: "Żywy taboret",
           category: "Badania Materiałowe",
           year: "2026–2028",
-          description: "Obiekt z materiałów bioregionalnych: siedzisko wyhodowane z grzybni na podłożu z drewna, nogi z gałęzi ściętych na miejscu. Rozwijany w l’atelier de l’Epinay z Adrienem Rigobello, w ramach badań Relational Tectonics, z myślą o wystawie finałowej w Kopenhadze w 2028 roku. Badania wspierane przez Carlsberg Foundation i sieć Designae COST Action."
+          description: "Siedzisko wyhodowane z grzybni na podłożu z drewna, nogi z gałęzi znalezionych na miejscu. Rozwijany w l’atelier de l’Epinay z Adrienem Rigobello, w ramach badań Relational Tectonics, na wystawę finałową w Kopenhadze w 2028 roku. Przy wsparciu Carlsberg Foundation i sieci Designae COST Action."
         },
         {
           title: "Wielki Świat, pejzaż morski",
           category: "Badania Materiałowe",
           year: "2025",
-          description: "Makieta łąk posidonie, przekładająca niewidzialną złożoność śródziemnomorskich ekosystemów trawy morskiej na namacalny, navigowalny obiekt, który czyni ekologiczną współzależność postrzegalną."
+          description: "Makieta łąki posidonii, która pokazuje, jak żyje to śródziemnomorskie środowisko i co od niego zależy."
         },
         {
           title: "Dom Modelowy",
           category: "Obiekty & Przestrzeń",
           year: "2025",
-          description: "Dochodzenie w skali makiety dotyczące przyszłości domowych: jak dom, jako jednostka systemowa, koduje i przekazuje logiki ekologiczne, społeczne i materialne."
+          description: "Makieta domu, do rozmowy o tym, jak będziemy mieszkać w nadchodzących latach."
         },
         {
           title: "Ulica",
           category: "Systemy Przestrzenne",
           year: "2025",
-          description: "Makieta w skali ulicy badająca, jak infrastruktura miejska kształtuje zachowania zbiorowe, czyniąc niewidzialne logiki przestrzeni publicznej widocznymi i otwartymi na przeprojektowanie."
+          description: "Makieta ulicy, do rozmowy o tym, jak dzielimy przestrzeń publiczną."
         }
       ]
     },
     about: {
-      sectionLabel: "Filozofia Studia",
-      headline: "Wierzymy, że przyszłość jest projektowana, nie przewidywana, i że dobry design czyni zrównoważoność namacalną, inspirującą i rzeczywistą.",
+      sectionLabel: "Studio",
+      headline: "Hors Échelle to praca w każdej skali: przedmiot, który trzymasz w dłoni, może wyjaśnić całe terytorium.",
       research: {
         title: "Obiekty & Materiały",
-        text: "Projektujemy i badamy w skali dłoni: obiekty, materiały i prototypy, które czynią myślenie systemowe widocznym, namacalnym i przekazywalnym."
+        text: "Prototypy, makiety i meble, często z materiałów biologicznych lub z odzysku."
       },
       making: {
         title: "Przestrzenie & Instalacje",
-        text: "Tworzymy środowiska, które ludzie mogą zamieszkiwać i doświadczać: instalacje przestrzenne, wystawy i interwencje zmieniające sposób rozumienia miejsca, problemu lub możliwości."
+        text: "Wystawy i instalacje, takie jak kontener La Voie czy wystawa Marsylia 2050."
       },
       expression: {
         title: "Systemy & Strategie",
-        text: "Mapujemy złożoność i projektujemy narzędzia do jej nawigowania: metodologie innowacji, ramy transformacji i strategie zbudowane do rzeczywistego użytku instytucjonalnego."
+        text: "Wsparcie programów publicznych: konkursy na projekty, jury i towarzyszenie finansowanym projektom."
       },
       relationship: {
         title: "Terytoria & Kolektywy",
-        text: "Pracujemy w skali miasta i regionu, współtworząc ze społecznościami, instytucjami i rządami, by aktywować transformację w całych ekosystemach."
+        text: "Rezydencje i warsztaty z mieszkańcami, samorządowcami i lokalnymi organizacjami."
       },
       manifesto: {
-        quote: "\"Hors Échelle\": poza skalą. Nowe sposoby nawigowania niepewnością, budowania połączeń i projektowania przyszłości, które są zarówno pożądane, jak i zakorzenione w rzeczywistości.",
-        attribution: "Manifest Studia"
+        quote: "Hors Échelle: nasz sposób pracy jednocześnie nad przedmiotem, budynkiem i terytorium.",
+        attribution: "Studio"
       }
     },
     footer: {
-      headline: "Jeśli pracujesz nad czymś, co ma znaczenie, chętnie o tym usłyszymy.",
-      description: "Oferujemy badania materiałowe, projektowanie obiektów, instalacje przestrzenne i doradztwo projektowe, dla organizacji gotowych nawigować złożoność i budować zrównoważone przyszłości.",
-      partnerLine: "Jesteśmy Twoim partnerem w eksploracji.",
+      headline: "Masz projekt? Napisz do nas.",
+      description: "Badania materiałowe, projektowanie przedmiotów, wystawy i doradztwo dla instytucji publicznych, firm i stowarzyszeń.",
+      partnerLine: "Działamy z Paryża, we Francji i w Europie.",
       email: "Email",
       phone: "Telefon",
       phoneValue: "+33 9 56 85 11 65",
-      location: "Lokalizacja",
+      location: "Adres",
       locationValue: "13 rue Godefroy Cavaignac 75011 Paris",
       follow: "Obserwuj",
       copyright: "© 2026 TINYLABS — Hors Échelle",
-      tagline: "Eksploratoryjne Studio Designu, Paryż"
+      tagline: "Studio projektowe, Paryż"
     }
   }
 };

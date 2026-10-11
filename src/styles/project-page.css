@@ -770,3 +770,311 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
   .pp-mosaic-1 { aspect-ratio: 1 / 1; }
 }
 .pp-mosaic img { object-position: center 40%; }
+
+/* ── Fiche La Voie ────────────────────────────────────────────────────────
+   Trois éléments propres à cette fiche.
+
+   1. Le lecteur vidéo. Une affiche cliquable tant que la personne n'a pas
+      choisi de lire : l'iframe YouTube n'est créée qu'au clic (voir
+      LaVoiePage.tsx), puis servie depuis youtube-nocookie.
+   2. Une liste à puces sobre, pour les objectifs et le contenu de
+      l'exposition : un tiret long en marge, pas de puce ronde.
+   3. Une paire d'images de même format, côte à côte dès la tablette.
+   ─────────────────────────────────────────────────────────────────────── */
+.pp-film {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--color-foreground);
+  overflow: hidden;
+}
+.pp-film iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.pp-film-poster {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  display: block; padding: 0; border: 0; cursor: pointer;
+  background: none; color: #fff; text-align: left;
+}
+.pp-film-poster img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+.pp-film-poster:hover img { transform: scale(1.015); }
+.pp-film-poster::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.45) 100%);
+}
+.pp-film-play {
+  /* En bas à gauche : l'affiche porte le titre « La Voie » en son centre. */
+  position: absolute; left: 1.25rem; bottom: 1.25rem; z-index: 1;
+  width: 3.25rem; height: 3.25rem;
+  display: grid; place-items: center; padding-left: 0.2rem;
+  border-radius: 50%; background: rgba(255,255,255,.92); color: #111;
+  font-size: 1rem; transition: transform .4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pp-film-poster:hover .pp-film-play { transform: scale(1.06); }
+.pp-film-poster:focus-visible { outline: 2px solid var(--color-foreground); outline-offset: 4px; }
+.pp-film-label, .pp-film-consent { position: absolute; left: 5.25rem; z-index: 1; font-family: var(--font-nav); }
+.pp-film-label { bottom: 2.55rem; font-size: 0.9375rem; }
+.pp-film-consent { bottom: 1.35rem; font-size: 0.75rem; opacity: .8; }
+@media (prefers-reduced-motion: reduce) {
+  .pp-film-poster img, .pp-film-play { transition: none; }
+  .pp-film-poster:hover img, .pp-film-poster:hover .pp-film-play { transform: none; }
+}
+
+.pp-liste { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+.pp-liste li { position: relative; padding: 0.75rem 0 0.75rem 2rem; border-top: 1px solid var(--color-border); }
+.pp-liste li:last-child { border-bottom: 1px solid var(--color-border); }
+.pp-liste li::before { content: "—"; position: absolute; left: 0; color: var(--color-muted); }
+
+.pp-pair { display: grid; gap: 1.5rem; }
+@media (width >= 48rem) { .pp-pair { grid-template-columns: 1fr 1fr; } }
+
+/* Pages du livre et pictogrammes : montrés entiers, sans recadrage. */
+.pp-figure-contain img { object-fit: contain; }
+
+/* Sommaire « En bref » : quatre volets numérotés, cliquables. Les numéros
+   sont ceux des sections plus bas (01 Ateliers … 04 Livre). */
+.pp-sommaire { display: grid; gap: 0; margin-top: 3rem; border-top: 1px solid var(--color-border); }
+@media (width >= 48rem) { .pp-sommaire { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; } }
+@media (width >= 64rem) { .pp-sommaire { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.pp-sommaire a {
+  display: flex; flex-direction: column; gap: 0.6rem;
+  padding: 1.5rem 0 1.75rem; border-bottom: 1px solid var(--color-border);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pp-sommaire a:hover { opacity: 0.6; }
+.pp-sommaire-num { font-family: var(--font-grotesk); font-size: 2.5rem; line-height: 1; }
+.pp-sommaire-titre { font-family: var(--font-grotesk); font-size: 1.125rem; font-weight: 500; }
+.pp-sommaire-texte { color: var(--color-muted); font-size: 0.9375rem; }
+
+/* Un saut vers un volet ne doit pas glisser le titre sous l'entête fixe
+   (bandeau + barre, ~135 px). */
+.pp-volet { scroll-margin-top: 140px; }
+
+/* Logos des soutiens, sous les crédits. */
+.pp-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem 2.5rem; margin-top: 2.5rem; }
+.pp-logos img { height: 56px; width: auto; display: block; opacity: 0.85; }
+
+/* ── Feuilleteur du livre (La Voie) ───────────────────────────────────
+   Styles de base de page-flip (la bibliothèque ne les injecte pas), puis
+   la mise en scène : aplat clair, livre centré, commandes sous le livre. */
+.stf__parent { position: relative; display: block; box-sizing: border-box; transform: translateZ(0); touch-action: pan-y; margin: 0 auto; }
+.stf__wrapper { position: relative; width: 100%; box-sizing: border-box; }
+.stf__parent canvas { position: absolute; width: 100%; height: 100%; left: 0; top: 0; }
+.stf__block { position: absolute; width: 100%; height: 100%; box-sizing: border-box; perspective: 2000px; }
+.stf__item { display: none; position: absolute; transform-style: preserve-3d; }
+.stf__outerShadow, .stf__innerShadow, .stf__hardShadow, .stf__hardInnerShadow { position: absolute; left: 0; top: 0; }
+
+.lv-extrait { margin-top: 1.5rem; background: var(--color-stone-light); padding: 2rem 1rem 1.5rem; }
+@media (min-width: 768px) { .lv-extrait { padding: 3rem 3rem 2rem; } }
+.lv-extrait > .label { margin-bottom: 2rem; }
+.lv-livre { outline: none; }
+.lv-livre:focus-visible { outline: 1px solid var(--color-foreground); outline-offset: 8px; }
+.lv-page { background: #fff; overflow: hidden; }
+.lv-page img { width: 100%; height: 100%; object-fit: cover; display: block; user-select: none; -webkit-user-drag: none; }
+.lv-commandes { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 1.75rem; }
+.lv-commandes button {
+  width: 2.75rem; height: 2.75rem; border-radius: 999px;
+  border: 1px solid var(--color-foreground); background: transparent; color: var(--color-foreground);
+  font-size: 1.1rem; line-height: 1; cursor: pointer; transition: background-color .2s, color .2s, opacity .2s;
+}
+.lv-commandes button:hover:not(:disabled) { background: var(--color-foreground); color: var(--color-background); }
+.lv-commandes button:disabled { opacity: 0.25; cursor: default; }
+.lv-compteur { font-family: var(--font-nav); font-size: 0.875rem; min-width: 6.5rem; text-align: center; font-variant-numeric: tabular-nums; }
+.lv-aide { text-align: center; color: var(--color-muted); font-size: 0.8125rem; margin: 0.75rem 0 0; }
+/* Décalage d'un quart de la largeur du livre lui-même (.stf__parent),
+   pas de celle de la section. translateZ(0) est celui de page-flip. */
+.lv-livre .stf__parent { transition: transform .8s cubic-bezier(.4,0,.2,1); }
+.lv-livre.lv-ferme-debut .stf__parent { transform: translateX(-25%) translateZ(0); }
+.lv-livre.lv-ferme-fin .stf__parent { transform: translateX(25%) translateZ(0); }
+@media (prefers-reduced-motion: reduce) { .lv-livre .stf__parent { transition: none; } }
+
+/* ── La Voie : photos ramenées à une taille de lecture ────────────────
+   Les classes pp- sont partagées avec les autres fiches ; ces réglages
+   ne valent que pour .lv-fiche. Ouverture et dessin moins hauts, images
+   isolées plafonnées (.lv-moyen), paires et duo resserrés. */
+.lv-fiche .pp-bleed { height: min(66svh, 52vw); }
+.lv-fiche .pp-bleed-mid { height: min(50svh, 38vw); }
+.lv-fiche .lv-moyen { max-width: 56rem; }
+@media (width >= 64rem) {
+  .lv-fiche .pp-offset.lv-moyen { width: 100%; margin-left: auto; }
+}
+.lv-fiche .pp-pair { max-width: 48rem; }
+.lv-fiche .pp-duo { max-width: 60rem; }
+.lv-fiche .pp-film { max-width: 56rem; }
+
+/* Les quatorze chapitres du livre : numéro, titre, entretien. */
+.lv-chapitres { margin-top: 3.5rem; }
+.lv-chapitres > .label { margin-bottom: 1rem; }
+.lv-chapitres ol { list-style: none; padding: 0; margin: 0; display: grid; border-top: 1px solid var(--color-border); }
+@media (width >= 48rem) { .lv-chapitres ol { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(7, auto); grid-auto-flow: column; column-gap: 3rem; } }
+.lv-chapitres li {
+  display: grid; grid-template-columns: 2.25rem 9rem 1fr; gap: 0.75rem; align-items: baseline;
+  padding: 0.7rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9375rem;
+}
+@media (width < 30rem) { .lv-chapitres li { grid-template-columns: 2rem 1fr; } .lv-chap-qui { grid-column: 2; } }
+.lv-chap-num { font-family: var(--font-grotesk); font-size: 0.75rem; color: var(--color-muted); }
+.lv-chap-titre { font-family: var(--font-grotesk); }
+.lv-chap-qui { color: var(--color-muted); }
+
+/* ── La Voie : galeries, voix, mosaïque de l'exposition, citation ───── */
+.lv-ratio-32 { aspect-ratio: 3 / 2; }
+.lv-ratio-169 { aspect-ratio: 16 / 9; }
+.lv-fig { margin: 0; display: flex; flex-direction: column; }
+.lv-fig figcaption {
+  font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 300;
+  color: var(--color-muted); margin-top: 0.6rem; line-height: 1.45;
+}
+.lv-fig figcaption span { font-family: var(--font-grotesk); color: var(--color-foreground); margin-right: 0.35rem; }
+
+/* Galerie : trois colonnes de photos 3:2 légendées. */
+.lv-galerie { display: grid; gap: 1.75rem 1.25rem; }
+@media (width >= 40rem) { .lv-galerie { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (width >= 64rem) { .lv-galerie { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* Quelques voix : quatre portraits d'entretien, en bandeau. */
+.lv-voix { margin-top: 3.5rem; }
+.lv-voix > .label { margin-bottom: 1.25rem; }
+.lv-voix-grille { display: grid; gap: 1.5rem 1.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (width >= 64rem) { .lv-voix-grille { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* Mosaïque : une grande image sur deux colonnes, un portrait sur une,
+   puis l'inverse. Le portrait prend la hauteur de la grande image. */
+.lv-mosaique { display: grid; gap: 1.75rem 1.25rem; }
+@media (width >= 48rem) {
+  .lv-mosaique { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lv-mosaique .lv-large { grid-column: span 2; }
+  .lv-mosaique .lv-haute .pp-figure { flex: 1; min-height: 0; }
+}
+.lv-mosaique .lv-haute .pp-figure { aspect-ratio: 4 / 5; }
+@media (width >= 48rem) { .lv-mosaique .lv-haute .pp-figure { aspect-ratio: auto; } }
+
+/* Clôture : paysage moins haut que le dessin, puis la citation du livre. */
+.lv-fiche .lv-paysage { height: min(56svh, 42vw); margin-top: 5rem; }
+.lv-citation { padding-top: 4.5rem; padding-bottom: 5rem; }
+.lv-citation blockquote { margin: 0; max-width: 46rem; }
+.lv-citation blockquote p {
+  font-family: var(--font-grotesk); font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  line-height: 1.25; letter-spacing: -0.01em; margin: 0 0 1.5rem;
+}
+
+/* ── La Voie : carnet de résidence ────────────────────────────────────
+   Une feuille blanche sur l'aplat de la section, des photos de tailles
+   variées et des notes tapées à la machine (police système à chasse fixe,
+   aucune police téléchargée). */
+.lv-carnet {
+  background: #fff;
+  padding: clamp(1.25rem, 4vw, 4.5rem);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  overflow: hidden;
+}
+.lv-c-photo { margin: 0; aspect-ratio: 3 / 2; overflow: hidden; background: var(--color-stone-light); }
+.lv-c-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.lv-c-grand, .lv-c-note { grid-column: span 2; }
+.lv-c-portrait { aspect-ratio: 4 / 5; }
+.lv-c-note {
+  margin: 0.25rem 0 1rem;
+  font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+  font-size: 0.75rem; line-height: 1.65; color: #3a3833; max-width: 34ch;
+}
+@media (width >= 64rem) {
+  .lv-carnet {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 1.5rem; row-gap: 3.5rem;
+    align-items: start;
+  }
+  .lv-c-photo, .lv-c-note { grid-column: var(--c); grid-row: var(--r); }
+  .lv-c-grand { aspect-ratio: 4 / 3; }
+  .lv-c-portrait { aspect-ratio: auto; height: 100%; }
+  .lv-c-bas { margin-top: 3rem; }
+  /* Débord : la photo sort du bord droit de la feuille, comme sur la planche. */
+  .lv-c-bord { margin-right: calc(-1 * clamp(1.25rem, 4vw, 4.5rem)); }
+  .lv-c-note { margin-top: 0.5rem; }
+}
+
+/* ── La Voie : fiche principale et pages de volet ─────────────────────
+   Les cartes des quatre volets (fiche) et, sur chaque page de volet,
+   l'en-tête et la navigation précédent / suivant. */
+.lv-ratio-45 { aspect-ratio: 4 / 5; }
+@media (width >= 64rem) { .lv-galerie.lv-galerie-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 56rem; } }
+
+.lv-cartes { display: grid; gap: 2.5rem 1.5rem; margin-top: 3rem; }
+@media (width >= 40rem) { .lv-cartes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (width >= 64rem) { .lv-cartes { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.lv-carte { display: flex; flex-direction: column; gap: 0.4rem; color: inherit; text-decoration: none; }
+.lv-carte .pp-figure { margin-bottom: 0.9rem; }
+.lv-carte-num { font-family: var(--font-grotesk); font-size: 0.75rem; color: var(--color-muted); }
+.lv-carte-titre { font-family: var(--font-grotesk); font-size: 1.35rem; line-height: 1.2; }
+.lv-carte-texte { color: var(--color-muted); font-size: 0.9375rem; line-height: 1.5; }
+.lv-carte-voir { font-family: var(--font-nav); font-size: 0.875rem; margin-top: 0.4rem; }
+.lv-carte:hover .lv-carte-voir, .lv-carte:focus-visible .lv-carte-voir { text-decoration: underline; text-underline-offset: 3px; }
+
+/* En-tête d'un volet : sous la barre fixe, avant l'image. */
+.lv-volet-tete { padding-top: calc(var(--header-h) + 3.5rem); padding-bottom: 3rem; }
+.lv-retour { display: inline-block; font-family: var(--font-nav); font-size: 0.9375rem; color: var(--color-muted); text-decoration: none; margin-bottom: 2.5rem; }
+.lv-retour:hover { color: var(--color-foreground); }
+.lv-volet-num { margin-bottom: 1rem; }
+.lv-volet-chapeau { max-width: 40ch; }
+.lv-fiche .lv-volet-ouverture { height: min(52svh, 40vw); }
+
+/* Précédent · La Voie · Suivant */
+.lv-suite { border-top: 1px solid var(--color-border); margin-top: 2rem; }
+.lv-suite-grille { display: grid; gap: 1.5rem; padding-top: 2.5rem; padding-bottom: 4rem; }
+@media (width >= 48rem) { .lv-suite-grille { grid-template-columns: 1fr 1fr 1fr; } }
+.lv-suite-lien { display: flex; flex-direction: column; gap: 0.5rem; color: inherit; text-decoration: none; }
+.lv-suite-titre { font-family: var(--font-grotesk); font-size: 1.35rem; }
+.lv-suite-lien:hover .lv-suite-titre { text-decoration: underline; text-underline-offset: 4px; }
+@media (width >= 48rem) { .lv-suite-centre { text-align: center; } .lv-suite-droite { text-align: right; } }
+
+/* Courts métrages en ligne : deux lecteurs côte à côte, sous le film du projet. */
+.lv-courts { margin-top: 3.5rem; }
+.lv-courts > .label { margin-bottom: 1.25rem; }
+.lv-courts-grille { display: grid; gap: 2rem 1.5rem; }
+@media (width >= 48rem) { .lv-courts-grille { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 56rem; } }
+.lv-courts-grille .pp-film { max-width: none; }
+
+/* ── La Voie : corrections après relecture design ─────────────────────── */
+/* Cartes des volets : même hauteur, « Découvrir » toujours en bas ; plus
+   basses sur téléphone. */
+.lv-carte { height: 100%; }
+.lv-carte-voir { margin-top: auto; padding-top: 0.75rem; }
+@media (width < 40rem) { .lv-cartes .lv-ratio-45 { aspect-ratio: 3 / 2; } }
+
+/* Crédits : libellé à gauche, valeur à droite, sur une même ligne. */
+@media (width >= 40rem) {
+  .lv-fiche .pp-credits { grid-template-columns: 9rem 1fr; gap: 0.9rem 1rem; align-items: baseline; }
+  .lv-fiche .pp-credits dt, .lv-fiche .pp-credits dt:first-of-type { margin-top: 0; }
+}
+
+/* En-tête d'un volet : chapeau plus court, contenu plus haut. */
+.lv-volet-tete { padding-bottom: 2.5rem; }
+.lv-volet-chapeau { max-width: 28ch; font-size: clamp(1.25rem, 2.2vw, 2rem); }
+
+/* Images vidéo : un peu plus de contraste pour rejoindre les photos. */
+.lv-c-photo img, .lv-voix-grille img { filter: contrast(1.08) saturate(1.05); }
+
+/* Carnet : rangées plus serrées, décalages propres à chaque élément. */
+@media (width >= 64rem) {
+  .lv-carnet { row-gap: 2rem; }
+  .lv-c-photo, .lv-c-note { margin-top: var(--m, 0); }
+}
+.lv-c-vertical { aspect-ratio: 4 / 5; }
+.lv-c-grand img { object-position: center 30%; }
+@media (width < 64rem) {
+  .lv-c-grand { margin-inline: calc(-1 * clamp(1.25rem, 4vw, 4.5rem)); }
+}
+
+/* Films : le film du projet à gauche, légende et liens à droite. */
+.lv-film-principal { display: grid; gap: 1.5rem; }
+@media (width >= 64rem) { .lv-film-principal { grid-template-columns: 2fr 1fr; gap: 3rem; align-items: end; } }
+.lv-fiche .lv-film-principal .pp-film { max-width: none; }
+.lv-film-cote { display: flex; flex-direction: column; gap: 0.6rem; }
+.lv-film-duree { font-family: var(--font-grotesk); font-size: 1.25rem; margin: 0; }
+.lv-film-lien { font-family: var(--font-nav); font-size: 0.9375rem; }
+.lv-courts figcaption span, .lv-voix figcaption span { display: block; margin: 0 0 0.15rem; }
+
+/* Livre : de l'air entre le texte et l'extrait. */
+.lv-volet .lv-extrait { margin-top: 4rem; }
+
+/* Précédent / suivant : deux colonnes, y compris sur téléphone. */
+.lv-suite-grille { grid-template-columns: 1fr 1fr; }
+.lv-suite-droite { text-align: right; }
+@media (width < 48rem) { .lv-suite-titre { font-size: 1.1rem; } }
