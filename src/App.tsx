@@ -10,7 +10,6 @@ import { StoolPage } from "./components/StoolPage";
 import { LaVoiePage } from "./components/LaVoiePage";
 import { LaVoieVoletPage } from "./components/LaVoieVolets";
 import { ScrollProgress } from "./components/ScrollProgress";
-import { AwardBanner } from "./components/AwardBanner";
 import { LanguageProvider } from "./lib/LanguageContext";
 
 function Home() {
@@ -45,7 +44,6 @@ export default function App() {
       <BrowserRouter>
         <HashScroll />
         <div className="min-h-screen">
-          <AwardBanner />
           <ScrollProgress />
           <Header />
           <Routes>

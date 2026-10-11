@@ -462,7 +462,10 @@
    une variable, seule valeur à changer si le texte passe sur deux lignes.
    ───────────────────────────────────────────────────────────────────────── */
 :root {
-  --banner-h: 2.6rem;
+  /* Bandeau retiré le 11 octobre 2026 (la Paris Design Week était passée) :
+     hauteur à 0, tout le reste se recale seul. Pour remettre un bandeau,
+     revenir à 2.6rem et réafficher <AwardBanner /> dans App.tsx. */
+  --banner-h: 0rem;
   /* Hauteur de l'entête page non défilée, mesurée : 2 rem de retrait
      haut et bas plus la ligne du logotype. Sert à caler l'ouverture de
      la fiche projet juste dessous. */

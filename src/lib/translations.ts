@@ -16,14 +16,14 @@ export const translations = {
       }
     },
     hero: {
-      headline: "A design studio in Paris working on the ecological transition, from a single object to a whole territory.",
+      headline: "We need new ways to navigate uncertainty, to build connections, and to design futures that are both desirable and grounded in reality.",
       mission: {
-        title: "What we do",
-        text: "TINYLABS designs objects, exhibitions, films and books, and advises public programmes. Every project starts in the field: we meet the people involved, test ideas on site and leave behind tools that others can use."
+        title: "Mission",
+        text: "TINYLABS is an exploratory design studio dedicated to helping organisations understand complexity and move into action with clarity. We work through systemic design, weaving together beauty, rigour, and ecological intelligence. Our ambition is simple: to make sustainability tangible, inspiring, and operational across objects, spaces, infrastructures, and collective narratives."
       },
       approach: {
-        title: "Who with",
-        text: "ADEME, the City of Marseille, local authorities, associations and research programmes such as Relational Tectonics."
+        title: "Approach",
+        text: "From a single object to a city-wide strategy, we make complexity visible and actionable, producing things that can be held, spaces that can be inhabited, and strategies that can be implemented."
       }
     },
     work: {
@@ -140,14 +140,14 @@ export const translations = {
       }
     },
     hero: {
-      headline: "Un studio de design à Paris qui travaille sur la transition écologique, de l'objet au territoire.",
+      headline: "Nous avons besoin de nouvelles façons de naviguer l'incertitude, de tisser des connexions, et de concevoir des futurs à la fois désirables et ancrés dans la réalité.",
       mission: {
-        title: "Ce que nous faisons",
-        text: "TINYLABS conçoit des objets, des expositions, des films et des livres, et accompagne des programmes publics. Chaque projet commence sur le terrain : nous rencontrons les personnes concernées, nous testons sur place et nous laissons des outils que d'autres peuvent reprendre."
+        title: "Mission",
+        text: "TINYLABS est un studio de design exploratoire dédié à aider les organisations à comprendre la complexité et à passer à l'action avec clarté. Nous travaillons par le design systémique, en tissant ensemble beauté, rigueur et intelligence écologique. Notre ambition est simple : rendre la durabilité tangible, inspirante et opérationnelle à travers objets, espaces, infrastructures et récits collectifs."
       },
       approach: {
-        title: "Avec qui",
-        text: "L'ADEME, la Ville de Marseille, des collectivités, des associations et des programmes de recherche comme Relational Tectonics."
+        title: "Approche",
+        text: "D'un objet unique à une stratégie à l'échelle de la ville, nous rendons la complexité visible et actionnable, produisant des choses que l'on peut tenir, des espaces que l'on peut habiter, et des stratégies que l'on peut mettre en œuvre."
       }
     },
     work: {
@@ -264,14 +264,14 @@ export const translations = {
       }
     },
     hero: {
-      headline: "Studio projektowe w Paryżu, które zajmuje się transformacją ekologiczną, od przedmiotu po całe terytorium.",
+      headline: "Potrzebujemy nowych sposobów nawigowania niepewnością, budowania połączeń i projektowania przyszłości, które są zarówno pożądane, jak i zakorzenione w rzeczywistości.",
       mission: {
-        title: "Co robimy",
-        text: "TINYLABS projektuje przedmioty, wystawy, filmy i książki, a także wspiera programy publiczne. Każdy projekt zaczyna się w terenie: spotykamy się z ludźmi, których dotyczy, testujemy na miejscu i zostawiamy narzędzia, z których inni mogą korzystać."
+        title: "Misja",
+        text: "TINYLABS to eksploratoryjne studio designu dedykowane pomaganiu organizacjom w rozumieniu złożoności i przechodzeniu do działania z jasnością. Pracujemy przez projektowanie systemowe, splatając razem piękno, rygor i ekologiczną inteligencję. Nasza ambicja jest prosta: uczynić zrównoważoność namacalną, inspirującą i operacyjną poprzez obiekty, przestrzenie, infrastruktury i zbiorowe narracje."
       },
       approach: {
-        title: "Z kim",
-        text: "ADEME, miasto Marsylia, samorządy, stowarzyszenia i programy badawcze, takie jak Relational Tectonics."
+        title: "Podejście",
+        text: "Od pojedynczego obiektu po strategię na skalę miasta, czynimy złożoność widoczną i możliwą do działania, tworząc rzeczy, które można trzymać, przestrzenie, które można zamieszkać, i strategie, które można wdrożyć."
       }
     },
     work: {
