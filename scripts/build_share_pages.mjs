@@ -38,7 +38,7 @@ const PAGES = [
   },
   {
     slug: 'work/tabouret-vivant',
-    titre: "Tabouret vivant (l'atelier de l'Epinay) | TINYLABS",
+    titre: "Matériaux biorégionaux alpins : mycélium (l'atelier de l'Epinay) | TINYLABS",
     description:
       "Un objet en matériaux biorégionaux : une assise poussée de mycélium sur substrat de bois, des pieds taillés dans les branches du lieu même. Recherche Relational Tectonics.",
     image: `${RACINE}/images/share/tabouret.jpg`,

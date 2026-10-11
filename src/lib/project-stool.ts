@@ -18,7 +18,7 @@ export type StoolContent = typeof fr;
 
 const fr = {
   allWork: "Tous les travaux",
-  title: "Tabouret vivant",
+  title: "Matériaux biorégionaux alpins : mycélium",
   subtitle: "(l'atelier de l'Epinay)",
   note: "Objet de recherche, en vue de l'exposition finale à Copenhague en 2028",
 
@@ -125,7 +125,7 @@ const fr = {
 
 const en: StoolContent = {
   allWork: "All work",
-  title: "Living stool",
+  title: "Alpine bioregional materials: mycelium",
   subtitle: "(l’atelier de l’Epinay)",
   note: "A research object, toward the final exhibition in Copenhagen in 2028",
 
@@ -232,7 +232,7 @@ const en: StoolContent = {
 
 const pl: StoolContent = {
   allWork: "Wszystkie prace",
-  title: "Żywy taboret",
+  title: "Alpejskie materiały bioregionalne: grzybnia",
   subtitle: "(l’atelier de l’Epinay)",
   note: "Obiekt badawczy, z myślą o wystawie finałowej w Kopenhadze w 2028 roku",
 

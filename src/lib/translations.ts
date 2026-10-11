@@ -67,10 +67,10 @@ export const translations = {
           description: "A travelling exhibition for the City of Marseille on how the city will change with the climate by 2050. Fibois Île-de-France award, shown at Paris Design Week."
         },
         {
-          title: "Living stool",
+          title: "Alpine bioregional materials: mycelium",
           category: "Material Research",
           year: "2026–2028",
-          description: "A seat grown from mycelium on a wood substrate, with legs cut from branches found on site. Developed at l’atelier de l’Epinay with Adrien Rigobello, within the Relational Tectonics research, for the final exhibition in Copenhagen in 2028. Supported by the Carlsberg Foundation and the Designae COST Action."
+          description: "A residency at l’atelier de l’Epinay: prototypes of conceptual furniture made from mycelium grown on local wood. Relational Tectonics research, with Adrien Rigobello."
         },
         {
           title: "Le Grand Dehors, seascape",
@@ -93,32 +93,32 @@ export const translations = {
       ]
     },
     about: {
-      sectionLabel: "The studio",
-      headline: "Hors Échelle means working at every scale: an object you can hold can explain a whole territory.",
+      sectionLabel: "Studio Philosophy",
+      headline: "We believe the future is designed, not predicted, and that good design makes sustainability tangible, inspiring, and real.",
       research: {
         title: "Objects & Materials",
-        text: "Prototypes, scale models and furniture, often in bio-based or reused materials."
+        text: "We design and research at the scale of the hand: objects, materials, and prototypes that make systems thinking visible, touchable, and transferable."
       },
       making: {
         title: "Spaces & Installations",
-        text: "Exhibitions and installations, such as the La Voie container or the Marseille 2050 exhibition."
+        text: "We create environments people can inhabit and experience: spatial installations, exhibitions, and interventions that change how a place, a problem, or a possibility is understood."
       },
       expression: {
         title: "Systems & Strategies",
-        text: "Support for public programmes: calls for projects, juries, and following the projects that get funded."
+        text: "We map complexity and design the tools to navigate it: innovation methodologies, transition frameworks, and strategies built for real institutional use."
       },
       relationship: {
         title: "Territories & Collectives",
-        text: "Residencies and workshops with residents, elected officials and local organisations."
+        text: "We work at city and regional scale, co-creating with communities, institutions, and governments to activate transformation across entire ecosystems."
       },
       manifesto: {
-        quote: "Hors Échelle: our way of working on the object, the building and the territory at the same time.",
-        attribution: "The studio"
+        quote: "\"Hors Échelle\": beyond scale. New ways to navigate uncertainty, build connections, and design futures that are both desirable and grounded in reality.",
+        attribution: "Studio Manifesto"
       }
     },
     footer: {
       headline: "Have a project in mind? Write to us.",
-      description: "Material research, object design, exhibitions and consulting, for public bodies, companies and associations.",
+      description: "Material research, object design, exhibitions and consulting, for companies, public bodies and NGOs.",
       partnerLine: "Based in Paris, working across France and Europe.",
       email: "Email",
       phone: "Phone",
@@ -191,10 +191,10 @@ export const translations = {
           description: "Une exposition itinérante pour la Ville de Marseille sur la façon dont la ville va changer avec le climat d'ici 2050. Prix Fibois Île-de-France, présentée à la Paris Design Week."
         },
         {
-          title: "Tabouret vivant",
+          title: "Matériaux biorégionaux alpins : mycélium",
           category: "Recherche Matérielle",
           year: "2026–2028",
-          description: "Une assise poussée de mycélium sur un substrat de bois, des pieds taillés dans les branches trouvées sur place. Développé à l'atelier de l'Epinay avec Adrien Rigobello, dans le cadre de la recherche Relational Tectonics, pour l'exposition finale à Copenhague en 2028. Avec le soutien de la Carlsberg Foundation et du réseau COST Designae."
+          description: "Une résidence à l'atelier de l'Epinay : des prototypes de mobilier conceptuel en mycélium cultivé sur du bois local. Recherche Relational Tectonics, avec Adrien Rigobello."
         },
         {
           title: "Le Grand Dehors, paysage marin",
@@ -217,32 +217,32 @@ export const translations = {
       ]
     },
     about: {
-      sectionLabel: "Le studio",
-      headline: "Hors Échelle, c'est travailler à toutes les échelles : un objet que l'on tient en main peut faire comprendre un territoire entier.",
+      sectionLabel: "Philosophie du Studio",
+      headline: "Nous croyons que le futur se conçoit, il ne se prédit pas, et que le bon design rend la durabilité tangible, inspirante et réelle.",
       research: {
         title: "Objets & Matériaux",
-        text: "Prototypes, maquettes et mobilier, souvent en matériaux biosourcés ou de réemploi."
+        text: "Nous concevons et recherchons à l'échelle de la main : objets, matériaux et prototypes qui rendent la pensée systémique visible, tangible et transmissible."
       },
       making: {
         title: "Espaces & Installations",
-        text: "Expositions et installations, comme le container de La Voie ou l'exposition Marseille 2050."
+        text: "Nous créons des environnements que les gens peuvent habiter et expérimenter : installations spatiales, expositions et interventions qui changent la façon dont un lieu, un problème ou une possibilité est compris."
       },
       expression: {
         title: "Systèmes & Stratégies",
-        text: "Accompagnement de programmes publics : appels à projets, jurys et suivi des projets financés."
+        text: "Nous cartographions la complexité et concevons les outils pour la naviguer : méthodologies d'innovation, cadres de transition et stratégies construits pour un usage institutionnel réel."
       },
       relationship: {
         title: "Territoires & Collectifs",
-        text: "Résidences et ateliers avec les habitants, les élus et les associations du territoire."
+        text: "Nous travaillons à l'échelle de la ville et de la région, co-créant avec des communautés, institutions et gouvernements pour activer la transformation à travers des écosystèmes entiers."
       },
       manifesto: {
-        quote: "Hors Échelle : notre façon de travailler en même temps sur l'objet, le bâtiment et le territoire.",
-        attribution: "Le studio"
+        quote: "« Hors Échelle » : au-delà de l'échelle. De nouvelles façons de naviguer l'incertitude, de tisser des connexions, et de concevoir des futurs à la fois désirables et ancrés dans la réalité.",
+        attribution: "Manifeste du Studio"
       }
     },
     footer: {
       headline: "Vous avez un projet ? Écrivez-nous.",
-      description: "Recherche matérielle, design d'objets, expositions et conseil, pour des acteurs publics, des entreprises et des associations.",
+      description: "Recherche matérielle, design d'objets, expositions et conseil, pour les entreprises, les acteurs publics et les ONG.",
       partnerLine: "Basés à Paris, nous travaillons en France et en Europe.",
       email: "Email",
       phone: "Téléphone",
@@ -315,10 +315,10 @@ export const translations = {
           description: "Wystawa objazdowa dla miasta Marsylia o tym, jak miasto zmieni się wraz z klimatem do 2050 roku. Nagroda Fibois Île-de-France, pokazana na Paris Design Week."
         },
         {
-          title: "Żywy taboret",
+          title: "Alpejskie materiały bioregionalne: grzybnia",
           category: "Badania Materiałowe",
           year: "2026–2028",
-          description: "Siedzisko wyhodowane z grzybni na podłożu z drewna, nogi z gałęzi znalezionych na miejscu. Rozwijany w l’atelier de l’Epinay z Adrienem Rigobello, w ramach badań Relational Tectonics, na wystawę finałową w Kopenhadze w 2028 roku. Przy wsparciu Carlsberg Foundation i sieci Designae COST Action."
+          description: "Rezydencja w l’atelier de l’Epinay: prototypy koncepcyjnych mebli z grzybni wyhodowanej na lokalnym drewnie. Badania Relational Tectonics, z Adrienem Rigobello."
         },
         {
           title: "Wielki Świat, pejzaż morski",
@@ -341,32 +341,32 @@ export const translations = {
       ]
     },
     about: {
-      sectionLabel: "Studio",
-      headline: "Hors Échelle to praca w każdej skali: przedmiot, który trzymasz w dłoni, może wyjaśnić całe terytorium.",
+      sectionLabel: "Filozofia Studia",
+      headline: "Wierzymy, że przyszłość jest projektowana, nie przewidywana, i że dobry design czyni zrównoważoność namacalną, inspirującą i rzeczywistą.",
       research: {
         title: "Obiekty & Materiały",
-        text: "Prototypy, makiety i meble, często z materiałów biologicznych lub z odzysku."
+        text: "Projektujemy i badamy w skali dłoni: obiekty, materiały i prototypy, które czynią myślenie systemowe widocznym, namacalnym i przekazywalnym."
       },
       making: {
         title: "Przestrzenie & Instalacje",
-        text: "Wystawy i instalacje, takie jak kontener La Voie czy wystawa Marsylia 2050."
+        text: "Tworzymy środowiska, które ludzie mogą zamieszkiwać i doświadczać: instalacje przestrzenne, wystawy i interwencje zmieniające sposób rozumienia miejsca, problemu lub możliwości."
       },
       expression: {
         title: "Systemy & Strategie",
-        text: "Wsparcie programów publicznych: konkursy na projekty, jury i towarzyszenie finansowanym projektom."
+        text: "Mapujemy złożoność i projektujemy narzędzia do jej nawigowania: metodologie innowacji, ramy transformacji i strategie zbudowane do rzeczywistego użytku instytucjonalnego."
       },
       relationship: {
         title: "Terytoria & Kolektywy",
-        text: "Rezydencje i warsztaty z mieszkańcami, samorządowcami i lokalnymi organizacjami."
+        text: "Pracujemy w skali miasta i regionu, współtworząc ze społecznościami, instytucjami i rządami, by aktywować transformację w całych ekosystemach."
       },
       manifesto: {
-        quote: "Hors Échelle: nasz sposób pracy jednocześnie nad przedmiotem, budynkiem i terytorium.",
-        attribution: "Studio"
+        quote: "\"Hors Échelle\": poza skalą. Nowe sposoby nawigowania niepewnością, budowania połączeń i projektowania przyszłości, które są zarówno pożądane, jak i zakorzenione w rzeczywistości.",
+        attribution: "Manifest Studia"
       }
     },
     footer: {
       headline: "Masz projekt? Napisz do nas.",
-      description: "Badania materiałowe, projektowanie przedmiotów, wystawy i doradztwo dla instytucji publicznych, firm i stowarzyszeń.",
+      description: "Badania materiałowe, projektowanie przedmiotów, wystawy i doradztwo dla firm, instytucji publicznych i organizacji pozarządowych.",
       partnerLine: "Działamy z Paryża, we Francji i w Europie.",
       email: "Email",
       phone: "Telefon",
