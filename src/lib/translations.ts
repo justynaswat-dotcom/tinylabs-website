@@ -45,8 +45,8 @@ export const translations = {
         {
           title: "La Voie · Exhibition",
           category: "Spatial & Research",
-          year: "2024",
-          description: "A converted shipping container shown at the Festival du Livre in Mouans-Sartoux, with the Vélis parked beside it."
+          year: "2024–2025",
+          description: "A travelling space dedicated to experiencing light mobility, shown in Mouans-Sartoux, Arles and Paris."
         },
         {
           title: "La Voie · Residency and workshop",
@@ -169,8 +169,8 @@ export const translations = {
         {
           title: "La Voie · Exposition",
           category: "Espace & Recherche",
-          year: "2024",
-          description: "Un container maritime réaménagé, présenté au Festival du Livre de Mouans-Sartoux, avec les Vélis garés à côté."
+          year: "2024–2025",
+          description: "Un espace itinérant dédié à l'expérience de la mobilité légère, montré à Mouans-Sartoux, Arles et Paris."
         },
         {
           title: "La Voie · Résidence et atelier",
@@ -293,8 +293,8 @@ export const translations = {
         {
           title: "La Voie · Wystawa",
           category: "Przestrzeń & Badania",
-          year: "2024",
-          description: "Przebudowany kontener morski pokazany na Festival du Livre w Mouans-Sartoux, z zaparkowanymi obok pojazdami Vélis."
+          year: "2024–2025",
+          description: "Objazdowa przestrzeń poświęcona doświadczaniu lekkiej mobilności, pokazana w Mouans-Sartoux, Arles i Paryżu."
         },
         {
           title: "La Voie · Rezydencja i warsztat",

@@ -43,7 +43,7 @@ const fr = {
   meta: [
     { k: "Programme", v: "Extrême Défi Mobilité · ADEME, France 2030" },
     { k: "Territoire", v: "Mouans-Sartoux, Alpes-Maritimes" },
-    { k: "Période", v: "Juin 2024 – mai 2025" },
+    { k: "Période", v: "Juin 2024 – octobre 2025" },
     { k: "Formats", v: "Résidence, atelier, 14 entretiens filmés, exposition, livre" },
   ],
 
@@ -92,7 +92,7 @@ const fr = {
     items: [
       { t: "Résidence et atelier", d: "Une semaine sur place en juin 2024, puis un atelier en septembre." },
       { t: "Films", d: "Quatorze entretiens filmés, un par chapitre du livre." },
-      { t: "Exposition", d: "Un container réaménagé, au Festival du Livre de Mouans-Sartoux." },
+      { t: "Exposition", d: "Un espace itinérant pour faire l'expérience de la mobilité légère." },
       { t: "Livre", d: "212 pages, 14 chapitres, 14 entretiens et la méthode." },
     ],
   },
@@ -137,9 +137,15 @@ const fr = {
   exposition: {
     label: "Exposition",
     heading:
-      "Un container maritime réaménagé, installé sur une place pendant le Festival du Livre.",
+      "Un espace dédié à l'expérience de la mobilité légère.",
     body:
-      "On y retrouvait les entretiens filmés, les cartes et les objets de l'atelier, en douze chapitres. Les Vélis étaient garés à côté : on pouvait les voir et les essayer.",
+      "Un module itinérant, installé dans l'espace public, pour découvrir autrement les véhicules intermédiaires. On y entre, on écoute les habitants filmés, on lit les cartes du territoire, puis on essaie les Vélis garés à côté. Après le Festival du Livre de Mouans-Sartoux, il a voyagé jusqu'à Arles et Paris.",
+    lieuxLabel: "Où l'exposition a été montrée",
+    lieux: [
+      { quand: "4 – 6 octobre 2024", ou: "Festival du Livre, Mouans-Sartoux" },
+      { quand: "23 – 27 août 2025", ou: "Agir pour le vivant, Arles" },
+      { quand: "8 – 9 octobre 2025", ou: "Produrable, Palais des Congrès, Paris" },
+    ],
     contenuLabel: "Contenu",
     contenu: [
       "Vidéos en boucle et extraits d'entretiens",
@@ -155,7 +161,7 @@ const fr = {
       "Circuler : le module peut se réinstaller, adapté, dans d'autres territoires",
     ],
     galerie: {
-      place: "Le container installé sur la place, pendant le Festival du Livre",
+      place: "Le container installé sur la place, pendant le Festival du Livre 2024",
       interieur: "À l'intérieur : photographies de terrain et table cartographique",
       ecran: "Sous la pergola, les entretiens projetés en boucle",
       visiteurs: "Des visiteurs à l'entrée de l'exposition",
@@ -238,7 +244,7 @@ const en: LaVoieContent = {
   meta: [
     { k: "Programme", v: "Extrême Défi Mobilité · ADEME, France 2030" },
     { k: "Place", v: "Mouans-Sartoux, Alpes-Maritimes" },
-    { k: "Period", v: "June 2024 – May 2025" },
+    { k: "Period", v: "June 2024 – October 2025" },
     { k: "Formats", v: "Residency, workshop, 14 filmed interviews, exhibition, book" },
   ],
 
@@ -287,7 +293,7 @@ const en: LaVoieContent = {
     items: [
       { t: "Residency and workshop", d: "A week on site in June 2024, then a workshop in September." },
       { t: "Films", d: "Fourteen filmed interviews, one for each chapter of the book." },
-      { t: "Exhibition", d: "A converted container at the Festival du Livre, Mouans-Sartoux." },
+      { t: "Exhibition", d: "A travelling space for experiencing light mobility." },
       { t: "Book", d: "212 pages, 14 chapters, 14 interviews and the method." },
     ],
   },
@@ -332,9 +338,15 @@ const en: LaVoieContent = {
   exposition: {
     label: "Exhibition",
     heading:
-      "A converted shipping container, set up on a square during the Festival du Livre.",
+      "A space dedicated to experiencing light mobility.",
     body:
-      "Inside were the filmed interviews, the maps and the objects from the workshop, in twelve chapters. The Vélis were parked next to it, so people could see them and try them.",
+      "A travelling module set up in public space, to discover intermediate vehicles in a different way. Visitors step in, listen to the residents on film, read the maps of the territory, then try the Vélis parked outside. After the Festival du Livre in Mouans-Sartoux, it travelled to Arles and Paris.",
+    lieuxLabel: "Where the exhibition was shown",
+    lieux: [
+      { quand: "4 – 6 October 2024", ou: "Festival du Livre, Mouans-Sartoux" },
+      { quand: "23 – 27 August 2025", ou: "Agir pour le vivant, Arles" },
+      { quand: "8 – 9 October 2025", ou: "Produrable, Palais des Congrès, Paris" },
+    ],
     contenuLabel: "Contents",
     contenu: [
       "Looping videos and interview extracts",
@@ -350,7 +362,7 @@ const en: LaVoieContent = {
       "Travel: the module can be set up again, adapted, in other places",
     ],
     galerie: {
-      place: "The container set up on the square during the Festival du Livre",
+      place: "The container set up on the square during the Festival du Livre 2024",
       interieur: "Inside: field photographs and the map table",
       ecran: "Under the pergola, the interviews playing on a loop",
       visiteurs: "Visitors at the entrance to the exhibition",
@@ -433,7 +445,7 @@ const pl: LaVoieContent = {
   meta: [
     { k: "Program", v: "Extrême Défi Mobilité · ADEME, France 2030" },
     { k: "Miejsce", v: "Mouans-Sartoux, Alpy Nadmorskie" },
-    { k: "Okres", v: "Czerwiec 2024 – maj 2025" },
+    { k: "Okres", v: "Czerwiec 2024 – październik 2025" },
     { k: "Formy", v: "Rezydencja, warsztat, 14 filmowanych wywiadów, wystawa, książka" },
   ],
 
@@ -482,7 +494,7 @@ const pl: LaVoieContent = {
     items: [
       { t: "Rezydencja i warsztat", d: "Tydzień na miejscu w czerwcu 2024, potem warsztat we wrześniu." },
       { t: "Filmy", d: "Czternaście wywiadów, po jednym na każdy rozdział książki." },
-      { t: "Wystawa", d: "Przebudowany kontener na Festival du Livre w Mouans-Sartoux." },
+      { t: "Wystawa", d: "Objazdowa przestrzeń do doświadczania lekkiej mobilności." },
       { t: "Książka", d: "212 stron, 14 rozdziałów, 14 wywiadów i metoda." },
     ],
   },
@@ -527,9 +539,15 @@ const pl: LaVoieContent = {
   exposition: {
     label: "Wystawa",
     heading:
-      "Przebudowany kontener morski, ustawiony na placu podczas Festival du Livre.",
+      "Przestrzeń poświęcona doświadczaniu lekkiej mobilności.",
     body:
-      "W środku były filmowane wywiady, mapy i przedmioty z warsztatu, w dwunastu rozdziałach. Obok stały pojazdy Vélis, które można było obejrzeć i wypróbować.",
+      "Objazdowy moduł ustawiany w przestrzeni publicznej, by w nowy sposób poznać pojazdy pośrednie. Wchodzi się do środka, słucha sfilmowanych mieszkańców, czyta mapy terytorium, a potem testuje pojazdy Vélis zaparkowane obok. Po Festival du Livre w Mouans-Sartoux pojechał do Arles i Paryża.",
+    lieuxLabel: "Gdzie pokazano wystawę",
+    lieux: [
+      { quand: "4 – 6 października 2024", ou: "Festival du Livre, Mouans-Sartoux" },
+      { quand: "23 – 27 sierpnia 2025", ou: "Agir pour le vivant, Arles" },
+      { quand: "8 – 9 października 2025", ou: "Produrable, Palais des Congrès, Paryż" },
+    ],
     contenuLabel: "Zawartość",
     contenu: [
       "Zapętlone filmy i fragmenty wywiadów",
@@ -545,7 +563,7 @@ const pl: LaVoieContent = {
       "Podróżować: moduł można ponownie ustawić, po dostosowaniu, w innych miejscach",
     ],
     galerie: {
-      place: "Kontener na placu podczas Festival du Livre",
+      place: "Kontener na placu podczas Festival du Livre 2024",
       interieur: "Wewnątrz: fotografie z terenu i stół z mapą",
       ecran: "Pod pergolą wywiady wyświetlane w pętli",
       visiteurs: "Zwiedzający przy wejściu na wystawę",

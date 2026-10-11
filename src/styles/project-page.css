@@ -1015,3 +1015,11 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
 .lv-suite-grille { grid-template-columns: 1fr 1fr; }
 .lv-suite-droite { text-align: right; }
 @media (width < 48rem) { .lv-suite-titre { font-size: 1.1rem; } }
+
+/* La Voie · Exposition : lieux où le container a été montré. */
+.lv-lieux { margin-top: 3rem; max-width: 40rem; }
+.lv-lieux > .label { margin-bottom: 0.75rem; }
+.lv-lieux ol { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--color-border); }
+.lv-lieux li { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid var(--color-border); }
+.lv-lieu-quand { font-family: var(--font-grotesk); color: var(--color-muted); }
+@media (width < 30rem) { .lv-lieux li { grid-template-columns: 1fr; gap: 0.15rem; } }

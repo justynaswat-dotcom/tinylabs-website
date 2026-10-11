@@ -236,6 +236,15 @@ function Exposition({ t }: { t: LaVoieContent }) {
         <div><p className="p-large">{t.exposition.body}</p></div>
         <div />
       </motion.div>
+      {/* Les lieux où le container a été installé, du plus ancien au plus récent. */}
+      <motion.div {...reveal} className="lv-lieux">
+        <p className="label">{t.exposition.lieuxLabel}</p>
+        <ol>
+          {t.exposition.lieux.map((l) => (
+            <li key={l.quand}><span className="lv-lieu-quand">{l.quand}</span><span>{l.ou}</span></li>
+          ))}
+        </ol>
+      </motion.div>
       <motion.div {...reveal} className="pp-two-col" style={{ marginTop: "3.5rem" }}>
         <div>
           <p className="label" style={{ marginBottom: "1rem" }}>{t.exposition.contenuLabel}</p>

@@ -69,7 +69,7 @@ const PAGES = [
     slug: 'work/la-voie/exposition',
     titre: "La Voie · Exposition | TINYLABS",
     description:
-      "Un container maritime réaménagé, présenté au Festival du Livre de Mouans-Sartoux : vidéos, cartes sensibles et Vélis à essayer.",
+      "Un espace itinérant dédié à l'expérience de la mobilité légère : entretiens filmés, cartes du territoire et Vélis à essayer. Montré à Mouans-Sartoux, Arles et Paris.",
     image: `${RACINE}/images/share/la-voie-exposition.jpg`,
   },
   {
