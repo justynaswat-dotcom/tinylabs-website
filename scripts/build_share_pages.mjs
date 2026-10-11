@@ -40,7 +40,7 @@ const PAGES = [
     slug: 'work/tabouret-vivant',
     titre: "Matériaux biorégionaux alpins : mycélium (l'atelier de l'Epinay) | TINYLABS",
     description:
-      "Un objet en matériaux biorégionaux : une assise poussée de mycélium sur substrat de bois, des pieds taillés dans les branches du lieu même. Recherche Relational Tectonics.",
+      "Une résidence à l'atelier de l'Epinay : des prototypes de mobilier conceptuel en mycélium cultivé sur du bois local. Recherche Relational Tectonics, avec Adrien Rigobello.",
     image: `${RACINE}/images/share/tabouret.jpg`,
   },
   {

@@ -20,7 +20,7 @@ const fr = {
   allWork: "Tous les travaux",
   title: "Matériaux biorégionaux alpins : mycélium",
   subtitle: "(l'atelier de l'Epinay)",
-  note: "Objet de recherche, en vue de l'exposition finale à Copenhague en 2028",
+  note: "Prototypes de résidence, en vue de l'exposition finale à Copenhague en 2028",
 
   meta: [
     { k: "Atelier", v: "L'atelier de l'Epinay · Adrien Rigobello" },
@@ -32,7 +32,7 @@ const fr = {
   intro: {
     label: "Le projet",
     lead:
-      "Un tabouret dont l'assise n'est pas fabriquée mais cultivée. Le mycélium, la partie souterraine du champignon, un feutrage de filaments, colonise un substrat de bois et le lie en un matériau ferme et léger. Les pieds sont trois branches coupées dans le bois voisin. Rien n'a été apporté de loin.",
+      "Une résidence à l'atelier de l'Epinay, en montagne, pour explorer les composites de mycélium. Le mycélium, la partie souterraine du champignon, pousse dans des moules sur un substrat de bois local et le lie en une matière ferme et légère. Il en est sorti des prototypes de mobilier conceptuel, dont ce tabouret dressé sur trois branches coupées sur place.",
     body: [
       "L'objet est né à l'atelier de l'Epinay, en montagne, en août 2026, sous la conduite d'Adrien Rigobello. L'atelier est un des terrains du projet de recherche Relational Tectonics, qui explore ce que devient la construction quand elle travaille avec le vivant plutôt que contre lui.",
       "Biorégional est ici un mot précis, pas une intention : le bois vient de la parcelle, la laine du troupeau qui la broute, le mycélium se nourrit des copeaux du bois coupé. La vallée fournit la matière, l'énergie et le temps de prise. Ce qui manque à la vallée ne fait pas partie de l'objet.",
@@ -127,7 +127,7 @@ const en: StoolContent = {
   allWork: "All work",
   title: "Alpine bioregional materials: mycelium",
   subtitle: "(l’atelier de l’Epinay)",
-  note: "A research object, toward the final exhibition in Copenhagen in 2028",
+  note: "Residency prototypes, toward the final exhibition in Copenhagen in 2028",
 
   meta: [
     { k: "Workshop", v: "L’atelier de l’Epinay · Adrien Rigobello" },
@@ -139,7 +139,7 @@ const en: StoolContent = {
   intro: {
     label: "The project",
     lead:
-      "A stool whose seat is not made but grown. Mycelium, the underground body of a fungus, a felt of fine filaments, colonises a wood substrate and binds it into a firm, light material. The legs are three branches cut in the wood next door. Nothing was brought from far away.",
+      "A residency at l’atelier de l’Epinay, in the mountains, to explore mycelium composites. Mycelium, the underground body of a fungus, grows in moulds on a substrate of local wood and binds it into a firm, light material. The residency produced prototypes of conceptual furniture, among them this stool standing on three branches cut on site.",
     body: [
       "The object was born at l’atelier de l’Epinay, in the mountains, in August 2026, led by Adrien Rigobello. The workshop is one of the testing grounds of the Relational Tectonics research project, which asks what building becomes when it works with the living rather than against it.",
       "Bioregional is a precise word here, not an intention: the wood comes from the plot, the wool from the flock that grazes it, the mycelium feeds on the shavings of the cut timber. The valley supplies the matter, the energy and the setting time. What the valley does not hold is not part of the object.",
@@ -234,7 +234,7 @@ const pl: StoolContent = {
   allWork: "Wszystkie prace",
   title: "Alpejskie materiały bioregionalne: grzybnia",
   subtitle: "(l’atelier de l’Epinay)",
-  note: "Obiekt badawczy, z myślą o wystawie finałowej w Kopenhadze w 2028 roku",
+  note: "Prototypy z rezydencji, z myślą o wystawie finałowej w Kopenhadze w 2028 roku",
 
   meta: [
     { k: "Warsztat", v: "L’atelier de l’Epinay · Adrien Rigobello" },
@@ -246,7 +246,7 @@ const pl: StoolContent = {
   intro: {
     label: "Projekt",
     lead:
-      "Taboret, którego siedzisko nie zostało wykonane, lecz wyhodowane. Grzybnia, podziemna część grzyba, filc z cienkich nitek, zarasta podłoże z drewna i wiąże je w materiał twardy i lekki. Nogi to trzy gałęzie ścięte w sąsiednim lesie. Nic nie zostało przywiezione z daleka.",
+      "Rezydencja w l’atelier de l’Epinay, w górach, poświęcona kompozytom z grzybni. Grzybnia, podziemna część grzyba, rośnie w formach na podłożu z lokalnego drewna i wiąże je w materiał twardy i lekki. Powstały prototypy koncepcyjnych mebli, a wśród nich ten taboret stojący na trzech gałęziach ściętych na miejscu.",
     body: [
       "Obiekt powstał w l’atelier de l’Epinay, w górach, w sierpniu 2026 roku, pod okiem Adriena Rigobello. Warsztat jest jednym z poligonów projektu badawczego Relational Tectonics, który pyta, czym staje się budowanie, gdy pracuje z tym, co żywe, a nie przeciw niemu.",
       "Bioregionalny jest tu słowem ścisłym, nie deklaracją: drewno pochodzi z działki, wełna od stada, które ją spasa, grzybnia żywi się wiórami ze ściętego drewna. Dolina daje materię, energię i czas wiązania. To, czego dolina nie ma, nie wchodzi w skład obiektu.",

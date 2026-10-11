@@ -464,7 +464,8 @@
 :root {
   /* Bandeau retiré le 11 octobre 2026 (la Paris Design Week était passée) :
      hauteur à 0, tout le reste se recale seul. Pour remettre un bandeau,
-     revenir à 2.6rem et réafficher <AwardBanner /> dans App.tsx. */
+     revenir à 2.6rem et recréer un composant de bandeau (l'ancien
+     AwardBanner est dans l'historique git, commit 109e9ee). */
   --banner-h: 0rem;
   /* Hauteur de l'entête page non défilée, mesurée : 2 rem de retrait
      haut et bas plus la ligne du logotype. Sert à caler l'ouverture de
@@ -472,73 +473,6 @@
   --header-h: 5.8rem;
 }
 
-.award-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 60;                       /* au-dessus du header, qui est en 50 */
-  height: var(--banner-h);
-  display: flex;
-  align-items: center;
-  /* Jaune Paris Design Week, prélevé sur leur logo (#FFBD15), texte noir :
-     c'est leur signalétique, elle identifie l'événement d'un coup d'œil. */
-  background: #FFBD15;
-  color: #1a1916;
-  padding: 0 1.5rem;
-}
-@media (width >= 48rem) { .award-banner { padding: 0 3rem; } }
-
-.award-banner-inner {
-  max-width: 1800px;
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
-  font-family: var(--font-nav);
-  font-size: 0.75rem;
-  line-height: 1;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.award-banner-prix { font-weight: 500; }
-.award-banner-suite {
-  opacity: 0.78;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.award-banner-lien {
-  margin-left: auto;
-  flex-shrink: 0;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.25em;
-  text-decoration-color: rgb(26 25 22 / 0.4);
-  transition: text-decoration-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.award-banner-lien:hover { text-decoration-color: currentColor; }
-
-/* Sur mobile, la phrase complète ne tient pas : on garde le prix et le lien,
-   qui portent l'essentiel, plutôt que de tronquer au milieu d'un mot. */
-.award-banner-court { display: none; opacity: 0.78; }
-
-/* Sous 64rem la phrase longue serait tronquée en plein mot : on bascule sur
-   la version courte, qui garde l'essentiel. */
-@media (width < 64rem) {
-  .award-banner-suite { display: none; }
-  .award-banner-court { display: inline; }
-}
-@media (width < 34rem) {
-  .award-banner-court { display: none; }
-}
-
-/* Le bandeau est fixe : il ne prend pas de place dans le flux, et le contenu
-   passerait dessous. Plutôt que de rattraper le décalage section par section,
-   le document entier descend d'un cran — une seule valeur à ajuster si le
-   bandeau change de hauteur. Le header et la jauge de défilement, tous deux
-   en position fixe, ne sont pas concernés par ce décalage et se règlent à la
-   main juste en dessous. */
 body { padding-top: var(--banner-h); }
 header.fixed { top: var(--banner-h); }
 body .tl-progress { top: var(--banner-h); }
