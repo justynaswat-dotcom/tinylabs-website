@@ -11,33 +11,45 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://tinylabs.one/"/>
   </url>
   <url>
-    <loc>https://tinylabs.one/work/la-voie</loc>
+    <loc>https://tinylabs.one/work/la-voie/</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://tinylabs.one/work/la-voie/residence</loc>
+    <loc>https://tinylabs.one/work/la-voie/residence/</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://tinylabs.one/work/la-voie/films</loc>
+    <loc>https://tinylabs.one/work/la-voie/films/</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://tinylabs.one/work/la-voie/exposition</loc>
+    <loc>https://tinylabs.one/work/la-voie/exposition/</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://tinylabs.one/work/la-voie/livre</loc>
+    <loc>https://tinylabs.one/work/la-voie/livre/</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tinylabs.one/work/marseille-2050/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tinylabs.one/work/tabouret-vivant/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

@@ -101,7 +101,18 @@ for (const page of PAGES) {
   let html = gabarit;
   html = html.replace(/<title>[^<]*<\/title>/, `<title>${page.titre}</title>`);
   html = remplaceMeta(html, 'name', 'description', page.description);
-  html = remplaceMeta(html, 'property', 'og:url', `${RACINE}/${page.slug}`);
+  html = remplaceMeta(html, 'property', 'og:url', `${RACINE}/${page.slug}/`);
+  // Chaque fiche est sa propre page canonique, avec la barre finale : GitHub
+  // Pages redirige /work/x vers /work/x/, on donne donc l'adresse d'arrivée. Sans cela, toutes héritaient
+  // du canonique de l'accueil et Google les traitait comme des doublons de
+  // l'accueil : ni la fiche ni ses images n'étaient indexées.
+  html = html.replace(
+    /<link rel="canonical" href="[^"]*"/,
+    `<link rel="canonical" href="${RACINE}/${page.slug}/"`
+  );
+  if (!html.includes(`rel="canonical" href="${RACINE}/${page.slug}/"`)) {
+    throw new Error(`canonique non remplacé : ${page.slug}`);
+  }
   html = remplaceMeta(html, 'property', 'og:title', page.titre);
   html = remplaceMeta(html, 'property', 'og:description', page.description);
   html = remplaceMeta(html, 'property', 'og:image', page.image);
