@@ -139,9 +139,6 @@ export function LaVoiePage() {
                 <dt className="label">{t.credits.soutien}</dt>
                 <dd>ADEME, Agence de la transition écologique · Extrême Défi Mobilité · France 2030</dd>
 
-                <dt className="label">{t.credits.equipe}</dt>
-                <dd>{t.credits.equipeNoms}</dd>
-
                 <dt className="label">{t.credits.films}</dt>
                 <dd>
                   <a href={PLAYLIST} target="_blank" rel="noreferrer noopener">YouTube</a>
