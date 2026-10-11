@@ -134,6 +134,67 @@
   </head>
 
   <body>
+    <!-- Écran d'ouverture : la sphère TINYLABS, le temps que le site se charge.
+         Écrit ici et non dans React pour s'afficher tout de suite, avant le
+         JavaScript. Une seule fois par visite (sessionStorage), jamais si la
+         personne a demandé de réduire les animations. -->
+    <style>
+      #tl-splash { position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center;
+        background: #f7f5f2; transition: opacity .7s cubic-bezier(.4,0,.2,1), visibility .7s; }
+      #tl-splash canvas { width: min(62vw, 340px); height: min(62vw, 340px); opacity: 0; transform: scale(.92);
+        animation: tl-splash-in 1.1s cubic-bezier(.16,1,.3,1) .05s forwards; }
+      #tl-splash.tl-out { opacity: 0; visibility: hidden; }
+      @keyframes tl-splash-in { to { opacity: 1; transform: scale(1); } }
+      @media (prefers-reduced-motion: reduce) { #tl-splash { display: none; } }
+    </style>
+    <div id="tl-splash" aria-hidden="true"><canvas width="340" height="340"></canvas></div>
+    <script>
+      (function () {
+        var el = document.getElementById("tl-splash");
+        var vu = false;
+        try { vu = sessionStorage.getItem("tl-splash") === "1"; sessionStorage.setItem("tl-splash", "1"); } catch (e) {}
+        if (vu || (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) { el.remove(); return; }
+
+        /* Sphère en pointillé : des points fixes, chacun avec son seuil ; à
+           chaque image, la lumière tourne et seuls les points assez « dans
+           l'ombre » sont dessinés. L'ombrage glisse, les points scintillent. */
+        var cv = el.querySelector("canvas"), ctx = cv.getContext("2d");
+        var dpr = Math.min(window.devicePixelRatio || 1, 2), S = 340;
+        cv.width = S * dpr; cv.height = S * dpr; ctx.scale(dpr, dpr);
+        var R = S * 0.47, C = S / 2, pts = [], n = 0;
+        while (n < 70000) {
+          var x = Math.random() * 2 - 1, y = Math.random() * 2 - 1;
+          if (x * x + y * y > 1) continue;
+          pts.push([x, y, Math.sqrt(1 - x * x - y * y), Math.random(), Math.random() * 0.5 + 0.8]); n++;
+        }
+        var debut = performance.now(), vivant = true;
+        function image(t) {
+          if (!vivant) return;
+          var a = (t - debut) / 1000 * 1.1 + 3.6;          /* angle de la lumière */
+          var hx = Math.cos(a) * 0.55, hy = Math.sin(a) * 0.55 - 0.1;
+          ctx.clearRect(0, 0, S, S); ctx.fillStyle = "#1a1916";
+          for (var i = 0; i < pts.length; i++) {
+            var p = pts[i], dx = p[0] - hx, dy = p[1] - hy;
+            var dens = 0.10 + 0.78 * Math.exp(-(dx * dx + dy * dy) / 0.55);
+            if (p[3] < dens * 0.95) ctx.fillRect(C + p[0] * R, C + p[1] * R, p[4], p[4]);
+          }
+          requestAnimationFrame(image);
+        }
+        requestAnimationFrame(image);
+
+        var ferme = false;
+        function fermer() {
+          if (ferme) return; ferme = true;
+          var reste = Math.max(0, 1800 - (performance.now() - debut));
+          setTimeout(function () {
+            el.classList.add("tl-out");
+            setTimeout(function () { vivant = false; el.remove(); }, 800);
+          }, reste);
+        }
+        if (document.readyState === "complete") fermer(); else window.addEventListener("load", fermer);
+        setTimeout(fermer, 4500);
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
