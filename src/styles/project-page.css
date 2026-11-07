@@ -1115,11 +1115,15 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
 
 /* Livre : pas de photo d'ouverture, donc en-tête et livre resserrés pour
    que le livre et ses boutons apparaissent dès l'ouverture de la page. */
-.lv-volet-livre .lv-volet-tete { padding-top: calc(var(--header-h) + 1.25rem); padding-bottom: 0; }
-.lv-volet-livre .lv-volet-num { margin-bottom: .5rem; }
-.lv-volet-livre .pp-section { padding-top: 2.5rem; }
+.lv-volet-livre .lv-volet-tete { padding-top: calc(var(--header-h) + 1rem); padding-bottom: 0; }
+.lv-volet-livre .lv-volet-tete .pp-inner { display: flex; align-items: baseline; gap: 1.25rem; }
+.lv-volet-livre .lv-volet-num { margin: 0; }
+.lv-volet-livre .pp-section { padding-top: 1.5rem; }
+.lv-livre-titre { margin: 0; line-height: 1; }
+.lv-livre-texte > p.lv-livre-chapeau { margin: .75rem 0 2rem !important; max-width: 30ch; font-size: clamp(1.25rem, 2vw, 1.75rem); }
 @media (width >= 56rem) {
   .lv-volet-livre .lv-livre-intro { align-items: start; }
   .lv-volet-livre .lv-livre-objet { max-height: calc(100svh - var(--header-h) - 3rem); }
   .lv-volet-livre .lv-livre-objet img { height: 100%; object-fit: cover; }
 }
+.lv-volet-livre .lv-retour { margin-bottom: 0; }

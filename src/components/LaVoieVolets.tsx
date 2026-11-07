@@ -310,6 +310,8 @@ function Livre({ t }: { t: LaVoieContent }) {
           <img src={`${IMG}/carte-livre.jpg`} alt={t.livre.couvertureAlt} decoding="async" fetchpriority="high" />
         </figure>
         <div className="lv-livre-texte">
+          <h1 className="pp-title lv-livre-titre">{t.livre.label}</h1>
+          <p className="pp-subtitle lv-livre-chapeau">{t.livre.heading}</p>
           <p className="p-large">{t.livre.pourquoi}</p>
           <p className="label">{t.livre.trouverLabel}</p>
           <ul className="pp-liste">{t.livre.trouver.map((x) => <li key={x}>{x}</li>)}</ul>
@@ -384,8 +386,11 @@ export function LaVoieVoletPage() {
         <div className="pp-inner">
           <Link to="/work/la-voie" className="lv-retour">← {t.nav.retour}</Link>
           <p className="label lv-volet-num">{num(i)} / {num(VOLETS.length - 1)}</p>
-          <h1 className="pp-title">{titre}</h1>
-          <p className="pp-subtitle lv-volet-chapeau">{chapeau}</p>
+          {/* Livre : le titre passe dans la colonne de droite, à côté du livre. */}
+          {v.slug !== "livre" && <>
+            <h1 className="pp-title">{titre}</h1>
+            <p className="pp-subtitle lv-volet-chapeau">{chapeau}</p>
+          </>}
         </div>
       </header>
 

@@ -177,7 +177,7 @@ const fr = {
   livre: {
     label: "Livre",
     heading:
-      "Un journal de bord en quatorze chapitres, de « Le défi » à « La liberté ».",
+      "Un journal de bord en quatorze chapitres, du défi à la liberté.",
     body:
       "Chaque chapitre part d'un entretien : un ingénieur de l'ADEME, des élus et agents de Mouans-Sartoux, des fabricants et réparateurs de véhicules, une soignante, un chef-jardinier, une habitante. Au milieu, la méthodologie de TINYLABS ; à la fin, une conclusion sur la ville pensée comme un organisme vivant.",
     pourquoi: "Le récit complet d'un an de travail à Mouans-Sartoux : ce qui a été écouté, testé et décidé avec le territoire, et la méthode pour le refaire ailleurs.",
@@ -230,7 +230,7 @@ const fr = {
   },
 
   citation: {
-    texte: "« Ce qui a été semé à Mouans-Sartoux peut maintenant circuler, germer ailleurs. »",
+    texte: "Ce qui a été semé à Mouans-Sartoux peut maintenant circuler, germer ailleurs.",
     source: "Le livre La Voie",
   },
 
@@ -397,7 +397,7 @@ const en: LaVoieContent = {
   livre: {
     label: "Book",
     heading:
-      "A logbook in fourteen chapters, from “The challenge” to “Freedom”.",
+      "A logbook in fourteen chapters, from the challenge to freedom.",
     body:
       "Each chapter starts from an interview: an ADEME engineer, elected officials and staff of Mouans-Sartoux, vehicle makers and repairers, a carer, a head gardener, a resident. In the middle, the TINYLABS methodology; at the end, a conclusion on the city as a living organism.",
     pourquoi: "The full account of a year of work in Mouans-Sartoux: what was heard, tested and decided with the people who live there, and the method to do it again elsewhere.",
@@ -450,7 +450,7 @@ const en: LaVoieContent = {
   },
 
   citation: {
-    texte: "“What was sown in Mouans-Sartoux can now travel and take root elsewhere.”",
+    texte: "What was sown in Mouans-Sartoux can now travel and take root elsewhere.",
     source: "The book La Voie",
   },
 
@@ -617,7 +617,7 @@ const pl: LaVoieContent = {
   livre: {
     label: "Książka",
     heading:
-      "Dziennik pokładowy w czternastu rozdziałach, od „Wyzwania” po „Wolność”.",
+      "Dziennik pokładowy w czternastu rozdziałach, od wyzwania po wolność.",
     body:
       "Każdy rozdział wychodzi od wywiadu: z inżynierem ADEME, samorządowcami i pracownikami Mouans-Sartoux, producentami i serwisantami pojazdów, opiekunką, głównym ogrodnikiem, mieszkanką. W środku metodologia TINYLABS, na końcu podsumowanie o mieście jako żywym organizmie.",
     pourquoi: "Pełna relacja z roku pracy w Mouans-Sartoux: co usłyszeliśmy, przetestowaliśmy i postanowiliśmy razem z mieszkańcami, oraz metoda, by zrobić to gdzie indziej.",
@@ -670,7 +670,7 @@ const pl: LaVoieContent = {
   },
 
   citation: {
-    texte: "„To, co zasialiśmy w Mouans-Sartoux, może teraz krążyć i kiełkować gdzie indziej.”",
+    texte: "To, co zasialiśmy w Mouans-Sartoux, może teraz krążyć i kiełkować gdzie indziej.",
     source: "Książka La Voie",
   },
 
