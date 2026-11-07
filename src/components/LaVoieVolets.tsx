@@ -377,7 +377,7 @@ export function LaVoieVoletPage() {
   const suiv = i < VOLETS.length - 1 ? VOLETS[i + 1] : null;
 
   return (
-    <article className="lv-fiche lv-volet">
+    <article className={`lv-fiche lv-volet lv-volet-${v.slug}`}>
       {/* En-tête : retour au projet, numéro, titre, chapeau. Placé avant
           l'image pour que l'on sache tout de suite où l'on est. */}
       <header className="pp lv-volet-tete">

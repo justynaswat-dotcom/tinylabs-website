@@ -1112,3 +1112,14 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
 .lv-lieux li { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid var(--color-border); }
 .lv-lieu-quand { font-family: var(--font-grotesk); color: var(--color-muted); }
 @media (width < 30rem) { .lv-lieux li { grid-template-columns: 1fr; gap: 0.15rem; } }
+
+/* Livre : pas de photo d'ouverture, donc en-tête et livre resserrés pour
+   que le livre et ses boutons apparaissent dès l'ouverture de la page. */
+.lv-volet-livre .lv-volet-tete { padding-top: calc(var(--header-h) + 1.25rem); padding-bottom: 0; }
+.lv-volet-livre .lv-volet-num { margin-bottom: .5rem; }
+.lv-volet-livre .pp-section { padding-top: 2.5rem; }
+@media (width >= 56rem) {
+  .lv-volet-livre .lv-livre-intro { align-items: start; }
+  .lv-volet-livre .lv-livre-objet { max-height: calc(100svh - var(--header-h) - 3rem); }
+  .lv-volet-livre .lv-livre-objet img { height: 100%; object-fit: cover; }
+}
