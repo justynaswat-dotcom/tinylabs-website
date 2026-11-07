@@ -1173,7 +1173,6 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
   .lv-volet-livre .lv-livre-objet img { width: 100%; height: 100%; object-fit: cover; }
 }
 /* 2. Les chiffres viennent juste après l'ouverture. */
-.lv-volet-livre .lv-livre-intro + .lv-cas { margin-top: 5rem; }
 /* 3. Partage : tableau centré face au texte. */
 @media (width >= 64rem) { .lv-partage { align-items: center; } }
 .lv-partage-figure a { display: block; cursor: zoom-in; }
@@ -1182,3 +1181,27 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
   .lv-partage-figure { overflow-x: auto; margin: 0 -1.25rem; padding: 0 1.25rem; background: transparent; -webkit-overflow-scrolling: touch; }
   .lv-partage-figure img { width: 640px; max-width: none; background: #fff; }
 }
+
+/* Le livre dans la démarche : sept étapes en frise. Les étapes 1 à 5
+   (documentées par le livre) portent un trait sombre ; le livre est en aplat. */
+.lv-demarche { margin-top: 5rem; }
+.lv-demarche > .label { margin-bottom: .75rem; }
+.lv-demarche-intro { font-size: clamp(1.15rem, 1.6vw, 1.4rem); max-width: 46ch; margin: 0 0 2rem; }
+.lv-demarche-etapes { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
+@media (width >= 48rem) { .lv-demarche-etapes { grid-template-columns: repeat(4, 1fr); } }
+@media (width >= 72rem) { .lv-demarche-etapes { grid-template-columns: repeat(7, 1fr); gap: .5rem; } }
+.lv-demarche-etapes li {
+  display: flex; flex-direction: column; gap: .35rem; padding: 1rem .9rem 1.1rem;
+  border-top: 3px solid var(--color-border); background: transparent;
+}
+.lv-demarche-etapes li.lv-etape-documentee { border-top-color: var(--color-foreground); }
+.lv-demarche-etapes li.lv-etape-livre { background: var(--color-foreground); color: var(--color-background); border-top-color: var(--color-foreground); }
+.lv-etape-num { font-family: var(--font-nav); font-size: .75rem; opacity: .6; }
+.lv-etape-titre { font-family: var(--font-grotesk); font-size: 1.1rem; line-height: 1.2; }
+.lv-etape-livre .lv-etape-titre { font-size: 1.25rem; }
+.lv-demarche-etapes .lv-etape-quand { font-family: var(--font-nav); font-size: .8125rem; opacity: .65; }
+.lv-etape-quoi { font-size: .875rem; line-height: 1.5; margin-top: .25rem; }
+.lv-demarche-legende { display: flex; align-items: center; gap: .6rem; margin: 1.25rem 0 0; font-family: var(--font-nav); font-size: .8125rem; color: var(--color-muted); }
+.lv-demarche-legende span { display: inline-block; width: 2rem; height: 3px; background: var(--color-foreground); }
+.lv-volet-livre .lv-demarche + .lv-cas { margin-top: 5rem; }
+.lv-volet-livre .lv-partage + .lv-extrait { margin-top: 5rem; }

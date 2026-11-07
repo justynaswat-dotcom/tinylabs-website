@@ -323,6 +323,25 @@ function Livre({ t }: { t: LaVoieContent }) {
         </div>
       </motion.div>
 
+      {/* La place du livre dans la démarche : les sept étapes, le livre
+          (sixième) mis en avant ; il documente les cinq premières et sert
+          d'outil à la septième. */}
+      <motion.section {...reveal} className="lv-demarche">
+        <p className="label">{t.livre.demarcheLabel}</p>
+        <p className="lv-demarche-intro">{t.livre.demarcheIntro}</p>
+        <ol className="lv-demarche-etapes">
+          {t.livre.etapes.map((e, k) => (
+            <li key={e.titre} className={"livre" in e && e.livre ? "lv-etape-livre" : k < 5 ? "lv-etape-documentee" : undefined}>
+              <span className="lv-etape-num">{num(k)}</span>
+              <span className="lv-etape-titre">{e.titre}</span>
+              <span className="lv-etape-quand">{e.quand}</span>
+              <span className="lv-etape-quoi">{e.quoi}</span>
+            </li>
+          ))}
+        </ol>
+        <p className="lv-demarche-legende"><span aria-hidden="true" /> {t.livre.demarcheLivre}</p>
+      </motion.section>
+
       {/* Les cas : un besoin, ce qui a été essayé, le lieu, le véhicule, le chapitre. */}
       <motion.section {...reveal} className="lv-cas">
         <p className="label">{t.livre.casLabel}</p>
@@ -362,14 +381,7 @@ function Livre({ t }: { t: LaVoieContent }) {
         </figure>
       </motion.section>
 
-      <motion.section {...reveal} className="lv-etapes">
-        <p className="label">{t.livre.etapesLabel}</p>
-        <ol>
-          {t.livre.etapes.map((e) => (
-            <li key={e.quand}><span className="lv-etape-quand">{e.quand}</span><span>{e.quoi}</span></li>
-          ))}
-        </ol>
-      </motion.section>
+
 
       <div className="lv-extrait" id="extrait">
         <p className="label">{t.livre.extrait} · {t.livre.extraitNote}</p>
