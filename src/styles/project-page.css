@@ -1129,4 +1129,38 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
 .lv-volet-livre .lv-retour { margin-bottom: 0; }
 .lv-livre-texte > p.lv-livre-signature { margin: 2rem 0 0 !important; font-family: var(--font-grotesk); font-size: clamp(1.15rem, 1.6vw, 1.4rem); line-height: 1.35; }
 .lv-livre-signature span { display: block; margin-top: .5rem; font-family: var(--font-nav); font-size: .8125rem; color: var(--color-muted); }
-@media (width >= 56rem) { .lv-volet-livre .lv-livre-objet { position: sticky; top: calc(var(--header-h) + 1rem); } }
+
+/* ── Livre : documentation de l'expérimentation ─────────────────────── */
+.lv-volet-livre .lv-livre-objet { max-height: min(78svh, 46rem); }
+.lv-cas, .lv-partage, .lv-chiffres, .lv-etapes { margin-top: 5rem; }
+.lv-cas > .label, .lv-chiffres > .label, .lv-etapes > .label { margin-bottom: .75rem; }
+.lv-cas-intro { font-size: clamp(1.15rem, 1.6vw, 1.4rem); max-width: 40ch; margin: 0 0 2rem; }
+.lv-cas-grille { list-style: none; margin: 0; padding: 0; display: grid; gap: 0 2.5rem; border-top: 1px solid var(--color-border); }
+@media (width >= 40rem) { .lv-cas-grille { grid-template-columns: 1fr 1fr; } }
+@media (width >= 72rem) { .lv-cas-grille { grid-template-columns: repeat(4, 1fr); } }
+.lv-cas-grille li { padding: 1.5rem 0 1.75rem; border-bottom: 1px solid var(--color-border); display: flex; flex-direction: column; }
+.lv-cas-grille h3 { font-family: var(--font-grotesk); font-size: 1.2rem; font-weight: 400; line-height: 1.25; margin: 0 0 .75rem; }
+.lv-cas-grille p { margin: 0; font-size: .9375rem; line-height: 1.55; }
+.lv-cas-meta { margin-top: auto !important; padding-top: 1rem; display: flex; flex-direction: column; gap: .15rem; font-family: var(--font-nav); font-size: .8125rem !important; color: var(--color-muted); }
+.lv-cas-meta span:first-child { color: var(--color-foreground); }
+
+.lv-partage { display: grid; gap: 2.5rem; align-items: start; background: var(--color-stone-light); padding: 2rem 1.25rem; }
+@media (width >= 64rem) { .lv-partage { grid-template-columns: 5fr 7fr; gap: 3.5rem; padding: 3rem; } }
+.lv-partage .p-large { margin: .75rem 0 1.5rem; }
+.lv-partage dl { margin: 0; border-top: 1px solid var(--color-border); }
+.lv-partage dl > div { padding: .8rem 0; border-bottom: 1px solid var(--color-border); }
+.lv-partage dt { font-family: var(--font-grotesk); margin-bottom: .2rem; }
+.lv-partage dd { margin: 0; font-size: .9375rem; color: var(--color-muted); }
+.lv-partage-figure { margin: 0; background: #fff; }
+.lv-partage-figure img { display: block; width: 100%; height: auto; }
+
+.lv-chiffres ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.5rem 2rem; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--color-border); padding-top: 1.5rem; }
+@media (width >= 56rem) { .lv-chiffres ul { grid-template-columns: repeat(5, 1fr); } }
+.lv-chiffres li { display: flex; flex-direction: column; gap: .4rem; font-size: .9375rem; }
+.lv-chiffre { font-family: var(--font-grotesk); font-size: clamp(2rem, 3.2vw, 2.75rem); line-height: 1; }
+
+.lv-etapes ol { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-border); }
+.lv-etapes li { display: grid; grid-template-columns: 1fr; gap: .25rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+@media (width >= 48rem) { .lv-etapes li { grid-template-columns: 12rem 1fr; gap: 2rem; } }
+.lv-etape-quand { font-family: var(--font-nav); font-size: .875rem; color: var(--color-muted); }
+.lv-volet-livre .lv-etapes + .lv-extrait { margin-top: 5rem; }

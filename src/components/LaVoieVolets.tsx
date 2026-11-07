@@ -311,14 +311,8 @@ function Livre({ t }: { t: LaVoieContent }) {
         </figure>
         <div className="lv-livre-texte">
           <h1 className="pp-title lv-livre-titre">{t.livre.label}</h1>
-          <p className="pp-subtitle lv-livre-chapeau">{t.livre.heading}</p>
+          <p className="pp-subtitle lv-livre-chapeau">{t.livre.sousTitre}</p>
           <p className="p-large">{t.livre.pourquoi}</p>
-          <p className="label">{t.livre.trouverLabel}</p>
-          <ul className="pp-liste">{t.livre.trouver.map((x) => <li key={x}>{x}</li>)}</ul>
-          <p className="label">{t.livre.pourQuiLabel}</p>
-          <p>{t.livre.pourQui}</p>
-          {/* La dernière phrase du prologue, signée. */}
-          <p className="lv-livre-signature">{t.livre.signature}<span>{t.livre.signatureAuteur}</span></p>
           <p className="lv-livre-faits">{t.livre.faits}</p>
           <div className="lv-livre-actions">
             <a href="#extrait" className="lv-bouton lv-bouton-plein">{t.livre.feuilleter} <span aria-hidden="true">↓</span></a>
@@ -328,6 +322,61 @@ function Livre({ t }: { t: LaVoieContent }) {
           </div>
         </div>
       </motion.div>
+
+      {/* Les cas : un besoin, ce qui a été essayé, le lieu, le véhicule, le chapitre. */}
+      <motion.section {...reveal} className="lv-cas">
+        <p className="label">{t.livre.casLabel}</p>
+        <p className="lv-cas-intro">{t.livre.casIntro}</p>
+        <ol className="lv-cas-grille">
+          {t.livre.cas.map((c) => (
+            <li key={c.besoin}>
+              <h3>{c.besoin}</h3>
+              <p>{c.d}</p>
+              <p className="lv-cas-meta">
+                <span>{c.vehicule}</span>
+                <span>{c.lieu}</span>
+                <span>{num(c.chap)} · {t.livre.chapitres[c.chap].t}</span>
+              </p>
+            </li>
+          ))}
+        </ol>
+      </motion.section>
+
+      {/* Le partage : la semaine type du Véli agricole, tirée du livre (p. 107). */}
+      <motion.section {...reveal} className="lv-partage">
+        <div className="lv-partage-texte">
+          <p className="label">{t.livre.partageLabel}</p>
+          <p className="p-large">{t.livre.partageTexte}</p>
+          <dl>
+            {t.livre.partage.map((u) => (
+              <div key={u.qui}><dt>{u.qui}</dt><dd>{u.quand}</dd></div>
+            ))}
+          </dl>
+        </div>
+        <figure className="lv-partage-figure">
+          <img loading="lazy" decoding="async" src={`${IMG}/partage-velie.jpg`} alt={t.livre.partageAlt} />
+        </figure>
+      </motion.section>
+
+      {/* Les chiffres du terrain, puis le déroulé. */}
+      <motion.section {...reveal} className="lv-chiffres">
+        <p className="label">{t.livre.chiffresLabel}</p>
+        <ul>
+          {t.livre.chiffres.map((c) => (
+            <li key={c.t}><span className="lv-chiffre">{c.n}</span><span>{c.t}</span></li>
+          ))}
+        </ul>
+      </motion.section>
+
+      <motion.section {...reveal} className="lv-etapes">
+        <p className="label">{t.livre.etapesLabel}</p>
+        <ol>
+          {t.livre.etapes.map((e) => (
+            <li key={e.quand}><span className="lv-etape-quand">{e.quand}</span><span>{e.quoi}</span></li>
+          ))}
+        </ol>
+      </motion.section>
+
       <div className="lv-extrait" id="extrait">
         <p className="label">{t.livre.extrait} · {t.livre.extraitNote}</p>
         <Feuilleteur pages={EXTRAIT} t={t.livre.feuilleteur} reperes={reperesLivre(t)}
