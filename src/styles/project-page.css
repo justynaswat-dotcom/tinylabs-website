@@ -1164,3 +1164,22 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
 @media (width >= 48rem) { .lv-etapes li { grid-template-columns: 12rem 1fr; gap: 2rem; } }
 .lv-etape-quand { font-family: var(--font-nav); font-size: .875rem; color: var(--color-muted); }
 .lv-volet-livre .lv-etapes + .lv-extrait { margin-top: 5rem; }
+
+/* Revue de mise en page (7 novembre 2026). */
+/* 1. Ouverture : texte centré à côté du livre, photo à hauteur du texte. */
+@media (width >= 56rem) {
+  .lv-volet-livre .lv-livre-intro { align-items: center; }
+  .lv-volet-livre .lv-livre-objet { height: min(70svh, 36rem); max-height: none; overflow: hidden; }
+  .lv-volet-livre .lv-livre-objet img { width: 100%; height: 100%; object-fit: cover; }
+}
+/* 2. Les chiffres viennent juste après l'ouverture. */
+.lv-volet-livre .lv-livre-intro + .lv-chiffres { margin-top: 4rem; }
+.lv-volet-livre .lv-chiffres + .lv-cas { margin-top: 5rem; }
+/* 3. Partage : tableau centré face au texte. */
+@media (width >= 64rem) { .lv-partage { align-items: center; } }
+.lv-partage-figure a { display: block; cursor: zoom-in; }
+/* 4. Sur téléphone : tableau lisible, qui défile à l'horizontale. */
+@media (width < 40rem) {
+  .lv-partage-figure { overflow-x: auto; margin: 0 -1.25rem; padding: 0 1.25rem; background: transparent; -webkit-overflow-scrolling: touch; }
+  .lv-partage-figure img { width: 640px; max-width: none; background: #fff; }
+}

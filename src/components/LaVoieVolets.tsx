@@ -323,6 +323,16 @@ function Livre({ t }: { t: LaVoieContent }) {
         </div>
       </motion.div>
 
+      {/* Les chiffres du terrain, juste sous l'introduction : la preuve d'abord. */}
+      <motion.section {...reveal} className="lv-chiffres">
+        <p className="label">{t.livre.chiffresLabel}</p>
+        <ul>
+          {t.livre.chiffres.map((c) => (
+            <li key={c.t}><span className="lv-chiffre">{c.n}</span><span>{c.t}</span></li>
+          ))}
+        </ul>
+      </motion.section>
+
       {/* Les cas : un besoin, ce qui a été essayé, le lieu, le véhicule, le chapitre. */}
       <motion.section {...reveal} className="lv-cas">
         <p className="label">{t.livre.casLabel}</p>
@@ -354,18 +364,12 @@ function Livre({ t }: { t: LaVoieContent }) {
           </dl>
         </div>
         <figure className="lv-partage-figure">
-          <img loading="lazy" decoding="async" src={`${IMG}/partage-velie.jpg`} alt={t.livre.partageAlt} />
+          {/* Sur téléphone, le tableau garde une largeur lisible et défile ;
+              un clic l'ouvre en grand. */}
+          <a href={`${IMG}/partage-velie.jpg`} target="_blank" rel="noopener">
+            <img loading="lazy" decoding="async" src={`${IMG}/partage-velie.jpg`} alt={t.livre.partageAlt} />
+          </a>
         </figure>
-      </motion.section>
-
-      {/* Les chiffres du terrain, puis le déroulé. */}
-      <motion.section {...reveal} className="lv-chiffres">
-        <p className="label">{t.livre.chiffresLabel}</p>
-        <ul>
-          {t.livre.chiffres.map((c) => (
-            <li key={c.t}><span className="lv-chiffre">{c.n}</span><span>{c.t}</span></li>
-          ))}
-        </ul>
       </motion.section>
 
       <motion.section {...reveal} className="lv-etapes">
