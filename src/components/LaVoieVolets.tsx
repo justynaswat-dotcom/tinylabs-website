@@ -38,7 +38,8 @@ export const VOLETS = [
   { slug: "residence", carte: "carte-residence", ouverture: "dessin" },
   { slug: "films", carte: "carte-films", ouverture: null },
   { slug: "exposition", carte: "carte-expo", ouverture: "ouverture" },
-  { slug: "livre", carte: "carte-livre", ouverture: "herbes" },
+  // Livre : pas de photo d'ouverture, la page s'ouvre sur le livre lui-même.
+  { slug: "livre", carte: "carte-livre", ouverture: null },
 ] as const;
 export type Volet = (typeof VOLETS)[number]["slug"];
 
@@ -302,12 +303,28 @@ function reperesLivre(t: LaVoieContent) {
 function Livre({ t }: { t: LaVoieContent }) {
   return (
     <>
-      <motion.div {...reveal} className="pp-two-col">
-        <div><p className="p-large">{t.livre.body}</p></div>
-        <div />
+      {/* Le livre d'abord, et pourquoi le lire : ce qu'il contient, pour qui,
+          puis les deux gestes possibles (feuilleter, commander). */}
+      <motion.div {...reveal} className="lv-livre-intro">
+        <figure className="lv-livre-objet">
+          <img src={`${IMG}/carte-livre.jpg`} alt={t.livre.couvertureAlt} decoding="async" fetchpriority="high" />
+        </figure>
+        <div className="lv-livre-texte">
+          <p className="p-large">{t.livre.pourquoi}</p>
+          <p className="label">{t.livre.trouverLabel}</p>
+          <ul className="pp-liste">{t.livre.trouver.map((x) => <li key={x}>{x}</li>)}</ul>
+          <p className="label">{t.livre.pourQuiLabel}</p>
+          <p>{t.livre.pourQui}</p>
+          <p className="lv-livre-faits">{t.livre.faits}</p>
+          <div className="lv-livre-actions">
+            <a href="#extrait" className="lv-bouton lv-bouton-plein">{t.livre.feuilleter} <span aria-hidden="true">↓</span></a>
+            <a href="mailto:hello@tinylabs.one?subject=La%20Voie%20%C2%B7%20commande%20du%20livre" className="lv-bouton">
+              {t.livre.commanderBouton}
+            </a>
+          </div>
+        </div>
       </motion.div>
-      {/* L'extrait d'abord : c'est ce que l'on vient voir. */}
-      <div className="lv-extrait">
+      <div className="lv-extrait" id="extrait">
         <p className="label">{t.livre.extrait} · {t.livre.extraitNote}</p>
         <Feuilleteur pages={EXTRAIT} t={t.livre.feuilleteur} reperes={reperesLivre(t)}
                      reperesLabel={t.livre.reperesLabel} />
@@ -329,9 +346,6 @@ function Livre({ t }: { t: LaVoieContent }) {
           ))}
         </ol>
       </motion.div>
-      <motion.figure {...reveal} className="pp-figure pp-figure-contain pp-figure-wide lv-moyen" style={{ marginTop: "3.5rem" }}>
-        <img loading="lazy" decoding="async" src={`${IMG}/livre.jpg`} alt={t.livre.couvertureAlt} />
-      </motion.figure>
     </>
   );
 }

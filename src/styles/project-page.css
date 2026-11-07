@@ -858,6 +858,26 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
 .lv-reperes button:hover { border-color: var(--color-foreground); }
 .lv-reperes button.lv-repere-actif { background: var(--color-foreground); color: var(--color-background); border-color: var(--color-foreground); }
 
+/* Livre : ouverture sur l'objet, puis pourquoi le lire. */
+.lv-livre-intro { display: grid; gap: 2.5rem; align-items: center; }
+@media (width >= 56rem) { .lv-livre-intro { grid-template-columns: 5fr 6fr; gap: 4rem; } }
+.lv-livre-objet { margin: 0; background: #ebebe8; }
+.lv-livre-objet img { display: block; width: 100%; height: auto; }
+.lv-livre-texte > .p-large { margin: 0 0 2rem; }
+.lv-livre-texte > .label { margin: 1.75rem 0 .75rem; }
+.lv-livre-texte > p:not(.label):not(.p-large) { margin: 0; }
+.lv-livre-faits { margin-top: 1.75rem !important; padding-top: 1rem; border-top: 1px solid var(--color-border); font-family: var(--font-nav); font-size: .875rem; color: var(--color-muted); }
+.lv-livre-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+.lv-bouton {
+  display: inline-flex; align-items: center; gap: .5rem; padding: .7rem 1.4rem; border-radius: 999px;
+  border: 1px solid var(--color-foreground); font-family: var(--font-nav); font-size: .9375rem;
+  transition: background-color .2s, color .2s;
+}
+.lv-bouton:hover, .lv-bouton-plein { background: var(--color-foreground); color: var(--color-background); }
+.lv-bouton-plein:hover { background: transparent; color: var(--color-foreground); }
+#extrait { scroll-margin-top: 5rem; }
+.lv-volet .lv-livre-intro + .lv-extrait { margin-top: 4.5rem; }
+
 .lv-commander { text-align: center; margin: 2rem auto 0; max-width: 36rem; font-size: .9375rem; }
 .lv-commander a { text-decoration: underline; text-underline-offset: 3px; }
 
