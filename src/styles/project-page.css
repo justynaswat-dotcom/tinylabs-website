@@ -801,7 +801,9 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
 .lv-extrait { margin-top: 1.5rem; background: var(--color-stone-light); padding: 2rem 1rem 1.5rem; }
 @media (min-width: 768px) { .lv-extrait { padding: 3rem 3rem 2rem; } }
 .lv-extrait > .label { margin-bottom: 2rem; }
-.lv-livre { outline: none; }
+/* Le livre ouvert tient dans l'écran avec ses boutons : largeur plafonnée
+   par la hauteur de la fenêtre (rapport d'une double page, 1200 × 847). */
+.lv-livre { outline: none; max-width: min(1200px, calc((100svh - 13rem) * 1.417)); margin: 0 auto; }
 .lv-livre:focus-visible { outline: 1px solid var(--color-foreground); outline-offset: 8px; }
 .lv-page { background: #fff; overflow: hidden; }
 .lv-page img { width: 100%; height: 100%; object-fit: cover; display: block; user-select: none; -webkit-user-drag: none; }
@@ -821,6 +823,73 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
 .lv-livre.lv-ferme-debut .stf__parent { transform: translateX(-25%) translateZ(0); }
 .lv-livre.lv-ferme-fin .stf__parent { transform: translateX(25%) translateZ(0); }
 @media (prefers-reduced-motion: reduce) { .lv-livre .stf__parent { transition: none; } }
+
+/* Le livre comme un objet : ombre portée sous chaque page, pli au milieu
+   (ombre douce côté reliure), tranche à peine marquée côté extérieur. */
+.lv-page { box-shadow: 0 1px 2px rgba(26,25,22,.08), 0 14px 30px -12px rgba(26,25,22,.28); }
+.lv-page::after { content: ""; position: absolute; top: 0; bottom: 0; width: 9%; pointer-events: none; }
+.lv-page.--left::after { right: 0; background: linear-gradient(to left, rgba(26,25,22,.16), rgba(26,25,22,.04) 40%, transparent); }
+.lv-page.--right::after { left: 0; background: linear-gradient(to right, rgba(26,25,22,.16), rgba(26,25,22,.04) 40%, transparent); }
+.lv-page[data-density="hard"]::after { display: none; }
+.lv-page.--left { border-left: 1px solid rgba(26,25,22,.06); }
+.lv-page.--right { border-right: 1px solid rgba(26,25,22,.06); }
+
+/* Bouton « Lire en grand », à droite des flèches. */
+.lv-commandes { flex-wrap: wrap; row-gap: .9rem; }
+.lv-commandes button { flex-shrink: 0; }
+.lv-commandes .lv-agrandir {
+  width: auto; padding: 0 1.1rem; font-family: var(--font-nav); font-size: 0.875rem; gap: .45rem;
+  display: inline-flex; align-items: center; white-space: nowrap;
+}
+/* Sur téléphone, « Lire en grand » passe sous les flèches. */
+@media (width < 36rem) { .lv-commandes .lv-agrandir { order: 1; } .lv-commandes::after { content: ""; order: 0; flex-basis: 100%; height: 0; } }
+
+/* Repères : prologue, chapitres, méthode, conclusion. */
+.lv-reperes {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline;
+  gap: .4rem .5rem; margin: 2rem auto 0; max-width: 60rem;
+}
+.lv-reperes .label { width: 100%; text-align: center; margin-bottom: .35rem; }
+.lv-reperes button {
+  border: 1px solid var(--color-border); background: transparent; color: var(--color-foreground);
+  border-radius: 999px; padding: .3rem .8rem; font-family: var(--font-nav); font-size: .8125rem;
+  cursor: pointer; transition: background-color .2s, color .2s, border-color .2s;
+}
+.lv-reperes button:hover { border-color: var(--color-foreground); }
+.lv-reperes button.lv-repere-actif { background: var(--color-foreground); color: var(--color-background); border-color: var(--color-foreground); }
+
+.lv-commander { text-align: center; margin: 2rem auto 0; max-width: 36rem; font-size: .9375rem; }
+.lv-commander a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Lecture en grand : fond sombre, la double page en haute définition. */
+.lv-lecture {
+  position: fixed; inset: 0; z-index: 1000; background: #1a1916; color: #f4f1ec;
+  display: grid; grid-template-rows: auto 1fr auto;
+}
+.lv-lecture-barre {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .9rem 1.25rem; border-bottom: 1px solid rgba(244,241,236,.12);
+}
+.lv-lecture-aide { color: rgba(244,241,236,.6); font-size: .8125rem; flex: 1; text-align: center; }
+@media (width < 40rem) { .lv-lecture-aide { display: none; } }
+.lv-lecture-fermer {
+  background: transparent; color: inherit; border: 1px solid rgba(244,241,236,.4); border-radius: 999px;
+  padding: .4rem 1rem; font-family: var(--font-nav); font-size: .875rem; cursor: pointer;
+}
+.lv-lecture-fermer:hover { background: #f4f1ec; color: #1a1916; }
+.lv-lecture-scene { overflow: auto; display: grid; place-items: center; padding: 1.25rem; min-height: 0; }
+.lv-lecture-pages { display: flex; justify-content: center; cursor: zoom-in; box-shadow: 0 20px 60px rgba(0,0,0,.45); }
+.lv-lecture-pages img { display: block; height: auto; width: auto; max-height: calc(100svh - 9.5rem); max-width: 100%; background: #fff; }
+.lv-lecture-double img { max-width: 50%; }
+/* Zoom : la page reprend sa largeur, on se déplace en défilant. */
+.lv-zoom { place-items: start center; }
+.lv-zoom .lv-lecture-pages { cursor: zoom-out; }
+.lv-zoom .lv-lecture-pages img { max-height: none; width: min(1600px, max(100vw - 2.5rem, 230vw)); max-width: none; }
+.lv-zoom .lv-lecture-double img { width: min(1100px, 50vw + 12rem); }
+.lv-lecture-commandes { padding: .75rem 0 1rem; margin-top: 0; }
+.lv-lecture-commandes button { border-color: rgba(244,241,236,.6); color: #f4f1ec; }
+.lv-lecture-commandes button:hover:not(:disabled) { background: #f4f1ec; color: #1a1916; }
+.lv-lecture .lv-compteur { color: rgba(244,241,236,.85); min-width: 0; text-align: left; }
 
 /* ── La Voie : photos ramenées à une taille de lecture ────────────────
    Les classes pp- sont partagées avec les autres fiches ; ces réglages

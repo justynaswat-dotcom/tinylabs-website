@@ -52,12 +52,25 @@ export function enTeteVolet(t: LaVoieContent, slug: Volet) {
   }
 }
 
-/* Extrait feuilletable du livre : 32 des 212 pages du PDF final (mai 2025).
+/* Extrait feuilletable du livre : 48 des 212 pages du PDF final (mai 2025),
+   choisies le 7 novembre 2026 pour montrer la méthode sans donner les
+   entretiens : couverture, prologue, sommaire, la double page d'ouverture
+   de chaque chapitre (dessin + introduction), la méthodologie (chronologie,
+   résidence, atelier, exposition), la conclusion et la quatrième.
    Les paires se suivent (page paire à gauche, impaire à droite) pour que les
-   doubles pages restent des doubles pages. */
-const EXTRAIT = [1, 2, 3, 6, 7, 10, 11, 12, 13, 14, 15, 16, 17, 24, 25, 84, 85,
-  86, 87, 100, 101, 114, 115, 124, 125, 132, 133, 170, 171, 198, 199, 212]
-  .map((n) => `${IMG}/livre/p${String(n).padStart(3, "0")}.jpg`);
+   doubles pages restent des doubles pages. Images en deux tailles :
+   livre/pNNN.jpg (1000 px, livre animé) et livre/hd/pNNN.jpg (1600 px, lecture). */
+const EXTRAIT_PAGES = [1, 6, 7, 10, 11, 14, 15, 24, 25, 30, 31, 36, 37, 46, 47,
+  62, 63, 76, 77, 84, 85, 90, 91, 92, 93, 100, 101, 114, 115, 122, 123,
+  134, 135, 142, 143, 148, 149, 158, 159, 166, 167, 178, 179, 188, 189, 200, 201, 212];
+const EXTRAIT = EXTRAIT_PAGES.map((n) => `${IMG}/livre/p${String(n).padStart(3, "0")}.jpg`);
+
+/* Première page de chaque chapitre dans le PDF (sommaire + 2), dans l'ordre
+   de t.livre.chapitres ; la méthodologie s'ouvre p. 85, la conclusion p. 201. */
+const DEBUT_CHAPITRES = [15, 25, 31, 37, 47, 63, 77, 135, 143, 149, 159, 167, 179, 189];
+/* Index de la page de gauche de la double page qui contient la page n :
+   page-flip ouvre la double page dont on lui donne la page de gauche. */
+const idx = (n: number) => EXTRAIT_PAGES.indexOf(n % 2 === 1 && n > 1 ? n - 1 : n);
 
 /* CARNET de la résidence : photos et notes posées comme sur une page de
    journal de bord (référence donnée : Alicia Carvalho, « Jackie, Korea »).
@@ -272,6 +285,20 @@ function Exposition({ t }: { t: LaVoieContent }) {
   );
 }
 
+/* Repères sous le livre, dans l'ordre des pages. */
+function reperesLivre(t: LaVoieContent) {
+  const r = t.livre.reperes;
+  const chap = (k: number) => ({ label: `${num(k)} ${t.livre.chapitres[k].t}`, index: idx(DEBUT_CHAPITRES[k]) });
+  return [
+    { label: r.prologue, index: idx(7) },
+    { label: r.sommaire, index: idx(11) },
+    ...[0, 1, 2, 3, 4, 5, 6].map(chap),
+    { label: r.methode, index: idx(85) },
+    ...[7, 8, 9, 10, 11, 12, 13].map(chap),
+    { label: r.conclusion, index: idx(201) },
+  ];
+}
+
 function Livre({ t }: { t: LaVoieContent }) {
   return (
     <>
@@ -282,7 +309,12 @@ function Livre({ t }: { t: LaVoieContent }) {
       {/* L'extrait d'abord : c'est ce que l'on vient voir. */}
       <div className="lv-extrait">
         <p className="label">{t.livre.extrait} · {t.livre.extraitNote}</p>
-        <Feuilleteur pages={EXTRAIT} t={t.livre.feuilleteur} />
+        <Feuilleteur pages={EXTRAIT} t={t.livre.feuilleteur} reperes={reperesLivre(t)}
+                     reperesLabel={t.livre.reperesLabel} />
+        <p className="lv-commander">
+          {t.livre.commander}{" "}
+          <a href="mailto:hello@tinylabs.one?subject=La%20Voie%20%C2%B7%20livre">hello@tinylabs.one</a>
+        </p>
       </div>
       {/* Les quatorze chapitres et leurs entretiens, d'après le sommaire. */}
       <motion.div {...reveal} className="lv-chapitres">
