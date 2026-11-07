@@ -755,9 +755,9 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
 }
 
 .pp-liste { list-style: none; padding: 0; margin: 1.5rem 0 0; }
-.pp-liste li { position: relative; padding: 0.75rem 0 0.75rem 2rem; border-top: 1px solid var(--color-border); }
+/* Listes sans tiret : un filet fin sépare les lignes (choix du 7 novembre 2026). */
+.pp-liste li { position: relative; padding: 0.75rem 0; border-top: 1px solid var(--color-border); }
 .pp-liste li:last-child { border-bottom: 1px solid var(--color-border); }
-.pp-liste li::before { content: "—"; position: absolute; left: 0; color: var(--color-muted); }
 
 .pp-pair { display: grid; gap: 1.5rem; }
 @media (width >= 48rem) { .pp-pair { grid-template-columns: 1fr 1fr; } }
