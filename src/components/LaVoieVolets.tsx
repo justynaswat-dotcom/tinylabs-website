@@ -323,16 +323,6 @@ function Livre({ t }: { t: LaVoieContent }) {
         </div>
       </motion.div>
 
-      {/* Les chiffres du terrain, juste sous l'introduction : la preuve d'abord. */}
-      <motion.section {...reveal} className="lv-chiffres">
-        <p className="label">{t.livre.chiffresLabel}</p>
-        <ul>
-          {t.livre.chiffres.map((c) => (
-            <li key={c.t}><span className="lv-chiffre">{c.n}</span><span>{c.t}</span></li>
-          ))}
-        </ul>
-      </motion.section>
-
       {/* Les cas : un besoin, ce qui a été essayé, le lieu, le véhicule, le chapitre. */}
       <motion.section {...reveal} className="lv-cas">
         <p className="label">{t.livre.casLabel}</p>

@@ -203,14 +203,6 @@ const fr = {
       { qui: "Habitant·es, avec Choisir le Vélo", quand: "Tous les créneaux libres." },
     ],
     partageAlt: "Tableau de la semaine type du Véli agricole partagé entre la régie agricole, les poulaillers et jardins citoyens, les ruches participatives et les habitant·es",
-    chiffresLabel: "Sur le terrain",
-    chiffres: [
-      { n: "11", t: "véhicules intermédiaires documentés" },
-      { n: "14", t: "entretiens filmés, un par chapitre" },
-      { n: "25 t", t: "de légumes par an livrés aux cantines" },
-      { n: "2 000 km", t: "par an pour les trajets des agents de l'eau" },
-      { n: "70 %", t: "du personnel de l'hôpital à moins de 10 km" },
-    ],
     etapesLabel: "Comment le travail a été mené",
     etapes: [
       { quand: "22 – 30 juin 2024", quoi: "Résidence : essais des Vélis sur le territoire, cartographie par thème avec les habitant·es et les services, six directs avec la communauté Extrême Défi." },
@@ -451,14 +443,6 @@ const en: LaVoieContent = {
       { qui: "Residents, with Choisir le Vélo", quand: "All free slots." },
     ],
     partageAlt: "Chart of a typical week for the farm Véli shared between the municipal farm, community henhouses and gardens, community beehives and residents",
-    chiffresLabel: "In the field",
-    chiffres: [
-      { n: "11", t: "intermediate vehicles documented" },
-      { n: "14", t: "filmed interviews, one per chapter" },
-      { n: "25 t", t: "of vegetables a year delivered to canteens" },
-      { n: "2,000 km", t: "a year driven by water company staff" },
-      { n: "70%", t: "of hospital staff live within 10 km" },
-    ],
     etapesLabel: "How the work was done",
     etapes: [
       { quand: "22 – 30 June 2024", quoi: "Residency: trying Vélis around the area, mapping by theme with residents and services, six live sessions with the Extrême Défi community." },
@@ -699,14 +683,6 @@ const pl: LaVoieContent = {
       { qui: "Mieszkańcy, z Choisir le Vélo", quand: "Wszystkie wolne terminy." },
     ],
     partageAlt: "Tabela typowego tygodnia rolniczego Véli dzielonego między gminne gospodarstwo, kurniki i ogrody społeczne, ule społeczne i mieszkańców",
-    chiffresLabel: "W terenie",
-    chiffres: [
-      { n: "11", t: "udokumentowanych pojazdów pośrednich" },
-      { n: "14", t: "filmowanych wywiadów, po jednym na rozdział" },
-      { n: "25 t", t: "warzyw rocznie dowożonych do stołówek" },
-      { n: "2000 km", t: "rocznie w trasach pracowników spółki wodnej" },
-      { n: "70%", t: "personelu szpitala mieszka w promieniu 10 km" },
-    ],
     etapesLabel: "Jak przebiegała praca",
     etapes: [
       { quand: "22 – 30 czerwca 2024", quoi: "Rezydencja: testy Véli w terenie, mapowanie tematyczne z mieszkańcami i służbami, sześć transmisji na żywo ze społecznością Extrême Défi." },

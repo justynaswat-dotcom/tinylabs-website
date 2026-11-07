@@ -1173,8 +1173,7 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
   .lv-volet-livre .lv-livre-objet img { width: 100%; height: 100%; object-fit: cover; }
 }
 /* 2. Les chiffres viennent juste après l'ouverture. */
-.lv-volet-livre .lv-livre-intro + .lv-chiffres { margin-top: 4rem; }
-.lv-volet-livre .lv-chiffres + .lv-cas { margin-top: 5rem; }
+.lv-volet-livre .lv-livre-intro + .lv-cas { margin-top: 5rem; }
 /* 3. Partage : tableau centré face au texte. */
 @media (width >= 64rem) { .lv-partage { align-items: center; } }
 .lv-partage-figure a { display: block; cursor: zoom-in; }
