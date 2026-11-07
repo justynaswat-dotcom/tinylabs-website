@@ -317,6 +317,8 @@ function Livre({ t }: { t: LaVoieContent }) {
           <ul className="pp-liste">{t.livre.trouver.map((x) => <li key={x}>{x}</li>)}</ul>
           <p className="label">{t.livre.pourQuiLabel}</p>
           <p>{t.livre.pourQui}</p>
+          {/* La dernière phrase du prologue, signée. */}
+          <p className="lv-livre-signature">{t.livre.signature}<span>{t.livre.signatureAuteur}</span></p>
           <p className="lv-livre-faits">{t.livre.faits}</p>
           <div className="lv-livre-actions">
             <a href="#extrait" className="lv-bouton lv-bouton-plein">{t.livre.feuilleter} <span aria-hidden="true">↓</span></a>

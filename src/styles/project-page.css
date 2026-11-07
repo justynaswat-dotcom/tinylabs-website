@@ -1127,3 +1127,6 @@ header.tl-header.tl-shrunk { padding-block: 1.1rem; }
   .lv-volet-livre .lv-livre-objet img { height: 100%; object-fit: cover; }
 }
 .lv-volet-livre .lv-retour { margin-bottom: 0; }
+.lv-livre-texte > p.lv-livre-signature { margin: 2rem 0 0 !important; font-family: var(--font-grotesk); font-size: clamp(1.15rem, 1.6vw, 1.4rem); line-height: 1.35; }
+.lv-livre-signature span { display: block; margin-top: .5rem; font-family: var(--font-nav); font-size: .8125rem; color: var(--color-muted); }
+@media (width >= 56rem) { .lv-volet-livre .lv-livre-objet { position: sticky; top: calc(var(--header-h) + 1rem); } }
