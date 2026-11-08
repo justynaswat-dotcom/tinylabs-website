@@ -53,22 +53,25 @@ export function enTeteVolet(t: LaVoieContent, slug: Volet) {
   }
 }
 
-/* Extrait feuilletable du livre : 48 des 212 pages du PDF final (mai 2025),
-   choisies le 7 novembre 2026 pour montrer la méthode sans donner les
-   entretiens : couverture, prologue, sommaire, la double page d'ouverture
-   de chaque chapitre (dessin + introduction), la méthodologie (chronologie,
-   résidence, atelier, exposition), la conclusion et la quatrième.
+/* Extrait feuilletable du livre : 64 des 292 pages de la nouvelle maquette
+   (format Lulu Exécutif, novembre 2026), sans fond perdu : couverture,
+   page de titre, prologue, sommaire, la double page d'ouverture de chacun des
+   quatorze chapitres, la méthodologie (iceberg, échelles, chronologie,
+   atelier, exposition), le chapitre 9 « La limite » en entier (Laura et ses
+   enfants essaient le Sorean), la conclusion, l'encart des véhicules
+   (dont le QBX Sorean), les crédits et la quatrième (p999).
    Les paires se suivent (page paire à gauche, impaire à droite) pour que les
    doubles pages restent des doubles pages. Images en deux tailles :
    livre/pNNN.jpg (1000 px, livre animé) et livre/hd/pNNN.jpg (1600 px, lecture). */
-const EXTRAIT_PAGES = [1, 6, 7, 10, 11, 14, 15, 24, 25, 30, 31, 36, 37, 46, 47,
-  62, 63, 76, 77, 84, 85, 90, 91, 92, 93, 100, 101, 114, 115, 122, 123,
-  134, 135, 142, 143, 148, 149, 158, 159, 166, 167, 178, 179, 188, 189, 200, 201, 212];
+const EXTRAIT_PAGES = [0, 2, 3, 6, 7, 10, 11, 12, 13, 18, 19, 32, 33, 42, 43,
+  50, 51, 66, 67, 90, 91, 108, 109, 118, 119, 122, 123, 126, 127, 138, 139,
+  152, 153, 174, 175, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193,
+  206, 207, 218, 219, 234, 235, 246, 247, 260, 261, 266, 267, 278, 279, 290, 291, 999];
 const EXTRAIT = EXTRAIT_PAGES.map((n) => `${IMG}/livre/p${String(n).padStart(3, "0")}.jpg`);
 
-/* Première page de chaque chapitre dans le PDF (sommaire + 2), dans l'ordre
-   de t.livre.chapitres ; la méthodologie s'ouvre p. 85, la conclusion p. 201. */
-const DEBUT_CHAPITRES = [15, 25, 31, 37, 47, 63, 77, 135, 143, 149, 159, 167, 179, 189];
+/* Page d'ouverture de chaque chapitre dans la maquette 292 p., dans l'ordre
+   de t.livre.chapitres ; la méthodologie s'ouvre p. 119, la conclusion p. 261. */
+const DEBUT_CHAPITRES = [19, 33, 43, 51, 67, 91, 109, 175, 185, 193, 207, 219, 235, 247];
 /* Index de la page de gauche de la double page qui contient la page n :
    page-flip ouvre la double page dont on lui donne la page de gauche. */
 const idx = (n: number) => EXTRAIT_PAGES.indexOf(n % 2 === 1 && n > 1 ? n - 1 : n);
@@ -292,19 +295,20 @@ function reperesLivre(t: LaVoieContent) {
   const chap = (k: number) => ({ label: `${num(k)} ${t.livre.chapitres[k].t}`, index: idx(DEBUT_CHAPITRES[k]) });
   return [
     { label: r.prologue, index: idx(7) },
-    { label: r.sommaire, index: idx(11) },
+    { label: r.sommaire, index: idx(13) },
     ...[0, 1, 2, 3, 4, 5, 6].map(chap),
-    { label: r.methode, index: idx(85) },
+    { label: r.methode, index: idx(119) },
     ...[7, 8, 9, 10, 11, 12, 13].map(chap),
-    { label: r.conclusion, index: idx(201) },
+    { label: r.conclusion, index: idx(261) },
   ];
 }
 
 function Livre({ t }: { t: LaVoieContent }) {
   return (
     <>
-      {/* Le livre d'abord, et pourquoi le lire : ce qu'il contient, pour qui,
-          puis les deux gestes possibles (feuilleter, commander). */}
+      {/* Page volontairement sobre : le livre, pourquoi le lire, puis
+          l'extrait à feuilleter. Les chapitres sont accessibles par les
+          repères sous le livre. */}
       <motion.div {...reveal} className="lv-livre-intro">
         <figure className="lv-livre-objet">
           <img src={`${IMG}/carte-livre.jpg`} alt={t.livre.couvertureAlt} decoding="async" fetchpriority="high" />
@@ -323,66 +327,6 @@ function Livre({ t }: { t: LaVoieContent }) {
         </div>
       </motion.div>
 
-      {/* La place du livre dans la démarche : les sept étapes, le livre
-          (sixième) mis en avant ; il documente les cinq premières et sert
-          d'outil à la septième. */}
-      <motion.section {...reveal} className="lv-demarche">
-        <p className="label">{t.livre.demarcheLabel}</p>
-        <p className="lv-demarche-intro">{t.livre.demarcheIntro}</p>
-        <ol className="lv-demarche-etapes">
-          {t.livre.etapes.map((e, k) => (
-            <li key={e.titre} className={"livre" in e && e.livre ? "lv-etape-livre" : k < 5 ? "lv-etape-documentee" : undefined}>
-              <span className="lv-etape-num">{num(k)}</span>
-              <span className="lv-etape-titre">{e.titre}</span>
-              <span className="lv-etape-quand">{e.quand}</span>
-              <span className="lv-etape-quoi">{e.quoi}</span>
-            </li>
-          ))}
-        </ol>
-        <p className="lv-demarche-legende"><span aria-hidden="true" /> {t.livre.demarcheLivre}</p>
-      </motion.section>
-
-      {/* Les cas : un besoin, ce qui a été essayé, le lieu, le véhicule, le chapitre. */}
-      <motion.section {...reveal} className="lv-cas">
-        <p className="label">{t.livre.casLabel}</p>
-        <p className="lv-cas-intro">{t.livre.casIntro}</p>
-        <ol className="lv-cas-grille">
-          {t.livre.cas.map((c) => (
-            <li key={c.besoin}>
-              <h3>{c.besoin}</h3>
-              <p>{c.d}</p>
-              <p className="lv-cas-meta">
-                <span>{c.vehicule}</span>
-                <span>{c.lieu}</span>
-                <span>{num(c.chap)} · {t.livre.chapitres[c.chap].t}</span>
-              </p>
-            </li>
-          ))}
-        </ol>
-      </motion.section>
-
-      {/* Le partage : la semaine type du Véli agricole, tirée du livre (p. 107). */}
-      <motion.section {...reveal} className="lv-partage">
-        <div className="lv-partage-texte">
-          <p className="label">{t.livre.partageLabel}</p>
-          <p className="p-large">{t.livre.partageTexte}</p>
-          <dl>
-            {t.livre.partage.map((u) => (
-              <div key={u.qui}><dt>{u.qui}</dt><dd>{u.quand}</dd></div>
-            ))}
-          </dl>
-        </div>
-        <figure className="lv-partage-figure">
-          {/* Sur téléphone, le tableau garde une largeur lisible et défile ;
-              un clic l'ouvre en grand. */}
-          <a href={`${IMG}/partage-velie.jpg`} target="_blank" rel="noopener">
-            <img loading="lazy" decoding="async" src={`${IMG}/partage-velie.jpg`} alt={t.livre.partageAlt} />
-          </a>
-        </figure>
-      </motion.section>
-
-
-
       <div className="lv-extrait" id="extrait">
         <p className="label">{t.livre.extrait} · {t.livre.extraitNote}</p>
         <Feuilleteur pages={EXTRAIT} t={t.livre.feuilleteur} reperes={reperesLivre(t)}
@@ -392,19 +336,6 @@ function Livre({ t }: { t: LaVoieContent }) {
           <a href="mailto:hello@tinylabs.one?subject=La%20Voie%20%C2%B7%20livre">hello@tinylabs.one</a>
         </p>
       </div>
-      {/* Les quatorze chapitres et leurs entretiens, d'après le sommaire. */}
-      <motion.div {...reveal} className="lv-chapitres">
-        <p className="label">{t.livre.chapitresLabel}</p>
-        <ol>
-          {t.livre.chapitres.map((c, i) => (
-            <li key={c.t}>
-              <span className="lv-chap-num">{num(i)}</span>
-              <span className="lv-chap-titre">{c.t}</span>
-              <span className="lv-chap-qui">{c.d}</span>
-            </li>
-          ))}
-        </ol>
-      </motion.div>
     </>
   );
 }

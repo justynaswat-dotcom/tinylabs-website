@@ -37,10 +37,10 @@ export interface Repere {
   index: number;
 }
 
-/* Dimensions d'une page (rendu du PDF 490 × 692 pt à 1000 px de large).
-   Le livre ouvert est plafonné à 1200 × 847 px. */
+/* Dimensions d'une page (maquette Lulu 504 × 720 pt, sans fond perdu,
+   rendue à 1000 × 1427 px). Le livre ouvert est plafonné à 1200 × 857 px. */
 const LARGEUR = 600;
-const HAUTEUR = 847;
+const HAUTEUR = 857;
 
 /** Version haute définition d'une page : même nom, dossier hd/. */
 const hd = (src: string) => src.replace(/\/([^/]+)$/, "/hd/$1");
