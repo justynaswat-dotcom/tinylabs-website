@@ -107,7 +107,7 @@ const CARNET: ElementCarnet[] = [
 
 /* Quatre des quatorze entretiens filmés : fichier et index du chapitre
    (t.livre.chapitres) pour la légende. Aucun ne double un court métrage
-   publié (biodiversité, plaisir). */
+   publié (défi, biodiversité, limite, plaisir). */
 const VOIX = [
   { img: "voix-tholence", chap: 1 },
   { img: "voix-spielmann", chap: 10 },
@@ -115,13 +115,16 @@ const VOIX = [
   { img: "voix-landes-guido", chap: 6 },
 ];
 
-/* Les films publiés sur YouTube (vérifié le 10 octobre 2026 : trois vidéos
-   publiques sur la chaîne). Affiches téléchargées et servies par le site :
-   rien n'est demandé à YouTube avant le clic. `chap` : index du chapitre du
-   livre (t.livre.chapitres) ; null pour le film du projet. */
+/* Les films publiés sur YouTube (vérifié le 16 novembre 2026 : cinq vidéos
+   publiques sur la chaîne), dans l'ordre des chapitres. Affiches téléchargées
+   et servies par le site : rien n'est demandé à YouTube avant le clic.
+   `chap` : index du chapitre du livre (t.livre.chapitres) ; null pour le film
+   du projet. */
 const FILMS = [
   { id: FILM_ID, affiche: "film", chap: null, duree: "2:18" },
+  { id: "JTzQI-oecNk", affiche: "films/defi", chap: 0, duree: "4:04" },
   { id: "FZFO35BPTyc", affiche: "films/biodiversite", chap: 3, duree: "2:56" },
+  { id: "JXothJDzWO8", affiche: "films/limite", chap: 8, duree: "2:28" },
   { id: "rmbzbhDlTOU", affiche: "films/plaisir", chap: 12, duree: "3:10" },
 ] as const;
 
