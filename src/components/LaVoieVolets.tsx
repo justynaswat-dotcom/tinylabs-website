@@ -115,14 +115,14 @@ const VOIX = [
   { img: "voix-landes-guido", chap: 6 },
 ];
 
-/* Les films publiés sur YouTube (vérifié le 16 novembre 2026 : cinq vidéos
+/* Les films publiés sur YouTube (vérifié le 16 novembre 2026 : quatre vidéos
    publiques sur la chaîne), dans l'ordre des chapitres. Affiches téléchargées
    et servies par le site : rien n'est demandé à YouTube avant le clic.
    `chap` : index du chapitre du livre (t.livre.chapitres) ; null pour le film
-   du projet. */
+   du projet. « Le défi » (chap. 0, affiche films/defi) est retiré le temps de
+   corriger un problème de son : à remettre avec son nouvel identifiant. */
 const FILMS = [
   { id: FILM_ID, affiche: "film", chap: null, duree: "2:18" },
-  { id: "JTzQI-oecNk", affiche: "films/defi", chap: 0, duree: "4:04" },
   { id: "FZFO35BPTyc", affiche: "films/biodiversite", chap: 3, duree: "2:56" },
   { id: "JXothJDzWO8", affiche: "films/limite", chap: 8, duree: "2:28" },
   { id: "rmbzbhDlTOU", affiche: "films/plaisir", chap: 12, duree: "3:10" },
